@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ByteBite1391.github.io/sitemap.xml
