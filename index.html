@@ -109,6 +109,28 @@
             --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12);
         }
 
+        /* RTL Support */
+        html[dir="rtl"] {
+            direction: rtl;
+        }
+        html[dir="rtl"] .nav-links {
+            margin-right: auto;
+            margin-left: 0;
+        }
+        html[dir="rtl"] .hero-cta {
+            flex-direction: row-reverse;
+        }
+        html[dir="rtl"] .project-meta span {
+            margin-left: 1rem;
+            margin-right: 0;
+        }
+        html[dir="rtl"] .contact-card {
+            flex-direction: row-reverse;
+        }
+        html[dir="rtl"] .highlight-item {
+            flex-direction: row-reverse;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -337,6 +359,25 @@
             font-size: 1.1rem;
         }
         .theme-btn:hover {
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+        .lang-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .lang-btn:hover {
             border-color: var(--primary);
             background: var(--primary-soft);
         }
@@ -1115,16 +1156,19 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <div class="nav-logo-icon">B</div>
-                ByteBite
+                <span id="logoText">ByteBite</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-key="navHome">Home</a></li>
+                <li><a href="#about" data-key="navAbout">About</a></li>
+                <li><a href="#skills" data-key="navSkills">Skills</a></li>
+                <li><a href="#projects" data-key="navProjects">Projects</a></li>
+                <li><a href="#contact" data-key="navContact">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <button class="lang-btn" id="langToggle" aria-label="Toggle language">
+                    🇬🇧
+                </button>
                 <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -1142,24 +1186,24 @@
                 <div>
                     <div class="hero-badge">
                         <span class="dot"></span>
-                        Available for Opportunities
+                        <span data-key="heroBadge">Available for Opportunities</span>
                     </div>
                     <h1>
-                        Hi, I'm<br>
+                        <span data-key="heroGreeting">Hi, I'm</span><br>
                         <span class="gradient-text">AmirAli Pourbabaeii</span>
                     </h1>
-                    <p class="hero-subtitle">Full Stack Developer · Django Specialist</p>
+                    <p class="hero-subtitle" data-key="heroSubtitle">Full Stack Developer · Django Specialist</p>
                     <div class="typing-text" id="typing"></div>
-                    <p class="hero-description">
+                    <p class="hero-description" data-key="heroDescription">
                         I build scalable, secure, and high-performance backend systems with Django & DRF.
                         Passionate about Clean Architecture, REST APIs, and crafting code that lasts.
                     </p>
                     <div class="hero-cta">
                         <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-code"></i> View Projects
+                            <i class="fas fa-code"></i> <span data-key="heroCtaProjects">View Projects</span>
                         </a>
                         <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-envelope"></i> Contact Me
+                            <i class="fas fa-envelope"></i> <span data-key="heroCtaContact">Contact Me</span>
                         </a>
                     </div>
                 </div>
@@ -1191,24 +1235,24 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">About Me</span>
-                <h2 class="section-title">Crafting <span class="highlight">Digital Excellence</span></h2>
-                <p class="section-subtitle">A passionate developer focused on building robust backend systems</p>
+                <span class="section-label" data-key="aboutLabel">About Me</span>
+                <h2 class="section-title"><span data-key="aboutTitle">Crafting</span> <span class="highlight" data-key="aboutHighlight">Digital Excellence</span></h2>
+                <p class="section-subtitle" data-key="aboutSubtitle">A passionate developer focused on building robust backend systems</p>
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>
+                    <p data-key="aboutText1">
                         I'm <strong>AmirAli Pourbabaeii</strong>, a Full Stack Developer from Tehran, Iran, 
                         building under the brand <strong>ByteBite</strong>. My expertise lies in creating 
                         <strong>scalable backend systems</strong> with Django and Django REST Framework.
                     </p>
-                    <p>
+                    <p data-key="aboutText2">
                         With a strong foundation in <strong>Clean Architecture</strong> and <strong>SOLID principles</strong>, 
                         I design REST APIs that are secure, maintainable, and built to scale. 
                         From JWT authentication to database optimization with PostgreSQL, 
                         I ensure every line of code serves a purpose.
                     </p>
-                    <p>
+                    <p data-key="aboutText3">
                         Currently expanding into <strong>React</strong> for full-stack capabilities, 
                         I'm committed to continuous learning and delivering production-ready solutions.
                     </p>
@@ -1216,29 +1260,29 @@
                         <div class="highlight-item">
                             <div class="highlight-icon blue"><i class="fas fa-server"></i></div>
                             <div>
-                                <strong>Backend Focus</strong>
-                                <p style="font-size:0.8rem;color:var(--text-secondary);">Django & DRF Expert</p>
+                                <strong data-key="highlight1Title">Backend Focus</strong>
+                                <p style="font-size:0.8rem;color:var(--text-secondary);" data-key="highlight1Desc">Django & DRF Expert</p>
                             </div>
                         </div>
                         <div class="highlight-item">
                             <div class="highlight-icon cyan"><i class="fas fa-shield-alt"></i></div>
                             <div>
-                                <strong>Secure APIs</strong>
-                                <p style="font-size:0.8rem;color:var(--text-secondary);">JWT & OAuth2</p>
+                                <strong data-key="highlight2Title">Secure APIs</strong>
+                                <p style="font-size:0.8rem;color:var(--text-secondary);" data-key="highlight2Desc">JWT & OAuth2</p>
                             </div>
                         </div>
                         <div class="highlight-item">
                             <div class="highlight-icon green"><i class="fas fa-database"></i></div>
                             <div>
-                                <strong>Database Design</strong>
-                                <p style="font-size:0.8rem;color:var(--text-secondary);">PostgreSQL & SQLite</p>
+                                <strong data-key="highlight3Title">Database Design</strong>
+                                <p style="font-size:0.8rem;color:var(--text-secondary);" data-key="highlight3Desc">PostgreSQL & SQLite</p>
                             </div>
                         </div>
                         <div class="highlight-item">
                             <div class="highlight-icon blue"><i class="fas fa-code-branch"></i></div>
                             <div>
-                                <strong>Clean Code</strong>
-                                <p style="font-size:0.8rem;color:var(--text-secondary);">SOLID & DRY</p>
+                                <strong data-key="highlight4Title">Clean Code</strong>
+                                <p style="font-size:0.8rem;color:var(--text-secondary);" data-key="highlight4Desc">SOLID & DRY</p>
                             </div>
                         </div>
                     </div>
@@ -1256,27 +1300,27 @@
     <section class="section" id="skills" style="background:var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Skills</span>
-                <h2 class="section-title">Technologies <span class="highlight">I Master</span></h2>
-                <p class="section-subtitle">Tools and technologies I use to build amazing products</p>
+                <span class="section-label" data-key="skillsLabel">Skills</span>
+                <h2 class="section-title"><span data-key="skillsTitle">Technologies</span> <span class="highlight" data-key="skillsHighlight">I Master</span></h2>
+                <p class="section-subtitle" data-key="skillsSubtitle">Tools and technologies I use to build amazing products</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <h3><i class="fas fa-server"></i> <span data-key="skillBackend">Backend</span></h3>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">Django</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">Django REST Framework</span><span class="skill-percent">88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">REST API Design</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Frontend</h3>
+                    <h3><i class="fas fa-globe"></i> <span data-key="skillFrontend">Frontend</span></h3>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">HTML5 & CSS3</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent">75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">Bootstrap 5</span><span class="skill-percent">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">React</span><span class="skill-percent">55%</span></div><div class="skill-bar"><div class="skill-fill" data-width="55%"></div></div></div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database & DevOps</h3>
+                    <h3><i class="fas fa-database"></i> <span data-key="skillDevops">Database & DevOps</span></h3>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">PostgreSQL</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">SQLite</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
                     <div class="skill-item"><div class="skill-info"><span class="skill-name">Docker</span><span class="skill-percent">65%</span></div><div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div></div>
@@ -1290,16 +1334,16 @@
     <section class="section" id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Projects</span>
-                <h2 class="section-title">Featured <span class="highlight">Work</span></h2>
-                <p class="section-subtitle">Real projects from my GitHub — fetched and displayed dynamically</p>
+                <span class="section-label" data-key="projectsLabel">Projects</span>
+                <h2 class="section-title"><span data-key="projectsTitle">Featured</span> <span class="highlight" data-key="projectsHighlight">Work</span></h2>
+                <p class="section-subtitle" data-key="projectsSubtitle">Real projects from my GitHub — fetched and displayed dynamically</p>
             </div>
             <div class="projects-filter" id="projectFilter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="django">Django</button>
-                <button class="filter-btn" data-filter="python">Python</button>
-                <button class="filter-btn" data-filter="api">API</button>
-                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn active" data-filter="all" data-key="filterAll">All</button>
+                <button class="filter-btn" data-filter="django" data-key="filterDjango">Django</button>
+                <button class="filter-btn" data-filter="python" data-key="filterPython">Python</button>
+                <button class="filter-btn" data-filter="api" data-key="filterApi">API</button>
+                <button class="filter-btn" data-filter="frontend" data-key="filterFrontend">Frontend</button>
             </div>
             <div class="projects-grid" id="projectsGrid">
                 <!-- Populated by JavaScript -->
@@ -1311,30 +1355,30 @@
     <section class="section" style="background:var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Services</span>
-                <h2 class="section-title">What I <span class="highlight">Offer</span></h2>
-                <p class="section-subtitle">Professional development services tailored to your needs</p>
+                <span class="section-label" data-key="servicesLabel">Services</span>
+                <h2 class="section-title"><span data-key="servicesTitle">What I</span> <span class="highlight" data-key="servicesHighlight">Offer</span></h2>
+                <p class="section-subtitle" data-key="servicesSubtitle">Professional development services tailored to your needs</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon blue"><i class="fas fa-code"></i></div>
-                    <h4>Backend Development</h4>
-                    <p>Building scalable and secure backend systems with Django and DRF</p>
+                    <h4 data-key="service1Title">Backend Development</h4>
+                    <p data-key="service1Desc">Building scalable and secure backend systems with Django and DRF</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon cyan"><i class="fas fa-plug"></i></div>
-                    <h4>REST API Design</h4>
-                    <p>Professional RESTful APIs with proper documentation and authentication</p>
+                    <h4 data-key="service2Title">REST API Design</h4>
+                    <p data-key="service2Desc">Professional RESTful APIs with proper documentation and authentication</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon green"><i class="fas fa-database"></i></div>
-                    <h4>Database Architecture</h4>
-                    <p>Optimized database design with PostgreSQL for performance at scale</p>
+                    <h4 data-key="service3Title">Database Architecture</h4>
+                    <p data-key="service3Desc">Optimized database design with PostgreSQL for performance at scale</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon blue"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Authentication Systems</h4>
-                    <p>JWT-based authentication and authorization for web applications</p>
+                    <h4 data-key="service4Title">Authentication Systems</h4>
+                    <p data-key="service4Desc">JWT-based authentication and authorization for web applications</p>
                 </div>
             </div>
         </div>
@@ -1344,26 +1388,26 @@
     <section class="section" id="stats">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">GitHub</span>
-                <h2 class="section-title">Open Source <span class="highlight">Contributions</span></h2>
-                <p class="section-subtitle">My GitHub activity and statistics</p>
+                <span class="section-label" data-key="githubLabel">GitHub</span>
+                <h2 class="section-title"><span data-key="githubTitle">Open Source</span> <span class="highlight" data-key="githubHighlight">Contributions</span></h2>
+                <p class="section-subtitle" data-key="githubSubtitle">My GitHub activity and statistics</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number" id="totalRepos">...</div>
-                    <div class="stat-label">Public Repositories</div>
+                    <div class="stat-label" data-key="statRepos">Public Repositories</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="totalStars">...</div>
-                    <div class="stat-label">Total Stars</div>
+                    <div class="stat-label" data-key="statStars">Total Stars</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="totalCommits">...</div>
-                    <div class="stat-label">Recent Commits</div>
+                    <div class="stat-label" data-key="statCommits">Recent Commits</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">Python</div>
-                    <div class="stat-label">Primary Language</div>
+                    <div class="stat-label" data-key="statLanguage">Primary Language</div>
                 </div>
             </div>
             <div class="github-chart">
@@ -1376,9 +1420,9 @@
     <section class="section" id="contact" style="background:var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
-                <p class="section-subtitle">Let's build something great together</p>
+                <span class="section-label" data-key="contactLabel">Contact</span>
+                <h2 class="section-title"><span data-key="contactTitle">Get In</span> <span class="highlight" data-key="contactHighlight">Touch</span></h2>
+                <p class="section-subtitle" data-key="contactSubtitle">Let's build something great together</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info-cards">
@@ -1392,7 +1436,7 @@
                     <a href="mailto:amiralipourbabaeii1391@gmail.com" class="contact-card">
                         <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
                         <div>
-                            <strong>Email</strong>
+                            <strong data-key="contactEmail">Email</strong>
                             <p style="font-size:0.85rem;color:var(--text-secondary);">amiralipourbabaeii1391@gmail.com</p>
                         </div>
                     </a>
@@ -1406,19 +1450,19 @@
                 </div>
                 <div class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="Enter your name">
+                        <label for="name" data-key="formName">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" data-placeholder-key="formNamePlaceholder">
                     </div>
                     <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" placeholder="Enter your email">
+                        <label for="email" data-key="formEmail">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" data-placeholder-key="formEmailPlaceholder">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4" placeholder="Your message..."></textarea>
+                        <label for="message" data-key="formMessage">Message</label>
+                        <textarea id="message" rows="4" placeholder="Your message..." data-placeholder-key="formMessagePlaceholder"></textarea>
                     </div>
                     <button class="btn btn-primary" onclick="handleContactSubmit()">
-                        <i class="fas fa-paper-plane"></i> Send Message
+                        <i class="fas fa-paper-plane"></i> <span data-key="formSend">Send Message</span>
                     </button>
                 </div>
             </div>
@@ -1429,13 +1473,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" data-key="navHome">Home</a>
+                <a href="#about" data-key="navAbout">About</a>
+                <a href="#skills" data-key="navSkills">Skills</a>
+                <a href="#projects" data-key="navProjects">Projects</a>
+                <a href="#contact" data-key="navContact">Contact</a>
             </div>
-            <p>&copy; 2024 ByteBite — AmirAli Pourbabaeii. Built with ❤️ and clean code.</p>
+            <p data-key="footerText">&copy; 2024 ByteBite — AmirAli Pourbabaeii. Built with ❤️ and clean code.</p>
         </div>
     </footer>
 
@@ -1445,6 +1489,285 @@
     </button>
 
     <script>
+        // ============================================
+        // TRANSLATIONS
+        // ============================================
+        const translations = {
+            en: {
+                // Navigation
+                navHome: 'Home',
+                navAbout: 'About',
+                navSkills: 'Skills',
+                navProjects: 'Projects',
+                navContact: 'Contact',
+                
+                // Hero
+                heroBadge: 'Available for Opportunities',
+                heroGreeting: "Hi, I'm",
+                heroSubtitle: 'Full Stack Developer · Django Specialist',
+                heroDescription: 'I build scalable, secure, and high-performance backend systems with Django & DRF. Passionate about Clean Architecture, REST APIs, and crafting code that lasts.',
+                heroCtaProjects: 'View Projects',
+                heroCtaContact: 'Contact Me',
+                
+                // About
+                aboutLabel: 'About Me',
+                aboutTitle: 'Crafting',
+                aboutHighlight: 'Digital Excellence',
+                aboutSubtitle: 'A passionate developer focused on building robust backend systems',
+                aboutText1: 'I\'m <strong>AmirAli Pourbabaeii</strong>, a Full Stack Developer from Tehran, Iran, building under the brand <strong>ByteBite</strong>. My expertise lies in creating <strong>scalable backend systems</strong> with Django and Django REST Framework.',
+                aboutText2: 'With a strong foundation in <strong>Clean Architecture</strong> and <strong>SOLID principles</strong>, I design REST APIs that are secure, maintainable, and built to scale. From JWT authentication to database optimization with PostgreSQL, I ensure every line of code serves a purpose.',
+                aboutText3: 'Currently expanding into <strong>React</strong> for full-stack capabilities, I\'m committed to continuous learning and delivering production-ready solutions.',
+                highlight1Title: 'Backend Focus',
+                highlight1Desc: 'Django & DRF Expert',
+                highlight2Title: 'Secure APIs',
+                highlight2Desc: 'JWT & OAuth2',
+                highlight3Title: 'Database Design',
+                highlight3Desc: 'PostgreSQL & SQLite',
+                highlight4Title: 'Clean Code',
+                highlight4Desc: 'SOLID & DRY',
+                
+                // Skills
+                skillsLabel: 'Skills',
+                skillsTitle: 'Technologies',
+                skillsHighlight: 'I Master',
+                skillsSubtitle: 'Tools and technologies I use to build amazing products',
+                skillBackend: 'Backend',
+                skillFrontend: 'Frontend',
+                skillDevops: 'Database & DevOps',
+                
+                // Projects
+                projectsLabel: 'Projects',
+                projectsTitle: 'Featured',
+                projectsHighlight: 'Work',
+                projectsSubtitle: 'Real projects from my GitHub — fetched and displayed dynamically',
+                filterAll: 'All',
+                filterDjango: 'Django',
+                filterPython: 'Python',
+                filterApi: 'API',
+                filterFrontend: 'Frontend',
+                
+                // Services
+                servicesLabel: 'Services',
+                servicesTitle: 'What I',
+                servicesHighlight: 'Offer',
+                servicesSubtitle: 'Professional development services tailored to your needs',
+                service1Title: 'Backend Development',
+                service1Desc: 'Building scalable and secure backend systems with Django and DRF',
+                service2Title: 'REST API Design',
+                service2Desc: 'Professional RESTful APIs with proper documentation and authentication',
+                service3Title: 'Database Architecture',
+                service3Desc: 'Optimized database design with PostgreSQL for performance at scale',
+                service4Title: 'Authentication Systems',
+                service4Desc: 'JWT-based authentication and authorization for web applications',
+                
+                // GitHub
+                githubLabel: 'GitHub',
+                githubTitle: 'Open Source',
+                githubHighlight: 'Contributions',
+                githubSubtitle: 'My GitHub activity and statistics',
+                statRepos: 'Public Repositories',
+                statStars: 'Total Stars',
+                statCommits: 'Recent Commits',
+                statLanguage: 'Primary Language',
+                
+                // Contact
+                contactLabel: 'Contact',
+                contactTitle: 'Get In',
+                contactHighlight: 'Touch',
+                contactSubtitle: 'Let\'s build something great together',
+                contactEmail: 'Email',
+                formName: 'Your Name',
+                formNamePlaceholder: 'Enter your name',
+                formEmail: 'Your Email',
+                formEmailPlaceholder: 'Enter your email',
+                formMessage: 'Message',
+                formMessagePlaceholder: 'Your message...',
+                formSend: 'Send Message',
+                
+                // Footer
+                footerText: '© 2024 ByteBite — AmirAli Pourbabaeii. Built with ❤️ and clean code.',
+                
+                // Typing phrases
+                typingPhrases: [
+                    'Building scalable APIs with Django...',
+                    'Crafting Clean Architecture...',
+                    'Writing SOLID code...',
+                    'Optimizing PostgreSQL queries...',
+                    'Learning React for Full Stack...',
+                    'Containerizing with Docker...'
+                ]
+            },
+            fa: {
+                // Navigation
+                navHome: 'خانه',
+                navAbout: 'درباره من',
+                navSkills: 'مهارت‌ها',
+                navProjects: 'پروژه‌ها',
+                navContact: 'تماس',
+                
+                // Hero
+                heroBadge: 'در دسترس برای همکاری',
+                heroGreeting: 'سلام، من',
+                heroSubtitle: 'توسعه‌دهنده فول‌استک · متخصص جنگو',
+                heroDescription: 'سیستم‌های بک‌اند مقیاس‌پذیر، امن و با کارایی بالا با جنگو و DRF می‌سازم. به معماری تمیز، REST API و نوشتن کدی که ماندگار باشد علاقه‌مندم.',
+                heroCtaProjects: 'مشاهده پروژه‌ها',
+                heroCtaContact: 'تماس با من',
+                
+                // About
+                aboutLabel: 'درباره من',
+                aboutTitle: 'ساختن',
+                aboutHighlight: 'برتری دیجیتال',
+                aboutSubtitle: 'یک توسعه‌دهنده پرشور متمرکز بر ساخت سیستم‌های بک‌اند قدرتمند',
+                aboutText1: 'من <strong>امیرعلی پوربابایی</strong> هستم، یک توسعه‌دهنده فول‌استک از تهران، ایران که با برند <strong>ByteBite</strong> فعالیت می‌کنم. تخصص من در ایجاد <strong>سیستم‌های بک‌اند مقیاس‌پذیر</strong> با جنگو و Django REST Framework است.',
+                aboutText2: 'با پایه‌ای قوی در <strong>معماری تمیز</strong> و <strong>اصول SOLID</strong>، REST APIهایی طراحی می‌کنم که امن، قابل نگهداری و برای مقیاس‌پذیری ساخته شده‌اند. از احراز هویت JWT تا بهینه‌سازی پایگاه داده با PostgreSQL، اطمینان می‌دهم هر خط کد هدفی را دنبال می‌کند.',
+                aboutText3: 'در حال حاضر در حال گسترش به سمت <strong>React</strong> برای قابلیت‌های فول‌استک هستم و به یادگیری مستمر و ارائه راه‌حل‌های آماده تولید متعهد هستم.',
+                highlight1Title: 'تمرکز بک‌اند',
+                highlight1Desc: 'متخصص جنگو و DRF',
+                highlight2Title: 'APIهای امن',
+                highlight2Desc: 'JWT و OAuth2',
+                highlight3Title: 'طراحی پایگاه داده',
+                highlight3Desc: 'PostgreSQL و SQLite',
+                highlight4Title: 'کد تمیز',
+                highlight4Desc: 'SOLID و DRY',
+                
+                // Skills
+                skillsLabel: 'مهارت‌ها',
+                skillsTitle: 'فناوری‌هایی',
+                skillsHighlight: 'که مسلط هستم',
+                skillsSubtitle: 'ابزارها و فناوری‌هایی که برای ساخت محصولات عالی استفاده می‌کنم',
+                skillBackend: 'بک‌اند',
+                skillFrontend: 'فرانت‌اند',
+                skillDevops: 'پایگاه داده و دواپس',
+                
+                // Projects
+                projectsLabel: 'پروژه‌ها',
+                projectsTitle: 'نمونه',
+                projectsHighlight: 'کارها',
+                projectsSubtitle: 'پروژه‌های واقعی از گیت‌هاب من — دریافت و نمایش داده شده به صورت پویا',
+                filterAll: 'همه',
+                filterDjango: 'جنگو',
+                filterPython: 'پایتون',
+                filterApi: 'API',
+                filterFrontend: 'فرانت‌اند',
+                
+                // Services
+                servicesLabel: 'خدمات',
+                servicesTitle: 'چیزی که',
+                servicesHighlight: 'ارائه می‌دهم',
+                servicesSubtitle: 'خدمات توسعه حرفه‌ای متناسب با نیازهای شما',
+                service1Title: 'توسعه بک‌اند',
+                service1Desc: 'ساخت سیستم‌های بک‌اند مقیاس‌پذیر و امن با جنگو و DRF',
+                service2Title: 'طراحی REST API',
+                service2Desc: 'APIهای RESTful حرفه‌ای با مستندات مناسب و احراز هویت',
+                service3Title: 'معماری پایگاه داده',
+                service3Desc: 'طراحی پایگاه داده بهینه‌شده با PostgreSQL برای عملکرد در مقیاس',
+                service4Title: 'سیستم‌های احراز هویت',
+                service4Desc: 'احراز هویت و مجوز مبتنی بر JWT برای برنامه‌های وب',
+                
+                // GitHub
+                githubLabel: 'گیت‌هاب',
+                githubTitle: 'متن‌باز',
+                githubHighlight: 'مشارکت‌ها',
+                githubSubtitle: 'فعالیت و آمار گیت‌هاب من',
+                statRepos: 'مخازن عمومی',
+                statStars: 'ستاره‌ها',
+                statCommits: 'کامیت‌های اخیر',
+                statLanguage: 'زبان اصلی',
+                
+                // Contact
+                contactLabel: 'تماس',
+                contactTitle: 'در',
+                contactHighlight: 'تماس باشید',
+                contactSubtitle: 'بیایید با هم چیزی عالی بسازیم',
+                contactEmail: 'ایمیل',
+                formName: 'نام شما',
+                formNamePlaceholder: 'نام خود را وارد کنید',
+                formEmail: 'ایمیل شما',
+                formEmailPlaceholder: 'ایمیل خود را وارد کنید',
+                formMessage: 'پیام',
+                formMessagePlaceholder: 'پیام شما...',
+                formSend: 'ارسال پیام',
+                
+                // Footer
+                footerText: '۲۰۲۴ © بایت‌بایت — امیرعلی پوربابایی. ساخته شده با ❤️ و کد تمیز.',
+                
+                // Typing phrases
+                typingPhrases: [
+                    'ساخت APIهای مقیاس‌پذیر با جنگو...',
+                    'طراحی معماری تمیز...',
+                    'نوشتن کد SOLID...',
+                    'بهینه‌سازی کوئری‌های PostgreSQL...',
+                    'یادگیری React برای فول‌استک...',
+                    'کانتینرسازی با Docker...'
+                ]
+            }
+        };
+
+        // ============================================
+        // LANGUAGE MANAGEMENT
+        // ============================================
+        let currentLang = localStorage.getItem('bb-lang') || 'en';
+        let isRTL = currentLang === 'fa';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('bb-lang', lang);
+            isRTL = lang === 'fa';
+            
+            // Set RTL direction
+            document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+            document.documentElement.lang = lang;
+            
+            // Update language button
+            const langBtn = document.getElementById('langToggle');
+            langBtn.textContent = lang === 'en' ? '🇬🇧' : '🇮🇷';
+            langBtn.setAttribute('aria-label', lang === 'en' ? 'Switch to Persian' : 'Switch to English');
+            
+            // Get translations
+            const t = translations[lang];
+            
+            // Update all elements with data-key attribute
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (t[key] !== undefined) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        const placeholderKey = el.getAttribute('data-placeholder-key');
+                        if (placeholderKey && t[placeholderKey] !== undefined) {
+                            el.placeholder = t[placeholderKey];
+                        }
+                    } else {
+                        el.innerHTML = t[key];
+                    }
+                }
+            });
+            
+            // Update placeholders
+            document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+                const key = el.getAttribute('data-placeholder-key');
+                if (t[key] !== undefined) {
+                    el.placeholder = t[key];
+                }
+            });
+            
+            // Update logo text
+            document.getElementById('logoText').textContent = lang === 'en' ? 'ByteBite' : 'بایت‌بایت';
+            
+            // Update typing phrases
+            typingPhrases = t.typingPhrases;
+            phraseIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+            
+            // Re-render projects with new language
+            renderProjects(allProjects);
+        }
+
+        // Language toggle
+        document.getElementById('langToggle').addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'fa' : 'en';
+            applyLanguage(newLang);
+        });
+
         // ============================================
         // PREMIUM PORTFOLIO - COMPLETE JAVASCRIPT
         // ============================================
@@ -1470,6 +1793,11 @@
             let currentTheme = localStorage.getItem('bb-theme') || 'dark';
             let allProjects = [];
             let activeFilter = 'all';
+            let typingPhrases = translations[currentLang].typingPhrases;
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 60;
 
             // ============================================
             // LOADING SCREEN
@@ -1583,21 +1911,9 @@
             // ============================================
             // TYPING EFFECT
             // ============================================
-            const phrases = [
-                'Building scalable APIs with Django...',
-                'Crafting Clean Architecture...',
-                'Writing SOLID code...',
-                'Optimizing PostgreSQL queries...',
-                'Learning React for Full Stack...',
-                'Containerizing with Docker...'
-            ];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 60;
-
             function typeEffect() {
-                const current = phrases[phraseIndex];
+                if (!typingPhrases || typingPhrases.length === 0) return;
+                const current = typingPhrases[phraseIndex];
                 if (isDeleting) {
                     typingEl.textContent = current.substring(0, charIndex - 1);
                     charIndex--;
@@ -1613,7 +1929,7 @@
                     isDeleting = true;
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    phraseIndex = (phraseIndex + 1) % typingPhrases.length;
                     typingSpeed = 400;
                 }
 
@@ -1645,23 +1961,18 @@
                 const username = 'ByteBite1391';
                 
                 try {
-                    // Fetch repositories
                     const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=20`);
                     const repos = await reposResponse.json();
                     
-                    // Fetch user data
                     const userResponse = await fetch(`https://api.github.com/users/${username}`);
                     const userData = await userResponse.json();
                     
-                    // Update stats
                     document.getElementById('totalRepos').textContent = userData.public_repos || '10+';
                     
-                    // Calculate total stars
                     const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
                     document.getElementById('totalStars').textContent = totalStars || '5+';
                     document.getElementById('totalCommits').textContent = '50+';
                     
-                    // Process repositories
                     allProjects = repos
                         .filter(repo => !repo.fork && !repo.archived)
                         .map(repo => ({
@@ -1877,7 +2188,7 @@
                 const message = document.getElementById('message').value;
                 
                 if (!name || !email || !message) {
-                    alert('Please fill in all fields.');
+                    alert(currentLang === 'en' ? 'Please fill in all fields.' : 'لطفاً تمام فیلدها را پر کنید.');
                     return;
                 }
                 
@@ -1908,9 +2219,11 @@
             // ============================================
             // INITIALIZE
             // ============================================
+            // Apply initial language
+            applyLanguage(currentLang);
+            
             fetchGitHubData();
             
-            // Trigger initial scroll for skill animation check
             setTimeout(animateSkillsOnScroll, 1000);
 
             console.log('%c🚀 ByteBite Portfolio Ready %c| %cBuilt with Django & Clean Code',
