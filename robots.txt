@@ -1,3 +1,84 @@
+# robots.txt برای سایت ByteBite Portfolio
+# https://bytebite1391.github.io/Portfolio/
+
 User-agent: *
 Allow: /
+Disallow: /static/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*.js.map$
+Disallow: /*.css.map$
+
 Sitemap: https://bytebite1391.github.io/Portfolio/sitemap.xml
+
+Crawl-delay: 1
+
+# گوگل
+User-agent: Googlebot
+Allow: /
+Disallow: /static/
+Disallow: /assets/
+Crawl-delay: 0.5
+
+# بینگ (Bing)
+User-agent: Bingbot
+Allow: /
+Disallow: /static/
+Crawl-delay: 0.5
+
+# یاهو
+User-agent: Yahoo! Slurp
+Allow: /
+Disallow: /static/
+
+# داک‌داک‌گو
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /static/
+Crawl-delay: 1
+
+# بایدو (چین)
+User-agent: Baiduspider
+Allow: /
+Disallow: /static/
+Crawl-delay: 2
+
+# خزنده‌های بد (Block bad bots)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+# خزنده‌های اسکرپر (Scrapers)
+User-agent: Scrapy
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+# خزنده‌های عکس (Image bots)
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/images/
+
+# خزنده‌های موبایل
+User-agent: Googlebot-Mobile
+Allow: /
+
+# درباره ما (برای ربات‌های خوب)
+# Host: https://bytebite1391.github.io/Portfolio/
