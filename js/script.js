@@ -1,8 +1,11 @@
 /* ============================================
    ByteBite Portfolio - Vanilla JavaScript
+   Version: 2.0
    ============================================ */
 
-// === Translations ===
+// ============================================
+// TRANSLATIONS
+// ============================================
 const translations = {
     en: {
         // Nav
@@ -81,13 +84,6 @@ const translations = {
         'projects.features': 'Key Features',
         'projects.technologies': 'Technologies',
 
-        'projects.novasearch.desc': 'A search-oriented backend system designed for fast, scalable full-text search across large datasets. Built with a modern Python stack and containerized infrastructure.',
-        'projects.novasearch.f1': 'Search architecture with Elasticsearch/OpenSearch',
-        'projects.novasearch.f2': 'RESTful backend APIs with FastAPI',
-        'projects.novasearch.f3': 'PostgreSQL for primary data storage',
-        'projects.novasearch.f4': 'Redis-based caching layer',
-        'projects.novasearch.f5': 'Docker Compose infrastructure',
-
         'projects.novaorm.desc': 'A custom ORM and database abstraction layer built in Python. An experimental project exploring how ORMs work internally — query building, connection management, and model mapping.',
         'projects.novaorm.f1': 'Database abstraction layer',
         'projects.novaorm.f2': 'Query builder implementation',
@@ -102,20 +98,6 @@ const translations = {
         'projects.novashop.f4': 'Checkout and order management',
         'projects.novashop.f5': 'User profile and order history',
         'projects.novashop.f6': 'Admin management panel',
-
-        'projects.hospital.desc': 'A hospital personnel shift management system built with Django. Handles employees, departments, shift assignments, swap requests, and leave management.',
-        'projects.hospital.f1': 'Employee, department, and role management',
-        'projects.hospital.f2': 'Shift types and shift assignments',
-        'projects.hospital.f3': 'Shift swap and leave requests',
-        'projects.hospital.f4': 'Conflict prevention for overlapping shifts',
-        'projects.hospital.f5': 'Notifications and activity logs',
-
-        'projects.ielts.desc': 'A professional online IELTS testing platform with a full-stack architecture. Designed to handle authentication, timed exams, auto-save, scoring, and PDF report generation.',
-        'projects.ielts.f1': 'Authentication & permissions system',
-        'projects.ielts.f2': 'Exam engine with timers and auto-save',
-        'projects.ielts.f3': 'Question navigation and flagging',
-        'projects.ielts.f4': 'Automated scoring and results',
-        'projects.ielts.f5': 'PDF report generation',
 
         // Status
         'status.inprogress': 'In Progress',
@@ -155,6 +137,8 @@ const translations = {
         'github.viewProfile': 'View Profile',
         'github.featured': 'Featured Repositories',
         'github.languages': 'Language Distribution: Python, JavaScript, TypeScript, HTML, CSS',
+        'github.loading': 'Loading...',
+        'github.error': 'Unable to load GitHub data',
 
         // Contact
         'contact.title': 'Contact',
@@ -250,13 +234,6 @@ const translations = {
         'projects.features': 'ویژگی‌های کلیدی',
         'projects.technologies': 'تکنولوژی‌ها',
 
-        'projects.novasearch.desc': 'یک سیستم بک‌اند متمرکز بر جستجو طراحی شده برای جستجوی متن کامل سریع و مقیاس‌پذیر در مجموعه داده‌های بزرگ. ساخته شده با استک مدرن Python و زیرساخت کانتینری.',
-        'projects.novasearch.f1': 'معماری جستجو با Elasticsearch/OpenSearch',
-        'projects.novasearch.f2': 'APIهای بک‌اند RESTful با FastAPI',
-        'projects.novasearch.f3': 'PostgreSQL برای ذخیره‌سازی اصلی داده',
-        'projects.novasearch.f4': 'لایه کش مبتنی بر Redis',
-        'projects.novasearch.f5': 'زیرساخت Docker Compose',
-
         'projects.novaorm.desc': 'یک ORM سفارشی و لایه انتزاع پایگاه داده ساخته شده با Python. یک پروژه آزمایشی برای کاوش در نحوه کار داخلی ORMها — ساخت کوئری، مدیریت اتصال و نگاشت مدل.',
         'projects.novaorm.f1': 'لایه انتزاع پایگاه داده',
         'projects.novaorm.f2': 'پیاده‌سازی Query Builder',
@@ -271,20 +248,6 @@ const translations = {
         'projects.novashop.f4': 'پرداخت و مدیریت سفارش',
         'projects.novashop.f5': 'پروفایل کاربر و تاریخچه سفارش',
         'projects.novashop.f6': 'پنل مدیریت ادمین',
-
-        'projects.hospital.desc': 'یک سیستم مدیریت شیفت پرسنل بیمارستان ساخته شده با Django. مدیریت کارمندان، بخش‌ها، تخصیص شیفت، درخواست جابجایی و مدیریت مرخصی.',
-        'projects.hospital.f1': 'مدیریت کارمند، بخش و نقش',
-        'projects.hospital.f2': 'انواع شیفت و تخصیص شیفت',
-        'projects.hospital.f3': 'درخواست جابجایی و مرخصی',
-        'projects.hospital.f4': 'جلوگیری از تداخل شیفت‌ها',
-        'projects.hospital.f5': 'اعلان‌ها و لاگ فعالیت',
-
-        'projects.ielts.desc': 'یک پلتفرم آزمون آنلاین IELTS حرفه‌ای با معماری فول‌استک. طراحی شده برای مدیریت احراز هویت، آزمون‌های زمان‌دار، ذخیره خودکار، نمره‌دهی و تولید گزارش PDF.',
-        'projects.ielts.f1': 'سیستم احراز هویت و مجوزها',
-        'projects.ielts.f2': 'موتور آزمون با تایمر و ذخیره خودکار',
-        'projects.ielts.f3': 'ناوبری سوالات و نشانه‌گذاری',
-        'projects.ielts.f4': 'نمره‌دهی خودکار و نتایج',
-        'projects.ielts.f5': 'تولید گزارش PDF',
 
         // Status
         'status.inprogress': 'در حال توسعه',
@@ -324,6 +287,8 @@ const translations = {
         'github.viewProfile': 'مشاهده پروفایل',
         'github.featured': 'مخازن ویژه',
         'github.languages': 'توزیع زبان‌ها: Python, JavaScript, TypeScript, HTML, CSS',
+        'github.loading': 'در حال بارگذاری...',
+        'github.error': 'امکان دریافت اطلاعات گیت‌هاب وجود ندارد',
 
         // Contact
         'contact.title': 'تماس',
@@ -344,20 +309,83 @@ const translations = {
     }
 };
 
-// === State ===
+// ============================================
+// CONFIG
+// ============================================
+const CONFIG = {
+    github: {
+        username: 'ByteBite1391',
+        apiBase: 'https://api.github.com',
+        cacheKey: 'bytebite-github-cache',
+        projectsCacheKey: 'bytebite-projects-cache',
+        cacheDuration: 30 * 60 * 1000, // 30 دقیقه
+        featuredRepos: ['NovaORM', 'NovaShop']
+    }
+};
+
+// ============================================
+// PROJECTS CONFIG
+// ============================================
+const PROJECTS_CONFIG = [
+    {
+        repo: 'NovaORM',
+        status: 'inprogress',
+        filters: ['backend', 'python', 'database', 'experimental'],
+        features: [
+            { en: 'Database abstraction layer', fa: 'لایه انتزاع پایگاه داده' },
+            { en: 'Query builder implementation', fa: 'پیاده‌سازی Query Builder' },
+            { en: 'Model-to-table mapping', fa: 'نگاشت مدل به جدول' },
+            { en: 'Connection management', fa: 'مدیریت اتصال' },
+            { en: 'Clean architectural patterns', fa: 'الگوهای معماری تمیز' }
+        ],
+        customTech: ['Python', 'ORM Concepts', 'Software Architecture'],
+        icon: 'database'
+    },
+    {
+        repo: 'NovaShop',
+        status: 'inprogress',
+        filters: ['fullstack', 'backend', 'django', 'python'],
+        features: [
+            { en: 'Authentication system', fa: 'سیستم احراز هویت' },
+            { en: 'Product catalog and product details', fa: 'کاتالوگ محصول و جزئیات محصول' },
+            { en: 'Session-based shopping cart', fa: 'سبد خرید مبتنی بر session' },
+            { en: 'Checkout and order management', fa: 'پرداخت و مدیریت سفارش' },
+            { en: 'User profile and order history', fa: 'پروفایل کاربر و تاریخچه سفارش' },
+            { en: 'Admin management panel', fa: 'پنل مدیریت ادمین' }
+        ],
+        customTech: ['Python', 'Django', 'Django Templates', 'HTML5', 'CSS3', 'JavaScript', 'PostgreSQL'],
+        icon: 'shop'
+    }
+];
+
+// ============================================
+// PROJECT ICONS (SVG paths)
+// ============================================
+const PROJECT_ICONS = {
+    search: `<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>`,
+    database: `<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>`,
+    shop: `<circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>`,
+    code: `<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>`
+};
+
+// ============================================
+// STATE
+// ============================================
 let currentLang = 'en';
+let navbar, menuToggle, mobileMenu, langToggle, contactForm, submitBtn, formStatus;
 
-// === DOM Elements ===
-const navbar = document.getElementById('navbar');
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-const langToggle = document.getElementById('lang-toggle');
-const contactForm = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
-const formStatus = document.getElementById('form-status');
-
-// === Initialize ===
+// ============================================
+// INIT
+// ============================================
 function init() {
+    navbar = document.getElementById('navbar');
+    menuToggle = document.getElementById('menu-toggle');
+    mobileMenu = document.getElementById('mobile-menu');
+    langToggle = document.getElementById('lang-toggle');
+    contactForm = document.getElementById('contact-form');
+    submitBtn = document.getElementById('submit-btn');
+    formStatus = document.getElementById('form-status');
+
     detectLanguage();
     setupNavbar();
     setupMobileMenu();
@@ -366,27 +394,31 @@ function init() {
     setupActiveNavigation();
     setupProjectFilters();
     setupContactForm();
+    setupSmoothScroll();
+
+    // GitHub data
     fetchGitHubData();
+    fetchAndRenderProjects();
 }
 
-// === Language Detection ===
+// ============================================
+// LANGUAGE
+// ============================================
 function detectLanguage() {
     const saved = localStorage.getItem('portfolio-lang');
     if (saved) {
         currentLang = saved;
     } else {
-        const browserLang = navigator.language || navigator.userLanguage;
-        currentLang = browserLang.startsWith('fa') ? 'fa' : 'en';
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        currentLang = browserLang.toLowerCase().startsWith('fa') ? 'fa' : 'en';
     }
     applyLanguage();
 }
 
-// === Apply Language ===
 function applyLanguage() {
     const html = document.documentElement;
     const t = translations[currentLang];
 
-    // Set direction
     if (currentLang === 'fa') {
         html.setAttribute('dir', 'rtl');
         html.setAttribute('lang', 'fa');
@@ -395,75 +427,66 @@ function applyLanguage() {
         html.setAttribute('lang', 'en');
     }
 
-    // Update text content
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (t[key]) {
-            el.textContent = t[key];
-        }
+        if (t[key]) el.textContent = t[key];
     });
 
-    // Update placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        if (t[key]) {
-            el.setAttribute('placeholder', t[key]);
-        }
+        if (t[key]) el.setAttribute('placeholder', t[key]);
     });
 
-    // Update page title
-    if (currentLang === 'fa') {
-        document.title = 'امیرعلی پوربابایی | توسعه‌دهنده فول‌استک';
-    } else {
-        document.title = 'AmirAli Pourbabaeii | Full-Stack Developer';
-    }
+    document.title = currentLang === 'fa'
+        ? 'امیرعلی پوربابایی | توسعه‌دهنده فول‌استک'
+        : 'AmirAli Pourbabaeii | Full-Stack Developer';
 
-    // Save preference
     localStorage.setItem('portfolio-lang', currentLang);
 }
 
-// === Navbar Scroll ===
+function setupLanguageToggle() {
+    if (!langToggle) return;
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'fa' : 'en';
+        applyLanguage();
+
+        // Re-render projects & repos با زبان جدید
+        const projectsCached = getCache(CONFIG.github.projectsCacheKey);
+        if (projectsCached) renderProjects(projectsCached);
+
+        const ghCached = getCache(CONFIG.github.cacheKey);
+        if (ghCached) renderGitHubData(ghCached.profile, ghCached.repos);
+    });
+}
+
+// ============================================
+// NAVBAR
+// ============================================
 function setupNavbar() {
-    let lastScroll = 0;
-
+    if (!navbar) return;
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        lastScroll = currentScroll;
+        navbar.classList.toggle('scrolled', window.pageYOffset > 50);
     }, { passive: true });
 }
 
-// === Mobile Menu ===
+// ============================================
+// MOBILE MENU
+// ============================================
 function setupMobileMenu() {
+    if (!menuToggle || !mobileMenu) return;
+
     menuToggle.addEventListener('click', () => {
-        const isActive = mobileMenu.classList.contains('active');
-
-        if (isActive) {
-            closeMobileMenu();
-        } else {
-            openMobileMenu();
-        }
+        if (mobileMenu.classList.contains('active')) closeMobileMenu();
+        else openMobileMenu();
     });
 
-    // Close on link click
     mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => {
-            closeMobileMenu();
-        });
+        link.addEventListener('click', closeMobileMenu);
     });
 
-    // Close on overlay click
-    mobileMenu.querySelector('.mobile-overlay-bg').addEventListener('click', () => {
-        closeMobileMenu();
-    });
+    const overlayBg = mobileMenu.querySelector('.mobile-overlay-bg');
+    if (overlayBg) overlayBg.addEventListener('click', closeMobileMenu);
 
-    // Close on Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
             closeMobileMenu();
@@ -487,33 +510,25 @@ function closeMobileMenu() {
     document.body.style.overflow = '';
 }
 
-// === Language Toggle ===
-function setupLanguageToggle() {
-    langToggle.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'fa' : 'en';
-        applyLanguage();
-    });
-}
-
-// === Scroll Reveal ===
+// ============================================
+// SCROLL REVEAL
+// ============================================
 function setupScrollReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-// === Active Navigation ===
+// ============================================
+// ACTIVE NAV
+// ============================================
 function setupActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
@@ -522,26 +537,19 @@ function setupActiveNavigation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
-
                 navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-section') === id) {
-                        link.classList.add('active');
-                    }
+                    link.classList.toggle('active', link.getAttribute('data-section') === id);
                 });
             }
         });
-    }, {
-        threshold: 0.3,
-        rootMargin: '-80px 0px -50% 0px'
-    });
+    }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    sections.forEach(s => observer.observe(s));
 }
 
-// === Project Filters ===
+// ============================================
+// PROJECT FILTERS
+// ============================================
 function setupProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
@@ -549,26 +557,40 @@ function setupProjectFilters() {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.getAttribute('data-filter');
-
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Filter cards
             projectCards.forEach(card => {
                 const categories = card.getAttribute('data-categories') || '';
-
-                if (filter === 'all' || categories.includes(filter)) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
+                const shouldShow = filter === 'all' || categories.split(' ').includes(filter);
+                card.classList.toggle('hidden', !shouldShow);
             });
         });
     });
 }
 
-// === Contact Form ===
+// ============================================
+// SMOOTH SCROLL
+// ============================================
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href.length < 2) return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                if (mobileMenu && mobileMenu.classList.contains('active')) closeMobileMenu();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+}
+
+// ============================================
+// CONTACT FORM
+// ============================================
 function setupContactForm() {
     if (!contactForm) return;
 
@@ -583,7 +605,6 @@ function setupContactForm() {
         const emailError = document.getElementById('email-error');
         const messageError = document.getElementById('message-error');
 
-        // Reset errors
         nameError.textContent = '';
         emailError.textContent = '';
         messageError.textContent = '';
@@ -592,20 +613,17 @@ function setupContactForm() {
 
         let isValid = true;
 
-        // Validate name
         if (!name.value.trim()) {
             nameError.textContent = t['contact.validation.name'];
             isValid = false;
         }
 
-        // Validate email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
             emailError.textContent = t['contact.validation.email'];
             isValid = false;
         }
 
-        // Validate message
         if (!message.value.trim()) {
             messageError.textContent = t['contact.validation.message'];
             isValid = false;
@@ -613,15 +631,12 @@ function setupContactForm() {
 
         if (!isValid) return;
 
-        // Show loading
         submitBtn.disabled = true;
         formStatus.textContent = '...';
         formStatus.className = 'form-status loading';
 
-        // Simulate sending (since there's no backend)
         try {
             await new Promise(resolve => setTimeout(resolve, 1500));
-
             formStatus.textContent = t['contact.success'];
             formStatus.className = 'form-status success';
             contactForm.reset();
@@ -634,50 +649,290 @@ function setupContactForm() {
     });
 }
 
-// === GitHub Data ===
+// ============================================
+// GITHUB DATA (Profile + Stars + Repos)
+// ============================================
 async function fetchGitHubData() {
+    const { username, apiBase, cacheKey, cacheDuration } = CONFIG.github;
+
+    const cached = getCache(cacheKey);
+    if (cached) {
+        renderGitHubData(cached.profile, cached.repos);
+        return;
+    }
+
+    setGitHubLoading();
+
     try {
-        const response = await fetch('https://api.github.com/users/ByteBite1391');
+        const profileRes = await fetch(`${apiBase}/users/${username}`);
+        if (!profileRes.ok) throw new Error(`Profile fetch failed: ${profileRes.status}`);
+        const profile = await profileRes.json();
 
-        if (!response.ok) throw new Error('GitHub API error');
+        const reposRes = await fetch(`${apiBase}/users/${username}/repos?per_page=100&sort=updated`);
+        if (!reposRes.ok) throw new Error(`Repos fetch failed: ${reposRes.status}`);
+        const repos = await reposRes.json();
 
-        const data = await response.json();
-
-        const repoCount = document.getElementById('repo-count');
-        const starCount = document.getElementById('star-count');
-
-        if (repoCount) {
-            repoCount.textContent = data.public_repos || '—';
-        }
-
-        // Fetch stars separately
-        const reposResponse = await fetch('https://api.github.com/users/ByteBite1391/repos?per_page=100');
-        if (reposResponse.ok) {
-            const repos = await reposResponse.json();
-            const totalStars = repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
-            if (starCount) {
-                starCount.textContent = totalStars || '—';
-            }
-        }
+        setCache(cacheKey, { profile, repos }, cacheDuration);
+        renderGitHubData(profile, repos);
     } catch (err) {
-        // Silently fail - keep the "—" placeholders
-        console.log('GitHub API unavailable, using fallback display');
+        console.warn('GitHub API error:', err);
+        setGitHubError();
     }
 }
 
-// === Smooth Scroll for anchor links ===
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+function renderGitHubData(profile, repos) {
+    const repoCountEl = document.getElementById('repo-count');
+    const starCountEl = document.getElementById('star-count');
 
-// === Start ===
+    if (repoCountEl) repoCountEl.textContent = profile.public_repos ?? '—';
+
+    const totalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+    if (starCountEl) starCountEl.textContent = totalStars;
+
+    const repoList = document.querySelector('.repo-list');
+    if (!repoList) return;
+
+    const featuredNames = CONFIG.github.featuredRepos;
+    const featured = repos
+        .filter(r => !r.fork && featuredNames.includes(r.name))
+        .sort((a, b) => featuredNames.indexOf(a.name) - featuredNames.indexOf(b.name));
+
+    const displayRepos = featured.length > 0
+        ? featured
+        : repos.filter(r => !r.fork).sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 4);
+
+    if (displayRepos.length === 0) {
+        repoList.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:1rem;">${translations[currentLang]['github.error']}</p>`;
+        return;
+    }
+
+    repoList.innerHTML = displayRepos.map(repo => buildRepoHTML(repo)).join('');
+}
+
+function buildRepoHTML(repo) {
+    const langColors = {
+        'Python': '#eab308', 'JavaScript': '#f7df1e', 'TypeScript': '#3178c6',
+        'HTML': '#e34c26', 'CSS': '#563d7c', 'Dockerfile': '#384d54',
+        'Shell': '#89e051', 'Vue': '#41b883', 'Go': '#00add8'
+    };
+
+    const langHTML = repo.language
+        ? `<span class="repo-lang"><span class="lang-dot" style="background:${langColors[repo.language] || '#6b7280'}"></span>${repo.language}</span>`
+        : '';
+
+    const desc = repo.description || 'No description';
+
+    return `
+        <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="repo-item">
+            <div class="repo-info">
+                <div class="repo-name-row">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>
+                    </svg>
+                    <span class="repo-name">${escapeHTML(repo.name)}</span>
+                </div>
+                <p class="repo-desc">${escapeHTML(desc)}</p>
+            </div>
+            <div class="repo-meta">
+                ${langHTML}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                </svg>
+            </div>
+        </a>
+    `;
+}
+
+function setGitHubLoading() {
+    const repoCountEl = document.getElementById('repo-count');
+    const starCountEl = document.getElementById('star-count');
+    const t = translations[currentLang];
+
+    if (repoCountEl) repoCountEl.textContent = '...';
+    if (starCountEl) starCountEl.textContent = '...';
+
+    const repoList = document.querySelector('.repo-list');
+    if (repoList && repoList.children.length === 0) {
+        repoList.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:1rem;">${t['github.loading']}</p>`;
+    }
+}
+
+function setGitHubError() {
+    const repoCountEl = document.getElementById('repo-count');
+    const starCountEl = document.getElementById('star-count');
+    const t = translations[currentLang];
+
+    if (repoCountEl) repoCountEl.textContent = '—';
+    if (starCountEl) starCountEl.textContent = '—';
+
+    const repoList = document.querySelector('.repo-list');
+    if (repoList) {
+        repoList.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:1rem;">${t['github.error']}</p>`;
+    }
+}
+
+// ============================================
+// DYNAMIC PROJECTS FROM GITHUB
+// ============================================
+async function fetchAndRenderProjects() {
+    const grid = document.querySelector('.projects-grid');
+    if (!grid) return;
+
+    const { username, apiBase, projectsCacheKey, cacheDuration } = CONFIG.github;
+
+    const cached = getCache(projectsCacheKey);
+    if (cached) {
+        renderProjects(cached);
+        return;
+    }
+
+    try {
+        const res = await fetch(`${apiBase}/users/${username}/repos?per_page=100&sort=updated`);
+        if (!res.ok) throw new Error(`Failed: ${res.status}`);
+        const repos = await res.json();
+
+        setCache(projectsCacheKey, repos, cacheDuration);
+        renderProjects(repos);
+    } catch (err) {
+        console.warn('Projects API error:', err);
+        // در صورت خطا، از دیتای استاتیک موجود در HTML استفاده کن
+        setupProjectFilters();
+    }
+}
+
+function renderProjects(repos) {
+    const grid = document.querySelector('.projects-grid');
+    if (!grid) return;
+
+    const repoMap = {};
+    repos.forEach(r => { repoMap[r.name] = r; });
+
+    const html = PROJECTS_CONFIG.map(proj => {
+        const repo = repoMap[proj.repo];
+        return buildProjectCard(proj, repo);
+    }).join('');
+
+    grid.innerHTML = html;
+    setupProjectFilters();
+}
+
+function buildProjectCard(proj, repo) {
+    const lang = currentLang;
+    const t = translations[lang];
+
+    const name = repo ? repo.name : proj.repo;
+    const desc = repo && repo.description
+        ? repo.description
+        : (t[`projects.${proj.repo.toLowerCase()}.desc`] || 'No description');
+
+    const stars = repo ? repo.stargazers_count : 0;
+    const starsHTML = stars > 0
+        ? `<span class="project-stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              ${stars}
+           </span>`
+        : '';
+
+    const featuresHTML = proj.features.map(f => `
+        <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            <span>${f[lang] || f.en}</span>
+        </li>
+    `).join('');
+
+    const techTagsHTML = proj.customTech.map(t => `<span>${t}</span>`).join('');
+
+    const statusKey = `status.${proj.status}`;
+    const statusLabel = t[statusKey] || proj.status;
+    const statusClass = proj.status === 'planned' ? 'badge-info' : 'badge-warning';
+
+    const iconPath = PROJECT_ICONS[proj.icon] || PROJECT_ICONS.code;
+    const repoUrl = repo ? repo.html_url : `https://github.com/${CONFIG.github.username}/${proj.repo}`;
+
+    return `
+        <article class="project-card glass-card-hover reveal visible"
+                 data-categories="${proj.filters.join(' ')}">
+            <div class="project-header">
+                <div class="project-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        ${iconPath}
+                    </svg>
+                </div>
+                <h3 class="project-name">${escapeHTML(name)}</h3>
+                <span class="${statusClass}">${statusLabel}</span>
+            </div>
+
+            <p class="project-desc">${escapeHTML(desc)}</p>
+
+            <div class="project-features">
+                <p class="features-label">${t['projects.features']}</p>
+                <ul class="features-list">${featuresHTML}</ul>
+            </div>
+
+            <div class="project-tech">
+                <p class="tech-label">${t['projects.technologies']}</p>
+                <div class="tech-tags">${techTagsHTML}</div>
+            </div>
+
+            <div class="project-footer">
+                ${starsHTML}
+                <a href="${repoUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </article>
+    `;
+}
+
+// ============================================
+// CACHE HELPERS
+// ============================================
+function getCache(key) {
+    try {
+        const raw = localStorage.getItem(key);
+        if (!raw) return null;
+        const data = JSON.parse(raw);
+        if (Date.now() > data.expiry) {
+            localStorage.removeItem(key);
+            return null;
+        }
+        return data.value;
+    } catch {
+        return null;
+    }
+}
+
+function setCache(key, value, duration) {
+    try {
+        localStorage.setItem(key, JSON.stringify({
+            value,
+            expiry: Date.now() + duration
+        }));
+    } catch {}
+}
+
+// ============================================
+// SECURITY
+// ============================================
+function escapeHTML(str) {
+    if (typeof str !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+// ============================================
+// START
+// ============================================
 document.addEventListener('DOMContentLoaded', init);

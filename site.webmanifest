@@ -1,0 +1,20 @@
+{
+  "name": "AmirAli Pourbabaeii | Portfolio",
+  "short_name": "ByteBite",
+  "description": "Full-Stack Developer focused on Backend Engineering with Python, Django, PostgreSQL.",
+  "start_url": "/Portfolio/",
+  "scope": "/Portfolio/",
+  "display": "standalone",
+  "background_color": "#08080a",
+  "theme_color": "#08080a",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/Portfolio/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

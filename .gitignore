@@ -1,0 +1,42 @@
+# ═══ OS Files ═══
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ═══ Editors ═══
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ═══ Archives (بکاپ‌ها) ═══
+*.rar
+*.zip
+*.7z
+*.tar.gz
+Portolio.rar
+
+# ═══ Logs ═══
+*.log
+npm-debug.log*
+
+# ═══ Dependencies ═══
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# ═══ Environment ═══
+.env
+.env.local
+.env.*.local
+
+# ═══ Build ═══
+dist/
+build/
+.cache/
+
+# ═══ Backup ═══
+*.bak
+*.backup

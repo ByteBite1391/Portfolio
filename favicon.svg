@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+  <defs>
+
+    <!-- Background -->
+    <linearGradient id="bg"
+      x1="0" y1="0"
+      x2="1" y2="1">
+
+      <stop offset="0" stop-color="#050507"/>
+      <stop offset="0.5" stop-color="#0b0b0f"/>
+      <stop offset="1" stop-color="#17171c"/>
+
+    </linearGradient>
+
+
+    <!-- Gold -->
+    <linearGradient id="gold"
+      x1="0" y1="0"
+      x2="1" y2="1">
+
+      <stop offset="0"
+        stop-color="#fff4b0"/>
+
+      <stop offset="0.18"
+        stop-color="#f4d86a"/>
+
+      <stop offset="0.5"
+        stop-color="#d4af37"/>
+
+      <stop offset="0.78"
+        stop-color="#b88c27"/>
+
+      <stop offset="1"
+        stop-color="#80601b"/>
+
+    </linearGradient>
+
+
+    <!-- Gold Shine -->
+    <linearGradient id="shine"
+      x1="0" y1="0"
+      x2="0" y2="1">
+
+      <stop offset="0"
+        stop-color="#fff9d4"
+        stop-opacity=".95"/>
+
+      <stop offset=".45"
+        stop-color="#e9c55a"
+        stop-opacity=".75"/>
+
+      <stop offset="1"
+        stop-color="#a88225"
+        stop-opacity=".35"/>
+
+    </linearGradient>
+
+
+    <!-- Ambient light -->
+    <radialGradient id="ambient"
+      cx="32%" cy="18%" r="75%">
+
+      <stop offset="0"
+        stop-color="#d4af37"
+        stop-opacity=".16"/>
+
+      <stop offset=".45"
+        stop-color="#d4af37"
+        stop-opacity=".035"/>
+
+      <stop offset="1"
+        stop-color="#000"
+        stop-opacity="0"/>
+
+    </radialGradient>
+
+
+    <!-- Glow -->
+    <filter id="glow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%">
+
+      <feGaussianBlur
+        stdDeviation="1.7"
+        result="blur"/>
+
+      <feFlood
+        flood-color="#d4af37"
+        flood-opacity=".38"/>
+
+      <feComposite
+        in2="blur"
+        operator="in"
+        result="goldBlur"/>
+
+      <feMerge>
+        <feMergeNode in="goldBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+
+
+    <!-- Soft shadow -->
+    <filter id="shadow"
+      x="-50%"
+      y="-50%"
+      width="200%"
+      height="200%">
+
+      <feDropShadow
+        dx="0"
+        dy="2"
+        stdDeviation="2.4"
+        flood-color="#000"
+        flood-opacity=".7"/>
+
+    </filter>
+
+
+    <!-- Clip -->
+    <clipPath id="clip">
+
+      <rect
+        x="1"
+        y="1"
+        width="62"
+        height="62"
+        rx="15"/>
+
+    </clipPath>
+
+  </defs>
+
+
+  <!-- ================================= -->
+  <!-- BACKGROUND -->
+  <!-- ================================= -->
+
+  <rect
+    width="64"
+    height="64"
+    rx="15"
+    fill="url(#bg)"
+    filter="url(#shadow)"/>
+
+
+  <!-- Ambient golden light -->
+
+  <rect
+    x="1"
+    y="1"
+    width="62"
+    height="62"
+    rx="14"
+    fill="url(#ambient)"/>
+
+
+  <!-- ================================= -->
+  <!-- SUBTLE GLASS EFFECT -->
+  <!-- ================================= -->
+
+  <g clip-path="url(#clip)"
+     opacity=".045">
+
+    <path
+      d="M-10 18 L26 -10
+         M-8 34 L42 -10
+         M8 62 L70 12
+         M28 72 L72 36"
+      stroke="#fff"
+      stroke-width=".7"/>
+
+  </g>
+
+
+  <!-- ================================= -->
+  <!-- OUTER GOLD FRAME -->
+  <!-- ================================= -->
+
+  <rect
+    x="1"
+    y="1"
+    width="62"
+    height="62"
+    rx="14"
+    fill="none"
+    stroke="url(#gold)"
+    stroke-width="1.25"
+    opacity=".62"/>
+
+
+  <!-- Inner frame -->
+
+  <rect
+    x="3"
+    y="3"
+    width="58"
+    height="58"
+    rx="12"
+    fill="none"
+    stroke="#fff"
+    stroke-width=".55"
+    opacity=".035"/>
+
+
+  <!-- ================================= -->
+  <!-- MONOGRAM -->
+  <!-- ================================= -->
+
+  <g filter="url(#glow)">
+
+    <!-- Main B -->
+
+    <path
+      d="
+        M21 15.5
+        V48.5
+
+        H33.5
+
+        C41.8 48.5
+        46.5 44.4
+        46.5 38.2
+
+        C46.5 33.7
+        43.9 30.8
+        39.2 29.7
+
+        C42.5 28.4
+        44.5 25.8
+        44.5 22.2
+
+        C44.5 18.1
+        40.7 15.5
+        34 15.5
+
+        Z
+      "
+      fill="none"
+      stroke="url(#gold)"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+
+
+    <!-- Vertical highlight -->
+
+    <path
+      d="M21.2 16.5 V47.5"
+      fill="none"
+      stroke="url(#shine)"
+      stroke-width=".85"
+      stroke-linecap="round"
+      opacity=".9"/>
+
+
+    <!-- Upper B accent -->
+
+    <circle
+      cx="34.1"
+      cy="22.5"
+      r="2.25"
+      fill="url(#gold)"/>
+
+
+    <!-- Lower B accent -->
+
+    <circle
+      cx="34.1"
+      cy="40"
+      r="2.25"
+      fill="url(#gold)"/>
+
+
+    <!-- Signature cut -->
+
+    <path
+      d="M38.5 31.2
+         L41.2 31.2"
+      stroke="#fff1a0"
+      stroke-width=".9"
+      stroke-linecap="round"
+      opacity=".85"/>
+
+  </g>
+
+
+  <!-- ================================= -->
+  <!-- MICRO BRAND DETAILS -->
+  <!-- ================================= -->
+
+  <circle
+    cx="8"
+    cy="8"
+    r=".7"
+    fill="#d4af37"
+    opacity=".3"/>
+
+  <circle
+    cx="56"
+    cy="56"
+    r=".65"
+    fill="#d4af37"
+    opacity=".2"/>
+
+
+  <!-- Top glass reflection -->
+
+  <path
+    d="M15 2.2 H48
+       C55.5 2.2 61.8 8.5 61.8 15"
+    fill="none"
+    stroke="#fff"
+    stroke-width=".7"
+    opacity=".06"/>
+
+</svg>
