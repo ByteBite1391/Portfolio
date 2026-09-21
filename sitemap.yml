@@ -1,0 +1,38 @@
+# ============================================================
+#  sitemap.yml — human-readable mirror of sitemap.xml
+#  NOT consumed by search engines. Reference/documentation only.
+#  The real sitemap that Google/Bing read is sitemap.xml.
+# ============================================================
+
+site:
+  name: AmirAli Pourbabaeii — Portfolio
+  base_url: https://bytebite1391.github.io/Portfolio/
+  language: en
+  type: single-page-application
+
+urls:
+  - loc: https://bytebite1391.github.io/Portfolio/
+    lastmod: 2026-09-21
+    changefreq: monthly
+    priority: 1.0
+
+sections:
+  # Anchor fragments inside the single page — not separate URLs
+  - id: home
+    label: Home
+  - id: identity
+    label: About
+  - id: skills
+    label: Skills
+  - id: projects
+    label: Projects
+  - id: lab
+    label: Tech Lab
+  - id: github
+    label: GitHub
+  - id: contact
+    label: Contact
+
+excluded:
+  - /404.html   # served for every unknown path; must not be indexed
+  - /vendor/    # fonts, Three.js, CSS — not content

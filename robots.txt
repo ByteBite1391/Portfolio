@@ -1,76 +1,21 @@
-# ═══════════════════════════════════════════════════════════
-#  robots.txt — ByteBite Portfolio
+# ============================================================
+#  robots.txt — AmirAli Pourbabaeii · Portfolio
 #  https://bytebite1391.github.io/Portfolio/
-# ═══════════════════════════════════════════════════════════
+# ============================================================
 
-# ─── همه‌ی ربات‌ها ───
 User-agent: *
 Allow: /
-Disallow: /node_modules/
-Disallow: /temp/
-Disallow: /private/
-Disallow: /*.log$
 
+# Everything except the 404 page is crawlable.
+# 404.html is served for every unknown path, so we do not want
+# it indexed as a real page.
+Disallow: /404.html
+Disallow: /404
+
+# Vendor folder is CSS/JS/fonts — no need to index
+Disallow: /vendor/
+
+# ------------------------------------------------------------
+#  Sitemap
+# ------------------------------------------------------------
 Sitemap: https://bytebite1391.github.io/Portfolio/sitemap.xml
-
-# ─── گوگل ───
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Mobile
-Allow: /
-
-# ─── بینگ ───
-User-agent: Bingbot
-Allow: /
-
-# ─── یاندکس ───
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 1
-Host: bytebite1391.github.io
-
-# ─── شبکه‌های اجتماعی (مهم برای og:image) ───
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-User-agent: TelegramBot
-Allow: /
-
-User-agent: WhatsApp
-Allow: /
-
-User-agent: Slackbot
-Allow: /
-
-User-agent: Discordbot
-Allow: /
-
-# ─── موتورهای کم‌ترافیک ───
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-# ─── ربات‌های مخرب ───
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: spbot
-Disallow: /
-
-# ─── Ahrefs و Semrush باز هستن برای تحلیل backlink ───
