@@ -1,2571 +1,1591 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0B0B0D" />
-
-<!-- ========== SEO ========== -->
-<title>آرتمیس | فروشگاه اکسسوری لوکس و مدرن</title>
-<meta name="description" content="آرتمیس، فروشگاه آنلاین اکسسوری لوکس؛ مجموعه‌ای خاص از ساعت، دستبند، گردنبند، انگشتر، کیف و عینک آفتابی با کیفیت تضمین‌شده و ارسال سریع." />
-<meta name="keywords" content="اکسسوری, فروشگاه اکسسوری, ساعت, دستبند, گردنبند, انگشتر, کیف دستی, عینک آفتابی, اکسسوری لوکس" />
-<meta name="author" content="آرتمیس" />
-<link rel="canonical" href="https://artemis-accessory.example/" />
-
-<!-- ========== Open Graph ========== -->
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="fa_IR" />
-<meta property="og:title" content="آرتمیس | فروشگاه اکسسوری لوکس" />
-<meta property="og:description" content="اکسسوری‌هایی برای تکمیل استایل شما — مجموعه‌ای از اکسسوری‌های خاص و باکیفیت." />
-<meta property="og:url" content="https://artemis-accessory.example/" />
-<meta property="og:image" content="https://picsum.photos/seed/artemis-og/1200/630" />
-<meta name="twitter:card" content="summary_large_image" />
-
-<!-- ========== Fonts ========== -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کلینیک پزشکی مهر | نوبت‌دهی آنلاین</title>
 <style>
-/* =========================================================
-   1. VARIABLES
-   ========================================================= */
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:            #0B0B0D;
-  --surface:       #141418;
-  --surface-2:     #1A1A20;
-  --surface-3:     #202027;
-  --gold:          #D4AF37;
-  --gold-light:    #E9C55A;
-  --gold-soft:     rgba(212,175,55,.14);
-  --white:         #FFFFFF;
-  --muted:         #A1A1AA;
-  --muted-2:       #7A7A85;
-  --border:        rgba(255,255,255,.07);
-  --border-gold:   rgba(212,175,55,.22);
-  --shadow-sm:     0 4px 14px rgba(0,0,0,.28);
-  --shadow-md:     0 14px 34px rgba(0,0,0,.42);
-  --shadow-lg:     0 26px 60px rgba(0,0,0,.55);
-  --shadow-gold:   0 14px 34px rgba(212,175,55,.16);
-  --radius-sm:     10px;
-  --radius:        16px;
-  --radius-lg:     22px;
-  --radius-xl:     30px;
-  --container:     1240px;
-  --nav-h:         74px;
-  --ease:          cubic-bezier(.22,.61,.36,1);
-  --t-fast:        .2s var(--ease);
-  --t:             .35s var(--ease);
-  --t-slow:        .6s var(--ease);
+  --primary:#0d7377;
+  --primary-dark:#095456;
+  --primary-light:#14a0a5;
+  --accent:#32e0c4;
+  --bg:#f4f9f9;
+  --surface:#ffffff;
+  --text:#1a2b32;
+  --text-soft:#5b6b73;
+  --border:#e2ecec;
+  --success:#28a745;
+  --warning:#f0ad4e;
+  --danger:#e04f5f;
+  --shadow:0 4px 20px rgba(13,115,119,.08);
+  --shadow-lg:0 12px 40px rgba(13,115,119,.14);
+  --radius:16px;
+  --radius-sm:10px;
+  --transition:.3s cubic-bezier(.4,0,.2,1);
 }
-
-/* =========================================================
-   2. RESET
-   ========================================================= */
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
-  color:var(--white);
-  font-family:"Vazirmatn", Tahoma, system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size:15px;
-  line-height:1.85;
-  overflow-x:hidden;
-  min-height:100vh;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+  font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;
+  font-size:15px;overflow-x:hidden;
 }
-img,svg{ display:block; max-width:100%; }
-img{ height:auto; }
-a{ color:inherit; text-decoration:none; }
-button,input,textarea,select{ font:inherit; color:inherit; }
-button{ background:none; border:none; cursor:pointer; }
-ul,ol{ list-style:none; }
-::selection{ background:var(--gold); color:#0B0B0D; }
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font-family:inherit;font-size:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-/* Scrollbar */
-::-webkit-scrollbar{ width:10px; height:10px; }
-::-webkit-scrollbar-track{ background:var(--bg); }
-::-webkit-scrollbar-thumb{ background:#2a2a32; border-radius:20px; border:2px solid var(--bg); }
-::-webkit-scrollbar-thumb:hover{ background:var(--gold); }
-
-/* Focus */
-:focus-visible{
-  outline:2px solid var(--gold);
-  outline-offset:3px;
-  border-radius:6px;
-}
-
-/* =========================================================
-   3. TYPOGRAPHY
-   ========================================================= */
-h1,h2,h3,h4{ line-height:1.45; font-weight:700; letter-spacing:-.2px; }
-h1{ font-size:clamp(1.9rem, 4.6vw, 3.4rem); font-weight:800; line-height:1.35; }
-h2{ font-size:clamp(1.5rem, 3.2vw, 2.35rem); font-weight:800; }
-h3{ font-size:clamp(1.05rem, 1.7vw, 1.25rem); font-weight:700; }
-p{ color:var(--muted); }
-.text-gold{ color:var(--gold); }
-.text-muted{ color:var(--muted); }
-
-/* =========================================================
-   4. LAYOUT
-   ========================================================= */
-.container{
-  width:100%;
-  max-width:var(--container);
-  margin-inline:auto;
-  padding-inline:20px;
-}
-.section{ padding:clamp(64px, 9vw, 120px) 0; position:relative; }
-.section-head{
-  text-align:center;
-  max-width:640px;
-  margin:0 auto clamp(38px, 5vw, 60px);
-}
-.section-head p{ margin-top:12px; font-size:15px; }
-.eyebrow{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:12.5px; font-weight:600; letter-spacing:.5px;
-  color:var(--gold);
-  background:var(--gold-soft);
-  border:1px solid var(--border-gold);
-  padding:6px 16px; border-radius:100px;
-  margin-bottom:16px;
-}
-.eyebrow::before{
-  content:""; width:5px; height:5px; border-radius:50%;
-  background:var(--gold); box-shadow:0 0 10px var(--gold);
-}
-
-/* =========================================================
-   5. COMPONENTS
-   ========================================================= */
-
-/* --- Buttons --- */
+/* ===== Buttons ===== */
 .btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:9px;
-  padding:13px 28px;
-  border-radius:100px;
-  font-size:14.5px; font-weight:600;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 26px;border-radius:var(--radius-sm);border:none;cursor:pointer;
+  font-weight:600;font-size:14px;transition:var(--transition);
   white-space:nowrap;
-  cursor:pointer;
-  transition:transform var(--t), background var(--t), color var(--t),
-             box-shadow var(--t), border-color var(--t);
-  border:1px solid transparent;
-  position:relative;
-  overflow:hidden;
 }
-.btn svg{ width:17px; height:17px; flex-shrink:0; transition:transform var(--t); }
-.btn:hover{ transform:translateY(-3px); }
-.btn:active{ transform:translateY(-1px); }
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;box-shadow:0 4px 14px rgba(13,115,119,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(13,115,119,.4)}
+.btn-outline{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}
+.btn-outline:hover{background:var(--primary);color:#fff}
+.btn-success{background:var(--success);color:#fff}
+.btn-success:hover{background:#218838}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-danger:hover{background:#c43e4d}
+.btn-warning{background:var(--warning);color:#fff}
+.btn-warning:hover{background:#e09b3a}
+.btn-sm{padding:7px 14px;font-size:12.5px;border-radius:8px}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
 
-.btn-gold{
-  background:linear-gradient(135deg, var(--gold-light), var(--gold));
-  color:#0B0B0D;
-  box-shadow:var(--shadow-gold);
-  font-weight:700;
+/* ===== Header ===== */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.85);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);transition:var(--transition);
 }
-.btn-gold:hover{ box-shadow:0 18px 42px rgba(212,175,55,.34); }
-.btn-gold:hover svg{ transform:translateX(-4px); }
-
-.btn-ghost{
-  background:rgba(255,255,255,.03);
-  border-color:var(--border);
-  color:var(--white);
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--primary)}
+.logo-icon{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;
+  box-shadow:0 4px 12px rgba(13,115,119,.3);
 }
-.btn-ghost:hover{
-  border-color:var(--border-gold);
-  background:var(--gold-soft);
-  color:var(--gold-light);
-}
-
-.btn-sm{ padding:9px 18px; font-size:13px; }
-
-/* --- Cards --- */
-.card{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  transition:transform var(--t), border-color var(--t), box-shadow var(--t), background var(--t);
-}
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--border-gold);
-  box-shadow:var(--shadow-md);
-}
-
-/* --- Image frame with graceful fallback --- */
-.img-frame{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(135deg, #1c1c22 0%, #14141a 55%, #1a1a20 100%);
-  isolation:isolate;
-}
-.img-frame::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    radial-gradient(circle at 30% 25%, rgba(212,175,55,.09), transparent 55%);
-  pointer-events:none;
-}
-.img-frame img{
-  width:100%; height:100%;
-  object-fit:cover;
-  position:relative; z-index:1;
-  transition:transform var(--t-slow), opacity var(--t-slow);
-  opacity:0;
-}
-.img-frame img.is-loaded{ opacity:1; }
-
-/* --- Divider --- */
-.gold-line{
-  width:60px; height:2px; border-radius:2px;
-  background:linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin:18px auto 0;
-}
-
-/* =========================================================
-   6. SECTIONS
-   ========================================================= */
-
-/* ---------- NAVBAR ---------- */
-.navbar{
-  position:fixed; inset-inline:0; top:0;
-  height:var(--nav-h);
-  z-index:1000;
-  display:flex; align-items:center;
-  transition:background var(--t), backdrop-filter var(--t),
-             border-color var(--t), box-shadow var(--t), height var(--t);
-  border-bottom:1px solid transparent;
-}
-.navbar.scrolled{
-  height:64px;
-  background:rgba(11,11,13,.78);
-  backdrop-filter:blur(18px) saturate(160%);
-  -webkit-backdrop-filter:blur(18px) saturate(160%);
-  border-bottom-color:var(--border);
-  box-shadow:0 8px 30px rgba(0,0,0,.35);
-}
-.nav-inner{
-  width:100%; max-width:var(--container);
-  margin-inline:auto; padding-inline:20px;
-  display:flex; align-items:center; justify-content:space-between;
-  gap:20px;
-}
-
-/* Logo */
-.logo{
-  display:flex; align-items:center; gap:10px;
-  font-weight:800; font-size:19px; letter-spacing:-.3px;
-  flex-shrink:0;
-}
-.logo-mark{
-  width:36px; height:36px; border-radius:11px;
-  display:grid; place-items:center;
-  background:linear-gradient(135deg, var(--gold-light), var(--gold));
-  color:#0B0B0D;
-  box-shadow:0 6px 18px rgba(212,175,55,.3);
-  flex-shrink:0;
-}
-.logo-mark svg{ width:19px; height:19px; }
-.logo-text small{
-  display:block; font-size:9.5px; font-weight:500;
-  color:var(--muted-2); letter-spacing:2.4px; line-height:1;
-  margin-top:2px;
-}
-
-/* Nav links */
-.nav-links{
-  display:flex; align-items:center; gap:4px;
-}
+.nav-links{display:flex;gap:6px;align-items:center}
 .nav-links a{
-  position:relative;
-  padding:9px 15px;
-  font-size:14px; font-weight:500;
-  color:var(--muted);
-  border-radius:100px;
-  transition:color var(--t), background var(--t);
+  padding:8px 16px;border-radius:9px;font-weight:500;font-size:14.5px;
+  color:var(--text-soft);transition:var(--transition);
 }
-.nav-links a::after{
-  content:"";
-  position:absolute; bottom:2px; inset-inline:50%;
-  width:0; height:2px; border-radius:2px;
-  background:var(--gold);
-  transform:translateX(50%);
-  transition:width var(--t);
-}
-.nav-links a:hover{ color:var(--white); }
-.nav-links a.active{ color:var(--gold-light); }
-.nav-links a.active::after{ width:18px; }
-
-.nav-actions{ display:flex; align-items:center; gap:12px; }
-
-/* Hamburger */
-.hamburger{
-  display:none;
-  width:42px; height:42px;
-  border-radius:12px;
-  border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
-  place-items:center;
-  transition:border-color var(--t), background var(--t);
-}
-.hamburger:hover{ border-color:var(--border-gold); background:var(--gold-soft); }
-.hamburger svg{ width:21px; height:21px; }
-.hamburger .icon-close{ display:none; }
-.hamburger.open .icon-menu{ display:none; }
-.hamburger.open .icon-close{ display:block; }
-
-/* Mobile menu */
+.nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(13,115,119,.08)}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2.5px;background:var(--primary);border-radius:2px;transition:var(--transition)}
 .mobile-menu{
-  position:fixed;
-  top:var(--nav-h); inset-inline:0;
-  background:rgba(11,11,13,.97);
-  backdrop-filter:blur(22px);
-  -webkit-backdrop-filter:blur(22px);
-  border-bottom:1px solid var(--border);
-  padding:14px 20px 26px;
-  z-index:999;
-  transform:translateY(-14px);
-  opacity:0; visibility:hidden;
-  transition:transform var(--t), opacity var(--t), visibility var(--t);
-  max-height:calc(100vh - var(--nav-h));
-  overflow-y:auto;
+  display:none;flex-direction:column;gap:4px;padding:16px 20px 22px;
+  background:#fff;border-bottom:1px solid var(--border);
 }
-.mobile-menu.open{ transform:translateY(0); opacity:1; visibility:visible; }
-.mobile-menu a{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 12px;
-  font-size:15px; font-weight:500;
-  color:var(--muted);
-  border-bottom:1px solid var(--border);
-  border-radius:10px;
-  transition:color var(--t), background var(--t), padding var(--t);
-}
-.mobile-menu a:last-of-type{ border-bottom:none; }
-.mobile-menu a:hover,
-.mobile-menu a.active{ color:var(--gold-light); background:var(--gold-soft); padding-inline-start:18px; }
-.mobile-menu a svg{ width:16px; height:16px; opacity:.5; }
-.mobile-menu .btn{ width:100%; margin-top:16px; }
+.mobile-menu a{padding:11px 14px;border-radius:9px;font-weight:500;color:var(--text-soft)}
+.mobile-menu a:hover{background:rgba(13,115,119,.08);color:var(--primary)}
+.mobile-menu.open{display:flex}
 
-/* ---------- HERO ---------- */
+/* ===== Hero ===== */
 .hero{
-  position:relative;
-  padding-top:calc(var(--nav-h) + 46px);
-  padding-bottom:clamp(60px, 8vw, 110px);
-  overflow:hidden;
+  position:relative;padding:70px 0 90px;overflow:hidden;
+  background:linear-gradient(135deg,#eaf7f7 0%,#f4fbfb 50%,#e8f5f5 100%);
 }
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    radial-gradient(760px 480px at 84% 12%, rgba(212,175,55,.11), transparent 62%),
-    radial-gradient(620px 420px at 8% 88%, rgba(212,175,55,.05), transparent 65%);
-  pointer-events:none;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(32px, 5vw, 70px);
-  align-items:center;
-  position:relative;
-  z-index:1;
-}
-.hero-content{ max-width:560px; }
-.hero h1{ margin-bottom:20px; }
-.hero h1 .accent{
-  background:linear-gradient(120deg, var(--gold-light), var(--gold) 60%, #b8912c);
-  -webkit-background-clip:text; background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.hero-lead{
-  font-size:clamp(14.5px, 1.6vw, 16.5px);
-  line-height:2.05;
-  color:var(--muted);
-  max-width:500px;
-  margin-bottom:32px;
-}
-.hero-actions{ display:flex; flex-wrap:wrap; gap:14px; }
-
-.hero-visual{ position:relative; }
-.hero-visual-main{
-  border-radius:var(--radius-xl);
-  aspect-ratio:4/4.4;
-  box-shadow:var(--shadow-lg);
-  border:1px solid var(--border);
-}
-.hero-visual-main img{ transition:transform 1.2s var(--ease), opacity var(--t-slow); }
-.hero-visual:hover .hero-visual-main img{ transform:scale(1.045); }
-
-/* Floating badge */
+.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;z-index:0}
+.hero::before{width:400px;height:400px;background:var(--accent);top:-120px;left:-100px}
+.hero::after{width:350px;height:350px;background:var(--primary-light);bottom:-150px;right:-80px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
 .hero-badge{
-  position:absolute;
-  top:22px; inset-inline-start:-14px;
-  display:inline-flex; align-items:center; gap:9px;
-  padding:10px 18px;
-  font-size:12.5px; font-weight:600;
-  color:var(--gold-light);
-  background:rgba(20,20,24,.72);
-  border:1px solid var(--border-gold);
-  border-radius:100px;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  box-shadow:var(--shadow-sm);
-  z-index:3;
-  animation:floatY 5s ease-in-out infinite;
+  display:inline-flex;align-items:center;gap:8px;background:#fff;
+  padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;color:var(--primary);
+  box-shadow:var(--shadow);margin-bottom:20px;
 }
-.hero-badge svg{ width:14px; height:14px; }
+.hero h1{font-size:42px;font-weight:800;line-height:1.35;margin-bottom:20px}
+.hero h1 span{color:var(--primary);position:relative}
+.hero p{font-size:16.5px;color:var(--text-soft);margin-bottom:32px;max-width:520px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.hero-stat h3{font-size:28px;font-weight:800;color:var(--primary)}
+.hero-stat p{font-size:13.5px;color:var(--text-soft);margin:0}
+.hero-visual{
+  background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+  border-radius:24px;padding:32px;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.8);
+}
+.hero-visual h4{font-size:17px;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.hero-visual h4::before{content:'';width:4px;height:18px;background:var(--primary);border-radius:2px}
+.mini-slot{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mini-slot span{
+  text-align:center;padding:10px;border-radius:9px;font-size:13px;font-weight:600;
+  background:#f0f7f7;color:var(--text-soft);
+}
+.mini-slot span.busy{background:#fdeaea;color:var(--danger);text-decoration:line-through}
+.mini-slot span.free{background:#e6f7f0;color:var(--success)}
 
-/* Floating stat card */
-.hero-stat{
-  position:absolute;
-  bottom:24px; inset-inline-end:-16px;
-  background:rgba(20,20,24,.8);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:14px 20px;
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  box-shadow:var(--shadow-md);
-  z-index:3;
-  animation:floatY 6s ease-in-out infinite reverse;
+/* ===== Sections ===== */
+section{padding:70px 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.section-head .tag{
+  display:inline-block;background:rgba(13,115,119,.1);color:var(--primary);
+  padding:6px 16px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:14px;
 }
-.hero-stat strong{
-  display:block; font-size:22px; font-weight:800; color:var(--gold);
-  line-height:1.2;
-}
-.hero-stat span{ font-size:11.5px; color:var(--muted); }
+.section-head h2{font-size:32px;font-weight:800;margin-bottom:14px}
+.section-head p{color:var(--text-soft);font-size:15.5px}
 
-/* ---------- TRUST ---------- */
-.trust{ padding:0 0 clamp(56px, 7vw, 92px); }
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:16px;
-  padding:clamp(22px, 3vw, 34px);
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  box-shadow:var(--shadow-sm);
-}
-.trust-item{
-  display:flex; align-items:center; gap:14px;
-  padding:10px 6px;
-  position:relative;
-}
-.trust-item:not(:last-child)::after{
-  content:"";
-  position:absolute; inset-inline-start:-8px; top:14%;
-  height:72%; width:1px;
-  background:var(--border);
-}
-.trust-icon{
-  width:46px; height:46px; flex-shrink:0;
-  border-radius:14px;
-  display:grid; place-items:center;
-  background:var(--gold-soft);
-  border:1px solid var(--border-gold);
-  color:var(--gold);
-  transition:transform var(--t), background var(--t);
-}
-.trust-item:hover .trust-icon{
-  transform:scale(1.07) rotate(-4deg);
-  background:rgba(212,175,55,.2);
-}
-.trust-icon svg{ width:21px; height:21px; }
-.trust-text h3{ font-size:14.5px; margin-bottom:1px; }
-.trust-text p{ font-size:12.5px; line-height:1.6; }
-
-/* ---------- PRODUCTS ---------- */
-.products-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(255px, 1fr));
-  gap:22px;
-}
-.product-card{ overflow:hidden; display:flex; flex-direction:column; }
-.product-media{
-  position:relative;
-  aspect-ratio:1/1.05;
-  border-radius:var(--radius-lg) var(--radius-lg) 0 0;
-}
-.product-media img{ transition:transform .8s var(--ease), opacity var(--t-slow); }
-.product-card:hover .product-media img{ transform:scale(1.07); }
-
-.product-tag{
-  position:absolute;
-  top:14px; inset-inline-end:14px;
-  z-index:4;
-  font-size:11px; font-weight:700;
-  padding:5px 13px;
-  border-radius:100px;
-  background:linear-gradient(135deg, var(--gold-light), var(--gold));
-  color:#0B0B0D;
-  box-shadow:0 6px 16px rgba(212,175,55,.3);
-}
-.product-tag.dark{
-  background:rgba(11,11,13,.72);
-  color:var(--gold-light);
-  border:1px solid var(--border-gold);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-}
-
-/* Quick wishlist */
-.product-fav{
-  position:absolute;
-  top:14px; inset-inline-start:14px;
-  z-index:4;
-  width:36px; height:36px;
-  border-radius:50%;
-  display:grid; place-items:center;
-  background:rgba(11,11,13,.6);
-  border:1px solid var(--border);
-  color:var(--white);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  opacity:0; transform:translateY(-6px);
-  transition:opacity var(--t), transform var(--t), color var(--t), border-color var(--t), background var(--t);
-}
-.product-card:hover .product-fav{ opacity:1; transform:translateY(0); }
-.product-fav:hover,
-.product-fav.active{ color:#ff5f7e; border-color:rgba(255,95,126,.4); background:rgba(255,95,126,.12); }
-.product-fav svg{ width:17px; height:17px; }
-.product-fav.active svg{ fill:currentColor; }
-
-.product-body{
-  padding:18px 18px 20px;
-  display:flex; flex-direction:column; gap:6px;
-  flex:1;
-}
-.product-cat{
-  font-size:11.5px; font-weight:600;
-  color:var(--gold);
-  letter-spacing:.4px;
-  text-transform:uppercase;
-}
-.product-name{ font-size:15.5px; font-weight:700; }
-.product-name a{ transition:color var(--t); }
-.product-name a:hover{ color:var(--gold-light); }
-
-.product-foot{
-  margin-top:auto;
-  padding-top:14px;
-  display:flex; align-items:center; justify-content:space-between; gap:12px;
-  border-top:1px solid var(--border);
-}
-.product-price{
-  display:flex; flex-direction:column; line-height:1.35;
-}
-.product-price .old{
-  font-size:11.5px; color:var(--muted-2);
-  text-decoration:line-through;
-}
-.product-price .now{
-  font-size:15.5px; font-weight:800; color:var(--white);
-}
-.product-price .now small{ font-size:11px; font-weight:500; color:var(--muted); margin-inline-start:3px; }
-
-/* ---------- CATEGORIES ---------- */
-.cat-grid{
-  display:grid;
-  grid-template-columns:repeat(6, 1fr);
-  gap:16px;
-}
-.cat-card{
-  position:relative;
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  aspect-ratio:1/1.22;
-  border:1px solid var(--border);
-  background:var(--surface);
-  transition:transform var(--t), border-color var(--t), box-shadow var(--t);
-  display:block;
-}
-.cat-card:hover{
-  transform:translateY(-6px);
-  border-color:var(--border-gold);
-  box-shadow:var(--shadow-md);
-}
-.cat-card .img-frame{ position:absolute; inset:0; }
-.cat-card img{ transition:transform .8s var(--ease), opacity var(--t-slow); }
-.cat-card:hover img{ transform:scale(1.09); }
-.cat-overlay{
-  position:absolute; inset:0; z-index:2;
-  background:linear-gradient(to top, rgba(11,11,13,.94) 4%, rgba(11,11,13,.34) 48%, transparent 100%);
-  display:flex; flex-direction:column; justify-content:flex-end;
-  align-items:center;
-  gap:6px;
-  padding:18px 12px;
+/* ===== Services ===== */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.service-card{
+  background:var(--surface);border-radius:var(--radius);padding:30px 24px;
+  box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition);
   text-align:center;
 }
-.cat-icon{
-  width:40px; height:40px; border-radius:12px;
-  display:grid; place-items:center;
-  background:rgba(212,175,55,.16);
-  border:1px solid var(--border-gold);
-  color:var(--gold);
-  margin-bottom:2px;
-  transition:transform var(--t), background var(--t);
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.service-icon{
+  width:60px;height:60px;margin:0 auto 18px;border-radius:16px;
+  background:linear-gradient(135deg,rgba(13,115,119,.12),rgba(50,224,196,.15));
+  display:flex;align-items:center;justify-content:center;font-size:28px;
 }
-.cat-card:hover .cat-icon{ transform:translateY(-3px) scale(1.06); background:rgba(212,175,55,.28); }
-.cat-icon svg{ width:19px; height:19px; }
-.cat-overlay h3{ font-size:14px; }
-.cat-overlay span{ font-size:11.5px; color:var(--muted); }
+.service-card h3{font-size:17.5px;margin-bottom:10px;font-weight:700}
+.service-card p{font-size:14px;color:var(--text-soft)}
 
-/* ---------- ABOUT ---------- */
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(32px, 5vw, 72px);
-  align-items:center;
+/* ===== Doctors ===== */
+.doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.doctor-card{
+  background:var(--surface);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition);
+  display:flex;flex-direction:column;
 }
-.about-visual{ position:relative; }
-.about-visual .img-frame{
-  border-radius:var(--radius-xl);
-  aspect-ratio:4/3.5;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow-lg);
+.doctor-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.doctor-avatar{
+  height:150px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-light));
+  color:#fff;font-size:52px;font-weight:800;position:relative;
 }
-.about-visual::before{
-  content:"";
-  position:absolute;
-  inset:auto -18px -18px auto;
-  width:120px; height:120px;
-  border-radius:var(--radius-lg);
-  border:1px solid var(--border-gold);
-  background:var(--gold-soft);
-  z-index:-1;
-  display:none;
+.doctor-status{
+  position:absolute;top:12px;left:12px;font-size:11.5px;padding:4px 12px;
+  border-radius:50px;font-weight:600;display:flex;align-items:center;gap:5px;
 }
-.about-stats{
-  position:absolute;
-  bottom:-20px; inset-inline-start:-14px;
-  display:flex; gap:10px;
-  z-index:3;
-}
-.stat-box{
-  background:rgba(20,20,24,.85);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:12px 18px;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  box-shadow:var(--shadow-md);
-  text-align:center;
-}
-.stat-box strong{ display:block; font-size:20px; font-weight:800; color:var(--gold); line-height:1.2; }
-.stat-box span{ font-size:11px; color:var(--muted); }
+.doctor-status.active{background:#e6f7f0;color:var(--success)}
+.doctor-status.inactive{background:#fdeaea;color:var(--danger)}
+.doctor-status::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.doctor-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.doctor-body h3{font-size:17px;font-weight:700;margin-bottom:4px}
+.doctor-spec{color:var(--primary);font-size:13.5px;font-weight:600;margin-bottom:12px}
+.doctor-meta{display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--text-soft);margin-bottom:16px}
+.doctor-meta div{display:flex;align-items:center;gap:7px}
+.doctor-body .btn{margin-top:auto;width:100%}
 
-.about-content p{ font-size:15px; line-height:2.05; margin-bottom:16px; }
-.about-list{
-  display:grid; gap:12px;
-  margin:24px 0 30px;
+/* ===== Steps ===== */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px}
+.step-card{
+  background:var(--surface);border-radius:var(--radius);padding:28px 22px;text-align:center;
+  box-shadow:var(--shadow);border:1px solid var(--border);position:relative;transition:var(--transition);
 }
-.about-list li{
-  display:flex; align-items:flex-start; gap:11px;
-  font-size:14px; color:var(--white);
+.step-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.step-num{
+  width:52px;height:52px;margin:0 auto 16px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;
+  box-shadow:0 6px 16px rgba(13,115,119,.3);
 }
-.about-list .check{
-  width:22px; height:22px; flex-shrink:0;
-  border-radius:50%;
-  display:grid; place-items:center;
-  background:var(--gold-soft);
-  border:1px solid var(--border-gold);
-  color:var(--gold);
-  margin-top:4px;
-}
-.about-list .check svg{ width:12px; height:12px; }
+.step-card h4{font-size:16px;margin-bottom:8px;font-weight:700}
+.step-card p{font-size:13.5px;color:var(--text-soft)}
 
-/* ---------- GALLERY ---------- */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  grid-auto-rows:180px;
-  gap:14px;
+/* ===== Testimonials ===== */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.testi-card{
+  background:var(--surface);border-radius:var(--radius);padding:26px;
+  box-shadow:var(--shadow);border:1px solid var(--border);position:relative;transition:var(--transition);
 }
-.gallery-item{
-  position:relative;
-  border-radius:var(--radius);
-  overflow:hidden;
-  border:1px solid var(--border);
-  cursor:pointer;
-  display:block;
-  background:var(--surface);
+.testi-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.testi-card::before{
+  content:'"';position:absolute;top:10px;left:22px;font-size:70px;
+  color:rgba(13,115,119,.1);font-family:Georgia,serif;line-height:1;
 }
-.gallery-item:nth-child(1){ grid-column:span 2; grid-row:span 2; }
-.gallery-item:nth-child(6){ grid-column:span 2; }
+.testi-stars{color:#f5b731;font-size:15px;margin-bottom:12px;letter-spacing:2px}
+.testi-text{font-size:14.5px;color:var(--text-soft);margin-bottom:18px;position:relative;z-index:1}
+.testi-user{display:flex;align-items:center;gap:12px}
+.testi-user .av{
+  width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:700;font-size:16px;
+}
+.testi-user h5{font-size:14.5px;font-weight:700}
+.testi-user p{font-size:12.5px;color:var(--text-soft)}
 
-.gallery-item img{ transition:transform .9s var(--ease), opacity var(--t-slow); }
-.gallery-item:hover img{ transform:scale(1.08); }
+/* ===== Appointment ===== */
+#appointment{background:linear-gradient(180deg,#f4f9f9,#eaf7f7)}
+.appt-wrapper{
+  background:var(--surface);border-radius:24px;box-shadow:var(--shadow-lg);
+  border:1px solid var(--border);overflow:hidden;max-width:920px;margin:0 auto;
+}
+.stepper{display:flex;padding:22px 26px;background:#f7fbfb;border-bottom:1px solid var(--border);gap:8px;flex-wrap:wrap}
+.step-item{display:flex;align-items:center;gap:9px;flex:1;min-width:120px;opacity:.45;transition:var(--transition)}
+.step-item.active,.step-item.done{opacity:1}
+.step-item .circle{
+  width:32px;height:32px;border-radius:50%;background:#d6e6e6;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;
+  transition:var(--transition);
+}
+.step-item.active .circle{background:linear-gradient(135deg,var(--primary),var(--primary-light));box-shadow:0 4px 12px rgba(13,115,119,.35)}
+.step-item.done .circle{background:var(--success)}
+.step-item .lbl{font-size:13px;font-weight:600;color:var(--text-soft)}
+.step-item.active .lbl{color:var(--primary)}
 
-.gallery-overlay{
-  position:absolute; inset:0; z-index:2;
-  background:linear-gradient(to top, rgba(11,11,13,.88), rgba(11,11,13,.15) 60%, transparent);
-  display:flex; flex-direction:column;
-  justify-content:flex-end;
-  padding:18px;
-  opacity:0;
-  transition:opacity var(--t);
-}
-.gallery-item:hover .gallery-overlay,
-.gallery-item:focus-visible .gallery-overlay{ opacity:1; }
+.appt-body{padding:32px 30px}
+.appt-step{display:none;animation:fadeIn .4s ease}
+.appt-step.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.appt-step h3{font-size:19px;margin-bottom:6px;font-weight:700}
+.appt-step .hint{color:var(--text-soft);font-size:14px;margin-bottom:24px}
 
-.gallery-overlay .zoom{
-  position:absolute;
-  top:50%; inset-inline-start:50%;
-  transform:translate(50%,-50%) scale(.82);
-  width:52px; height:52px;
-  border-radius:50%;
-  display:grid; place-items:center;
-  background:rgba(212,175,55,.92);
-  color:#0B0B0D;
-  transition:transform var(--t);
-  box-shadow:0 10px 26px rgba(212,175,55,.34);
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.pick-card{
+  border:2px solid var(--border);border-radius:14px;padding:18px;cursor:pointer;
+  transition:var(--transition);background:#fff;display:flex;gap:14px;align-items:center;
 }
-.gallery-item:hover .zoom{ transform:translate(50%,-50%) scale(1); }
-.gallery-overlay .zoom svg{ width:21px; height:21px; }
-.gallery-overlay h3{ font-size:14.5px; }
-.gallery-overlay span{ font-size:12px; color:var(--gold-light); }
+.pick-card:hover{border-color:var(--primary-light);transform:translateY(-3px);box-shadow:var(--shadow)}
+.pick-card.selected{border-color:var(--primary);background:rgba(13,115,119,.05);box-shadow:0 6px 18px rgba(13,115,119,.15)}
+.pick-card.disabled{opacity:.45;cursor:not-allowed;pointer-events:none}
+.pick-av{
+  width:52px;height:52px;border-radius:13px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--primary),var(--primary-light));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;
+}
+.pick-info h4{font-size:15px;font-weight:700}
+.pick-info p{font-size:13px;color:var(--text-soft)}
+.pick-check{margin-right:auto;color:var(--primary);font-size:20px;opacity:0;transition:var(--transition)}
+.pick-card.selected .pick-check{opacity:1}
 
-/* Lightbox */
-.lightbox{
-  position:fixed; inset:0; z-index:2000;
-  background:rgba(6,6,8,.94);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  display:grid; place-items:center;
-  padding:24px;
-  opacity:0; visibility:hidden;
-  transition:opacity var(--t), visibility var(--t);
+.dates-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px}
+.date-card{
+  border:2px solid var(--border);border-radius:12px;padding:14px 8px;text-align:center;
+  cursor:pointer;transition:var(--transition);background:#fff;
 }
-.lightbox.open{ opacity:1; visibility:visible; }
-.lightbox img{
-  max-width:min(940px, 92vw);
-  max-height:82vh;
-  border-radius:var(--radius-lg);
-  border:1px solid var(--border-gold);
-  box-shadow:var(--shadow-lg);
-  transform:scale(.94);
-  transition:transform var(--t);
-  object-fit:contain;
-  background:var(--surface);
-}
-.lightbox.open img{ transform:scale(1); }
-.lightbox-close{
-  position:absolute; top:22px; inset-inline-end:22px;
-  width:46px; height:46px; border-radius:50%;
-  display:grid; place-items:center;
-  background:rgba(255,255,255,.06);
-  border:1px solid var(--border);
-  color:var(--white);
-  transition:background var(--t), border-color var(--t), transform var(--t);
-}
-.lightbox-close:hover{ background:var(--gold); color:#0B0B0D; transform:rotate(90deg); }
-.lightbox-close svg{ width:20px; height:20px; }
+.date-card:hover{border-color:var(--primary-light);transform:translateY(-3px)}
+.date-card.selected{border-color:var(--primary);background:rgba(13,115,119,.06)}
+.date-card.disabled{opacity:.4;cursor:not-allowed;pointer-events:none;background:#f5f5f5}
+.date-card .dow{font-size:12px;color:var(--text-soft);margin-bottom:4px}
+.date-card .day{font-size:20px;font-weight:800;color:var(--text)}
+.date-card.selected .day{color:var(--primary)}
+.date-card .mon{font-size:11.5px;color:var(--text-soft)}
 
-/* ---------- REVIEWS ---------- */
-.reviews-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(290px, 1fr));
-  gap:22px;
+.slots-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:12px}
+.slot{
+  padding:13px 8px;text-align:center;border-radius:11px;font-weight:600;font-size:14px;
+  border:2px solid var(--border);cursor:pointer;transition:var(--transition);background:#fff;
 }
-.review-card{
-  padding:28px 26px;
-  display:flex; flex-direction:column; gap:16px;
-  position:relative;
-}
-.review-card::before{
-  content:"”";
-  position:absolute;
-  top:6px; inset-inline-end:22px;
-  font-size:76px;
-  line-height:1;
-  font-family:Georgia, serif;
-  color:var(--gold);
-  opacity:.14;
-  pointer-events:none;
-}
-.review-stars{ display:flex; gap:3px; color:var(--gold); }
-.review-stars svg{ width:16px; height:16px; }
-.review-stars svg.empty{ color:#3a3a44; }
-.review-text{
-  font-size:14.5px;
-  line-height:2;
-  color:#d5d5dc;
-  flex:1;
-}
-.review-author{
-  display:flex; align-items:center; gap:12px;
-  padding-top:16px;
-  border-top:1px solid var(--border);
-}
-.review-avatar{
-  width:44px; height:44px; flex-shrink:0;
-  border-radius:50%;
-  display:grid; place-items:center;
-  font-weight:700; font-size:16px;
-  color:#0B0B0D;
-  background:linear-gradient(135deg, var(--gold-light), var(--gold));
-}
-.review-author strong{ display:block; font-size:14px; }
-.review-author span{ font-size:12px; color:var(--muted); }
+.slot.free:hover{border-color:var(--primary-light);background:rgba(13,115,119,.05);transform:translateY(-3px)}
+.slot.selected{border-color:var(--primary);background:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(13,115,119,.35)}
+.slot.busy{background:#fdeaea;color:var(--danger);border-color:#f8d7da;cursor:not-allowed;text-decoration:line-through;opacity:.7}
+.slot-legend{display:flex;gap:20px;margin-top:18px;font-size:13px;color:var(--text-soft);flex-wrap:wrap}
+.slot-legend span{display:flex;align-items:center;gap:7px}
+.slot-legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.legend-free{background:#fff;border:2px solid var(--border)}
+.legend-selected{background:var(--primary)}
+.legend-busy{background:#fdeaea;border:2px solid #f8d7da}
 
-/* ---------- LOCATION ---------- */
-.location-grid{
-  display:grid;
-  grid-template-columns:1fr 1.15fr;
-  gap:clamp(24px, 4vw, 52px);
-  align-items:stretch;
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:13.5px;font-weight:600;color:var(--text)}
+.form-group label .req{color:var(--danger)}
+.form-group input,.form-group textarea,.form-group select{
+  padding:12px 14px;border:1.5px solid var(--border);border-radius:11px;
+  background:#fbfdfd;transition:var(--transition);outline:none;color:var(--text);
 }
-.location-info{
-  display:flex; flex-direction:column; gap:16px;
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(13,115,119,.1);
 }
-.info-card{
-  display:flex; align-items:flex-start; gap:15px;
-  padding:20px 22px;
-  border-radius:var(--radius);
-  background:var(--surface);
-  border:1px solid var(--border);
-  transition:border-color var(--t), transform var(--t), background var(--t);
-}
-.info-card:hover{
-  border-color:var(--border-gold);
-  transform:translateX(-5px);
-  background:var(--surface-2);
-}
-.info-icon{
-  width:44px; height:44px; flex-shrink:0;
-  border-radius:13px;
-  display:grid; place-items:center;
-  background:var(--gold-soft);
-  border:1px solid var(--border-gold);
-  color:var(--gold);
-}
-.info-icon svg{ width:20px; height:20px; }
-.info-card h3{ font-size:14px; margin-bottom:3px; }
-.info-card p, .info-card a{
-  font-size:13.5px; color:var(--muted); line-height:1.8;
-  transition:color var(--t);
-}
-.info-card a:hover{ color:var(--gold-light); }
+.form-group textarea{resize:vertical;min-height:90px}
+.form-group.error input,.form-group.error textarea{border-color:var(--danger);background:#fef5f5}
+.err-msg{font-size:12px;color:var(--danger);display:none}
+.form-group.error .err-msg{display:block}
 
-/* Map placeholder */
-.map-box{
-  position:relative;
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  border:1px solid var(--border);
-  background:var(--surface);
-  min-height:340px;
-  display:grid; place-items:center;
-  box-shadow:var(--shadow-md);
-}
-.map-box svg.map-art{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  opacity:.6;
-}
-.map-pin{
-  position:relative; z-index:2;
-  display:flex; flex-direction:column; align-items:center; gap:14px;
-  text-align:center;
-  padding:24px;
-}
-.map-pin-icon{
-  width:64px; height:64px;
-  border-radius:50%;
-  display:grid; place-items:center;
-  background:rgba(212,175,55,.14);
-  border:1px solid var(--border-gold);
-  color:var(--gold);
-  animation:pulseGold 2.6s ease-in-out infinite;
-}
-.map-pin-icon svg{ width:28px; height:28px; }
-.map-pin strong{ font-size:15px; }
-.map-pin span{ font-size:12.5px; color:var(--muted); }
+.review-box{background:#f7fbfb;border-radius:14px;padding:22px;border:1px solid var(--border);margin-bottom:22px}
+.review-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--border);font-size:14.5px}
+.review-row:last-child{border-bottom:none}
+.review-row span:first-child{color:var(--text-soft)}
+.review-row span:last-child{font-weight:600}
 
-/* ---------- CONTACT ---------- */
-.contact-wrap{
-  position:relative;
-  border-radius:var(--radius-xl);
-  border:1px solid var(--border);
-  background:
-    radial-gradient(700px 340px at 82% 0%, rgba(212,175,55,.09), transparent 62%),
-    var(--surface);
-  padding:clamp(30px, 5vw, 60px);
-  overflow:hidden;
-  box-shadow:var(--shadow-md);
-}
-.contact-head{
-  text-align:center;
-  max-width:600px;
-  margin:0 auto clamp(30px, 4vw, 46px);
-}
-.contact-head p{ margin-top:12px; font-size:15px; }
+.appt-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;padding-top:22px;border-top:1px solid var(--border)}
+.appt-nav .btn{min-width:130px}
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(215px, 1fr));
-  gap:16px;
+.success-box{text-align:center;padding:20px 10px}
+.success-icon{
+  width:90px;height:90px;margin:0 auto 24px;border-radius:50%;
+  background:linear-gradient(135deg,var(--success),#4cd964);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:46px;
+  box-shadow:0 10px 30px rgba(40,167,69,.35);animation:pop .5s ease;
 }
-.contact-card{
-  display:flex; flex-direction:column; align-items:center;
-  gap:12px;
-  text-align:center;
-  padding:26px 18px;
-  border-radius:var(--radius);
-  background:rgba(255,255,255,.02);
-  border:1px solid var(--border);
-  transition:transform var(--t), border-color var(--t), background var(--t), box-shadow var(--t);
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.success-box h3{font-size:23px;margin-bottom:10px;color:var(--success)}
+.success-box p{color:var(--text-soft);margin-bottom:24px}
+.track-code{
+  display:inline-block;background:#f0f7f7;border:2px dashed var(--primary);
+  padding:14px 34px;border-radius:14px;font-size:22px;font-weight:800;
+  color:var(--primary);letter-spacing:3px;margin-bottom:24px;
 }
-.contact-card:hover{
-  transform:translateY(-6px);
-  border-color:var(--border-gold);
-  background:var(--surface-2);
-  box-shadow:var(--shadow-md);
+.success-details{
+  max-width:440px;margin:0 auto 26px;text-align:right;background:#f7fbfb;
+  border-radius:14px;padding:20px;border:1px solid var(--border);
 }
-.contact-card .info-icon{ width:50px; height:50px; }
-.contact-card .info-icon svg{ width:22px; height:22px; }
-.contact-card strong{ font-size:14px; }
-.contact-card span,
-.contact-card a{
-  font-size:13px; color:var(--muted); direction:ltr; unicode-bidi:plaintext;
-  transition:color var(--t);
-}
-.contact-card a:hover{ color:var(--gold-light); }
+.success-details .review-row span:last-child{color:var(--primary)}
 
-.contact-cta{
-  margin-top:34px;
-  display:flex; flex-wrap:wrap;
-  align-items:center; justify-content:center;
-  gap:16px;
-  text-align:center;
+/* ===== Admin Dashboard ===== */
+#admin{background:linear-gradient(180deg,#eaf7f7,#f4f9f9)}
+.admin-login{
+  max-width:400px;margin:0 auto;background:#fff;border-radius:20px;padding:36px 30px;
+  box-shadow:var(--shadow-lg);border:1px solid var(--border);text-align:center;
 }
-.contact-cta p{
-  font-size:15px; color:var(--white); font-weight:500;
-  flex:1 1 260px;
-  text-align:center;
+.admin-login .lock{
+  width:70px;height:70px;margin:0 auto 20px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;
 }
+.admin-login h3{font-size:20px;margin-bottom:8px}
+.admin-login p{color:var(--text-soft);font-size:14px;margin-bottom:24px}
+.admin-login .form-group{text-align:right;margin-bottom:16px}
+.admin-hint{font-size:12.5px;color:var(--text-soft);margin-top:14px;background:#f7fbfb;padding:10px;border-radius:9px}
 
-/* ---------- FOOTER ---------- */
-.footer{
-  margin-top:clamp(60px, 8vw, 100px);
-  border-top:1px solid var(--border);
-  background:linear-gradient(180deg, transparent, rgba(20,20,24,.5));
-  padding-top:clamp(46px, 6vw, 70px);
+.dash{display:none}
+.dash.active{display:block;animation:fadeIn .4s ease}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-bottom:28px}
+.stat-card{
+  background:#fff;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
+  border:1px solid var(--border);transition:var(--transition);position:relative;overflow:hidden;
 }
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1.4fr;
-  gap:clamp(24px, 3.4vw, 46px);
-  padding-bottom:46px;
-}
-.footer-col h4{
-  font-size:14.5px; margin-bottom:20px;
-  position:relative; padding-bottom:12px;
-}
-.footer-col h4::after{
-  content:""; position:absolute;
-  bottom:0; inset-inline-start:0;
-  width:28px; height:2px; border-radius:2px;
-  background:var(--gold);
-}
-.footer-about p{
-  font-size:13.5px; line-height:1.95;
-  margin:18px 0 20px;
-  max-width:330px;
-}
-.footer-links{ display:grid; gap:11px; }
-.footer-links a{
-  font-size:13.5px; color:var(--muted);
-  display:inline-flex; align-items:center; gap:8px;
-  transition:color var(--t), transform var(--t);
-  width:fit-content;
-}
-.footer-links a::before{
-  content:""; width:5px; height:5px; border-radius:50%;
-  background:var(--gold); opacity:.4;
-  transition:opacity var(--t), transform var(--t);
-}
-.footer-links a:hover{ color:var(--gold-light); transform:translateX(-4px); }
-.footer-links a:hover::before{ opacity:1; }
+.stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.stat-card::after{content:'';position:absolute;top:0;right:0;width:5px;height:100%}
+.stat-card.c1::after{background:var(--primary)}
+.stat-card.c2::after{background:var(--warning)}
+.stat-card.c3::after{background:var(--success)}
+.stat-card.c4::after{background:var(--danger)}
+.stat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.stat-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.c1 .stat-icon{background:rgba(13,115,119,.12);color:var(--primary)}
+.c2 .stat-icon{background:rgba(240,173,78,.15);color:var(--warning)}
+.c3 .stat-icon{background:rgba(40,167,69,.12);color:var(--success)}
+.c4 .stat-icon{background:rgba(224,79,95,.12);color:var(--danger)}
+.stat-card h3{font-size:30px;font-weight:800}
+.stat-card p{font-size:13.5px;color:var(--text-soft)}
 
-.footer-contact{ display:grid; gap:14px; }
-.footer-contact li{
-  display:flex; align-items:flex-start; gap:11px;
-  font-size:13.5px; color:var(--muted); line-height:1.8;
+.table-tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.search-box{position:relative;flex:1;min-width:200px}
+.search-box input{
+  width:100%;padding:12px 44px 12px 16px;border:1.5px solid var(--border);
+  border-radius:11px;outline:none;background:#fff;transition:var(--transition);
 }
-.footer-contact svg{ width:17px; height:17px; color:var(--gold); flex-shrink:0; margin-top:5px; }
-.footer-contact a{ transition:color var(--t); }
-.footer-contact a:hover{ color:var(--gold-light); }
+.search-box input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(13,115,119,.1)}
+.search-box::before{content:'🔍';position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.6}
+.table-tools select{
+  padding:12px 14px;border:1.5px solid var(--border);border-radius:11px;
+  background:#fff;outline:none;cursor:pointer;transition:var(--transition);min-width:150px;
+}
+.table-tools select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(13,115,119,.1)}
 
-/* Socials */
-.socials{ display:flex; gap:10px; margin-top:22px; }
-.social-btn{
-  width:42px; height:42px;
-  border-radius:12px;
-  display:grid; place-items:center;
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--border);
-  color:var(--muted);
-  transition:color var(--t), background var(--t), border-color var(--t), transform var(--t);
-}
-.social-btn:hover{
-  color:#0B0B0D;
-  background:var(--gold);
-  border-color:var(--gold);
-  transform:translateY(-4px);
-}
-.social-btn svg{ width:19px; height:19px; }
+.table-wrap{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:820px}
+thead{background:#f7fbfb}
+th{padding:15px 16px;text-align:right;font-size:13.5px;font-weight:700;color:var(--text-soft);white-space:nowrap}
+td{padding:15px 16px;font-size:14px;border-top:1px solid var(--border);white-space:nowrap}
+tbody tr{transition:var(--transition)}
+tbody tr:hover{background:#fafdfd}
+.badge{padding:5px 13px;border-radius:50px;font-size:12px;font-weight:600;display:inline-block}
+.badge.pending{background:rgba(240,173,78,.15);color:#c98a26}
+.badge.confirmed{background:rgba(40,167,69,.13);color:var(--success)}
+.badge.cancelled{background:rgba(224,79,95,.12);color:var(--danger)}
+.track-cell{font-weight:700;color:var(--primary);font-family:monospace;font-size:13.5px}
+.actions{display:flex;gap:6px}
+.empty-state{text-align:center;padding:50px 20px;color:var(--text-soft)}
+.empty-state .em{font-size:52px;margin-bottom:14px;opacity:.5}
 
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-info{display:flex;flex-direction:column;gap:18px}
+.contact-item{
+  display:flex;gap:16px;align-items:flex-start;background:#fff;padding:20px;
+  border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition);
+}
+.contact-item:hover{transform:translateX(-5px);box-shadow:var(--shadow-lg)}
+.contact-item .ci{
+  width:48px;height:48px;border-radius:13px;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(13,115,119,.12),rgba(50,224,196,.15));
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.contact-item h4{font-size:15.5px;margin-bottom:4px}
+.contact-item p{font-size:13.5px;color:var(--text-soft)}
+.contact-map{
+  background:linear-gradient(135deg,var(--primary),var(--primary-light));
+  border-radius:var(--radius);display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:60px;min-height:320px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.contact-map::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.15),transparent 60%);
+}
+.contact-map span{position:relative;z-index:1;text-align:center;font-size:18px;font-weight:600}
+.contact-map span em{display:block;font-size:60px;font-style:normal;margin-bottom:12px}
+
+/* ===== Footer ===== */
+footer{background:#0d2b2d;color:#c8dcdc;padding:55px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:40px}
+.footer-col h4{color:#fff;font-size:16px;margin-bottom:18px;font-weight:700}
+.footer-col p,.footer-col a{font-size:13.5px;color:#9fb8b8;line-height:2;display:block;transition:var(--transition)}
+.footer-col a:hover{color:var(--accent);padding-right:5px}
+.footer-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:19px;margin-bottom:16px}
+.footer-social{display:flex;gap:10px;margin-top:16px}
+.footer-social a{
+  width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;font-size:17px;transition:var(--transition);
+}
+.footer-social a:hover{background:var(--primary);transform:translateY(-3px);padding:0}
 .footer-bottom{
-  border-top:1px solid var(--border);
-  padding:22px 0;
-  display:flex; flex-wrap:wrap;
-  align-items:center; justify-content:space-between;
-  gap:14px;
-}
-.footer-bottom p{ font-size:12.5px; color:var(--muted-2); }
-.footer-bottom .gold{ color:var(--gold); }
-.footer-bottom-links{ display:flex; gap:22px; }
-.footer-bottom-links a{ font-size:12.5px; color:var(--muted-2); transition:color var(--t); }
-.footer-bottom-links a:hover{ color:var(--gold-light); }
-
-/* ---------- BACK TO TOP ---------- */
-.to-top{
-  position:fixed;
-  bottom:26px; inset-inline-start:26px;
-  width:48px; height:48px;
-  border-radius:14px;
-  display:grid; place-items:center;
-  background:linear-gradient(135deg, var(--gold-light), var(--gold));
-  color:#0B0B0D;
-  box-shadow:var(--shadow-gold);
-  z-index:900;
-  opacity:0; visibility:hidden;
-  transform:translateY(16px);
-  transition:opacity var(--t), visibility var(--t), transform var(--t), box-shadow var(--t);
-}
-.to-top.show{ opacity:1; visibility:visible; transform:translateY(0); }
-.to-top:hover{ box-shadow:0 18px 40px rgba(212,175,55,.4); transform:translateY(-4px); }
-.to-top svg{ width:20px; height:20px; }
-
-/* =========================================================
-   7. ANIMATIONS
-   ========================================================= */
-@keyframes floatY{
-  0%,100%{ transform:translateY(0); }
-  50%    { transform:translateY(-11px); }
-}
-@keyframes pulseGold{
-  0%,100%{ box-shadow:0 0 0 0 rgba(212,175,55,.32); }
-  50%    { box-shadow:0 0 0 16px rgba(212,175,55,0); }
+  border-top:1px solid rgba(255,255,255,.1);padding:20px 0;text-align:center;
+  font-size:13px;color:#7fa0a0;
 }
 
-/* Reveal on scroll */
-.reveal{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .75s var(--ease), transform .75s var(--ease);
-  will-change:opacity, transform;
+/* ===== Toast ===== */
+#toastWrap{position:fixed;top:20px;left:20px;z-index:9999;display:flex;flex-direction:column;gap:12px;max-width:340px}
+.toast{
+  background:#fff;border-radius:13px;padding:15px 18px;box-shadow:0 10px 30px rgba(0,0,0,.15);
+  display:flex;gap:12px;align-items:center;border-right:4px solid var(--primary);
+  animation:slideIn .4s ease;font-size:14px;
 }
-.reveal.visible{ opacity:1; transform:none; }
+.toast.success{border-right-color:var(--success)}
+.toast.error{border-right-color:var(--danger)}
+.toast.warning{border-right-color:var(--warning)}
+.toast .t-icon{font-size:20px;flex-shrink:0}
+.toast .t-body{flex:1}
+.toast .t-body strong{display:block;font-size:14px;margin-bottom:2px}
+.toast .t-body span{font-size:12.5px;color:var(--text-soft)}
+@keyframes slideIn{from{transform:translateX(-120%);opacity:0}to{transform:none;opacity:1}}
+.toast.out{animation:slideOut .3s ease forwards}
+@keyframes slideOut{to{transform:translateX(-120%);opacity:0}}
 
-/* =========================================================
-   8. RESPONSIVE
-   ========================================================= */
-@media (max-width:1100px){
-  .cat-grid{ grid-template-columns:repeat(3, 1fr); }
-  .footer-grid{ grid-template-columns:1fr 1fr; }
+/* ===== Modal ===== */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(13,43,45,.55);backdrop-filter:blur(4px);
+  z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;
 }
-
-@media (max-width:960px){
-  .nav-links{ display:none; }
-  .hamburger{ display:grid; }
-  .nav-actions .btn{ display:none; }
-
-  .hero-grid{ grid-template-columns:1fr; gap:44px; }
-  .hero-content{ max-width:100%; text-align:center; margin-inline:auto; }
-  .hero h1{ margin-inline:auto; }
-  .hero-lead{ margin-inline:auto; }
-  .hero-actions{ justify-content:center; }
-  .hero-visual{ max-width:520px; margin-inline:auto; width:100%; }
-  .hero-badge{ inset-inline-start:6px; }
-  .hero-stat{ inset-inline-end:6px; }
-
-  .trust-grid{ grid-template-columns:repeat(2, 1fr); gap:6px; }
-  .trust-item:nth-child(2)::after{ display:none; }
-  .trust-item:nth-child(1)::after,
-  .trust-item:nth-child(3)::after{ display:block; }
-  .trust-item{ padding:14px 8px; }
-  .trust-item:nth-child(3),
-  .trust-item:nth-child(4){ border-top:1px solid var(--border); padding-top:20px; }
-
-  .about-grid{ grid-template-columns:1fr; gap:52px; }
-  .about-visual{ max-width:540px; margin-inline:auto; width:100%; }
-
-  .location-grid{ grid-template-columns:1fr; }
-
-  .gallery-grid{
-    grid-template-columns:repeat(2, 1fr);
-    grid-auto-rows:160px;
-  }
-  .gallery-item:nth-child(1){ grid-column:span 2; grid-row:span 1; }
-  .gallery-item:nth-child(6){ grid-column:span 2; }
+.modal-overlay.open{display:flex;animation:fadeIn .25s ease}
+.modal{
+  background:#fff;border-radius:20px;max-width:440px;width:100%;padding:30px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);animation:pop .3s ease;
 }
-
-@media (max-width:720px){
-  body{ font-size:14.5px; }
-  .section{ padding:64px 0; }
-  .container{ padding-inline:16px; }
-
-  .products-grid{ grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:16px; }
-  .cat-grid{ grid-template-columns:repeat(2, 1fr); gap:12px; }
-
-  .footer-grid{ grid-template-columns:1fr; gap:34px; }
-  .footer-about p{ max-width:100%; }
-
-  .contact-cta{ flex-direction:column; }
-  .contact-cta .btn{ width:100%; }
-
-  .to-top{ bottom:18px; inset-inline-start:18px; width:44px; height:44px; }
-
-  .about-stats{ inset-inline-start:50%; transform:translateX(50%); bottom:-24px; }
+.modal-icon{
+  width:64px;height:64px;margin:0 auto 18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:30px;
 }
+.modal-icon.danger{background:rgba(224,79,95,.12);color:var(--danger)}
+.modal-icon.warn{background:rgba(240,173,78,.15);color:var(--warning)}
+.modal-icon.info{background:rgba(13,115,119,.12);color:var(--primary)}
+.modal h3{text-align:center;font-size:19px;margin-bottom:10px}
+.modal p{text-align:center;color:var(--text-soft);font-size:14px;margin-bottom:24px;line-height:1.8}
+.modal-actions{display:flex;gap:12px}
+.modal-actions .btn{flex:1}
 
-@media (max-width:520px){
-  .hero{ padding-top:calc(var(--nav-h) + 30px); }
-  .hero-actions{ flex-direction:column; width:100%; }
-  .hero-actions .btn{ width:100%; }
-  .hero-badge{ font-size:11.5px; padding:8px 14px; inset-inline-start:0; }
-  .hero-stat{ padding:11px 16px; inset-inline-end:0; bottom:14px; }
-  .hero-stat strong{ font-size:18px; }
+/* ===== Reveal animation ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.4,0,.2,1)}
+.reveal.in{opacity:1;transform:none}
 
-  .trust-grid{ grid-template-columns:1fr; gap:0; }
-  .trust-item{ border-top:1px solid var(--border); padding:16px 4px; }
-  .trust-item:first-child{ border-top:none; }
-  .trust-item::after{ display:none !important; }
-
-  .products-grid{ grid-template-columns:1fr; }
-
-  .gallery-grid{ grid-template-columns:1fr; grid-auto-rows:210px; }
-  .gallery-item:nth-child(1),
-  .gallery-item:nth-child(6){ grid-column:span 1; }
-
-  .footer-bottom{ flex-direction:column; text-align:center; }
-
-  .contact-wrap{ padding:26px 18px; }
+/* ===== Responsive ===== */
+@media(max-width:992px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:34px}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
 }
-
-/* =========================================================
-   9. REDUCED MOTION
-   ========================================================= */
-@media (prefers-reduced-motion: reduce){
-  *,
-  *::before,
-  *::after{
-    animation-duration:.001ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.001ms !important;
-    scroll-behavior:auto !important;
-  }
-  .reveal{ opacity:1 !important; transform:none !important; }
+@media(max-width:768px){
+  .nav-links,.nav-actions .btn:not(.burger){display:none}
+  .nav-actions{display:none}
+  .burger{display:flex}
+  section{padding:50px 0}
+  .hero{padding:45px 0 60px}
+  .hero h1{font-size:27px}
+  .hero p{font-size:15px}
+  .section-head h2{font-size:25px}
+  .form-grid{grid-template-columns:1fr}
+  .stepper{padding:16px}
+  .step-item .lbl{display:none}
+  .appt-body{padding:24px 18px}
+  .hero-stats{gap:22px}
+  .hero-stat h3{font-size:23px}
+  #toastWrap{left:12px;right:12px;max-width:none}
+  .table-tools select{min-width:0;flex:1}
+}
+@media(max-width:480px){
+  .hero h1{font-size:23px}
+  .hero-btns .btn{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .dates-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}
+  .slots-grid{grid-template-columns:repeat(auto-fill,minmax(85px,1fr))}
+  .track-code{font-size:18px;padding:12px 22px}
+  .appt-nav{flex-direction:column-reverse}
+  .appt-nav .btn{width:100%}
+  .modal-actions{flex-direction:column}
 }
 </style>
 </head>
-
 <body>
 
-<!-- =========================================================
-     NAVBAR
-     ========================================================= -->
-<header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <!-- Logo -->
-    <a href="#home" class="logo" aria-label="آرتمیس - صفحه اصلی">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 3h12l4 6-10 12L2 9l4-6Z"/>
-          <path d="M2 9h20"/>
-          <path d="M12 21 8 9l4-6 4 6-4 12Z"/>
-        </svg>
-      </span>
-      <span class="logo-text">
-        آرتمیس
-        <small>ACCESSORY</small>
-      </span>
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <span class="logo-icon">✚</span>
+      <span>کلینیک مهر</span>
     </a>
-
-    <!-- Desktop Nav -->
-    <nav class="nav-links" aria-label="ناوبری اصلی">
+    <nav class="nav-links">
       <a href="#home" class="active">خانه</a>
-      <a href="#products">محصولات</a>
+      <a href="#doctors">پزشکان</a>
+      <a href="#appointment">نوبت‌دهی</a>
       <a href="#about">درباره ما</a>
-      <a href="#gallery">گالری</a>
-      <a href="#reviews">نظرات مشتریان</a>
       <a href="#contact">تماس با ما</a>
     </nav>
-
-    <!-- Actions -->
     <div class="nav-actions">
-      <a href="#products" class="btn btn-gold btn-sm">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
-          <path d="M3 6h18"/>
-          <path d="M16 10a4 4 0 0 1-8 0"/>
-        </svg>
-        مشاهده فروشگاه
-      </a>
-
-      <button class="hamburger" id="hamburger" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileMenu">
-        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
+      <a href="#admin" class="btn btn-outline btn-sm">پنل مدیریت</a>
+      <a href="#appointment" class="btn btn-primary btn-sm">دریافت نوبت</a>
     </div>
+    <button class="burger" id="burger" aria-label="منو">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">خانه</a>
+    <a href="#doctors">پزشکان</a>
+    <a href="#appointment">نوبت‌دهی</a>
+    <a href="#about">درباره ما</a>
+    <a href="#contact">تماس با ما</a>
+    <a href="#admin">پنل مدیریت</a>
   </div>
 </header>
 
-<!-- Mobile Menu -->
-<nav class="mobile-menu" id="mobileMenu" aria-label="ناوبری موبایل">
-  <a href="#home" class="active">خانه
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-  </a>
-  <a href="#products">محصولات
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-  </a>
-  <a href="#about">درباره ما
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-  </a>
-  <a href="#gallery">گالری
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-  </a>
-  <a href="#reviews">نظرات مشتریان
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-  </a>
-  <a href="#contact">تماس با ما
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-  </a>
-  <a href="#products" class="btn btn-gold">مشاهده محصولات</a>
-</nav>
-
-<main>
-
-  <!-- =========================================================
-       HERO
-       ========================================================= -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-grid">
-
-        <!-- Content -->
-        <div class="hero-content">
-          <span class="eyebrow">کالکشن جدید ۱۴۰۵</span>
-          <h1>
-            اکسسوری‌هایی برای
-            <span class="accent">تکمیل استایل شما</span>
-          </h1>
-          <p class="hero-lead">
-            مجموعه‌ای از اکسسوری‌های خاص و باکیفیت برای کسانی که به جزئیات اهمیت می‌دهند.
-            انتخابی دقیق از ساعت، دستبند، گردنبند و کیف؛ ساخته‌شده برای ماندن.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#products" class="btn btn-gold">
-              مشاهده محصولات
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-            </a>
-            <a href="#contact" class="btn btn-ghost">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-              </svg>
-              تماس با ما
-            </a>
-          </div>
-        </div>
-
-        <!-- Visual -->
-        <div class="hero-visual">
-          <span class="hero-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/>
-            </svg>
-            کالکشن جدید ۱۴۰۵
-          </span>
-
-          <div class="img-frame hero-visual-main">
-            <img
-              src="https://picsum.photos/seed/artemis-hero/900/990"
-              alt="تصویر شاخص اکسسوری لوکس - ساعت مچی کلاسیک"
-              width="900" height="990" />
-          </div>
-
-          <div class="hero-stat">
-            <strong>+۴٫۸۰۰</strong>
-            <span>مشتری راضی</span>
-          </div>
-        </div>
-
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge">🩺 سامانه نوبت‌دهی آنلاین کلینیک</div>
+      <h1>نوبت پزشک را <span>سریع و آسان</span> از خانه بگیرید</h1>
+      <p>با کلینیک مهر در چند ثانیه نوبت خود را رزرو کنید، زمان‌های آزاد را ببینید و بدون تماس تلفنی یا انتظار، به پزشک متخصص دسترسی داشته باشید.</p>
+      <div class="hero-btns">
+        <a href="#appointment" class="btn btn-primary">دریافت نوبت</a>
+        <a href="#doctors" class="btn btn-outline">مشاهده پزشکان</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><h3>۱۲+</h3><p>پزشک متخصص</p></div>
+        <div class="hero-stat"><h3>۸۵۰۰+</h3><p>بیمار راضی</p></div>
+        <div class="hero-stat"><h3>۲۴/۷</h3><p>پشتیبانی آنلاین</p></div>
       </div>
     </div>
-  </section>
-
-  <!-- =========================================================
-       TRUST
-       ========================================================= -->
-  <section class="trust" aria-label="مزایای خرید">
-    <div class="container">
-      <div class="trust-grid reveal">
-
-        <div class="trust-item">
-          <span class="trust-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2 4 5.5v5.6c0 5 3.4 9.6 8 10.9 4.6-1.3 8-5.9 8-10.9V5.5L12 2Z"/>
-              <path d="m9 12 2 2 4-4"/>
-            </svg>
-          </span>
-          <div class="trust-text">
-            <h3>کیفیت تضمین‌شده</h3>
-            <p>اصالت تمام محصولات</p>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <span class="trust-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="6" width="14" height="11" rx="1.5"/>
-              <path d="M15 9h4l3 3v5h-7"/>
-              <circle cx="6" cy="18.5" r="2"/>
-              <circle cx="18" cy="18.5" r="2"/>
-            </svg>
-          </span>
-          <div class="trust-text">
-            <h3>ارسال سریع</h3>
-            <p>تحویل در ۲۴ ساعت</p>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <span class="trust-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
-              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5Z"/>
-              <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5Z"/>
-            </svg>
-          </span>
-          <div class="trust-text">
-            <h3>پشتیبانی پاسخگو</h3>
-            <p>همراه شما در تمام مراحل</p>
-          </div>
-        </div>
-
-        <div class="trust-item">
-          <span class="trust-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="5" width="20" height="14" rx="2.5"/>
-              <path d="M2 10h20"/>
-              <path d="M6 15h3"/>
-            </svg>
-          </span>
-          <div class="trust-text">
-            <h3>خرید مطمئن</h3>
-            <p>پرداخت امن و بازگشت وجه</p>
-          </div>
-        </div>
-
+    <div class="hero-visual">
+      <h4>زمان‌های آزاد امروز</h4>
+      <div class="mini-slot">
+        <span class="free">۰۸:۰۰</span>
+        <span class="busy">۰۸:۳۰</span>
+        <span class="free">۰۹:۰۰</span>
+        <span class="free">۰۹:۳۰</span>
+        <span class="busy">۱۰:۰۰</span>
+        <span class="free">۱۰:۳۰</span>
+        <span class="free">۱۱:۰۰</span>
+        <span class="free">۱۶:۰۰</span>
+        <span class="busy">۱۶:۳۰</span>
       </div>
     </div>
-  </section>
-
-  <!-- =========================================================
-       PRODUCTS
-       ========================================================= -->
-  <section class="section" id="products">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <span class="eyebrow">کالکشن ویژه</span>
-        <h2>محصولات ویژه</h2>
-        <p>انتخابی از محبوب‌ترین محصولات فروشگاه</p>
-        <div class="gold-line"></div>
-      </div>
-
-      <div class="products-grid">
-
-        <!-- Product 1 -->
-        <article class="card product-card reveal">
-          <div class="img-frame product-media">
-            <span class="product-tag">پرفروش</span>
-            <button class="product-fav" aria-label="افزودن ساعت کلاسیک به علاقه‌مندی‌ها">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>
-              </svg>
-            </button>
-            <img src="https://picsum.photos/seed/artemis-watch/700/735"
-                 alt="ساعت کلاسیک با بند چرم مشکی و صفحه مینیمال" loading="lazy" width="700" height="735" />
-          </div>
-          <div class="product-body">
-            <span class="product-cat">ساعت</span>
-            <h3 class="product-name"><a href="#products">ساعت کلاسیک</a></h3>
-            <div class="product-foot">
-              <div class="product-price">
-                <span class="old">۴٫۸۰۰٫۰۰۰ تومان</span>
-                <span class="now">۳٫۹۵۰٫۰۰۰<small>تومان</small></span>
-              </div>
-              <a href="#products" class="btn btn-ghost btn-sm">مشاهده</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 2 -->
-        <article class="card product-card reveal">
-          <div class="img-frame product-media">
-            <span class="product-tag dark">جدید</span>
-            <button class="product-fav" aria-label="افزودن دستبند مینیمال به علاقه‌مندی‌ها">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>
-              </svg>
-            </button>
-            <img src="https://picsum.photos/seed/artemis-bracelet/700/735"
-                 alt="دستبند مینیمال استیل با طراحی ساده" loading="lazy" width="700" height="735" />
-          </div>
-          <div class="product-body">
-            <span class="product-cat">دستبند</span>
-            <h3 class="product-name"><a href="#products">دستبند مینیمال</a></h3>
-            <div class="product-foot">
-              <div class="product-price">
-                <span class="now">۸۴۰٫۰۰۰<small>تومان</small></span>
-              </div>
-              <a href="#products" class="btn btn-ghost btn-sm">مشاهده</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 3 -->
-        <article class="card product-card reveal">
-          <div class="img-frame product-media">
-            <button class="product-fav" aria-label="افزودن گردنبند استیل به علاقه‌مندی‌ها">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>
-              </svg>
-            </button>
-            <img src="https://picsum.photos/seed/artemis-necklace/700/735"
-                 alt="گردنبند استیل با آویز ظریف" loading="lazy" width="700" height="735" />
-          </div>
-          <div class="product-body">
-            <span class="product-cat">گردنبند</span>
-            <h3 class="product-name"><a href="#products">گردنبند استیل</a></h3>
-            <div class="product-foot">
-              <div class="product-price">
-                <span class="old">۱٫۲۵۰٫۰۰۰ تومان</span>
-                <span class="now">۹۹۰٫۰۰۰<small>تومان</small></span>
-              </div>
-              <a href="#products" class="btn btn-ghost btn-sm">مشاهده</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 4 -->
-        <article class="card product-card reveal">
-          <div class="img-frame product-media">
-            <span class="product-tag dark">پیشنهاد ویژه</span>
-            <button class="product-fav" aria-label="افزودن انگشتر مردانه به علاقه‌مندی‌ها">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>
-              </svg>
-            </button>
-            <img src="https://picsum.photos/seed/artemis-ring/700/735"
-                 alt="انگشتر مردانه نقره‌ای با طراحی ساده و مدرن" loading="lazy" width="700" height="735" />
-          </div>
-          <div class="product-body">
-            <span class="product-cat">انگشتر</span>
-            <h3 class="product-name"><a href="#products">انگشتر مردانه</a></h3>
-            <div class="product-foot">
-              <div class="product-price">
-                <span class="now">۱٫۴۸۰٫۰۰۰<small>تومان</small></span>
-              </div>
-              <a href="#products" class="btn btn-ghost btn-sm">مشاهده</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 5 -->
-        <article class="card product-card reveal">
-          <div class="img-frame product-media">
-            <button class="product-fav" aria-label="افزودن کیف دستی به علاقه‌مندی‌ها">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>
-              </svg>
-            </button>
-            <img src="https://picsum.photos/seed/artemis-bag/700/735"
-                 alt="کیف دستی زنانه چرمی با رنگ خنثی" loading="lazy" width="700" height="735" />
-          </div>
-          <div class="product-body">
-            <span class="product-cat">کیف</span>
-            <h3 class="product-name"><a href="#products">کیف دستی</a></h3>
-            <div class="product-foot">
-              <div class="product-price">
-                <span class="old">۳٫۲۰۰٫۰۰۰ تومان</span>
-                <span class="now">۲٫۶۵۰٫۰۰۰<small>تومان</small></span>
-              </div>
-              <a href="#products" class="btn btn-ghost btn-sm">مشاهده</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 6 -->
-        <article class="card product-card reveal">
-          <div class="img-frame product-media">
-            <span class="product-tag">جدید</span>
-            <button class="product-fav" aria-label="افزودن عینک آفتابی به علاقه‌مندی‌ها">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>
-              </svg>
-            </button>
-            <img src="https://picsum.photos/seed/artemis-glasses/700/735"
-                 alt="عینک آفتابی کلاسیک با فریم فلزی طلایی" loading="lazy" width="700" height="735" />
-          </div>
-          <div class="product-body">
-            <span class="product-cat">عینک</span>
-            <h3 class="product-name"><a href="#products">عینک آفتابی</a></h3>
-            <div class="product-foot">
-              <div class="product-price">
-                <span class="now">۱٫۹۸۰٫۰۰۰<small>تومان</small></span>
-              </div>
-              <a href="#products" class="btn btn-ghost btn-sm">مشاهده</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       CATEGORIES
-       ========================================================= -->
-  <section class="section" id="categories">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <span class="eyebrow">دسته‌بندی‌ها</span>
-        <h2>خرید بر اساس دسته‌بندی</h2>
-        <p>از میان دسته‌بندی‌های متنوع، سلیقه خودتان را پیدا کنید</p>
-        <div class="gold-line"></div>
-      </div>
-
-      <div class="cat-grid">
-
-        <!-- Watch -->
-        <a href="#products" class="cat-card reveal" aria-label="دسته‌بندی ساعت">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-cat-watch/500/610"
-                 alt="دسته‌بندی ساعت" loading="lazy" width="500" height="610" />
-          </div>
-          <div class="cat-overlay">
-            <span class="cat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <polyline points="12 7 12 12 15.5 14"/>
-              </svg>
-            </span>
-            <h3>ساعت</h3>
-            <span>۲۴ محصول</span>
-          </div>
-        </a>
-
-        <!-- Bracelet -->
-        <a href="#products" class="cat-card reveal" aria-label="دسته‌بندی دستبند">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-cat-bracelet/500/610"
-                 alt="دسته‌بندی دستبند" loading="lazy" width="500" height="610" />
-          </div>
-          <div class="cat-overlay">
-            <span class="cat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="12" rx="8" ry="6"/>
-                <circle cx="12" cy="6" r="2.2"/>
-              </svg>
-            </span>
-            <h3>دستبند</h3>
-            <span>۳۱ محصول</span>
-          </div>
-        </a>
-
-        <!-- Necklace -->
-        <a href="#products" class="cat-card reveal" aria-label="دسته‌بندی گردنبند">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-cat-necklace/500/610"
-                 alt="دسته‌بندی گردنبند" loading="lazy" width="500" height="610" />
-          </div>
-          <div class="cat-overlay">
-            <span class="cat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4c0 6 3.6 10 8 10s8-4 8-10"/>
-                <path d="m12 14 2 3-2 3-2-3 2-3Z"/>
-              </svg>
-            </span>
-            <h3>گردنبند</h3>
-            <span>۱۹ محصول</span>
-          </div>
-        </a>
-
-        <!-- Ring -->
-        <a href="#products" class="cat-card reveal" aria-label="دسته‌بندی انگشتر">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-cat-ring/500/610"
-                 alt="دسته‌بندی انگشتر" loading="lazy" width="500" height="610" />
-          </div>
-          <div class="cat-overlay">
-            <span class="cat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="15" r="6"/>
-                <path d="m9 9 3-6 3 6"/>
-              </svg>
-            </span>
-            <h3>انگشتر</h3>
-            <span>۲۷ محصول</span>
-          </div>
-        </a>
-
-        <!-- Bag -->
-        <a href="#products" class="cat-card reveal" aria-label="دسته‌بندی کیف">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-cat-bag/500/610"
-                 alt="دسته‌بندی کیف" loading="lazy" width="500" height="610" />
-          </div>
-          <div class="cat-overlay">
-            <span class="cat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 8h14l1 12H4L5 8Z"/>
-                <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
-              </svg>
-            </span>
-            <h3>کیف</h3>
-            <span>۱۵ محصول</span>
-          </div>
-        </a>
-
-        <!-- Sunglasses -->
-        <a href="#products" class="cat-card reveal" aria-label="دسته‌بندی عینک">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-cat-glasses/500/610"
-                 alt="دسته‌بندی عینک آفتابی" loading="lazy" width="500" height="610" />
-          </div>
-          <div class="cat-overlay">
-            <span class="cat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="6.5" cy="14" r="3.5"/>
-                <circle cx="17.5" cy="14" r="3.5"/>
-                <path d="M10 13.5c.8-.8 3.2-.8 4 0"/>
-                <path d="M3 11 6 7h4"/><path d="M21 11 18 7h-4"/>
-              </svg>
-            </span>
-            <h3>عینک</h3>
-            <span>۱۲ محصول</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       ABOUT
-       ========================================================= -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about-grid">
-
-        <!-- Visual -->
-        <div class="about-visual reveal">
-          <div class="img-frame">
-            <img src="https://picsum.photos/seed/artemis-store/900/790"
-                 alt="نمای داخلی فروشگاه اکسسوری آرتمیس با چیدمان مدرن"
-                 loading="lazy" width="900" height="790" />
-          </div>
-          <div class="about-stats">
-            <div class="stat-box">
-              <strong>۱۲+</strong>
-              <span>سال تجربه</span>
-            </div>
-            <div class="stat-box">
-              <strong>۴٫۸</strong>
-              <span>امتیاز مشتریان</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content -->
-        <div class="about-content reveal">
-          <span class="eyebrow">درباره آرتمیس</span>
-          <h2>جزئیات کوچک، تفاوت‌های بزرگ</h2>
-
-          <p style="margin-top:18px;">
-            ما در <strong class="text-gold">آرتمیس</strong> تلاش می‌کنیم مجموعه‌ای از اکسسوری‌های خاص و باکیفیت را برای سلیقه‌های مختلف ارائه کنیم.
-            انتخاب دقیق محصولات و رضایت مشتری، بخش مهمی از تجربه خرید ماست.
-          </p>
-          <p>
-            هر قطعه‌ای که در ویترین ما قرار می‌گیرد، پیش از هر چیز از فیلتر کیفیت، دوام و طراحی عبور می‌کند؛
-            چون باور داریم یک اکسسوری درست، می‌تواند استایل شما را برای همیشه تغییر دهد.
-          </p>
-
-          <ul class="about-list">
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              انتخاب و بازرسی دقیق تمام محصولات پیش از ارسال
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              ضمانت اصالت و بازگشت کالا تا ۷ روز
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              بسته‌بندی شکیل و مناسب هدیه
-            </li>
-          </ul>
-
-          <a href="#contact" class="btn btn-gold">
-            درباره ما بیشتر بدانید
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="19" y1="12" x2="5" y2="12"/>
-              <polyline points="12 19 5 12 12 5"/>
-            </svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       GALLERY
-       ========================================================= -->
-  <section class="section" id="gallery">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <span class="eyebrow">گالری تصاویر</span>
-        <h2>نگاهی به کالکشن</h2>
-        <p>نگاهی نزدیک‌تر به جزئیات محصولات و فضای فروشگاه</p>
-        <div class="gold-line"></div>
-      </div>
-
-      <div class="gallery-grid reveal">
-
-        <a class="gallery-item" href="#" data-lightbox
-           data-img="https://picsum.photos/seed/artemis-g1/1400/900"
-           aria-label="مشاهده تصویر بزرگ: ساعت لوکس">
-          <div class="img-frame" style="position:absolute;inset:0;">
-            <img src="https://picsum.photos/seed/artemis-g1/900/600"
-                 alt="ساعت مچی لوکس با صفحه فلزی" loading="lazy" width="900" height="600" />
-          </div>
-          <div class="gallery-overlay">
-            <span class="zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </span>
-            <h3>ساعت لوکس</h3>
-            <span>کالکشن زمستان</span>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" data-lightbox
-           data-img="https://picsum.photos/seed/artemis-g2/1200/1200"
-           aria-label="مشاهده تصویر بزرگ: دستبند طلا">
-          <div class="img-frame" style="position:absolute;inset:0;">
-            <img src="https://picsum.photos/seed/artemis-g2/600/600"
-                 alt="دستبند طلا با طراحی ظریف" loading="lazy" width="600" height="600" />
-          </div>
-          <div class="gallery-overlay">
-            <span class="zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </span>
-            <h3>دستبند طلا</h3>
-            <span>سری ظرافت</span>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" data-lightbox
-           data-img="https://picsum.photos/seed/artemis-g3/1200/1200"
-           aria-label="مشاهده تصویر بزرگ: گردنبند مینیمال">
-          <div class="img-frame" style="position:absolute;inset:0;">
-            <img src="https://picsum.photos/seed/artemis-g3/600/600"
-                 alt="گردنبند مینیمال با آویز ساده" loading="lazy" width="600" height="600" />
-          </div>
-          <div class="gallery-overlay">
-            <span class="zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </span>
-            <h3>گردنبند مینیمال</h3>
-            <span>سری روزمره</span>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" data-lightbox
-           data-img="https://picsum.photos/seed/artemis-g4/1200/1200"
-           aria-label="مشاهده تصویر بزرگ: انگشتر نقره">
-          <div class="img-frame" style="position:absolute;inset:0;">
-            <img src="https://picsum.photos/seed/artemis-g4/600/600"
-                 alt="انگشتر نقره با نگین کوچک" loading="lazy" width="600" height="600" />
-          </div>
-          <div class="gallery-overlay">
-            <span class="zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </span>
-            <h3>انگشتر نقره</h3>
-            <span>کالکشن کلاسیک</span>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" data-lightbox
-           data-img="https://picsum.photos/seed/artemis-g5/1200/1200"
-           aria-label="مشاهده تصویر بزرگ: کیف چرم">
-          <div class="img-frame" style="position:absolute;inset:0;">
-            <img src="https://picsum.photos/seed/artemis-g5/600/600"
-                 alt="کیف چرم دست‌دوز با طراحی مینیمال" loading="lazy" width="600" height="600" />
-          </div>
-          <div class="gallery-overlay">
-            <span class="zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </span>
-            <h3>کیف چرم</h3>
-            <span>سری دست‌دوز</span>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" data-lightbox
-           data-img="https://picsum.photos/seed/artemis-g6/1400/900"
-           aria-label="مشاهده تصویر بزرگ: عینک آفتابی">
-          <div class="img-frame" style="position:absolute;inset:0;">
-            <img src="https://picsum.photos/seed/artemis-g6/900/600"
-                 alt="عینک آفتابی مدرن با فریم مشکی" loading="lazy" width="900" height="600" />
-          </div>
-          <div class="gallery-overlay">
-            <span class="zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </span>
-            <h3>عینک آفتابی</h3>
-            <span>کالکشن تابستان</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       REVIEWS
-       ========================================================= -->
-  <section class="section" id="reviews">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <span class="eyebrow">نظرات مشتریان</span>
-        <h2>مشتریان درباره ما چه می‌گویند؟</h2>
-        <p>بازخوردهای واقعی از کسانی که تجربه خرید ما را داشته‌اند</p>
-        <div class="gold-line"></div>
-      </div>
-
-      <div class="reviews-grid">
-
-        <!-- Review 1 -->
-        <article class="card review-card reveal">
-          <div class="review-stars" role="img" aria-label="امتیاز ۵ از ۵">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-          </div>
-          <p class="review-text">
-            «ساعت کلاسیکی که خریدم دقیقاً همون چیزی بود که تو عکس‌ها دیدم. کیفیت بند و صفحه واقعاً عالیه
-            و بسته‌بندی هم خیلی شکیل بود. قطعاً دوباره خرید می‌کنم.»
-          </p>
-          <div class="review-author">
-            <span class="review-avatar" aria-hidden="true">م</span>
-            <div>
-              <strong>مهدی رضایی</strong>
-              <span>خریدار ساعت کلاسیک</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Review 2 -->
-        <article class="card review-card reveal">
-          <div class="review-stars" role="img" aria-label="امتیاز ۵ از ۵">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-          </div>
-          <p class="review-text">
-            «برای تولد همسرم یه دستبند مینیمال سفارش دادم. ارسالش واقعاً سریع بود و پشتیبانی هم
-            خیلی صبورانه به سوالاتم جواب داد. از خریدم کاملاً راضی‌ام.»
-          </p>
-          <div class="review-author">
-            <span class="review-avatar" aria-hidden="true">س</span>
-            <div>
-              <strong>سارا محمدی</strong>
-              <span>خریدار دستبند مینیمال</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Review 3 -->
-        <article class="card review-card reveal">
-          <div class="review-stars" role="img" aria-label="امتیاز ۴ از ۵">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-            <svg class="empty" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7L6.8 19l1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg>
-          </div>
-          <p class="review-text">
-            «کیف دستی که گرفتم طراحی خیلی شیکی داشت و جنس چرمش هم واقعاً خوبه. فقط کاش رنگ‌بندی
-            بیشتری داشت. در کل تجربه خرید خوبی بود.»
-          </p>
-          <div class="review-author">
-            <span class="review-avatar" aria-hidden="true">ن</span>
-            <div>
-              <strong>نگار کریمی</strong>
-              <span>خریدار کیف دستی</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       LOCATION
-       ========================================================= -->
-  <section class="section" id="location">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <span class="eyebrow">موقعیت فروشگاه</span>
-        <h2>ما را از نزدیک ببینید</h2>
-        <p>منتظر حضور شما در فروشگاه آرتمیس هستیم</p>
-        <div class="gold-line"></div>
-      </div>
-
-      <div class="location-grid">
-
-        <!-- Info -->
-        <div class="location-info reveal">
-
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </span>
-            <div>
-              <h3>آدرس فروشگاه</h3>
-              <p>
-                تهران، خیابان ولیعصر، دقیقاً همون‌جایی که ترافیک تموم می‌شه (هیچ‌وقت تموم نمی‌شه)،
-                کوچه «گم‌شده‌ها»، پلاک ۱۲۳، طبقه سوم، واحد ۷ — زنگ رو بزن، اگه جواب ندادیم یعنی رفتیم چای بخوریم!
-              </p>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-              </svg>
-            </span>
-            <div>
-              <h3>شماره تماس</h3>
-              <p><a href="tel:+982188776655" dir="ltr">۰۲۱ ۸۸۷۷ ۶۶۵۵</a></p>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <polyline points="12 7 12 12 15.5 14"/>
-              </svg>
-            </span>
-            <div>
-              <h3>ساعات کاری</h3>
-              <p>
-                شنبه تا پنجشنبه: ۱۰:۰۰ تا ۲۱:۰۰<br />
-                جمعه: فقط اگه حال داشته باشیم! (۱۵:۰۰ تا ۲۱:۰۰)
-              </p>
-            </div>
-          </div>
-
-          <a href="https://maps.google.com/?q=35.6892,51.3890" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="margin-top:6px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            مسیریابی در Google Maps
-          </a>
-
-        </div>
-
-        <!-- Map placeholder -->
-        <div class="map-box reveal" role="img" aria-label="نقشه موقعیت فروشگاه آرتمیس">
-          <svg class="map-art" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M40 0H0V40" fill="none" stroke="rgba(212,175,55,.10)" stroke-width="1"/>
-              </pattern>
-            </defs>
-            <rect width="600" height="420" fill="#101014"/>
-            <rect width="600" height="420" fill="url(#grid)"/>
-            <!-- roads -->
-            <path d="M0 150 H600" stroke="rgba(212,175,55,.24)" stroke-width="3"/>
-            <path d="M0 280 H600" stroke="rgba(212,175,55,.16)" stroke-width="2"/>
-            <path d="M160 0 V420" stroke="rgba(212,175,55,.24)" stroke-width="3"/>
-            <path d="M420 0 V420" stroke="rgba(212,175,55,.16)" stroke-width="2"/>
-            <path d="M0 60 Q200 120 600 40" stroke="rgba(255,255,255,.05)" stroke-width="2" fill="none"/>
-            <path d="M0 380 Q260 320 600 400" stroke="rgba(255,255,255,.05)" stroke-width="2" fill="none"/>
-            <!-- blocks -->
-            <rect x="200" y="180" width="180" height="70" rx="8" fill="rgba(212,175,55,.055)"/>
-            <rect x="40" y="200" width="90" height="50" rx="8" fill="rgba(255,255,255,.03)"/>
-            <rect x="460" y="190" width="100" height="60" rx="8" fill="rgba(255,255,255,.03)"/>
-            <rect x="210" y="320" width="160" height="60" rx="8" fill="rgba(255,255,255,.03)"/>
-            <rect x="200" y="40" width="150" height="70" rx="8" fill="rgba(255,255,255,.03)"/>
-          </svg>
-
-          <div class="map-pin">
-            <span class="map-pin-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </span>
-            <strong>فروشگاه آرتمیس</strong>
-            <span>تهران، ولیعصر، کوچه گم‌شده‌ها، پلاک ۱۲۳</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       CONTACT
-       ========================================================= -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-wrap reveal">
-
-        <div class="contact-head">
-          <span class="eyebrow">تماس با ما</span>
-          <h2>در ارتباط باشیم</h2>
-          <p>برای دریافت اطلاعات بیشتر با ما در تماس باشید.</p>
-          <div class="gold-line"></div>
-        </div>
-
-        <div class="contact-grid">
-
-          <!-- Phone -->
-          <a class="contact-card" href="tel:+982188776655">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-              </svg>
-            </span>
-            <strong>شماره تلفن</strong>
-            <span>۰۲۱ ۸۸۷۷ ۶۶۵۵</span>
-          </a>
-
-          <!-- Email -->
-          <a class="contact-card" href="mailto:info@artemis-shop.ir">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
-                <path d="m3 7 9 6 9-6"/>
-              </svg>
-            </span>
-            <strong>ایمیل</strong>
-            <span>info@artemis-shop.ir</span>
-          </a>
-
-          <!-- Instagram -->
-          <a class="contact-card" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
-              </svg>
-            </span>
-            <strong>اینستاگرام</strong>
-            <span>@artemis.accessory</span>
-          </a>
-
-          <!-- WhatsApp -->
-          <a class="contact-card" href="https://wa.me/989120000000" target="_blank" rel="noopener noreferrer">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"/>
-                <path d="M8.8 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.3 0 .5-.1.7l-.4.5c-.1.2-.2.3 0 .6.5.8 1.2 1.4 2 1.8.3.1.4 0 .6-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5v.5c0 .4-.3.9-.8 1.1-.5.2-1.2.3-2-.1a8.6 8.6 0 0 1-4.1-3.6c-.6-1-.8-1.9-.8-2.6 0-.6.2-1 .4-1.3Z"/>
-              </svg>
-            </span>
-            <strong>واتساپ</strong>
-            <span dir="ltr">+98 912 000 0000</span>
-          </a>
-
-          <!-- Address -->
-          <a class="contact-card" href="https://maps.google.com/?q=35.6892,51.3890" target="_blank" rel="noopener noreferrer">
-            <span class="info-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </span>
-            <strong>آدرس</strong>
-            <span style="direction:rtl;">تهران، ولیعصر، کوچه گم‌شده‌ها، پلاک ۱۲۳</span>
-          </a>
-
-        </div>
-
-        <div class="contact-cta">
-          <p>برای دریافت اطلاعات بیشتر با ما در تماس باشید.</p>
-          <a href="tel:+982188776655" class="btn btn-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-            </svg>
-            تماس تلفنی
-          </a>
-          <a href="https://wa.me/989120000000" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"/>
-            </svg>
-            گفتگو در واتساپ
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-<footer class="footer">
+  </div>
+</section>
+
+<!-- Services -->
+<section id="about">
   <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">خدمات ما</span>
+      <h2>خدمات تخصصی کلینیک مهر</h2>
+      <p>با بهره‌گیری از تیم پزشکی مجرب و تجهیزات مدرن، در تمام زمینه‌های درمانی در خدمت شما هستیم.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon">❤️</div><h3>قلب و عروق</h3><p>تشخیص و درمان بیماری‌های قلبی با پیشرفته‌ترین تجهیزات.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🦷</div><h3>دندانپزشکی</h3><p>خدمات کامل دندانپزشکی زیبایی و درمانی.</p></div>
+      <div class="service-card reveal"><div class="service-icon">👶</div><h3>اطفال</h3><p>مراقبت‌های تخصصی کودکان توسط پزشکان مجرب.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🧠</div><h3>مغز و اعصاب</h3><p>درمان اختلالات عصبی با تیم تخصصی.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🦴</div><h3>ارتوپدی</h3><p>درمان آسیب‌های استخوانی و مفاصل.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🔬</div><h3>آزمایشگاه</h3><p>انجام تست‌های دقیق آزمایشگاهی در محل.</p></div>
+    </div>
+  </div>
+</section>
 
-    <div class="footer-grid">
+<!-- Doctors -->
+<section id="doctors">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">تیم پزشکی</span>
+      <h2>پزشکان متخصص ما</h2>
+      <p>با انتخاب پزشک مورد نظر خود، نوبت خود را در کمترین زمان رزرو کنید.</p>
+    </div>
+    <div class="doctors-grid" id="doctorsGrid"></div>
+  </div>
+</section>
 
-      <!-- About -->
-      <div class="footer-col footer-about">
-        <a href="#home" class="logo" aria-label="آرتمیس">
-          <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 3h12l4 6-10 12L2 9l4-6Z"/>
-              <path d="M2 9h20"/>
-              <path d="M12 21 8 9l4-6 4 6-4 12Z"/>
-            </svg>
-          </span>
-          <span class="logo-text">
-            آرتمیس
-            <small>ACCESSORY</small>
-          </span>
-        </a>
-        <p>
-          آرتمیس، فروشگاه تخصصی اکسسوری لوکس؛ مجموعه‌ای منتخب از ساعت، دستبند، گردنبند،
-          انگشتر، کیف و عینک برای سلیقه‌های خاص.
-        </p>
-        <div class="socials">
-          <a class="social-btn" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام آرتمیس">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-          <a class="social-btn" href="https://wa.me/989120000000" target="_blank" rel="noopener noreferrer" aria-label="واتساپ آرتمیس">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"/>
-              <path d="M8.8 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.3 0 .5-.1.7l-.4.5c-.1.2-.2.3 0 .6.5.8 1.2 1.4 2 1.8.3.1.4 0 .6-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5v.5c0 .4-.3.9-.8 1.1-.5.2-1.2.3-2-.1a8.6 8.6 0 0 1-4.1-3.6c-.6-1-.8-1.9-.8-2.6 0-.6.2-1 .4-1.3Z"/>
-            </svg>
-          </a>
-          <a class="social-btn" href="tel:+982188776655" aria-label="تماس تلفنی با آرتمیس">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-            </svg>
-          </a>
-          <a class="social-btn" href="mailto:info@artemis-shop.ir" aria-label="ارسال ایمیل به آرتمیس">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
-              <path d="m3 7 9 6 9-6"/>
-            </svg>
-          </a>
+<!-- Steps -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">فرایند ساده</span>
+      <h2>چطور نوبت بگیریم؟</h2>
+      <p>در ۴ مرحله ساده نوبت خود را ثبت کنید.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal"><div class="step-num">۱</div><h4>انتخاب پزشک</h4><p>از میان پزشکان متخصص، پزشک مورد نظر خود را انتخاب کنید.</p></div>
+      <div class="step-card reveal"><div class="step-num">۲</div><h4>انتخاب زمان</h4><p>تاریخ و ساعت مناسب خود را از زمان‌های آزاد انتخاب کنید.</p></div>
+      <div class="step-card reveal"><div class="step-num">۳</div><h4>تکمیل اطلاعات</h4><p>اطلاعات شخصی خود را وارد و بررسی کنید.</p></div>
+      <div class="step-card reveal"><div class="step-num">۴</div><h4>دریافت کد پیگیری</h4><p>کد پیگیری نوبت خود را دریافت و ذخیره کنید.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section style="background:linear-gradient(180deg,#f4f9f9,#eaf7f7)">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">نظرات بیماران</span>
+      <h2>بیماران ما چه می‌گویند؟</h2>
+      <p>رضایت بیماران، بزرگترین افتخار ماست.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">سامانه بسیار ساده و کاربردی. در کمتر از یک دقیقه نوبت گرفتم و پیام تأیید دریافت کردم. واقعاً عالی بود.</p>
+        <div class="testi-user"><div class="av">م</div><div><h5>مریم احمدی</h5><p>بیمار</p></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">بدون تماس تلفنی و انتظار، نوبت دندانپزشکی گرفتم. پنل مدیریت هم برای پیگیری بسیار کارآمد است.</p>
+        <div class="testi-user"><div class="av">ع</div><div><h5>علی رضایی</h5><p>بیمار</p></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★☆</div>
+        <p class="testi-text">رابط کاربری زیبا و فارسی. پزشکان مجرب و زمان‌بندی دقیق. به همه پیشنهاد می‌کنم.</p>
+        <div class="testi-user"><div class="av">ز</div><div><h5>زهرا کریمی</h5><p>بیمار</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment -->
+<section id="appointment">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">نوبت‌دهی آنلاین</span>
+      <h2>دریافت نوبت</h2>
+      <p>در چند مرحله ساده نوبت خود را ثبت کنید.</p>
+    </div>
+    <div class="appt-wrapper reveal">
+      <div class="stepper" id="stepper">
+        <div class="step-item active" data-step="1"><div class="circle">۱</div><span class="lbl">انتخاب پزشک</span></div>
+        <div class="step-item" data-step="2"><div class="circle">۲</div><span class="lbl">انتخاب تاریخ</span></div>
+        <div class="step-item" data-step="3"><div class="circle">۳</div><span class="lbl">انتخاب ساعت</span></div>
+        <div class="step-item" data-step="4"><div class="circle">۴</div><span class="lbl">اطلاعات بیمار</span></div>
+        <div class="step-item" data-step="5"><div class="circle">۵</div><span class="lbl">تأیید نهایی</span></div>
+      </div>
+      <div class="appt-body">
+
+        <!-- Step 1: Doctor -->
+        <div class="appt-step active" data-step="1">
+          <h3>انتخاب پزشک</h3>
+          <p class="hint">پزشک مورد نظر خود را انتخاب کنید.</p>
+          <div class="pick-grid" id="apptDoctors"></div>
+          <div class="appt-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next1" disabled>مرحله بعد ←</button>
+          </div>
         </div>
+
+        <!-- Step 2: Date -->
+        <div class="appt-step" data-step="2">
+          <h3>انتخاب تاریخ</h3>
+          <p class="hint">تاریخ مورد نظر خود را انتخاب کنید.</p>
+          <div class="dates-grid" id="datesGrid"></div>
+          <div class="appt-nav">
+            <button class="btn btn-outline" data-prev="1">→ مرحله قبل</button>
+            <button class="btn btn-primary" id="next2" disabled>مرحله بعد ←</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Time -->
+        <div class="appt-step" data-step="3">
+          <h3>انتخاب ساعت</h3>
+          <p class="hint">زمان‌های آزاد پزشک را انتخاب کنید.</p>
+          <div class="slots-grid" id="slotsGrid"></div>
+          <div class="slot-legend">
+            <span><i class="legend-free"></i> آزاد</span>
+            <span><i class="legend-selected"></i> انتخاب‌شده</span>
+            <span><i class="legend-busy"></i> رزرو شده</span>
+          </div>
+          <div class="appt-nav">
+            <button class="btn btn-outline" data-prev="2">→ مرحله قبل</button>
+            <button class="btn btn-primary" id="next3" disabled>مرحله بعد ←</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Patient Info -->
+        <div class="appt-step" data-step="4">
+          <h3>اطلاعات بیمار</h3>
+          <p class="hint">اطلاعات خود را وارد کنید. فیلدهای ستاره‌دار الزامی هستند.</p>
+          <form id="patientForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group" id="fg-name">
+                <label>نام و نام خانوادگی <span class="req">*</span></label>
+                <input type="text" id="pName" placeholder="مثال: علی محمدی" autocomplete="off">
+                <span class="err-msg">نام باید حداقل ۳ حرف باشد.</span>
+              </div>
+              <div class="form-group" id="fg-phone">
+                <label>شماره موبایل <span class="req">*</span></label>
+                <input type="tel" id="pPhone" placeholder="09xxxxxxxxx" maxlength="11" autocomplete="off">
+                <span class="err-msg">شماره موبایل معتبر وارد کنید (۰۹...).</span>
+              </div>
+              <div class="form-group" id="fg-nid">
+                <label>کد ملی <span class="req">*</span></label>
+                <input type="text" id="pNid" placeholder="۱۰ رقم" maxlength="10" autocomplete="off">
+                <span class="err-msg">کد ملی معتبر ۱۰ رقمی وارد کنید.</span>
+              </div>
+              <div class="form-group" id="fg-email">
+                <label>ایمیل (اختیاری)</label>
+                <input type="email" id="pEmail" placeholder="example@mail.com" autocomplete="off">
+                <span class="err-msg">ایمیل معتبر وارد کنید.</span>
+              </div>
+              <div class="form-group full" id="fg-note">
+                <label>توضیحات بیمار (اختیاری)</label>
+                <textarea id="pNote" placeholder="توضیحات خود را وارد کنید..."></textarea>
+                <span class="err-msg"></span>
+              </div>
+            </div>
+          </form>
+          <div class="appt-nav">
+            <button class="btn btn-outline" data-prev="3">→ مرحله قبل</button>
+            <button class="btn btn-primary" id="next4">بررسی و تأیید ←</button>
+          </div>
+        </div>
+
+        <!-- Step 5: Review -->
+        <div class="appt-step" data-step="5">
+          <h3>تأیید نهایی</h3>
+          <p class="hint">اطلاعات نوبت خود را بررسی کنید.</p>
+          <div class="review-box" id="reviewBox"></div>
+          <div class="appt-nav">
+            <button class="btn btn-outline" data-prev="4">→ ویرایش</button>
+            <button class="btn btn-primary" id="confirmBtn">✅ ثبت نهایی نوبت</button>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div class="appt-step" data-step="6">
+          <div class="success-box">
+            <div class="success-icon">✓</div>
+            <h3>نوبت شما با موفقیت ثبت شد!</h3>
+            <p>کد پیگیری زیر را برای مراجعه به کلینیک ذخیره کنید.</p>
+            <div class="track-code" id="successCode">-</div>
+            <div class="success-details" id="successDetails"></div>
+            <button class="btn btn-primary" id="newApptBtn">ثبت نوبت جدید</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Admin Dashboard -->
+<section id="admin">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">پنل مدیریت</span>
+      <h2>مدیریت نوبت‌ها</h2>
+      <p>مدیریت، جستجو و تغییر وضعیت نوبت‌ها.</p>
+    </div>
+
+    <!-- Login -->
+    <div class="admin-login reveal" id="adminLogin">
+      <div class="lock">🔒</div>
+      <h3>ورود به پنل مدیریت</h3>
+      <p>نام کاربری و رمز عبور را وارد کنید.</p>
+      <div class="form-group">
+        <label>نام کاربری</label>
+        <input type="text" id="adminUser" placeholder="admin" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label>رمز عبور</label>
+        <input type="password" id="adminPass" placeholder="••••••" autocomplete="off">
+      </div>
+      <button class="btn btn-primary" style="width:100%" id="adminLoginBtn">ورود به پنل</button>
+      <div class="admin-hint">💡 برای دمو: نام کاربری <b>admin</b> و رمز عبور <b>admin</b></div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dash" id="adminDash">
+      <div class="stats-grid">
+        <div class="stat-card c1"><div class="stat-top"><div class="stat-icon">📋</div></div><h3 id="statTotal">۰</h3><p>کل نوبت‌ها</p></div>
+        <div class="stat-card c2"><div class="stat-top"><div class="stat-icon">📅</div></div><h3 id="statToday">۰</h3><p>نوبت‌های امروز</p></div>
+        <div class="stat-card c3"><div class="stat-top"><div class="stat-icon">✅</div></div><h3 id="statConfirmed">۰</h3><p>تأییدشده</p></div>
+        <div class="stat-card c4"><div class="stat-top"><div class="stat-icon">❌</div></div><h3 id="statCancelled">۰</h3><p>لغوشده</p></div>
       </div>
 
-      <!-- Links -->
+      <div class="table-tools">
+        <div class="search-box"><input type="text" id="adminSearch" placeholder="جستجو بر اساس کد پیگیری، نام یا موبایل..."></div>
+        <select id="filterStatus">
+          <option value="all">همه وضعیت‌ها</option>
+          <option value="pending">در انتظار تأیید</option>
+          <option value="confirmed">تأییدشده</option>
+          <option value="cancelled">لغوشده</option>
+        </select>
+        <select id="filterDoctor"><option value="all">همه پزشکان</option></select>
+        <button class="btn btn-outline btn-sm" id="refreshBtn">🔄 بازنشانی</button>
+        <button class="btn btn-danger btn-sm" id="logoutBtn">خروج</button>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>کد پیگیری</th><th>نام بیمار</th><th>پزشک</th><th>تاریخ</th>
+                <th>ساعت</th><th>موبایل</th><th>وضعیت</th><th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody"></tbody>
+          </table>
+        </div>
+        <div class="empty-state" id="emptyState" style="display:none">
+          <div class="em">📭</div>
+          <p>نوبتی مطابق فیلترهای انتخابی یافت نشد.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">تماس با ما</span>
+      <h2>راه‌های ارتباطی</h2>
+      <p>هر سوال یا ابهامی دارید، با ما در تماس باشید.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item reveal"><div class="ci">📍</div><div><h4>آدرس کلینیک</h4><p>تهران، خیابان ولیعصر، نبش کوچه مهر، پلاک ۱۲، طبقه سوم</p></div></div>
+        <div class="contact-item reveal"><div class="ci">📞</div><div><h4>تلفن تماس</h4><p>۰۲۱-۸۸۷۶۵۴۳۲ | ۰۹۱۲۳۴۵۶۷۸۹</p></div></div>
+        <div class="contact-item reveal"><div class="ci">✉️</div><div><h4>ایمیل</h4><p>info@mehrclinic.ir</p></div></div>
+        <div class="contact-item reveal"><div class="ci">🕐</div><div><h4>ساعات کاری</h4><p>شنبه تا چهارشنبه: ۸:۰۰ تا ۱۹:۰۰ | پنجشنبه: ۸:۰۰ تا ۱۳:۰۰</p></div></div>
+      </div>
+      <div class="contact-map reveal">
+        <span><em>🗺️</em>موقعیت کلینیک روی نقشه</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><span class="logo-icon">✚</span> کلینیک مهر</div>
+        <p>کلینیک تخصصی مهر با تیمی از پزشکان مجرب و تجهیزات مدرن، آماده خدمت‌رسانی به شما عزیزان است.</p>
+        <div class="footer-social">
+          <a href="#">📷</a><a href="#">✈️</a><a href="#">🐦</a><a href="#">📘</a>
+        </div>
+      </div>
       <div class="footer-col">
         <h4>دسترسی سریع</h4>
-        <nav class="footer-links" aria-label="لینک‌های فوتر">
-          <a href="#home">خانه</a>
-          <a href="#products">محصولات</a>
-          <a href="#about">درباره ما</a>
-          <a href="#gallery">گالری</a>
-          <a href="#reviews">نظرات مشتریان</a>
-          <a href="#contact">تماس با ما</a>
-        </nav>
+        <a href="#home">خانه</a>
+        <a href="#doctors">پزشکان</a>
+        <a href="#appointment">نوبت‌دهی</a>
+        <a href="#admin">پنل مدیریت</a>
       </div>
-
-      <!-- Categories -->
       <div class="footer-col">
-        <h4>دسته‌بندی‌ها</h4>
-        <nav class="footer-links" aria-label="دسته‌بندی‌های فوتر">
-          <a href="#products">ساعت</a>
-          <a href="#products">دستبند</a>
-          <a href="#products">گردنبند</a>
-          <a href="#products">انگشتر</a>
-          <a href="#products">کیف</a>
-          <a href="#products">عینک آفتابی</a>
-        </nav>
+        <h4>خدمات</h4>
+        <a href="#">قلب و عروق</a>
+        <a href="#">دندانپزشکی</a>
+        <a href="#">اطفال</a>
+        <a href="#">مغز و اعصاب</a>
       </div>
-
-      <!-- Contact -->
       <div class="footer-col">
-        <h4>اطلاعات تماس</h4>
-        <ul class="footer-contact">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <span>تهران، ولیعصر، کوچه گم‌شده‌ها، پلاک ۱۲۳، طبقه سوم، واحد ۷</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-            </svg>
-            <a href="tel:+982188776655" dir="ltr">۰۲۱ ۸۸۷۷ ۶۶۵۵</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
-              <path d="m3 7 9 6 9-6"/>
-            </svg>
-            <a href="mailto:info@artemis-shop.ir">info@artemis-shop.ir</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="9"/>
-              <polyline points="12 7 12 12 15.5 14"/>
-            </svg>
-            <span>شنبه تا پنجشنبه، ۱۰:۰۰ تا ۲۱:۰۰</span>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>© ۱۴۰۵ تمامی حقوق برای <span class="gold">آرتمیس</span> محفوظ است.</p>
-      <div class="footer-bottom-links">
-        <a href="#about">قوانین و مقررات</a>
-        <a href="#about">حریم خصوصی</a>
-        <a href="#contact">پشتیبانی</a>
+        <h4>تماس با ما</h4>
+        <p>📍 تهران، خیابان ولیعصر، پلاک ۱۲</p>
+        <p>📞 ۰۲۱-۸۸۷۶۵۴۳۲</p>
+        <p>✉️ info@mehrclinic.ir</p>
       </div>
     </div>
-
+    <div class="footer-bottom">© ۱۴۰۳ کلینیک پزشکی مهر — تمامی حقوق محفوظ است.</div>
   </div>
 </footer>
 
-<!-- =========================================================
-     BACK TO TOP
-     ========================================================= -->
-<button class="to-top" id="toTop" aria-label="بازگشت به بالای صفحه">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <line x1="12" y1="19" x2="12" y2="5"/>
-    <polyline points="5 12 12 5 19 12"/>
-  </svg>
-</button>
+<!-- Toast -->
+<div id="toastWrap"></div>
 
-<!-- =========================================================
-     LIGHTBOX
-     ========================================================= -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش تصویر بزرگ">
-  <button class="lightbox-close" id="lightboxClose" aria-label="بستن تصویر">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-      <line x1="18" y1="6" x2="6" y2="18"/>
-      <line x1="6" y1="6" x2="18" y2="18"/>
-    </svg>
-  </button>
-  <img id="lightboxImg" src="" alt="تصویر بزرگ گالری" />
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-icon" id="modalIcon">❓</div>
+    <h3 id="modalTitle">عنوان</h3>
+    <p id="modalText">متن</p>
+    <div class="modal-actions">
+      <button class="btn btn-outline" id="modalCancel">انصراف</button>
+      <button class="btn btn-primary" id="modalConfirm">تأیید</button>
+    </div>
+  </div>
 </div>
 
-<!-- =========================================================
-     SCRIPTS
-     ========================================================= -->
 <script>
-(function () {
-  'use strict';
+/* =====================================================
+   داده‌های اولیه (Demo Data)
+===================================================== */
+const DOCTORS = [
+  { id: 1, name: 'دکتر سارا محمدی', spec: 'متخصص قلب و عروق', exp: 15, days: 'شنبه، دوشنبه، چهارشنبه', active: true, avatar: 'س' },
+  { id: 2, name: 'دکتر علی رضایی', spec: 'متخصص دندانپزشکی', exp: 12, days: 'یکشنبه، سه‌شنبه، پنجشنبه', active: true, avatar: 'ع' },
+  { id: 3, name: 'دکتر مریم حسینی', spec: 'متخصص اطفال', exp: 10, days: 'شنبه، دوشنبه، چهارشنبه', active: true, avatar: 'م' },
+  { id: 4, name: 'دکتر رضا کریمی', spec: 'متخصص مغز و اعصاب', exp: 18, days: 'یکشنبه، سه‌شنبه، پنجشنبه', active: true, avatar: 'ر' },
+  { id: 5, name: 'دکتر نازنین احمدی', spec: 'متخصص ارتوپدی', exp: 9, days: 'شنبه، دوشنبه', active: false, avatar: 'ن' },
+  { id: 6, name: 'دکتر حسین نوری', spec: 'متخصص پوست و مو', exp: 14, days: 'یکشنبه، چهارشنبه', active: true, avatar: 'ح' }
+];
 
-  /* =========================================================
-     1. IMAGE FALLBACK / FADE-IN
-     ========================================================= */
-  function handleImage(img) {
-    if (img.complete && img.naturalWidth > 0) {
-      img.classList.add('is-loaded');
-    } else {
-      img.addEventListener('load', function () {
-        img.classList.add('is-loaded');
-      }, { once: true });
-    }
-    img.addEventListener('error', function () {
-      img.classList.add('is-loaded');
-      img.style.opacity = '0';
-      var frame = img.closest('.img-frame');
-      if (frame) frame.style.background =
-        'linear-gradient(135deg,#1c1c22 0%,#14141a 55%,#1a1a20 100%)';
-    }, { once: true });
+const TIME_SLOTS = ['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','16:00','16:30','17:00','17:30'];
+
+const FA_MONTHS = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+const FA_DAYS = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+
+/* =====================================================
+   ذخیره‌سازی (LocalStorage)
+===================================================== */
+const STORAGE_KEY = 'mehr_clinic_appointments';
+
+function loadAppointments(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return null;
+    const data = JSON.parse(raw);
+    return Array.isArray(data) ? data : null;
+  }catch(e){ return null; }
+}
+function saveAppointments(list){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }catch(e){}
+}
+function seedDemoAppointments(){
+  const today = new Date();
+  const d1 = new Date(today); d1.setDate(today.getDate());
+  const d2 = new Date(today); d2.setDate(today.getDate()+1);
+  const d3 = new Date(today); d3.setDate(today.getDate()+2);
+  const fmt = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  return [
+    { code:'MR-4821', name:'محمد اسدی', phone:'09121234567', nid:'1234567890', email:'', note:'', doctorId:1, date:fmt(d1), time:'08:30', status:'confirmed', createdAt: Date.now()-86400000 },
+    { code:'MR-7319', name:'فاطمه نوری', phone:'09359876543', nid:'0987654321', email:'f@mail.com', note:'درد قفسه سینه', doctorId:1, date:fmt(d1), time:'10:00', status:'pending', createdAt: Date.now()-3600000 },
+    { code:'MR-2045', name:'رضا کریمی', phone:'09151112233', nid:'1122334455', email:'', note:'', doctorId:2, date:fmt(d2), time:'09:00', status:'confirmed', createdAt: Date.now()-7200000 },
+    { code:'MR-9037', name:'زهرا صادقی', phone:'09197778899', nid:'5544332211', email:'', note:'معاینه دوره‌ای', doctorId:3, date:fmt(d3), time:'16:30', status:'cancelled', createdAt: Date.now()-172800000 }
+  ];
+}
+
+let appointments = loadAppointments();
+if(appointments === null){
+  appointments = seedDemoAppointments();
+  saveAppointments(appointments);
+}
+
+/* =====================================================
+   حالت (State)
+===================================================== */
+const state = {
+  step: 1,
+  doctorId: null,
+  date: null,
+  time: null,
+  patient: {},
+  lastAppt: null,
+  adminLoggedIn: false,
+  filterStatus: 'all',
+  filterDoctor: 'all',
+  search: ''
+};
+
+/* =====================================================
+   ابزارها (Utils)
+===================================================== */
+function toFa(n){ return String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]); }
+function genCode(){
+  const n = Math.floor(1000 + Math.random()*9000);
+  return 'MR-' + n;
+}
+function uniqueCode(){
+  let c;
+  do{ c = genCode(); } while(appointments.some(a => a.code === c));
+  return c;
+}
+function formatDateFa(iso){
+  if(!iso) return '-';
+  const [y,m,d] = iso.split('-').map(Number);
+  const dt = new Date(y, m-1, d);
+  const dow = FA_DAYS[dt.getDay()];
+  return `${dow} ${toFa(d)} ${FA_MONTHS[m-1]} ${toFa(y)}`;
+}
+function getDoctor(id){ return DOCTORS.find(d => d.id === id); }
+function todayISO(){
+  const t = new Date();
+  return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+}
+function isValidPhone(p){ return /^09\d{9}$/.test(p); }
+function isValidNid(n){
+  if(!/^\d{10}$/.test(n)) return false;
+  if(/^(\d)\1{9}$/.test(n)) return false;
+  let sum=0;
+  for(let i=0;i<9;i++) sum += parseInt(n[i]) * (10-i);
+  const r = sum % 11;
+  const last = parseInt(n[9]);
+  return (r < 2) ? last === r : last === 11-r;
+}
+function isValidEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+
+/* =====================================================
+   Toast
+===================================================== */
+function showToast(type, title, msg){
+  const wrap = document.getElementById('toastWrap');
+  const t = document.createElement('div');
+  t.className = 'toast ' + type;
+  const icons = { success:'✅', error:'⛔', warning:'⚠️', info:'ℹ️' };
+  t.innerHTML = `<div class="t-icon">${icons[type]||'ℹ️'}</div><div class="t-body"><strong>${title}</strong><span>${msg||''}</span></div>`;
+  wrap.appendChild(t);
+  setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(), 300); }, 3800);
+}
+
+/* =====================================================
+   Modal
+===================================================== */
+const modal = {
+  cb: null,
+  open(type, title, text, onConfirm){
+    const ov = document.getElementById('modalOverlay');
+    document.getElementById('modalIcon').className = 'modal-icon ' + type;
+    document.getElementById('modalIcon').textContent = type === 'danger' ? '🗑️' : type === 'warn' ? '⚠️' : '❓';
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalText').textContent = text;
+    modal.cb = onConfirm;
+    ov.classList.add('open');
+  },
+  close(){
+    document.getElementById('modalOverlay').classList.remove('open');
+    modal.cb = null;
   }
-  document.querySelectorAll('.img-frame img').forEach(handleImage);
+};
+document.getElementById('modalCancel').addEventListener('click', modal.close);
+document.getElementById('modalConfirm').addEventListener('click', ()=>{
+  if(modal.cb) modal.cb();
+  modal.close();
+});
+document.getElementById('modalOverlay').addEventListener('click', e => {
+  if(e.target.id === 'modalOverlay') modal.close();
+});
 
-  /* =========================================================
-     2. NAVBAR SCROLL EFFECT
-     ========================================================= */
-  var navbar = document.getElementById('navbar');
-  var toTop  = document.getElementById('toTop');
+/* =====================================================
+   Header & Mobile Menu
+===================================================== */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
 
-  function onScroll() {
-    var y = window.scrollY || window.pageYOffset;
-    if (y > 24) navbar.classList.add('scrolled');
-    else        navbar.classList.remove('scrolled');
+window.addEventListener('scroll', ()=>{
+  const header = document.querySelector('header');
+  if(window.scrollY > 20) header.style.boxShadow = '0 4px 20px rgba(13,115,119,.12)';
+  else header.style.boxShadow = 'none';
+});
 
-    if (y > 480) toTop.classList.add('show');
-    else         toTop.classList.remove('show');
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* =========================================================
-     3. MOBILE MENU
-     ========================================================= */
-  var hamburger  = document.getElementById('hamburger');
-  var mobileMenu = document.getElementById('mobileMenu');
-
-  function closeMenu() {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'باز کردن منو');
-  }
-  function toggleMenu() {
-    var isOpen = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', String(isOpen));
-    hamburger.setAttribute('aria-label', isOpen ? 'بستن منو' : 'باز کردن منو');
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-  mobileMenu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
+/* Active nav link on scroll */
+const sections = ['home','doctors','appointment','about','contact'];
+window.addEventListener('scroll', ()=>{
+  let current = 'home';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && window.scrollY >= el.offsetTop - 120) current = id;
   });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#'+current);
   });
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 960) closeMenu();
-  });
+});
 
-  /* =========================================================
-     4. SMOOTH SCROLL (with fixed-navbar offset)
-     ========================================================= */
-  var NAV_OFFSET = 74;
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var id = link.getAttribute('href');
-      if (!id || id === '#') return;
-      var target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      var top = target.getBoundingClientRect().top + window.pageYOffset - NAV_OFFSET;
-      window.scrollTo({ top: top, behavior: 'smooth' });
+/* =====================================================
+   Reveal on scroll
+===================================================== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold:.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* =====================================================
+   رندر پزشکان (صفحه اصلی)
+===================================================== */
+function renderDoctors(){
+  const grid = document.getElementById('doctorsGrid');
+  grid.innerHTML = DOCTORS.map(d => `
+    <div class="doctor-card">
+      <div class="doctor-avatar">
+        ${d.avatar}
+        <span class="doctor-status ${d.active ? 'active' : 'inactive'}">${d.active ? 'فعال' : 'غیرفعال'}</span>
+      </div>
+      <div class="doctor-body">
+        <h3>${d.name}</h3>
+        <p class="doctor-spec">${d.spec}</p>
+        <div class="doctor-meta">
+          <div>🎓 سابقه: ${toFa(d.exp)} سال</div>
+          <div>📅 روزهای کاری: ${d.days}</div>
+        </div>
+        <button class="btn btn-primary btn-sm" ${d.active ? '' : 'disabled'} onclick="goToBooking(${d.id})">
+          ${d.active ? 'دریافت نوبت' : 'غیرفعال'}
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function goToBooking(doctorId){
+  state.doctorId = doctorId;
+  state.date = null;
+  state.time = null;
+  renderApptDoctors();
+  buildDates();
+  goStep(2);
+  document.getElementById('appointment').scrollIntoView({ behavior:'smooth' });
+}
+
+/* =====================================================
+   رندر پزشکان در فرم نوبت‌دهی
+===================================================== */
+function renderApptDoctors(){
+  const wrap = document.getElementById('apptDoctors');
+  wrap.innerHTML = DOCTORS.map(d => {
+    const sel = state.doctorId === d.id ? 'selected' : '';
+    const dis = d.active ? '' : 'disabled';
+    return `
+      <div class="pick-card ${sel} ${dis}" data-id="${d.id}">
+        <div class="pick-av">${d.avatar}</div>
+        <div class="pick-info">
+          <h4>${d.name}</h4>
+          <p>${d.spec}</p>
+        </div>
+        <div class="pick-check">✓</div>
+      </div>
+    `;
+  }).join('');
+
+  wrap.querySelectorAll('.pick-card').forEach(card => {
+    card.addEventListener('click', ()=>{
+      if(card.classList.contains('disabled')) return;
+      state.doctorId = parseInt(card.dataset.id);
+      state.date = null;
+      state.time = null;
+      renderApptDoctors();
+      buildDates();
+      document.getElementById('next1').disabled = false;
     });
   });
+}
 
-  /* =========================================================
-     5. ACTIVE NAVIGATION (IntersectionObserver)
-     ========================================================= */
-  var sections = Array.prototype.slice.call(
-    document.querySelectorAll('main section[id]')
+/* =====================================================
+   ساخت تاریخ‌ها (۱۴ روز آینده)
+===================================================== */
+function buildDates(){
+  const grid = document.getElementById('datesGrid');
+  const today = new Date();
+  let html = '';
+  for(let i=0;i<14;i++){
+    const d = new Date(today);
+    d.setDate(today.getDate()+i);
+    const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const dow = FA_DAYS[d.getDay()];
+    const dayNum = d.getDate();
+    const mon = FA_MONTHS[d.getMonth()];
+    const isFri = d.getDay() === 5;
+    const sel = state.date === iso ? 'selected' : '';
+    html += `
+      <div class="date-card ${sel} ${isFri ? 'disabled' : ''}" data-iso="${iso}">
+        <div class="dow">${dow}</div>
+        <div class="day">${toFa(dayNum)}</div>
+        <div class="mon">${mon}</div>
+      </div>
+    `;
+  }
+  grid.innerHTML = html;
+  grid.querySelectorAll('.date-card').forEach(card => {
+    card.addEventListener('click', ()=>{
+      if(card.classList.contains('disabled')) return;
+      state.date = card.dataset.iso;
+      state.time = null;
+      buildDates();
+      buildSlots();
+      document.getElementById('next2').disabled = false;
+    });
+  });
+}
+
+/* =====================================================
+   ساخت زمان‌های آزاد / رزروشده
+===================================================== */
+function isSlotBusy(doctorId, date, time){
+  return appointments.some(a =>
+    a.doctorId === doctorId &&
+    a.date === date &&
+    a.time === time &&
+    a.status !== 'cancelled'
   );
-  var navLinks = Array.prototype.slice.call(
-    document.querySelectorAll('.nav-links a, .mobile-menu a')
-  );
+}
 
-  function setActive(id) {
-    navLinks.forEach(function (a) {
-      var href = a.getAttribute('href');
-      if (href === '#' + id) a.classList.add('active');
-      else a.classList.remove('active');
-    });
+function buildSlots(){
+  const grid = document.getElementById('slotsGrid');
+  if(!state.doctorId || !state.date){
+    grid.innerHTML = '<p style="grid-column:1/-1;color:var(--text-soft)">ابتدا پزشک و تاریخ را انتخاب کنید.</p>';
+    return;
   }
+  grid.innerHTML = TIME_SLOTS.map(t => {
+    const busy = isSlotBusy(state.doctorId, state.date, t);
+    const sel = state.time === t ? 'selected' : '';
+    const cls = busy ? 'busy' : 'free ' + sel;
+    return `<div class="slot ${cls}" data-time="${t}">${toFa(t)}</div>`;
+  }).join('');
 
-  if ('IntersectionObserver' in window && sections.length) {
-    var navObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) setActive(entry.target.id);
-      });
-    }, {
-      rootMargin: '-45% 0px -50% 0px',
-      threshold: 0
+  grid.querySelectorAll('.slot.free').forEach(s => {
+    s.addEventListener('click', ()=>{
+      state.time = s.dataset.time;
+      buildSlots();
+      document.getElementById('next3').disabled = false;
     });
-    sections.forEach(function (s) { navObserver.observe(s); });
+  });
+}
+
+/* =====================================================
+   مدیریت مراحل (Stepper)
+===================================================== */
+function goStep(n){
+  state.step = n;
+  document.querySelectorAll('.appt-step').forEach(el => {
+    el.classList.toggle('active', parseInt(el.dataset.step) === n);
+  });
+  document.querySelectorAll('#stepper .step-item').forEach(el => {
+    const s = parseInt(el.dataset.step);
+    el.classList.toggle('active', s === n);
+    el.classList.toggle('done', s < n);
+  });
+  window.scrollTo({ top: document.getElementById('appointment').offsetTop - 60, behavior:'smooth' });
+}
+
+document.getElementById('next1').addEventListener('click', ()=>{ if(state.doctorId) goStep(2); });
+document.getElementById('next2').addEventListener('click', ()=>{ if(state.date) goStep(3); });
+document.getElementById('next3').addEventListener('click', ()=>{ if(state.time) goStep(4); });
+
+document.querySelectorAll('[data-prev]').forEach(btn => {
+  btn.addEventListener('click', ()=> goStep(parseInt(btn.dataset.prev)));
+});
+
+/* =====================================================
+   اعتبارسنجی فرم بیمار
+===================================================== */
+function validatePatient(){
+  let ok = true;
+  const name = document.getElementById('pName').value.trim();
+  const phone = document.getElementById('pPhone').value.trim();
+  const nid = document.getElementById('pNid').value.trim();
+  const email = document.getElementById('pEmail').value.trim();
+  const note = document.getElementById('pNote').value.trim();
+
+  const setErr = (id, cond) => {
+    const el = document.getElementById(id);
+    el.classList.toggle('error', !cond);
+    if(!cond) ok = false;
+  };
+
+  setErr('fg-name', name.length >= 3);
+  setErr('fg-phone', isValidPhone(phone));
+  setErr('fg-nid', isValidNid(nid));
+  if(email) setErr('fg-email', isValidEmail(email));
+  else document.getElementById('fg-email').classList.remove('error');
+
+  state.patient = { name, phone, nid, email, note };
+  return ok;
+}
+
+document.getElementById('next4').addEventListener('click', ()=>{
+  if(!validatePatient()){
+    showToast('error', 'خطا در اطلاعات', 'لطفاً خطاهای فرم را برطرف کنید.');
+    return;
   }
+  buildReview();
+  goStep(5);
+});
 
-  /* =========================================================
-     6. REVEAL ON SCROLL
-     ========================================================= */
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var revealObserver = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+/* =====================================================
+   ساخت خلاصه بررسی
+===================================================== */
+function buildReview(){
+  const doc = getDoctor(state.doctorId);
+  const box = document.getElementById('reviewBox');
+  box.innerHTML = `
+    <div class="review-row"><span>پزشک</span><span>${doc.name} (${doc.spec})</span></div>
+    <div class="review-row"><span>تاریخ</span><span>${formatDateFa(state.date)}</span></div>
+    <div class="review-row"><span>ساعت</span><span>${toFa(state.time)}</span></div>
+    <div class="review-row"><span>نام بیمار</span><span>${state.patient.name}</span></div>
+    <div class="review-row"><span>موبایل</span><span>${toFa(state.patient.phone)}</span></div>
+    <div class="review-row"><span>کد ملی</span><span>${toFa(state.patient.nid)}</span></div>
+    ${state.patient.email ? `<div class="review-row"><span>ایمیل</span><span>${state.patient.email}</span></div>` : ''}
+    ${state.patient.note ? `<div class="review-row"><span>توضیحات</span><span>${state.patient.note}</span></div>` : ''}
+  `;
+}
 
-    reveals.forEach(function (el) { revealObserver.observe(el); });
+/* =====================================================
+   ثبت نهایی نوبت
+===================================================== */
+document.getElementById('confirmBtn').addEventListener('click', ()=>{
+  if(isSlotBusy(state.doctorId, state.date, state.time)){
+    showToast('error', 'زمان رزرو شده', 'این زمان هم‌اکنون رزرو شده است. لطفاً زمان دیگری انتخاب کنید.');
+    buildSlots();
+    goStep(3);
+    return;
+  }
+  const appt = {
+    code: uniqueCode(),
+    name: state.patient.name,
+    phone: state.patient.phone,
+    nid: state.patient.nid,
+    email: state.patient.email,
+    note: state.patient.note,
+    doctorId: state.doctorId,
+    date: state.date,
+    time: state.time,
+    status: 'pending',
+    createdAt: Date.now()
+  };
+  appointments.push(appt);
+  saveAppointments(appointments);
+  state.lastAppt = appt;
+  showSuccess(appt);
+  showToast('success', 'نوبت ثبت شد', 'کد پیگیری: ' + appt.code);
+  renderAdminTable();
+  updateStats();
+});
+
+function showSuccess(appt){
+  const doc = getDoctor(appt.doctorId);
+  document.getElementById('successCode').textContent = appt.code;
+  document.getElementById('successDetails').innerHTML = `
+    <div class="review-row"><span>پزشک</span><span>${doc.name}</span></div>
+    <div class="review-row"><span>تاریخ</span><span>${formatDateFa(appt.date)}</span></div>
+    <div class="review-row"><span>ساعت</span><span>${toFa(appt.time)}</span></div>
+    <div class="review-row"><span>نام بیمار</span><span>${appt.name}</span></div>
+    <div class="review-row"><span>وضعیت</span><span>در انتظار تأیید</span></div>
+  `;
+  goStep(6);
+}
+
+document.getElementById('newApptBtn').addEventListener('click', ()=>{
+  state.doctorId = null; state.date = null; state.time = null; state.patient = {};
+  state.lastAppt = null;
+  document.getElementById('patientForm').reset();
+  document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+  renderApptDoctors();
+  buildDates();
+  buildSlots();
+  document.getElementById('next1').disabled = true;
+  document.getElementById('next2').disabled = true;
+  document.getElementById('next3').disabled = true;
+  goStep(1);
+});
+
+/* =====================================================
+   پنل مدیریت — ورود
+===================================================== */
+document.getElementById('adminLoginBtn').addEventListener('click', ()=>{
+  const u = document.getElementById('adminUser').value.trim();
+  const p = document.getElementById('adminPass').value.trim();
+  if(u === 'admin' && p === 'admin'){
+    state.adminLoggedIn = true;
+    document.getElementById('adminLogin').style.display = 'none';
+    document.getElementById('adminDash').classList.add('active');
+    renderAdminTable();
+    updateStats();
+    showToast('success', 'خوش آمدید', 'به پنل مدیریت وارد شدید.');
   } else {
-    reveals.forEach(function (el) { el.classList.add('visible'); });
+    showToast('error', 'ورود ناموفق', 'نام کاربری یا رمز عبور اشتباه است.');
+  }
+});
+
+document.getElementById('logoutBtn').addEventListener('click', ()=>{
+  state.adminLoggedIn = false;
+  document.getElementById('adminLogin').style.display = '';
+  document.getElementById('adminDash').classList.remove('active');
+  document.getElementById('adminUser').value = '';
+  document.getElementById('adminPass').value = '';
+  showToast('info', 'خروج', 'از پنل مدیریت خارج شدید.');
+});
+
+/* =====================================================
+   آمار پنل مدیریت
+===================================================== */
+function updateStats(){
+  const today = todayISO();
+  document.getElementById('statTotal').textContent = toFa(appointments.length);
+  document.getElementById('statToday').textContent = toFa(appointments.filter(a => a.date === today).length);
+  document.getElementById('statConfirmed').textContent = toFa(appointments.filter(a => a.status === 'confirmed').length);
+  document.getElementById('statCancelled').textContent = toFa(appointments.filter(a => a.status === 'cancelled').length);
+}
+
+/* =====================================================
+   فیلتر پزشکان در جدول
+===================================================== */
+function fillDoctorFilter(){
+  const sel = document.getElementById('filterDoctor');
+  sel.innerHTML = '<option value="all">همه پزشکان</option>' +
+    DOCTORS.map(d => `<option value="${d.id}">${d.name}</option>`).join('');
+}
+
+/* =====================================================
+   رندر جدول مدیریت
+===================================================== */
+function statusFa(s){
+  return s === 'confirmed' ? 'تأییدشده' : s === 'cancelled' ? 'لغوشده' : 'در انتظار';
+}
+
+function renderAdminTable(){
+  const tbody = document.getElementById('adminTableBody');
+  const empty = document.getElementById('emptyState');
+  const q = state.search.trim().toLowerCase();
+  const fs = state.filterStatus;
+  const fd = state.filterDoctor;
+
+  let list = appointments.slice().sort((a,b)=> b.createdAt - a.createdAt);
+
+  if(fs !== 'all') list = list.filter(a => a.status === fs);
+  if(fd !== 'all') list = list.filter(a => a.doctorId === parseInt(fd));
+  if(q){
+    list = list.filter(a =>
+      a.code.toLowerCase().includes(q) ||
+      a.name.toLowerCase().includes(q) ||
+      a.phone.includes(q)
+    );
   }
 
-  /* =========================================================
-     7. WISHLIST TOGGLE
-     ========================================================= */
-  document.querySelectorAll('.product-fav').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      btn.classList.toggle('active');
-      var label = btn.getAttribute('aria-label') || '';
-      if (btn.classList.contains('active')) {
-        btn.setAttribute('aria-pressed', 'true');
-        btn.setAttribute('aria-label', label.replace('افزودن', 'حذف'));
-      } else {
-        btn.setAttribute('aria-pressed', 'false');
-        btn.setAttribute('aria-label', label.replace('حذف', 'افزودن'));
-      }
+  if(list.length === 0){
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  tbody.innerHTML = list.map(a => {
+    const doc = getDoctor(a.doctorId);
+    const badgeCls = a.status === 'confirmed' ? 'confirmed' : a.status === 'cancelled' ? 'cancelled' : 'pending';
+    return `
+      <tr data-code="${a.code}">
+        <td class="track-cell">${a.code}</td>
+        <td>${a.name}</td>
+        <td>${doc ? doc.name : '-'}</td>
+        <td>${formatDateFa(a.date)}</td>
+        <td>${toFa(a.time)}</td>
+        <td>${toFa(a.phone)}</td>
+        <td><span class="badge ${badgeCls}">${statusFa(a.status)}</span></td>
+        <td>
+          <div class="actions">
+            ${a.status !== 'confirmed' ? `<button class="btn btn-success btn-sm" data-act="confirm" data-code="${a.code}">تأیید</button>` : ''}
+            ${a.status !== 'cancelled' ? `<button class="btn btn-warning btn-sm" data-act="cancel" data-code="${a.code}">لغو</button>` : ''}
+            <button class="btn btn-danger btn-sm" data-act="delete" data-code="${a.code}">حذف</button>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  tbody.querySelectorAll('button[data-act]').forEach(btn => {
+    btn.addEventListener('click', ()=>{
+      const code = btn.dataset.code;
+      const act = btn.dataset.act;
+      if(act === 'confirm') confirmAppt(code);
+      else if(act === 'cancel') cancelAppt(code);
+      else if(act === 'delete') deleteAppt(code);
     });
   });
+}
 
-  /* =========================================================
-     8. GALLERY LIGHTBOX
-     ========================================================= */
-  var lightbox      = document.getElementById('lightbox');
-  var lightboxImg   = document.getElementById('lightboxImg');
-  var lightboxClose = document.getElementById('lightboxClose');
-  var lastFocused   = null;
-
-  function openLightbox(src, alt) {
-    lastFocused = document.activeElement;
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || 'تصویر گالری';
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    lightboxClose.focus();
-  }
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    lightboxImg.src = '';
-    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
-  }
-
-  document.querySelectorAll('[data-lightbox]').forEach(function (item) {
-    item.addEventListener('click', function (e) {
-      e.preventDefault();
-      var img = item.querySelector('img');
-      var src = item.getAttribute('data-img') || (img ? img.src : '');
-      var alt = img ? img.alt : '';
-      openLightbox(src, alt);
-    });
+/* =====================================================
+   عملیات روی نوبت‌ها
+===================================================== */
+function confirmAppt(code){
+  const a = appointments.find(x => x.code === code);
+  if(!a) return;
+  modal.open('info', 'تأیید نوبت', `آیا از تأیید نوبت ${a.name} با کد ${code} مطمئن هستید؟`, ()=>{
+    a.status = 'confirmed';
+    saveAppointments(appointments);
+    renderAdminTable();
+    updateStats();
+    showToast('success', 'تأیید شد', `نوبت ${code} با موفقیت تأیید شد.`);
   });
+}
 
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) closeLightbox();
+function cancelAppt(code){
+  const a = appointments.find(x => x.code === code);
+  if(!a) return;
+  modal.open('warn', 'لغو نوبت', `آیا از لغو نوبت ${a.name} با کد ${code} مطمئن هستید؟`, ()=>{
+    a.status = 'cancelled';
+    saveAppointments(appointments);
+    renderAdminTable();
+    updateStats();
+    showToast('warning', 'لغو شد', `نوبت ${code} لغو شد.`);
   });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
-  });
+}
 
-  /* =========================================================
-     9. BACK TO TOP
-     ========================================================= */
-  toTop.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+function deleteAppt(code){
+  const a = appointments.find(x => x.code === code);
+  if(!a) return;
+  modal.open('danger', 'حذف نوبت', `آیا از حذف کامل نوبت ${a.name} با کد ${code} مطمئن هستید؟ این عمل بازگشت‌پذیر نیست.`, ()=>{
+    appointments = appointments.filter(x => x.code !== code);
+    saveAppointments(appointments);
+    renderAdminTable();
+    updateStats();
+    showToast('error', 'حذف شد', `نوبت ${code} حذف شد.`);
   });
+}
 
-  /* =========================================================
-     10. KEYBOARD NAVIGATION FALLBACK
-     ========================================================= */
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Tab') document.body.classList.add('kb-nav');
-  });
+/* =====================================================
+   فیلترها و جستجو
+===================================================== */
+document.getElementById('adminSearch').addEventListener('input', e => {
+  state.search = e.target.value;
+  renderAdminTable();
+});
+document.getElementById('filterStatus').addEventListener('change', e => {
+  state.filterStatus = e.target.value;
+  renderAdminTable();
+});
+document.getElementById('filterDoctor').addEventListener('change', e => {
+  state.filterDoctor = e.target.value;
+  renderAdminTable();
+});
+document.getElementById('refreshBtn').addEventListener('click', ()=>{
+  state.search = ''; state.filterStatus = 'all'; state.filterDoctor = 'all';
+  document.getElementById('adminSearch').value = '';
+  document.getElementById('filterStatus').value = 'all';
+  document.getElementById('filterDoctor').value = 'all';
+  renderAdminTable();
+  showToast('info', 'بازنشانی', 'فیلترها پاک شدند.');
+});
 
-})();
+/* =====================================================
+   مقداردهی اولیه
+===================================================== */
+function init(){
+  renderDoctors();
+  renderApptDoctors();
+  buildDates();
+  fillDoctorFilter();
+  updateStats();
+}
+init();
 </script>
-
 </body>
 </html>
