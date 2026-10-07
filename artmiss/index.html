@@ -1,1136 +1,2764 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کلینیک پزشکی مهر | نوبت‌دهی آنلاین</title>
-<style>
-/* ===== Reset & Base ===== */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --primary:#0d7377;
-  --primary-dark:#095456;
-  --primary-light:#14a0a5;
-  --accent:#32e0c4;
-  --bg:#f4f9f9;
-  --surface:#ffffff;
-  --text:#1a2b32;
-  --text-soft:#5b6b73;
-  --border:#e2ecec;
-  --success:#28a745;
-  --warning:#f0ad4e;
-  --danger:#e04f5f;
-  --shadow:0 4px 20px rgba(13,115,119,.08);
-  --shadow-lg:0 12px 40px rgba(13,115,119,.14);
-  --radius:16px;
-  --radius-sm:10px;
-  --transition:.3s cubic-bezier(.4,0,.2,1);
-}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.7;
-  font-size:15px;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-button,input,select,textarea{font-family:inherit;font-size:inherit}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کلینیک پزشکی مهر | نوبت‌دهی آنلاین</title>
+    <style>
+      /* ===== Reset & Base ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --primary: #0d7377;
+        --primary-dark: #095456;
+        --primary-light: #14a0a5;
+        --accent: #32e0c4;
+        --bg: #f4f9f9;
+        --surface: #ffffff;
+        --text: #1a2b32;
+        --text-soft: #5b6b73;
+        --border: #e2ecec;
+        --success: #28a745;
+        --warning: #f0ad4e;
+        --danger: #e04f5f;
+        --shadow: 0 4px 20px rgba(13, 115, 119, 0.08);
+        --shadow-lg: 0 12px 40px rgba(13, 115, 119, 0.14);
+        --radius: 16px;
+        --radius-sm: 10px;
+        --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        font-size: 15px;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: inherit;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-/* ===== Buttons ===== */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 26px;border-radius:var(--radius-sm);border:none;cursor:pointer;
-  font-weight:600;font-size:14px;transition:var(--transition);
-  white-space:nowrap;
-}
-.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;box-shadow:0 4px 14px rgba(13,115,119,.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(13,115,119,.4)}
-.btn-outline{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}
-.btn-outline:hover{background:var(--primary);color:#fff}
-.btn-success{background:var(--success);color:#fff}
-.btn-success:hover{background:#218838}
-.btn-danger{background:var(--danger);color:#fff}
-.btn-danger:hover{background:#c43e4d}
-.btn-warning{background:var(--warning);color:#fff}
-.btn-warning:hover{background:#e09b3a}
-.btn-sm{padding:7px 14px;font-size:12.5px;border-radius:8px}
-.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
+      /* ===== Buttons ===== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 26px;
+        border-radius: var(--radius-sm);
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        transition: var(--transition);
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(13, 115, 119, 0.3);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(13, 115, 119, 0.4);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border: 1.5px solid var(--primary);
+      }
+      .btn-outline:hover {
+        background: var(--primary);
+        color: #fff;
+      }
+      .btn-success {
+        background: var(--success);
+        color: #fff;
+      }
+      .btn-success:hover {
+        background: #218838;
+      }
+      .btn-danger {
+        background: var(--danger);
+        color: #fff;
+      }
+      .btn-danger:hover {
+        background: #c43e4d;
+      }
+      .btn-warning {
+        background: var(--warning);
+        color: #fff;
+      }
+      .btn-warning:hover {
+        background: #e09b3a;
+      }
+      .btn-sm {
+        padding: 7px 14px;
+        font-size: 12.5px;
+        border-radius: 8px;
+      }
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none !important;
+      }
 
-/* ===== Header ===== */
-header{
-  position:sticky;top:0;z-index:1000;
-  background:rgba(255,255,255,.85);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);transition:var(--transition);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--primary)}
-.logo-icon{
-  width:42px;height:42px;border-radius:12px;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;
-  box-shadow:0 4px 12px rgba(13,115,119,.3);
-}
-.nav-links{display:flex;gap:6px;align-items:center}
-.nav-links a{
-  padding:8px 16px;border-radius:9px;font-weight:500;font-size:14.5px;
-  color:var(--text-soft);transition:var(--transition);
-}
-.nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(13,115,119,.08)}
-.nav-actions{display:flex;gap:10px;align-items:center}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
-.burger span{width:24px;height:2.5px;background:var(--primary);border-radius:2px;transition:var(--transition)}
-.mobile-menu{
-  display:none;flex-direction:column;gap:4px;padding:16px 20px 22px;
-  background:#fff;border-bottom:1px solid var(--border);
-}
-.mobile-menu a{padding:11px 14px;border-radius:9px;font-weight:500;color:var(--text-soft)}
-.mobile-menu a:hover{background:rgba(13,115,119,.08);color:var(--primary)}
-.mobile-menu.open{display:flex}
+      /* ===== Header ===== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+        transition: var(--transition);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 20px;
+        color: var(--primary);
+      }
+      .logo-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 22px;
+        box-shadow: 0 4px 12px rgba(13, 115, 119, 0.3);
+      }
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+      .nav-links a {
+        padding: 8px 16px;
+        border-radius: 9px;
+        font-weight: 500;
+        font-size: 14.5px;
+        color: var(--text-soft);
+        transition: var(--transition);
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--primary);
+        background: rgba(13, 115, 119, 0.08);
+      }
+      .nav-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+      }
+      .burger span {
+        width: 24px;
+        height: 2.5px;
+        background: var(--primary);
+        border-radius: 2px;
+        transition: var(--transition);
+      }
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding: 16px 20px 22px;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+      }
+      .mobile-menu a {
+        padding: 11px 14px;
+        border-radius: 9px;
+        font-weight: 500;
+        color: var(--text-soft);
+      }
+      .mobile-menu a:hover {
+        background: rgba(13, 115, 119, 0.08);
+        color: var(--primary);
+      }
+      .mobile-menu.open {
+        display: flex;
+      }
 
-/* ===== Hero ===== */
-.hero{
-  position:relative;padding:70px 0 90px;overflow:hidden;
-  background:linear-gradient(135deg,#eaf7f7 0%,#f4fbfb 50%,#e8f5f5 100%);
-}
-.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;z-index:0}
-.hero::before{width:400px;height:400px;background:var(--accent);top:-120px;left:-100px}
-.hero::after{width:350px;height:350px;background:var(--primary-light);bottom:-150px;right:-80px}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;background:#fff;
-  padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;color:var(--primary);
-  box-shadow:var(--shadow);margin-bottom:20px;
-}
-.hero h1{font-size:42px;font-weight:800;line-height:1.35;margin-bottom:20px}
-.hero h1 span{color:var(--primary);position:relative}
-.hero p{font-size:16.5px;color:var(--text-soft);margin-bottom:32px;max-width:520px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
-.hero-stat h3{font-size:28px;font-weight:800;color:var(--primary)}
-.hero-stat p{font-size:13.5px;color:var(--text-soft);margin:0}
-.hero-visual{
-  background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
-  border-radius:24px;padding:32px;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.8);
-}
-.hero-visual h4{font-size:17px;margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.hero-visual h4::before{content:'';width:4px;height:18px;background:var(--primary);border-radius:2px}
-.mini-slot{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.mini-slot span{
-  text-align:center;padding:10px;border-radius:9px;font-size:13px;font-weight:600;
-  background:#f0f7f7;color:var(--text-soft);
-}
-.mini-slot span.busy{background:#fdeaea;color:var(--danger);text-decoration:line-through}
-.mini-slot span.free{background:#e6f7f0;color:var(--success)}
+      /* ===== Hero ===== */
+      .hero {
+        position: relative;
+        padding: 70px 0 90px;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #eaf7f7 0%,
+          #f4fbfb 50%,
+          #e8f5f5 100%
+        );
+      }
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.35;
+        z-index: 0;
+      }
+      .hero::before {
+        width: 400px;
+        height: 400px;
+        background: var(--accent);
+        top: -120px;
+        left: -100px;
+      }
+      .hero::after {
+        width: 350px;
+        height: 350px;
+        background: var(--primary-light);
+        bottom: -150px;
+        right: -80px;
+      }
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 50px;
+        align-items: center;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary);
+        box-shadow: var(--shadow);
+        margin-bottom: 20px;
+      }
+      .hero h1 {
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 1.35;
+        margin-bottom: 20px;
+      }
+      .hero h1 span {
+        color: var(--primary);
+        position: relative;
+      }
+      .hero p {
+        font-size: 16.5px;
+        color: var(--text-soft);
+        margin-bottom: 32px;
+        max-width: 520px;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 36px;
+        margin-top: 44px;
+        flex-wrap: wrap;
+      }
+      .hero-stat h3 {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--primary);
+      }
+      .hero-stat p {
+        font-size: 13.5px;
+        color: var(--text-soft);
+        margin: 0;
+      }
+      .hero-visual {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+      }
+      .hero-visual h4 {
+        font-size: 17px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .hero-visual h4::before {
+        content: "";
+        width: 4px;
+        height: 18px;
+        background: var(--primary);
+        border-radius: 2px;
+      }
+      .mini-slot {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .mini-slot span {
+        text-align: center;
+        padding: 10px;
+        border-radius: 9px;
+        font-size: 13px;
+        font-weight: 600;
+        background: #f0f7f7;
+        color: var(--text-soft);
+      }
+      .mini-slot span.busy {
+        background: #fdeaea;
+        color: var(--danger);
+        text-decoration: line-through;
+      }
+      .mini-slot span.free {
+        background: #e6f7f0;
+        color: var(--success);
+      }
 
-/* ===== Sections ===== */
-section{padding:70px 0}
-.section-head{text-align:center;max-width:640px;margin:0 auto 48px}
-.section-head .tag{
-  display:inline-block;background:rgba(13,115,119,.1);color:var(--primary);
-  padding:6px 16px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:14px;
-}
-.section-head h2{font-size:32px;font-weight:800;margin-bottom:14px}
-.section-head p{color:var(--text-soft);font-size:15.5px}
+      /* ===== Sections ===== */
+      section {
+        padding: 70px 0;
+      }
+      .section-head {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto 48px;
+      }
+      .section-head .tag {
+        display: inline-block;
+        background: rgba(13, 115, 119, 0.1);
+        color: var(--primary);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 14px;
+      }
+      .section-head h2 {
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 14px;
+      }
+      .section-head p {
+        color: var(--text-soft);
+        font-size: 15.5px;
+      }
 
-/* ===== Services ===== */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.service-card{
-  background:var(--surface);border-radius:var(--radius);padding:30px 24px;
-  box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition);
-  text-align:center;
-}
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
-.service-icon{
-  width:60px;height:60px;margin:0 auto 18px;border-radius:16px;
-  background:linear-gradient(135deg,rgba(13,115,119,.12),rgba(50,224,196,.15));
-  display:flex;align-items:center;justify-content:center;font-size:28px;
-}
-.service-card h3{font-size:17.5px;margin-bottom:10px;font-weight:700}
-.service-card p{font-size:14px;color:var(--text-soft)}
+      /* ===== Services ===== */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+      }
+      .service-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 30px 24px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        transition: var(--transition);
+        text-align: center;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--accent);
+      }
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 18px;
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 115, 119, 0.12),
+          rgba(50, 224, 196, 0.15)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+      }
+      .service-card h3 {
+        font-size: 17.5px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .service-card p {
+        font-size: 14px;
+        color: var(--text-soft);
+      }
 
-/* ===== Doctors ===== */
-.doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-.doctor-card{
-  background:var(--surface);border-radius:var(--radius);overflow:hidden;
-  box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition);
-  display:flex;flex-direction:column;
-}
-.doctor-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.doctor-avatar{
-  height:150px;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,var(--primary),var(--primary-light));
-  color:#fff;font-size:52px;font-weight:800;position:relative;
-}
-.doctor-status{
-  position:absolute;top:12px;left:12px;font-size:11.5px;padding:4px 12px;
-  border-radius:50px;font-weight:600;display:flex;align-items:center;gap:5px;
-}
-.doctor-status.active{background:#e6f7f0;color:var(--success)}
-.doctor-status.inactive{background:#fdeaea;color:var(--danger)}
-.doctor-status::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
-.doctor-body{padding:20px;flex:1;display:flex;flex-direction:column}
-.doctor-body h3{font-size:17px;font-weight:700;margin-bottom:4px}
-.doctor-spec{color:var(--primary);font-size:13.5px;font-weight:600;margin-bottom:12px}
-.doctor-meta{display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--text-soft);margin-bottom:16px}
-.doctor-meta div{display:flex;align-items:center;gap:7px}
-.doctor-body .btn{margin-top:auto;width:100%}
+      /* ===== Doctors ===== */
+      .doctors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 26px;
+      }
+      .doctor-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+      .doctor-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+      }
+      .doctor-avatar {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: #fff;
+        font-size: 52px;
+        font-weight: 800;
+        position: relative;
+      }
+      .doctor-status {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 11.5px;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .doctor-status.active {
+        background: #e6f7f0;
+        color: var(--success);
+      }
+      .doctor-status.inactive {
+        background: #fdeaea;
+        color: var(--danger);
+      }
+      .doctor-status::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+      .doctor-body {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .doctor-body h3 {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .doctor-spec {
+        color: var(--primary);
+        font-size: 13.5px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .doctor-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        font-size: 13px;
+        color: var(--text-soft);
+        margin-bottom: 16px;
+      }
+      .doctor-meta div {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .doctor-body .btn {
+        margin-top: auto;
+        width: 100%;
+      }
 
-/* ===== Steps ===== */
-.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px}
-.step-card{
-  background:var(--surface);border-radius:var(--radius);padding:28px 22px;text-align:center;
-  box-shadow:var(--shadow);border:1px solid var(--border);position:relative;transition:var(--transition);
-}
-.step-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
-.step-num{
-  width:52px;height:52px;margin:0 auto 16px;border-radius:50%;
-  background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;
-  box-shadow:0 6px 16px rgba(13,115,119,.3);
-}
-.step-card h4{font-size:16px;margin-bottom:8px;font-weight:700}
-.step-card p{font-size:13.5px;color:var(--text-soft)}
+      /* ===== Steps ===== */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 24px;
+      }
+      .step-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 28px 22px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        position: relative;
+        transition: var(--transition);
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+      .step-num {
+        width: 52px;
+        height: 52px;
+        margin: 0 auto 16px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 800;
+        box-shadow: 0 6px 16px rgba(13, 115, 119, 0.3);
+      }
+      .step-card h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 13.5px;
+        color: var(--text-soft);
+      }
 
-/* ===== Testimonials ===== */
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.testi-card{
-  background:var(--surface);border-radius:var(--radius);padding:26px;
-  box-shadow:var(--shadow);border:1px solid var(--border);position:relative;transition:var(--transition);
-}
-.testi-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
-.testi-card::before{
-  content:'"';position:absolute;top:10px;left:22px;font-size:70px;
-  color:rgba(13,115,119,.1);font-family:Georgia,serif;line-height:1;
-}
-.testi-stars{color:#f5b731;font-size:15px;margin-bottom:12px;letter-spacing:2px}
-.testi-text{font-size:14.5px;color:var(--text-soft);margin-bottom:18px;position:relative;z-index:1}
-.testi-user{display:flex;align-items:center;gap:12px}
-.testi-user .av{
-  width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:700;font-size:16px;
-}
-.testi-user h5{font-size:14.5px;font-weight:700}
-.testi-user p{font-size:12.5px;color:var(--text-soft)}
+      /* ===== Testimonials ===== */
+      .testi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .testi-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 26px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        position: relative;
+        transition: var(--transition);
+      }
+      .testi-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+      .testi-card::before {
+        content: '"';
+        position: absolute;
+        top: 10px;
+        left: 22px;
+        font-size: 70px;
+        color: rgba(13, 115, 119, 0.1);
+        font-family: Georgia, serif;
+        line-height: 1;
+      }
+      .testi-stars {
+        color: #f5b731;
+        font-size: 15px;
+        margin-bottom: 12px;
+        letter-spacing: 2px;
+      }
+      .testi-text {
+        font-size: 14.5px;
+        color: var(--text-soft);
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 1;
+      }
+      .testi-user {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testi-user .av {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      .testi-user h5 {
+        font-size: 14.5px;
+        font-weight: 700;
+      }
+      .testi-user p {
+        font-size: 12.5px;
+        color: var(--text-soft);
+      }
 
-/* ===== Appointment ===== */
-#appointment{background:linear-gradient(180deg,#f4f9f9,#eaf7f7)}
-.appt-wrapper{
-  background:var(--surface);border-radius:24px;box-shadow:var(--shadow-lg);
-  border:1px solid var(--border);overflow:hidden;max-width:920px;margin:0 auto;
-}
-.stepper{display:flex;padding:22px 26px;background:#f7fbfb;border-bottom:1px solid var(--border);gap:8px;flex-wrap:wrap}
-.step-item{display:flex;align-items:center;gap:9px;flex:1;min-width:120px;opacity:.45;transition:var(--transition)}
-.step-item.active,.step-item.done{opacity:1}
-.step-item .circle{
-  width:32px;height:32px;border-radius:50%;background:#d6e6e6;color:#fff;
-  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;
-  transition:var(--transition);
-}
-.step-item.active .circle{background:linear-gradient(135deg,var(--primary),var(--primary-light));box-shadow:0 4px 12px rgba(13,115,119,.35)}
-.step-item.done .circle{background:var(--success)}
-.step-item .lbl{font-size:13px;font-weight:600;color:var(--text-soft)}
-.step-item.active .lbl{color:var(--primary)}
+      /* ===== Appointment ===== */
+      #appointment {
+        background: linear-gradient(180deg, #f4f9f9, #eaf7f7);
+      }
+      .appt-wrapper {
+        background: var(--surface);
+        border-radius: 24px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border);
+        overflow: hidden;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+      .stepper {
+        display: flex;
+        padding: 22px 26px;
+        background: #f7fbfb;
+        border-bottom: 1px solid var(--border);
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .step-item {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        flex: 1;
+        min-width: 120px;
+        opacity: 0.45;
+        transition: var(--transition);
+      }
+      .step-item.active,
+      .step-item.done {
+        opacity: 1;
+      }
+      .step-item .circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #d6e6e6;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        flex-shrink: 0;
+        transition: var(--transition);
+      }
+      .step-item.active .circle {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        box-shadow: 0 4px 12px rgba(13, 115, 119, 0.35);
+      }
+      .step-item.done .circle {
+        background: var(--success);
+      }
+      .step-item .lbl {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-soft);
+      }
+      .step-item.active .lbl {
+        color: var(--primary);
+      }
 
-.appt-body{padding:32px 30px}
-.appt-step{display:none;animation:fadeIn .4s ease}
-.appt-step.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.appt-step h3{font-size:19px;margin-bottom:6px;font-weight:700}
-.appt-step .hint{color:var(--text-soft);font-size:14px;margin-bottom:24px}
+      .appt-body {
+        padding: 32px 30px;
+      }
+      .appt-step {
+        display: none;
+        animation: fadeIn 0.4s ease;
+      }
+      .appt-step.active {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .appt-step h3 {
+        font-size: 19px;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .appt-step .hint {
+        color: var(--text-soft);
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
 
-.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.pick-card{
-  border:2px solid var(--border);border-radius:14px;padding:18px;cursor:pointer;
-  transition:var(--transition);background:#fff;display:flex;gap:14px;align-items:center;
-}
-.pick-card:hover{border-color:var(--primary-light);transform:translateY(-3px);box-shadow:var(--shadow)}
-.pick-card.selected{border-color:var(--primary);background:rgba(13,115,119,.05);box-shadow:0 6px 18px rgba(13,115,119,.15)}
-.pick-card.disabled{opacity:.45;cursor:not-allowed;pointer-events:none}
-.pick-av{
-  width:52px;height:52px;border-radius:13px;flex-shrink:0;
-  background:linear-gradient(135deg,var(--primary),var(--primary-light));
-  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;
-}
-.pick-info h4{font-size:15px;font-weight:700}
-.pick-info p{font-size:13px;color:var(--text-soft)}
-.pick-check{margin-right:auto;color:var(--primary);font-size:20px;opacity:0;transition:var(--transition)}
-.pick-card.selected .pick-check{opacity:1}
+      .pick-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+      }
+      .pick-card {
+        border: 2px solid var(--border);
+        border-radius: 14px;
+        padding: 18px;
+        cursor: pointer;
+        transition: var(--transition);
+        background: #fff;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      .pick-card:hover {
+        border-color: var(--primary-light);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+      }
+      .pick-card.selected {
+        border-color: var(--primary);
+        background: rgba(13, 115, 119, 0.05);
+        box-shadow: 0 6px 18px rgba(13, 115, 119, 0.15);
+      }
+      .pick-card.disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .pick-av {
+        width: 52px;
+        height: 52px;
+        border-radius: 13px;
+        flex-shrink: 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .pick-info h4 {
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .pick-info p {
+        font-size: 13px;
+        color: var(--text-soft);
+      }
+      .pick-check {
+        margin-right: auto;
+        color: var(--primary);
+        font-size: 20px;
+        opacity: 0;
+        transition: var(--transition);
+      }
+      .pick-card.selected .pick-check {
+        opacity: 1;
+      }
 
-.dates-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px}
-.date-card{
-  border:2px solid var(--border);border-radius:12px;padding:14px 8px;text-align:center;
-  cursor:pointer;transition:var(--transition);background:#fff;
-}
-.date-card:hover{border-color:var(--primary-light);transform:translateY(-3px)}
-.date-card.selected{border-color:var(--primary);background:rgba(13,115,119,.06)}
-.date-card.disabled{opacity:.4;cursor:not-allowed;pointer-events:none;background:#f5f5f5}
-.date-card .dow{font-size:12px;color:var(--text-soft);margin-bottom:4px}
-.date-card .day{font-size:20px;font-weight:800;color:var(--text)}
-.date-card.selected .day{color:var(--primary)}
-.date-card .mon{font-size:11.5px;color:var(--text-soft)}
+      .dates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 12px;
+      }
+      .date-card {
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        background: #fff;
+      }
+      .date-card:hover {
+        border-color: var(--primary-light);
+        transform: translateY(-3px);
+      }
+      .date-card.selected {
+        border-color: var(--primary);
+        background: rgba(13, 115, 119, 0.06);
+      }
+      .date-card.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        pointer-events: none;
+        background: #f5f5f5;
+      }
+      .date-card .dow {
+        font-size: 12px;
+        color: var(--text-soft);
+        margin-bottom: 4px;
+      }
+      .date-card .day {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--text);
+      }
+      .date-card.selected .day {
+        color: var(--primary);
+      }
+      .date-card .mon {
+        font-size: 11.5px;
+        color: var(--text-soft);
+      }
 
-.slots-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:12px}
-.slot{
-  padding:13px 8px;text-align:center;border-radius:11px;font-weight:600;font-size:14px;
-  border:2px solid var(--border);cursor:pointer;transition:var(--transition);background:#fff;
-}
-.slot.free:hover{border-color:var(--primary-light);background:rgba(13,115,119,.05);transform:translateY(-3px)}
-.slot.selected{border-color:var(--primary);background:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(13,115,119,.35)}
-.slot.busy{background:#fdeaea;color:var(--danger);border-color:#f8d7da;cursor:not-allowed;text-decoration:line-through;opacity:.7}
-.slot-legend{display:flex;gap:20px;margin-top:18px;font-size:13px;color:var(--text-soft);flex-wrap:wrap}
-.slot-legend span{display:flex;align-items:center;gap:7px}
-.slot-legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
-.legend-free{background:#fff;border:2px solid var(--border)}
-.legend-selected{background:var(--primary)}
-.legend-busy{background:#fdeaea;border:2px solid #f8d7da}
+      .slots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+      }
+      .slot {
+        padding: 13px 8px;
+        text-align: center;
+        border-radius: 11px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 2px solid var(--border);
+        cursor: pointer;
+        transition: var(--transition);
+        background: #fff;
+      }
+      .slot.free:hover {
+        border-color: var(--primary-light);
+        background: rgba(13, 115, 119, 0.05);
+        transform: translateY(-3px);
+      }
+      .slot.selected {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 6px 16px rgba(13, 115, 119, 0.35);
+      }
+      .slot.busy {
+        background: #fdeaea;
+        color: var(--danger);
+        border-color: #f8d7da;
+        cursor: not-allowed;
+        text-decoration: line-through;
+        opacity: 0.7;
+      }
+      .slot-legend {
+        display: flex;
+        gap: 20px;
+        margin-top: 18px;
+        font-size: 13px;
+        color: var(--text-soft);
+        flex-wrap: wrap;
+      }
+      .slot-legend span {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .slot-legend i {
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+      .legend-free {
+        background: #fff;
+        border: 2px solid var(--border);
+      }
+      .legend-selected {
+        background: var(--primary);
+      }
+      .legend-busy {
+        background: #fdeaea;
+        border: 2px solid #f8d7da;
+      }
 
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.form-group{display:flex;flex-direction:column;gap:7px}
-.form-group.full{grid-column:1/-1}
-.form-group label{font-size:13.5px;font-weight:600;color:var(--text)}
-.form-group label .req{color:var(--danger)}
-.form-group input,.form-group textarea,.form-group select{
-  padding:12px 14px;border:1.5px solid var(--border);border-radius:11px;
-  background:#fbfdfd;transition:var(--transition);outline:none;color:var(--text);
-}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
-  border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(13,115,119,.1);
-}
-.form-group textarea{resize:vertical;min-height:90px}
-.form-group.error input,.form-group.error textarea{border-color:var(--danger);background:#fef5f5}
-.err-msg{font-size:12px;color:var(--danger);display:none}
-.form-group.error .err-msg{display:block}
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .form-group.full {
+        grid-column: 1/-1;
+      }
+      .form-group label {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .form-group label .req {
+        color: var(--danger);
+      }
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        padding: 12px 14px;
+        border: 1.5px solid var(--border);
+        border-radius: 11px;
+        background: #fbfdfd;
+        transition: var(--transition);
+        outline: none;
+        color: var(--text);
+      }
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        border-color: var(--primary);
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(13, 115, 119, 0.1);
+      }
+      .form-group textarea {
+        resize: vertical;
+        min-height: 90px;
+      }
+      .form-group.error input,
+      .form-group.error textarea {
+        border-color: var(--danger);
+        background: #fef5f5;
+      }
+      .err-msg {
+        font-size: 12px;
+        color: var(--danger);
+        display: none;
+      }
+      .form-group.error .err-msg {
+        display: block;
+      }
 
-.review-box{background:#f7fbfb;border-radius:14px;padding:22px;border:1px solid var(--border);margin-bottom:22px}
-.review-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--border);font-size:14.5px}
-.review-row:last-child{border-bottom:none}
-.review-row span:first-child{color:var(--text-soft)}
-.review-row span:last-child{font-weight:600}
+      .review-box {
+        background: #f7fbfb;
+        border-radius: 14px;
+        padding: 22px;
+        border: 1px solid var(--border);
+        margin-bottom: 22px;
+      }
+      .review-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed var(--border);
+        font-size: 14.5px;
+      }
+      .review-row:last-child {
+        border-bottom: none;
+      }
+      .review-row span:first-child {
+        color: var(--text-soft);
+      }
+      .review-row span:last-child {
+        font-weight: 600;
+      }
 
-.appt-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;padding-top:22px;border-top:1px solid var(--border)}
-.appt-nav .btn{min-width:130px}
+      .appt-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 28px;
+        padding-top: 22px;
+        border-top: 1px solid var(--border);
+      }
+      .appt-nav .btn {
+        min-width: 130px;
+      }
 
-.success-box{text-align:center;padding:20px 10px}
-.success-icon{
-  width:90px;height:90px;margin:0 auto 24px;border-radius:50%;
-  background:linear-gradient(135deg,var(--success),#4cd964);
-  display:flex;align-items:center;justify-content:center;color:#fff;font-size:46px;
-  box-shadow:0 10px 30px rgba(40,167,69,.35);animation:pop .5s ease;
-}
-@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
-.success-box h3{font-size:23px;margin-bottom:10px;color:var(--success)}
-.success-box p{color:var(--text-soft);margin-bottom:24px}
-.track-code{
-  display:inline-block;background:#f0f7f7;border:2px dashed var(--primary);
-  padding:14px 34px;border-radius:14px;font-size:22px;font-weight:800;
-  color:var(--primary);letter-spacing:3px;margin-bottom:24px;
-}
-.success-details{
-  max-width:440px;margin:0 auto 26px;text-align:right;background:#f7fbfb;
-  border-radius:14px;padding:20px;border:1px solid var(--border);
-}
-.success-details .review-row span:last-child{color:var(--primary)}
+      .success-box {
+        text-align: center;
+        padding: 20px 10px;
+      }
+      .success-icon {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--success), #4cd964);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 46px;
+        box-shadow: 0 10px 30px rgba(40, 167, 69, 0.35);
+        animation: pop 0.5s ease;
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(0);
+        }
+        70% {
+          transform: scale(1.15);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .success-box h3 {
+        font-size: 23px;
+        margin-bottom: 10px;
+        color: var(--success);
+      }
+      .success-box p {
+        color: var(--text-soft);
+        margin-bottom: 24px;
+      }
+      .track-code {
+        display: inline-block;
+        background: #f0f7f7;
+        border: 2px dashed var(--primary);
+        padding: 14px 34px;
+        border-radius: 14px;
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--primary);
+        letter-spacing: 3px;
+        margin-bottom: 24px;
+      }
+      .success-details {
+        max-width: 440px;
+        margin: 0 auto 26px;
+        text-align: right;
+        background: #f7fbfb;
+        border-radius: 14px;
+        padding: 20px;
+        border: 1px solid var(--border);
+      }
+      .success-details .review-row span:last-child {
+        color: var(--primary);
+      }
 
-/* ===== Admin Dashboard ===== */
-#admin{background:linear-gradient(180deg,#eaf7f7,#f4f9f9)}
-.admin-login{
-  max-width:400px;margin:0 auto;background:#fff;border-radius:20px;padding:36px 30px;
-  box-shadow:var(--shadow-lg);border:1px solid var(--border);text-align:center;
-}
-.admin-login .lock{
-  width:70px;height:70px;margin:0 auto 20px;border-radius:50%;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;
-}
-.admin-login h3{font-size:20px;margin-bottom:8px}
-.admin-login p{color:var(--text-soft);font-size:14px;margin-bottom:24px}
-.admin-login .form-group{text-align:right;margin-bottom:16px}
-.admin-hint{font-size:12.5px;color:var(--text-soft);margin-top:14px;background:#f7fbfb;padding:10px;border-radius:9px}
+      /* ===== Admin Dashboard ===== */
+      #admin {
+        background: linear-gradient(180deg, #eaf7f7, #f4f9f9);
+      }
+      .admin-login {
+        max-width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 20px;
+        padding: 36px 30px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border);
+        text-align: center;
+      }
+      .admin-login .lock {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 32px;
+      }
+      .admin-login h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      .admin-login p {
+        color: var(--text-soft);
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      .admin-login .form-group {
+        text-align: right;
+        margin-bottom: 16px;
+      }
+      .admin-hint {
+        font-size: 12.5px;
+        color: var(--text-soft);
+        margin-top: 14px;
+        background: #f7fbfb;
+        padding: 10px;
+        border-radius: 9px;
+      }
 
-.dash{display:none}
-.dash.active{display:block;animation:fadeIn .4s ease}
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-bottom:28px}
-.stat-card{
-  background:#fff;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
-  border:1px solid var(--border);transition:var(--transition);position:relative;overflow:hidden;
-}
-.stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.stat-card::after{content:'';position:absolute;top:0;right:0;width:5px;height:100%}
-.stat-card.c1::after{background:var(--primary)}
-.stat-card.c2::after{background:var(--warning)}
-.stat-card.c3::after{background:var(--success)}
-.stat-card.c4::after{background:var(--danger)}
-.stat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.stat-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
-.c1 .stat-icon{background:rgba(13,115,119,.12);color:var(--primary)}
-.c2 .stat-icon{background:rgba(240,173,78,.15);color:var(--warning)}
-.c3 .stat-icon{background:rgba(40,167,69,.12);color:var(--success)}
-.c4 .stat-icon{background:rgba(224,79,95,.12);color:var(--danger)}
-.stat-card h3{font-size:30px;font-weight:800}
-.stat-card p{font-size:13.5px;color:var(--text-soft)}
+      .dash {
+        display: none;
+      }
+      .dash.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        margin-bottom: 28px;
+      }
+      .stat-card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 22px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+      .stat-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+      }
+      .stat-card.c1::after {
+        background: var(--primary);
+      }
+      .stat-card.c2::after {
+        background: var(--warning);
+      }
+      .stat-card.c3::after {
+        background: var(--success);
+      }
+      .stat-card.c4::after {
+        background: var(--danger);
+      }
+      .stat-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .stat-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+      }
+      .c1 .stat-icon {
+        background: rgba(13, 115, 119, 0.12);
+        color: var(--primary);
+      }
+      .c2 .stat-icon {
+        background: rgba(240, 173, 78, 0.15);
+        color: var(--warning);
+      }
+      .c3 .stat-icon {
+        background: rgba(40, 167, 69, 0.12);
+        color: var(--success);
+      }
+      .c4 .stat-icon {
+        background: rgba(224, 79, 95, 0.12);
+        color: var(--danger);
+      }
+      .stat-card h3 {
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .stat-card p {
+        font-size: 13.5px;
+        color: var(--text-soft);
+      }
 
-.table-tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
-.search-box{position:relative;flex:1;min-width:200px}
-.search-box input{
-  width:100%;padding:12px 44px 12px 16px;border:1.5px solid var(--border);
-  border-radius:11px;outline:none;background:#fff;transition:var(--transition);
-}
-.search-box input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(13,115,119,.1)}
-.search-box::before{content:'🔍';position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.6}
-.table-tools select{
-  padding:12px 14px;border:1.5px solid var(--border);border-radius:11px;
-  background:#fff;outline:none;cursor:pointer;transition:var(--transition);min-width:150px;
-}
-.table-tools select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(13,115,119,.1)}
+      .table-tools {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        align-items: center;
+      }
+      .search-box {
+        position: relative;
+        flex: 1;
+        min-width: 200px;
+      }
+      .search-box input {
+        width: 100%;
+        padding: 12px 44px 12px 16px;
+        border: 1.5px solid var(--border);
+        border-radius: 11px;
+        outline: none;
+        background: #fff;
+        transition: var(--transition);
+      }
+      .search-box input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(13, 115, 119, 0.1);
+      }
+      .search-box::before {
+        content: "🔍";
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+        opacity: 0.6;
+      }
+      .table-tools select {
+        padding: 12px 14px;
+        border: 1.5px solid var(--border);
+        border-radius: 11px;
+        background: #fff;
+        outline: none;
+        cursor: pointer;
+        transition: var(--transition);
+        min-width: 150px;
+      }
+      .table-tools select:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(13, 115, 119, 0.1);
+      }
 
-.table-wrap{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
-.table-scroll{overflow-x:auto}
-table{width:100%;border-collapse:collapse;min-width:820px}
-thead{background:#f7fbfb}
-th{padding:15px 16px;text-align:right;font-size:13.5px;font-weight:700;color:var(--text-soft);white-space:nowrap}
-td{padding:15px 16px;font-size:14px;border-top:1px solid var(--border);white-space:nowrap}
-tbody tr{transition:var(--transition)}
-tbody tr:hover{background:#fafdfd}
-.badge{padding:5px 13px;border-radius:50px;font-size:12px;font-weight:600;display:inline-block}
-.badge.pending{background:rgba(240,173,78,.15);color:#c98a26}
-.badge.confirmed{background:rgba(40,167,69,.13);color:var(--success)}
-.badge.cancelled{background:rgba(224,79,95,.12);color:var(--danger)}
-.track-cell{font-weight:700;color:var(--primary);font-family:monospace;font-size:13.5px}
-.actions{display:flex;gap:6px}
-.empty-state{text-align:center;padding:50px 20px;color:var(--text-soft)}
-.empty-state .em{font-size:52px;margin-bottom:14px;opacity:.5}
+      .table-wrap {
+        background: #fff;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+      .table-scroll {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 820px;
+      }
+      thead {
+        background: #f7fbfb;
+      }
+      th {
+        padding: 15px 16px;
+        text-align: right;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: var(--text-soft);
+        white-space: nowrap;
+      }
+      td {
+        padding: 15px 16px;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
+        white-space: nowrap;
+      }
+      tbody tr {
+        transition: var(--transition);
+      }
+      tbody tr:hover {
+        background: #fafdfd;
+      }
+      .badge {
+        padding: 5px 13px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-block;
+      }
+      .badge.pending {
+        background: rgba(240, 173, 78, 0.15);
+        color: #c98a26;
+      }
+      .badge.confirmed {
+        background: rgba(40, 167, 69, 0.13);
+        color: var(--success);
+      }
+      .badge.cancelled {
+        background: rgba(224, 79, 95, 0.12);
+        color: var(--danger);
+      }
+      .track-cell {
+        font-weight: 700;
+        color: var(--primary);
+        font-family: monospace;
+        font-size: 13.5px;
+      }
+      .actions {
+        display: flex;
+        gap: 6px;
+      }
+      .empty-state {
+        text-align: center;
+        padding: 50px 20px;
+        color: var(--text-soft);
+      }
+      .empty-state .em {
+        font-size: 52px;
+        margin-bottom: 14px;
+        opacity: 0.5;
+      }
 
-/* ===== Contact ===== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.contact-info{display:flex;flex-direction:column;gap:18px}
-.contact-item{
-  display:flex;gap:16px;align-items:flex-start;background:#fff;padding:20px;
-  border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition);
-}
-.contact-item:hover{transform:translateX(-5px);box-shadow:var(--shadow-lg)}
-.contact-item .ci{
-  width:48px;height:48px;border-radius:13px;flex-shrink:0;
-  background:linear-gradient(135deg,rgba(13,115,119,.12),rgba(50,224,196,.15));
-  display:flex;align-items:center;justify-content:center;font-size:22px;
-}
-.contact-item h4{font-size:15.5px;margin-bottom:4px}
-.contact-item p{font-size:13.5px;color:var(--text-soft)}
-.contact-map{
-  background:linear-gradient(135deg,var(--primary),var(--primary-light));
-  border-radius:var(--radius);display:flex;align-items:center;justify-content:center;
-  color:#fff;font-size:60px;min-height:320px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
-}
-.contact-map::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.15),transparent 60%);
-}
-.contact-map span{position:relative;z-index:1;text-align:center;font-size:18px;font-weight:600}
-.contact-map span em{display:block;font-size:60px;font-style:normal;margin-bottom:12px}
+      /* ===== Contact ===== */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .contact-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        background: #fff;
+        padding: 20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        transition: var(--transition);
+      }
+      .contact-item:hover {
+        transform: translateX(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+      .contact-item .ci {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        flex-shrink: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 115, 119, 0.12),
+          rgba(50, 224, 196, 0.15)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+      }
+      .contact-item h4 {
+        font-size: 15.5px;
+        margin-bottom: 4px;
+      }
+      .contact-item p {
+        font-size: 13.5px;
+        color: var(--text-soft);
+      }
+      .contact-map {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 60px;
+        min-height: 320px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+      .contact-map::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(255, 255, 255, 0.15),
+          transparent 60%
+        );
+      }
+      .contact-map span {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .contact-map span em {
+        display: block;
+        font-size: 60px;
+        font-style: normal;
+        margin-bottom: 12px;
+      }
 
-/* ===== Footer ===== */
-footer{background:#0d2b2d;color:#c8dcdc;padding:55px 0 0}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:40px}
-.footer-col h4{color:#fff;font-size:16px;margin-bottom:18px;font-weight:700}
-.footer-col p,.footer-col a{font-size:13.5px;color:#9fb8b8;line-height:2;display:block;transition:var(--transition)}
-.footer-col a:hover{color:var(--accent);padding-right:5px}
-.footer-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:19px;margin-bottom:16px}
-.footer-social{display:flex;gap:10px;margin-top:16px}
-.footer-social a{
-  width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:center;font-size:17px;transition:var(--transition);
-}
-.footer-social a:hover{background:var(--primary);transform:translateY(-3px);padding:0}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);padding:20px 0;text-align:center;
-  font-size:13px;color:#7fa0a0;
-}
+      /* ===== Footer ===== */
+      footer {
+        background: #0d2b2d;
+        color: #c8dcdc;
+        padding: 55px 0 0;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 36px;
+        padding-bottom: 40px;
+      }
+      .footer-col h4 {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 18px;
+        font-weight: 700;
+      }
+      .footer-col p,
+      .footer-col a {
+        font-size: 13.5px;
+        color: #9fb8b8;
+        line-height: 2;
+        display: block;
+        transition: var(--transition);
+      }
+      .footer-col a:hover {
+        color: var(--accent);
+        padding-right: 5px;
+      }
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-weight: 800;
+        font-size: 19px;
+        margin-bottom: 16px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .footer-social a {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        transition: var(--transition);
+      }
+      .footer-social a:hover {
+        background: var(--primary);
+        transform: translateY(-3px);
+        padding: 0;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px 0;
+        text-align: center;
+        font-size: 13px;
+        color: #7fa0a0;
+      }
 
-/* ===== Toast ===== */
-#toastWrap{position:fixed;top:20px;left:20px;z-index:9999;display:flex;flex-direction:column;gap:12px;max-width:340px}
-.toast{
-  background:#fff;border-radius:13px;padding:15px 18px;box-shadow:0 10px 30px rgba(0,0,0,.15);
-  display:flex;gap:12px;align-items:center;border-right:4px solid var(--primary);
-  animation:slideIn .4s ease;font-size:14px;
-}
-.toast.success{border-right-color:var(--success)}
-.toast.error{border-right-color:var(--danger)}
-.toast.warning{border-right-color:var(--warning)}
-.toast .t-icon{font-size:20px;flex-shrink:0}
-.toast .t-body{flex:1}
-.toast .t-body strong{display:block;font-size:14px;margin-bottom:2px}
-.toast .t-body span{font-size:12.5px;color:var(--text-soft)}
-@keyframes slideIn{from{transform:translateX(-120%);opacity:0}to{transform:none;opacity:1}}
-.toast.out{animation:slideOut .3s ease forwards}
-@keyframes slideOut{to{transform:translateX(-120%);opacity:0}}
+      /* ===== Toast ===== */
+      #toastWrap {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 340px;
+      }
+      .toast {
+        background: #fff;
+        border-radius: 13px;
+        padding: 15px 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border-right: 4px solid var(--primary);
+        animation: slideIn 0.4s ease;
+        font-size: 14px;
+      }
+      .toast.success {
+        border-right-color: var(--success);
+      }
+      .toast.error {
+        border-right-color: var(--danger);
+      }
+      .toast.warning {
+        border-right-color: var(--warning);
+      }
+      .toast .t-icon {
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .toast .t-body {
+        flex: 1;
+      }
+      .toast .t-body strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      .toast .t-body span {
+        font-size: 12.5px;
+        color: var(--text-soft);
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(-120%);
+          opacity: 0;
+        }
+        to {
+          transform: none;
+          opacity: 1;
+        }
+      }
+      .toast.out {
+        animation: slideOut 0.3s ease forwards;
+      }
+      @keyframes slideOut {
+        to {
+          transform: translateX(-120%);
+          opacity: 0;
+        }
+      }
 
-/* ===== Modal ===== */
-.modal-overlay{
-  position:fixed;inset:0;background:rgba(13,43,45,.55);backdrop-filter:blur(4px);
-  z-index:9000;display:none;align-items:center;justify-content:center;padding:20px;
-}
-.modal-overlay.open{display:flex;animation:fadeIn .25s ease}
-.modal{
-  background:#fff;border-radius:20px;max-width:440px;width:100%;padding:30px;
-  box-shadow:0 20px 60px rgba(0,0,0,.25);animation:pop .3s ease;
-}
-.modal-icon{
-  width:64px;height:64px;margin:0 auto 18px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:30px;
-}
-.modal-icon.danger{background:rgba(224,79,95,.12);color:var(--danger)}
-.modal-icon.warn{background:rgba(240,173,78,.15);color:var(--warning)}
-.modal-icon.info{background:rgba(13,115,119,.12);color:var(--primary)}
-.modal h3{text-align:center;font-size:19px;margin-bottom:10px}
-.modal p{text-align:center;color:var(--text-soft);font-size:14px;margin-bottom:24px;line-height:1.8}
-.modal-actions{display:flex;gap:12px}
-.modal-actions .btn{flex:1}
+      /* ===== Modal ===== */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(13, 43, 45, 0.55);
+        backdrop-filter: blur(4px);
+        z-index: 9000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .modal-overlay.open {
+        display: flex;
+        animation: fadeIn 0.25s ease;
+      }
+      .modal {
+        background: #fff;
+        border-radius: 20px;
+        max-width: 440px;
+        width: 100%;
+        padding: 30px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        animation: pop 0.3s ease;
+      }
+      .modal-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+      }
+      .modal-icon.danger {
+        background: rgba(224, 79, 95, 0.12);
+        color: var(--danger);
+      }
+      .modal-icon.warn {
+        background: rgba(240, 173, 78, 0.15);
+        color: var(--warning);
+      }
+      .modal-icon.info {
+        background: rgba(13, 115, 119, 0.12);
+        color: var(--primary);
+      }
+      .modal h3 {
+        text-align: center;
+        font-size: 19px;
+        margin-bottom: 10px;
+      }
+      .modal p {
+        text-align: center;
+        color: var(--text-soft);
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.8;
+      }
+      .modal-actions {
+        display: flex;
+        gap: 12px;
+      }
+      .modal-actions .btn {
+        flex: 1;
+      }
 
-/* ===== Reveal animation ===== */
-.reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.4,0,.2,1)}
-.reveal.in{opacity:1;transform:none}
+      /* ===== Reveal animation ===== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
 
-/* ===== Responsive ===== */
-@media(max-width:992px){
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero h1{font-size:34px}
-  .contact-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
-}
-@media(max-width:768px){
-  .nav-links,.nav-actions .btn:not(.burger){display:none}
-  .nav-actions{display:none}
-  .burger{display:flex}
-  section{padding:50px 0}
-  .hero{padding:45px 0 60px}
-  .hero h1{font-size:27px}
-  .hero p{font-size:15px}
-  .section-head h2{font-size:25px}
-  .form-grid{grid-template-columns:1fr}
-  .stepper{padding:16px}
-  .step-item .lbl{display:none}
-  .appt-body{padding:24px 18px}
-  .hero-stats{gap:22px}
-  .hero-stat h3{font-size:23px}
-  #toastWrap{left:12px;right:12px;max-width:none}
-  .table-tools select{min-width:0;flex:1}
-}
-@media(max-width:480px){
-  .hero h1{font-size:23px}
-  .hero-btns .btn{width:100%}
-  .footer-grid{grid-template-columns:1fr}
-  .dates-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}
-  .slots-grid{grid-template-columns:repeat(auto-fill,minmax(85px,1fr))}
-  .track-code{font-size:18px;padding:12px 22px}
-  .appt-nav{flex-direction:column-reverse}
-  .appt-nav .btn{width:100%}
-  .modal-actions{flex-direction:column}
-}
-</style>
-</head>
-<body>
-
-<!-- Header -->
-<header>
-  <div class="container nav">
-    <a href="#home" class="logo">
-      <span class="logo-icon">✚</span>
-      <span>کلینیک مهر</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#home" class="active">خانه</a>
-      <a href="#doctors">پزشکان</a>
-      <a href="#appointment">نوبت‌دهی</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">تماس با ما</a>
-    </nav>
-    <div class="nav-actions">
-      <a href="#admin" class="btn btn-outline btn-sm">پنل مدیریت</a>
-      <a href="#appointment" class="btn btn-primary btn-sm">دریافت نوبت</a>
-    </div>
-    <button class="burger" id="burger" aria-label="منو">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home">خانه</a>
-    <a href="#doctors">پزشکان</a>
-    <a href="#appointment">نوبت‌دهی</a>
-    <a href="#about">درباره ما</a>
-    <a href="#contact">تماس با ما</a>
-    <a href="#admin">پنل مدیریت</a>
-  </div>
-</header>
-
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="hero-badge">🩺 سامانه نوبت‌دهی آنلاین کلینیک</div>
-      <h1>نوبت پزشک را <span>سریع و آسان</span> از خانه بگیرید</h1>
-      <p>با کلینیک مهر در چند ثانیه نوبت خود را رزرو کنید، زمان‌های آزاد را ببینید و بدون تماس تلفنی یا انتظار، به پزشک متخصص دسترسی داشته باشید.</p>
-      <div class="hero-btns">
-        <a href="#appointment" class="btn btn-primary">دریافت نوبت</a>
-        <a href="#doctors" class="btn btn-outline">مشاهده پزشکان</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><h3>۱۲+</h3><p>پزشک متخصص</p></div>
-        <div class="hero-stat"><h3>۸۵۰۰+</h3><p>بیمار راضی</p></div>
-        <div class="hero-stat"><h3>۲۴/۷</h3><p>پشتیبانی آنلاین</p></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <h4>زمان‌های آزاد امروز</h4>
-      <div class="mini-slot">
-        <span class="free">۰۸:۰۰</span>
-        <span class="busy">۰۸:۳۰</span>
-        <span class="free">۰۹:۰۰</span>
-        <span class="free">۰۹:۳۰</span>
-        <span class="busy">۱۰:۰۰</span>
-        <span class="free">۱۰:۳۰</span>
-        <span class="free">۱۱:۰۰</span>
-        <span class="free">۱۶:۰۰</span>
-        <span class="busy">۱۶:۳۰</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section id="about">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">خدمات ما</span>
-      <h2>خدمات تخصصی کلینیک مهر</h2>
-      <p>با بهره‌گیری از تیم پزشکی مجرب و تجهیزات مدرن، در تمام زمینه‌های درمانی در خدمت شما هستیم.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal"><div class="service-icon">❤️</div><h3>قلب و عروق</h3><p>تشخیص و درمان بیماری‌های قلبی با پیشرفته‌ترین تجهیزات.</p></div>
-      <div class="service-card reveal"><div class="service-icon">🦷</div><h3>دندانپزشکی</h3><p>خدمات کامل دندانپزشکی زیبایی و درمانی.</p></div>
-      <div class="service-card reveal"><div class="service-icon">👶</div><h3>اطفال</h3><p>مراقبت‌های تخصصی کودکان توسط پزشکان مجرب.</p></div>
-      <div class="service-card reveal"><div class="service-icon">🧠</div><h3>مغز و اعصاب</h3><p>درمان اختلالات عصبی با تیم تخصصی.</p></div>
-      <div class="service-card reveal"><div class="service-icon">🦴</div><h3>ارتوپدی</h3><p>درمان آسیب‌های استخوانی و مفاصل.</p></div>
-      <div class="service-card reveal"><div class="service-icon">🔬</div><h3>آزمایشگاه</h3><p>انجام تست‌های دقیق آزمایشگاهی در محل.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Doctors -->
-<section id="doctors">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">تیم پزشکی</span>
-      <h2>پزشکان متخصص ما</h2>
-      <p>با انتخاب پزشک مورد نظر خود، نوبت خود را در کمترین زمان رزرو کنید.</p>
-    </div>
-    <div class="doctors-grid" id="doctorsGrid"></div>
-  </div>
-</section>
-
-<!-- Steps -->
-<section>
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">فرایند ساده</span>
-      <h2>چطور نوبت بگیریم؟</h2>
-      <p>در ۴ مرحله ساده نوبت خود را ثبت کنید.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card reveal"><div class="step-num">۱</div><h4>انتخاب پزشک</h4><p>از میان پزشکان متخصص، پزشک مورد نظر خود را انتخاب کنید.</p></div>
-      <div class="step-card reveal"><div class="step-num">۲</div><h4>انتخاب زمان</h4><p>تاریخ و ساعت مناسب خود را از زمان‌های آزاد انتخاب کنید.</p></div>
-      <div class="step-card reveal"><div class="step-num">۳</div><h4>تکمیل اطلاعات</h4><p>اطلاعات شخصی خود را وارد و بررسی کنید.</p></div>
-      <div class="step-card reveal"><div class="step-num">۴</div><h4>دریافت کد پیگیری</h4><p>کد پیگیری نوبت خود را دریافت و ذخیره کنید.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section style="background:linear-gradient(180deg,#f4f9f9,#eaf7f7)">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">نظرات بیماران</span>
-      <h2>بیماران ما چه می‌گویند؟</h2>
-      <p>رضایت بیماران، بزرگترین افتخار ماست.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">سامانه بسیار ساده و کاربردی. در کمتر از یک دقیقه نوبت گرفتم و پیام تأیید دریافت کردم. واقعاً عالی بود.</p>
-        <div class="testi-user"><div class="av">م</div><div><h5>مریم احمدی</h5><p>بیمار</p></div></div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">بدون تماس تلفنی و انتظار، نوبت دندانپزشکی گرفتم. پنل مدیریت هم برای پیگیری بسیار کارآمد است.</p>
-        <div class="testi-user"><div class="av">ع</div><div><h5>علی رضایی</h5><p>بیمار</p></div></div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★☆</div>
-        <p class="testi-text">رابط کاربری زیبا و فارسی. پزشکان مجرب و زمان‌بندی دقیق. به همه پیشنهاد می‌کنم.</p>
-        <div class="testi-user"><div class="av">ز</div><div><h5>زهرا کریمی</h5><p>بیمار</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Appointment -->
-<section id="appointment">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">نوبت‌دهی آنلاین</span>
-      <h2>دریافت نوبت</h2>
-      <p>در چند مرحله ساده نوبت خود را ثبت کنید.</p>
-    </div>
-    <div class="appt-wrapper reveal">
-      <div class="stepper" id="stepper">
-        <div class="step-item active" data-step="1"><div class="circle">۱</div><span class="lbl">انتخاب پزشک</span></div>
-        <div class="step-item" data-step="2"><div class="circle">۲</div><span class="lbl">انتخاب تاریخ</span></div>
-        <div class="step-item" data-step="3"><div class="circle">۳</div><span class="lbl">انتخاب ساعت</span></div>
-        <div class="step-item" data-step="4"><div class="circle">۴</div><span class="lbl">اطلاعات بیمار</span></div>
-        <div class="step-item" data-step="5"><div class="circle">۵</div><span class="lbl">تأیید نهایی</span></div>
-      </div>
-      <div class="appt-body">
-
-        <!-- Step 1: Doctor -->
-        <div class="appt-step active" data-step="1">
-          <h3>انتخاب پزشک</h3>
-          <p class="hint">پزشک مورد نظر خود را انتخاب کنید.</p>
-          <div class="pick-grid" id="apptDoctors"></div>
-          <div class="appt-nav">
-            <span></span>
-            <button class="btn btn-primary" id="next1" disabled>مرحله بعد ←</button>
-          </div>
+      /* ===== Responsive ===== */
+      @media (max-width: 992px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .hero h1 {
+          font-size: 34px;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav-links,
+        .nav-actions .btn:not(.burger) {
+          display: none;
+        }
+        .nav-actions {
+          display: none;
+        }
+        .burger {
+          display: flex;
+        }
+        section {
+          padding: 50px 0;
+        }
+        .hero {
+          padding: 45px 0 60px;
+        }
+        .hero h1 {
+          font-size: 27px;
+        }
+        .hero p {
+          font-size: 15px;
+        }
+        .section-head h2 {
+          font-size: 25px;
+        }
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+        .stepper {
+          padding: 16px;
+        }
+        .step-item .lbl {
+          display: none;
+        }
+        .appt-body {
+          padding: 24px 18px;
+        }
+        .hero-stats {
+          gap: 22px;
+        }
+        .hero-stat h3 {
+          font-size: 23px;
+        }
+        #toastWrap {
+          left: 12px;
+          right: 12px;
+          max-width: none;
+        }
+        .table-tools select {
+          min-width: 0;
+          flex: 1;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 23px;
+        }
+        .hero-btns .btn {
+          width: 100%;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .dates-grid {
+          grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        }
+        .slots-grid {
+          grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+        }
+        .track-code {
+          font-size: 18px;
+          padding: 12px 22px;
+        }
+        .appt-nav {
+          flex-direction: column-reverse;
+        }
+        .appt-nav .btn {
+          width: 100%;
+        }
+        .modal-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav">
+        <a href="#home" class="logo">
+          <span class="logo-icon">✚</span>
+          <span>کلینیک مهر</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#home" class="active">خانه</a>
+          <a href="#doctors">پزشکان</a>
+          <a href="#appointment">نوبت‌دهی</a>
+          <a href="#about">درباره ما</a>
+          <a href="#contact">تماس با ما</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="#admin" class="btn btn-outline btn-sm">پنل مدیریت</a>
+          <a href="#appointment" class="btn btn-primary btn-sm">دریافت نوبت</a>
         </div>
-
-        <!-- Step 2: Date -->
-        <div class="appt-step" data-step="2">
-          <h3>انتخاب تاریخ</h3>
-          <p class="hint">تاریخ مورد نظر خود را انتخاب کنید.</p>
-          <div class="dates-grid" id="datesGrid"></div>
-          <div class="appt-nav">
-            <button class="btn btn-outline" data-prev="1">→ مرحله قبل</button>
-            <button class="btn btn-primary" id="next2" disabled>مرحله بعد ←</button>
-          </div>
-        </div>
-
-        <!-- Step 3: Time -->
-        <div class="appt-step" data-step="3">
-          <h3>انتخاب ساعت</h3>
-          <p class="hint">زمان‌های آزاد پزشک را انتخاب کنید.</p>
-          <div class="slots-grid" id="slotsGrid"></div>
-          <div class="slot-legend">
-            <span><i class="legend-free"></i> آزاد</span>
-            <span><i class="legend-selected"></i> انتخاب‌شده</span>
-            <span><i class="legend-busy"></i> رزرو شده</span>
-          </div>
-          <div class="appt-nav">
-            <button class="btn btn-outline" data-prev="2">→ مرحله قبل</button>
-            <button class="btn btn-primary" id="next3" disabled>مرحله بعد ←</button>
-          </div>
-        </div>
-
-        <!-- Step 4: Patient Info -->
-        <div class="appt-step" data-step="4">
-          <h3>اطلاعات بیمار</h3>
-          <p class="hint">اطلاعات خود را وارد کنید. فیلدهای ستاره‌دار الزامی هستند.</p>
-          <form id="patientForm" novalidate>
-            <div class="form-grid">
-              <div class="form-group" id="fg-name">
-                <label>نام و نام خانوادگی <span class="req">*</span></label>
-                <input type="text" id="pName" placeholder="مثال: علی محمدی" autocomplete="off">
-                <span class="err-msg">نام باید حداقل ۳ حرف باشد.</span>
-              </div>
-              <div class="form-group" id="fg-phone">
-                <label>شماره موبایل <span class="req">*</span></label>
-                <input type="tel" id="pPhone" placeholder="09xxxxxxxxx" maxlength="11" autocomplete="off">
-                <span class="err-msg">شماره موبایل معتبر وارد کنید (۰۹...).</span>
-              </div>
-              <div class="form-group" id="fg-nid">
-                <label>کد ملی <span class="req">*</span></label>
-                <input type="text" id="pNid" placeholder="۱۰ رقم" maxlength="10" autocomplete="off">
-                <span class="err-msg">کد ملی معتبر ۱۰ رقمی وارد کنید.</span>
-              </div>
-              <div class="form-group" id="fg-email">
-                <label>ایمیل (اختیاری)</label>
-                <input type="email" id="pEmail" placeholder="example@mail.com" autocomplete="off">
-                <span class="err-msg">ایمیل معتبر وارد کنید.</span>
-              </div>
-              <div class="form-group full" id="fg-note">
-                <label>توضیحات بیمار (اختیاری)</label>
-                <textarea id="pNote" placeholder="توضیحات خود را وارد کنید..."></textarea>
-                <span class="err-msg"></span>
-              </div>
-            </div>
-          </form>
-          <div class="appt-nav">
-            <button class="btn btn-outline" data-prev="3">→ مرحله قبل</button>
-            <button class="btn btn-primary" id="next4">بررسی و تأیید ←</button>
-          </div>
-        </div>
-
-        <!-- Step 5: Review -->
-        <div class="appt-step" data-step="5">
-          <h3>تأیید نهایی</h3>
-          <p class="hint">اطلاعات نوبت خود را بررسی کنید.</p>
-          <div class="review-box" id="reviewBox"></div>
-          <div class="appt-nav">
-            <button class="btn btn-outline" data-prev="4">→ ویرایش</button>
-            <button class="btn btn-primary" id="confirmBtn">✅ ثبت نهایی نوبت</button>
-          </div>
-        </div>
-
-        <!-- Success -->
-        <div class="appt-step" data-step="6">
-          <div class="success-box">
-            <div class="success-icon">✓</div>
-            <h3>نوبت شما با موفقیت ثبت شد!</h3>
-            <p>کد پیگیری زیر را برای مراجعه به کلینیک ذخیره کنید.</p>
-            <div class="track-code" id="successCode">-</div>
-            <div class="success-details" id="successDetails"></div>
-            <button class="btn btn-primary" id="newApptBtn">ثبت نوبت جدید</button>
-          </div>
-        </div>
-
+        <button class="burger" id="burger" aria-label="منو">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Admin Dashboard -->
-<section id="admin">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">پنل مدیریت</span>
-      <h2>مدیریت نوبت‌ها</h2>
-      <p>مدیریت، جستجو و تغییر وضعیت نوبت‌ها.</p>
-    </div>
-
-    <!-- Login -->
-    <div class="admin-login reveal" id="adminLogin">
-      <div class="lock">🔒</div>
-      <h3>ورود به پنل مدیریت</h3>
-      <p>نام کاربری و رمز عبور را وارد کنید.</p>
-      <div class="form-group">
-        <label>نام کاربری</label>
-        <input type="text" id="adminUser" placeholder="admin" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <label>رمز عبور</label>
-        <input type="password" id="adminPass" placeholder="••••••" autocomplete="off">
-      </div>
-      <button class="btn btn-primary" style="width:100%" id="adminLoginBtn">ورود به پنل</button>
-      <div class="admin-hint">💡 برای دمو: نام کاربری <b>admin</b> و رمز عبور <b>admin</b></div>
-    </div>
-
-    <!-- Dashboard -->
-    <div class="dash" id="adminDash">
-      <div class="stats-grid">
-        <div class="stat-card c1"><div class="stat-top"><div class="stat-icon">📋</div></div><h3 id="statTotal">۰</h3><p>کل نوبت‌ها</p></div>
-        <div class="stat-card c2"><div class="stat-top"><div class="stat-icon">📅</div></div><h3 id="statToday">۰</h3><p>نوبت‌های امروز</p></div>
-        <div class="stat-card c3"><div class="stat-top"><div class="stat-icon">✅</div></div><h3 id="statConfirmed">۰</h3><p>تأییدشده</p></div>
-        <div class="stat-card c4"><div class="stat-top"><div class="stat-icon">❌</div></div><h3 id="statCancelled">۰</h3><p>لغوشده</p></div>
-      </div>
-
-      <div class="table-tools">
-        <div class="search-box"><input type="text" id="adminSearch" placeholder="جستجو بر اساس کد پیگیری، نام یا موبایل..."></div>
-        <select id="filterStatus">
-          <option value="all">همه وضعیت‌ها</option>
-          <option value="pending">در انتظار تأیید</option>
-          <option value="confirmed">تأییدشده</option>
-          <option value="cancelled">لغوشده</option>
-        </select>
-        <select id="filterDoctor"><option value="all">همه پزشکان</option></select>
-        <button class="btn btn-outline btn-sm" id="refreshBtn">🔄 بازنشانی</button>
-        <button class="btn btn-danger btn-sm" id="logoutBtn">خروج</button>
-      </div>
-
-      <div class="table-wrap">
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>کد پیگیری</th><th>نام بیمار</th><th>پزشک</th><th>تاریخ</th>
-                <th>ساعت</th><th>موبایل</th><th>وضعیت</th><th>عملیات</th>
-              </tr>
-            </thead>
-            <tbody id="adminTableBody"></tbody>
-          </table>
-        </div>
-        <div class="empty-state" id="emptyState" style="display:none">
-          <div class="em">📭</div>
-          <p>نوبتی مطابق فیلترهای انتخابی یافت نشد.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="tag">تماس با ما</span>
-      <h2>راه‌های ارتباطی</h2>
-      <p>هر سوال یا ابهامی دارید، با ما در تماس باشید.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-item reveal"><div class="ci">📍</div><div><h4>آدرس کلینیک</h4><p>تهران، خیابان ولیعصر، نبش کوچه مهر، پلاک ۱۲، طبقه سوم</p></div></div>
-        <div class="contact-item reveal"><div class="ci">📞</div><div><h4>تلفن تماس</h4><p>۰۲۱-۸۸۷۶۵۴۳۲ | ۰۹۱۲۳۴۵۶۷۸۹</p></div></div>
-        <div class="contact-item reveal"><div class="ci">✉️</div><div><h4>ایمیل</h4><p>info@mehrclinic.ir</p></div></div>
-        <div class="contact-item reveal"><div class="ci">🕐</div><div><h4>ساعات کاری</h4><p>شنبه تا چهارشنبه: ۸:۰۰ تا ۱۹:۰۰ | پنجشنبه: ۸:۰۰ تا ۱۳:۰۰</p></div></div>
-      </div>
-      <div class="contact-map reveal">
-        <span><em>🗺️</em>موقعیت کلینیک روی نقشه</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-logo"><span class="logo-icon">✚</span> کلینیک مهر</div>
-        <p>کلینیک تخصصی مهر با تیمی از پزشکان مجرب و تجهیزات مدرن، آماده خدمت‌رسانی به شما عزیزان است.</p>
-        <div class="footer-social">
-          <a href="#">📷</a><a href="#">✈️</a><a href="#">🐦</a><a href="#">📘</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>دسترسی سریع</h4>
+      <div class="mobile-menu" id="mobileMenu">
         <a href="#home">خانه</a>
         <a href="#doctors">پزشکان</a>
         <a href="#appointment">نوبت‌دهی</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
         <a href="#admin">پنل مدیریت</a>
       </div>
-      <div class="footer-col">
-        <h4>خدمات</h4>
-        <a href="#">قلب و عروق</a>
-        <a href="#">دندانپزشکی</a>
-        <a href="#">اطفال</a>
-        <a href="#">مغز و اعصاب</a>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">🩺 سامانه نوبت‌دهی آنلاین کلینیک</div>
+          <h1>نوبت پزشک را <span>سریع و آسان</span> از خانه بگیرید</h1>
+          <p>
+            با کلینیک مهر در چند ثانیه نوبت خود را رزرو کنید، زمان‌های آزاد را
+            ببینید و بدون تماس تلفنی یا انتظار، به پزشک متخصص دسترسی داشته
+            باشید.
+          </p>
+          <div class="hero-btns">
+            <a href="#appointment" class="btn btn-primary">دریافت نوبت</a>
+            <a href="#doctors" class="btn btn-outline">مشاهده پزشکان</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <h3>۱۲+</h3>
+              <p>پزشک متخصص</p>
+            </div>
+            <div class="hero-stat">
+              <h3>۸۵۰۰+</h3>
+              <p>بیمار راضی</p>
+            </div>
+            <div class="hero-stat">
+              <h3>۲۴/۷</h3>
+              <p>پشتیبانی آنلاین</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <h4>زمان‌های آزاد امروز</h4>
+          <div class="mini-slot">
+            <span class="free">۰۸:۰۰</span>
+            <span class="busy">۰۸:۳۰</span>
+            <span class="free">۰۹:۰۰</span>
+            <span class="free">۰۹:۳۰</span>
+            <span class="busy">۱۰:۰۰</span>
+            <span class="free">۱۰:۳۰</span>
+            <span class="free">۱۱:۰۰</span>
+            <span class="free">۱۶:۰۰</span>
+            <span class="busy">۱۶:۳۰</span>
+          </div>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>تماس با ما</h4>
-        <p>📍 تهران، خیابان ولیعصر، پلاک ۱۲</p>
-        <p>📞 ۰۲۱-۸۸۷۶۵۴۳۲</p>
-        <p>✉️ info@mehrclinic.ir</p>
+    </section>
+
+    <!-- Services -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">خدمات ما</span>
+          <h2>خدمات تخصصی کلینیک مهر</h2>
+          <p>
+            با بهره‌گیری از تیم پزشکی مجرب و تجهیزات مدرن، در تمام زمینه‌های
+            درمانی در خدمت شما هستیم.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">❤️</div>
+            <h3>قلب و عروق</h3>
+            <p>تشخیص و درمان بیماری‌های قلبی با پیشرفته‌ترین تجهیزات.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🦷</div>
+            <h3>دندانپزشکی</h3>
+            <p>خدمات کامل دندانپزشکی زیبایی و درمانی.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">👶</div>
+            <h3>اطفال</h3>
+            <p>مراقبت‌های تخصصی کودکان توسط پزشکان مجرب.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🧠</div>
+            <h3>مغز و اعصاب</h3>
+            <p>درمان اختلالات عصبی با تیم تخصصی.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🦴</div>
+            <h3>ارتوپدی</h3>
+            <p>درمان آسیب‌های استخوانی و مفاصل.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🔬</div>
+            <h3>آزمایشگاه</h3>
+            <p>انجام تست‌های دقیق آزمایشگاهی در محل.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors -->
+    <section id="doctors">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">تیم پزشکی</span>
+          <h2>پزشکان متخصص ما</h2>
+          <p>
+            با انتخاب پزشک مورد نظر خود، نوبت خود را در کمترین زمان رزرو کنید.
+          </p>
+        </div>
+        <div class="doctors-grid" id="doctorsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">فرایند ساده</span>
+          <h2>چطور نوبت بگیریم؟</h2>
+          <p>در ۴ مرحله ساده نوبت خود را ثبت کنید.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num">۱</div>
+            <h4>انتخاب پزشک</h4>
+            <p>از میان پزشکان متخصص، پزشک مورد نظر خود را انتخاب کنید.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">۲</div>
+            <h4>انتخاب زمان</h4>
+            <p>تاریخ و ساعت مناسب خود را از زمان‌های آزاد انتخاب کنید.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">۳</div>
+            <h4>تکمیل اطلاعات</h4>
+            <p>اطلاعات شخصی خود را وارد و بررسی کنید.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">۴</div>
+            <h4>دریافت کد پیگیری</h4>
+            <p>کد پیگیری نوبت خود را دریافت و ذخیره کنید.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="background: linear-gradient(180deg, #f4f9f9, #eaf7f7)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">نظرات بیماران</span>
+          <h2>بیماران ما چه می‌گویند؟</h2>
+          <p>رضایت بیماران، بزرگترین افتخار ماست.</p>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              سامانه بسیار ساده و کاربردی. در کمتر از یک دقیقه نوبت گرفتم و پیام
+              تأیید دریافت کردم. واقعاً عالی بود.
+            </p>
+            <div class="testi-user">
+              <div class="av">م</div>
+              <div>
+                <h5>مریم احمدی</h5>
+                <p>بیمار</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              بدون تماس تلفنی و انتظار، نوبت دندانپزشکی گرفتم. پنل مدیریت هم
+              برای پیگیری بسیار کارآمد است.
+            </p>
+            <div class="testi-user">
+              <div class="av">ع</div>
+              <div>
+                <h5>علی رضایی</h5>
+                <p>بیمار</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★☆</div>
+            <p class="testi-text">
+              رابط کاربری زیبا و فارسی. پزشکان مجرب و زمان‌بندی دقیق. به همه
+              پیشنهاد می‌کنم.
+            </p>
+            <div class="testi-user">
+              <div class="av">ز</div>
+              <div>
+                <h5>زهرا کریمی</h5>
+                <p>بیمار</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment -->
+    <section id="appointment">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">نوبت‌دهی آنلاین</span>
+          <h2>دریافت نوبت</h2>
+          <p>در چند مرحله ساده نوبت خود را ثبت کنید.</p>
+        </div>
+        <div class="appt-wrapper reveal">
+          <div class="stepper" id="stepper">
+            <div class="step-item active" data-step="1">
+              <div class="circle">۱</div>
+              <span class="lbl">انتخاب پزشک</span>
+            </div>
+            <div class="step-item" data-step="2">
+              <div class="circle">۲</div>
+              <span class="lbl">انتخاب تاریخ</span>
+            </div>
+            <div class="step-item" data-step="3">
+              <div class="circle">۳</div>
+              <span class="lbl">انتخاب ساعت</span>
+            </div>
+            <div class="step-item" data-step="4">
+              <div class="circle">۴</div>
+              <span class="lbl">اطلاعات بیمار</span>
+            </div>
+            <div class="step-item" data-step="5">
+              <div class="circle">۵</div>
+              <span class="lbl">تأیید نهایی</span>
+            </div>
+          </div>
+          <div class="appt-body">
+            <!-- Step 1: Doctor -->
+            <div class="appt-step active" data-step="1">
+              <h3>انتخاب پزشک</h3>
+              <p class="hint">پزشک مورد نظر خود را انتخاب کنید.</p>
+              <div class="pick-grid" id="apptDoctors"></div>
+              <div class="appt-nav">
+                <span></span>
+                <button class="btn btn-primary" id="next1" disabled>
+                  مرحله بعد ←
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Date -->
+            <div class="appt-step" data-step="2">
+              <h3>انتخاب تاریخ</h3>
+              <p class="hint">تاریخ مورد نظر خود را انتخاب کنید.</p>
+              <div class="dates-grid" id="datesGrid"></div>
+              <div class="appt-nav">
+                <button class="btn btn-outline" data-prev="1">
+                  → مرحله قبل
+                </button>
+                <button class="btn btn-primary" id="next2" disabled>
+                  مرحله بعد ←
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Time -->
+            <div class="appt-step" data-step="3">
+              <h3>انتخاب ساعت</h3>
+              <p class="hint">زمان‌های آزاد پزشک را انتخاب کنید.</p>
+              <div class="slots-grid" id="slotsGrid"></div>
+              <div class="slot-legend">
+                <span><i class="legend-free"></i> آزاد</span>
+                <span><i class="legend-selected"></i> انتخاب‌شده</span>
+                <span><i class="legend-busy"></i> رزرو شده</span>
+              </div>
+              <div class="appt-nav">
+                <button class="btn btn-outline" data-prev="2">
+                  → مرحله قبل
+                </button>
+                <button class="btn btn-primary" id="next3" disabled>
+                  مرحله بعد ←
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Patient Info -->
+            <div class="appt-step" data-step="4">
+              <h3>اطلاعات بیمار</h3>
+              <p class="hint">
+                اطلاعات خود را وارد کنید. فیلدهای ستاره‌دار الزامی هستند.
+              </p>
+              <form id="patientForm" novalidate>
+                <div class="form-grid">
+                  <div class="form-group" id="fg-name">
+                    <label>نام و نام خانوادگی <span class="req">*</span></label>
+                    <input
+                      type="text"
+                      id="pName"
+                      placeholder="مثال: علی محمدی"
+                      autocomplete="off"
+                    />
+                    <span class="err-msg">نام باید حداقل ۳ حرف باشد.</span>
+                  </div>
+                  <div class="form-group" id="fg-phone">
+                    <label>شماره موبایل <span class="req">*</span></label>
+                    <input
+                      type="tel"
+                      id="pPhone"
+                      placeholder="09xxxxxxxxx"
+                      maxlength="11"
+                      autocomplete="off"
+                    />
+                    <span class="err-msg"
+                      >شماره موبایل معتبر وارد کنید (۰۹...).</span
+                    >
+                  </div>
+                  <div class="form-group" id="fg-nid">
+                    <label>کد ملی <span class="req">*</span></label>
+                    <input
+                      type="text"
+                      id="pNid"
+                      placeholder="۱۰ رقم"
+                      maxlength="10"
+                      autocomplete="off"
+                    />
+                    <span class="err-msg">کد ملی معتبر ۱۰ رقمی وارد کنید.</span>
+                  </div>
+                  <div class="form-group" id="fg-email">
+                    <label>ایمیل (اختیاری)</label>
+                    <input
+                      type="email"
+                      id="pEmail"
+                      placeholder="example@mail.com"
+                      autocomplete="off"
+                    />
+                    <span class="err-msg">ایمیل معتبر وارد کنید.</span>
+                  </div>
+                  <div class="form-group full" id="fg-note">
+                    <label>توضیحات بیمار (اختیاری)</label>
+                    <textarea
+                      id="pNote"
+                      placeholder="توضیحات خود را وارد کنید..."
+                    ></textarea>
+                    <span class="err-msg"></span>
+                  </div>
+                </div>
+              </form>
+              <div class="appt-nav">
+                <button class="btn btn-outline" data-prev="3">
+                  → مرحله قبل
+                </button>
+                <button class="btn btn-primary" id="next4">
+                  بررسی و تأیید ←
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 5: Review -->
+            <div class="appt-step" data-step="5">
+              <h3>تأیید نهایی</h3>
+              <p class="hint">اطلاعات نوبت خود را بررسی کنید.</p>
+              <div class="review-box" id="reviewBox"></div>
+              <div class="appt-nav">
+                <button class="btn btn-outline" data-prev="4">→ ویرایش</button>
+                <button class="btn btn-primary" id="confirmBtn">
+                  ✅ ثبت نهایی نوبت
+                </button>
+              </div>
+            </div>
+
+            <!-- Success -->
+            <div class="appt-step" data-step="6">
+              <div class="success-box">
+                <div class="success-icon">✓</div>
+                <h3>نوبت شما با موفقیت ثبت شد!</h3>
+                <p>کد پیگیری زیر را برای مراجعه به کلینیک ذخیره کنید.</p>
+                <div class="track-code" id="successCode">-</div>
+                <div class="success-details" id="successDetails"></div>
+                <button class="btn btn-primary" id="newApptBtn">
+                  ثبت نوبت جدید
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="admin">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">پنل مدیریت</span>
+          <h2>مدیریت نوبت‌ها</h2>
+          <p>مدیریت، جستجو و تغییر وضعیت نوبت‌ها.</p>
+        </div>
+
+        <!-- Login -->
+        <div class="admin-login reveal" id="adminLogin">
+          <div class="lock">🔒</div>
+          <h3>ورود به پنل مدیریت</h3>
+          <p>نام کاربری و رمز عبور را وارد کنید.</p>
+          <div class="form-group">
+            <label>نام کاربری</label>
+            <input
+              type="text"
+              id="adminUser"
+              placeholder="admin"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <label>رمز عبور</label>
+            <input
+              type="password"
+              id="adminPass"
+              placeholder="••••••"
+              autocomplete="off"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            style="width: 100%"
+            id="adminLoginBtn"
+          >
+            ورود به پنل
+          </button>
+          <div class="admin-hint">
+            💡 برای دمو: نام کاربری <b>admin</b> و رمز عبور <b>admin</b>
+          </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dash" id="adminDash">
+          <div class="stats-grid">
+            <div class="stat-card c1">
+              <div class="stat-top"><div class="stat-icon">📋</div></div>
+              <h3 id="statTotal">۰</h3>
+              <p>کل نوبت‌ها</p>
+            </div>
+            <div class="stat-card c2">
+              <div class="stat-top"><div class="stat-icon">📅</div></div>
+              <h3 id="statToday">۰</h3>
+              <p>نوبت‌های امروز</p>
+            </div>
+            <div class="stat-card c3">
+              <div class="stat-top"><div class="stat-icon">✅</div></div>
+              <h3 id="statConfirmed">۰</h3>
+              <p>تأییدشده</p>
+            </div>
+            <div class="stat-card c4">
+              <div class="stat-top"><div class="stat-icon">❌</div></div>
+              <h3 id="statCancelled">۰</h3>
+              <p>لغوشده</p>
+            </div>
+          </div>
+
+          <div class="table-tools">
+            <div class="search-box">
+              <input
+                type="text"
+                id="adminSearch"
+                placeholder="جستجو بر اساس کد پیگیری، نام یا موبایل..."
+              />
+            </div>
+            <select id="filterStatus">
+              <option value="all">همه وضعیت‌ها</option>
+              <option value="pending">در انتظار تأیید</option>
+              <option value="confirmed">تأییدشده</option>
+              <option value="cancelled">لغوشده</option>
+            </select>
+            <select id="filterDoctor">
+              <option value="all">همه پزشکان</option>
+            </select>
+            <button class="btn btn-outline btn-sm" id="refreshBtn">
+              🔄 بازنشانی
+            </button>
+            <button class="btn btn-danger btn-sm" id="logoutBtn">خروج</button>
+          </div>
+
+          <div class="table-wrap">
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>کد پیگیری</th>
+                    <th>نام بیمار</th>
+                    <th>پزشک</th>
+                    <th>تاریخ</th>
+                    <th>ساعت</th>
+                    <th>موبایل</th>
+                    <th>وضعیت</th>
+                    <th>عملیات</th>
+                  </tr>
+                </thead>
+                <tbody id="adminTableBody"></tbody>
+              </table>
+            </div>
+            <div class="empty-state" id="emptyState" style="display: none">
+              <div class="em">📭</div>
+              <p>نوبتی مطابق فیلترهای انتخابی یافت نشد.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">تماس با ما</span>
+          <h2>راه‌های ارتباطی</h2>
+          <p>هر سوال یا ابهامی دارید، با ما در تماس باشید.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item reveal">
+              <div class="ci">📍</div>
+              <div>
+                <h4>آدرس کلینیک</h4>
+                <p>تهران، خیابان ولیعصر، نبش کوچه مهر، پلاک ۱۲، طبقه سوم</p>
+              </div>
+            </div>
+            <div class="contact-item reveal">
+              <div class="ci">📞</div>
+              <div>
+                <h4>تلفن تماس</h4>
+                <p>۰۲۱-۸۸۷۶۵۴۳۲ | ۰۹۱۲۳۴۵۶۷۸۹</p>
+              </div>
+            </div>
+            <div class="contact-item reveal">
+              <div class="ci">✉️</div>
+              <div>
+                <h4>ایمیل</h4>
+                <p>info@mehrclinic.ir</p>
+              </div>
+            </div>
+            <div class="contact-item reveal">
+              <div class="ci">🕐</div>
+              <div>
+                <h4>ساعات کاری</h4>
+                <p>شنبه تا چهارشنبه: ۸:۰۰ تا ۱۹:۰۰ | پنجشنبه: ۸:۰۰ تا ۱۳:۰۰</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-map reveal">
+            <span><em>🗺️</em>موقعیت کلینیک روی نقشه</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <span class="logo-icon">✚</span> کلینیک مهر
+            </div>
+            <p>
+              کلینیک تخصصی مهر با تیمی از پزشکان مجرب و تجهیزات مدرن، آماده
+              خدمت‌رسانی به شما عزیزان است.
+            </p>
+            <div class="footer-social">
+              <a href="#">📷</a><a href="#">✈️</a><a href="#">🐦</a
+              ><a href="#">📘</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>دسترسی سریع</h4>
+            <a href="#home">خانه</a>
+            <a href="#doctors">پزشکان</a>
+            <a href="#appointment">نوبت‌دهی</a>
+            <a href="#admin">پنل مدیریت</a>
+          </div>
+          <div class="footer-col">
+            <h4>خدمات</h4>
+            <a href="#">قلب و عروق</a>
+            <a href="#">دندانپزشکی</a>
+            <a href="#">اطفال</a>
+            <a href="#">مغز و اعصاب</a>
+          </div>
+          <div class="footer-col">
+            <h4>تماس با ما</h4>
+            <p>📍 تهران، خیابان ولیعصر، پلاک ۱۲</p>
+            <p>📞 ۰۲۱-۸۸۷۶۵۴۳۲</p>
+            <p>✉️ info@mehrclinic.ir</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © ۱۴۰۳ کلینیک پزشکی مهر — تمامی حقوق محفوظ است.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toastWrap"></div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-icon" id="modalIcon">❓</div>
+        <h3 id="modalTitle">عنوان</h3>
+        <p id="modalText">متن</p>
+        <div class="modal-actions">
+          <button class="btn btn-outline" id="modalCancel">انصراف</button>
+          <button class="btn btn-primary" id="modalConfirm">تأیید</button>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">© ۱۴۰۳ کلینیک پزشکی مهر — تمامی حقوق محفوظ است.</div>
-  </div>
-</footer>
 
-<!-- Toast -->
-<div id="toastWrap"></div>
-
-<!-- Modal -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <div class="modal-icon" id="modalIcon">❓</div>
-    <h3 id="modalTitle">عنوان</h3>
-    <p id="modalText">متن</p>
-    <div class="modal-actions">
-      <button class="btn btn-outline" id="modalCancel">انصراف</button>
-      <button class="btn btn-primary" id="modalConfirm">تأیید</button>
-    </div>
-  </div>
-</div>
-
-<script>
-/* =====================================================
+    <script>
+      /* =====================================================
    داده‌های اولیه (Demo Data)
 ===================================================== */
-const DOCTORS = [
-  { id: 1, name: 'دکتر سارا محمدی', spec: 'متخصص قلب و عروق', exp: 15, days: 'شنبه، دوشنبه، چهارشنبه', active: true, avatar: 'س' },
-  { id: 2, name: 'دکتر علی رضایی', spec: 'متخصص دندانپزشکی', exp: 12, days: 'یکشنبه، سه‌شنبه، پنجشنبه', active: true, avatar: 'ع' },
-  { id: 3, name: 'دکتر مریم حسینی', spec: 'متخصص اطفال', exp: 10, days: 'شنبه، دوشنبه، چهارشنبه', active: true, avatar: 'م' },
-  { id: 4, name: 'دکتر رضا کریمی', spec: 'متخصص مغز و اعصاب', exp: 18, days: 'یکشنبه، سه‌شنبه، پنجشنبه', active: true, avatar: 'ر' },
-  { id: 5, name: 'دکتر نازنین احمدی', spec: 'متخصص ارتوپدی', exp: 9, days: 'شنبه، دوشنبه', active: false, avatar: 'ن' },
-  { id: 6, name: 'دکتر حسین نوری', spec: 'متخصص پوست و مو', exp: 14, days: 'یکشنبه، چهارشنبه', active: true, avatar: 'ح' }
-];
+      const DOCTORS = [
+        {
+          id: 1,
+          name: "دکتر سارا محمدی",
+          spec: "متخصص قلب و عروق",
+          exp: 15,
+          days: "شنبه، دوشنبه، چهارشنبه",
+          active: true,
+          avatar: "س",
+        },
+        {
+          id: 2,
+          name: "دکتر علی رضایی",
+          spec: "متخصص دندانپزشکی",
+          exp: 12,
+          days: "یکشنبه، سه‌شنبه، پنجشنبه",
+          active: true,
+          avatar: "ع",
+        },
+        {
+          id: 3,
+          name: "دکتر مریم حسینی",
+          spec: "متخصص اطفال",
+          exp: 10,
+          days: "شنبه، دوشنبه، چهارشنبه",
+          active: true,
+          avatar: "م",
+        },
+        {
+          id: 4,
+          name: "دکتر رضا کریمی",
+          spec: "متخصص مغز و اعصاب",
+          exp: 18,
+          days: "یکشنبه، سه‌شنبه، پنجشنبه",
+          active: true,
+          avatar: "ر",
+        },
+        {
+          id: 5,
+          name: "دکتر نازنین احمدی",
+          spec: "متخصص ارتوپدی",
+          exp: 9,
+          days: "شنبه، دوشنبه",
+          active: false,
+          avatar: "ن",
+        },
+        {
+          id: 6,
+          name: "دکتر حسین نوری",
+          spec: "متخصص پوست و مو",
+          exp: 14,
+          days: "یکشنبه، چهارشنبه",
+          active: true,
+          avatar: "ح",
+        },
+      ];
 
-const TIME_SLOTS = ['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','16:00','16:30','17:00','17:30'];
+      const TIME_SLOTS = [
+        "08:00",
+        "08:30",
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+      ];
 
-const FA_MONTHS = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
-const FA_DAYS = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+      const FA_MONTHS = [
+        "فروردین",
+        "اردیبهشت",
+        "خرداد",
+        "تیر",
+        "مرداد",
+        "شهریور",
+        "مهر",
+        "آبان",
+        "آذر",
+        "دی",
+        "بهمن",
+        "اسفند",
+      ];
+      const FA_DAYS = [
+        "یکشنبه",
+        "دوشنبه",
+        "سه‌شنبه",
+        "چهارشنبه",
+        "پنجشنبه",
+        "جمعه",
+        "شنبه",
+      ];
 
-/* =====================================================
+      /* =====================================================
    ذخیره‌سازی (LocalStorage)
 ===================================================== */
-const STORAGE_KEY = 'mehr_clinic_appointments';
+      const STORAGE_KEY = "mehr_clinic_appointments";
 
-function loadAppointments(){
-  try{
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if(!raw) return null;
-    const data = JSON.parse(raw);
-    return Array.isArray(data) ? data : null;
-  }catch(e){ return null; }
-}
-function saveAppointments(list){
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }catch(e){}
-}
-function seedDemoAppointments(){
-  const today = new Date();
-  const d1 = new Date(today); d1.setDate(today.getDate());
-  const d2 = new Date(today); d2.setDate(today.getDate()+1);
-  const d3 = new Date(today); d3.setDate(today.getDate()+2);
-  const fmt = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-  return [
-    { code:'MR-4821', name:'محمد اسدی', phone:'09121234567', nid:'1234567890', email:'', note:'', doctorId:1, date:fmt(d1), time:'08:30', status:'confirmed', createdAt: Date.now()-86400000 },
-    { code:'MR-7319', name:'فاطمه نوری', phone:'09359876543', nid:'0987654321', email:'f@mail.com', note:'درد قفسه سینه', doctorId:1, date:fmt(d1), time:'10:00', status:'pending', createdAt: Date.now()-3600000 },
-    { code:'MR-2045', name:'رضا کریمی', phone:'09151112233', nid:'1122334455', email:'', note:'', doctorId:2, date:fmt(d2), time:'09:00', status:'confirmed', createdAt: Date.now()-7200000 },
-    { code:'MR-9037', name:'زهرا صادقی', phone:'09197778899', nid:'5544332211', email:'', note:'معاینه دوره‌ای', doctorId:3, date:fmt(d3), time:'16:30', status:'cancelled', createdAt: Date.now()-172800000 }
-  ];
-}
+      function loadAppointments() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return null;
+          const data = JSON.parse(raw);
+          return Array.isArray(data) ? data : null;
+        } catch (e) {
+          return null;
+        }
+      }
+      function saveAppointments(list) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+        } catch (e) {}
+      }
+      function seedDemoAppointments() {
+        const today = new Date();
+        const d1 = new Date(today);
+        d1.setDate(today.getDate());
+        const d2 = new Date(today);
+        d2.setDate(today.getDate() + 1);
+        const d3 = new Date(today);
+        d3.setDate(today.getDate() + 2);
+        const fmt = (d) =>
+          `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+        return [
+          {
+            code: "MR-4821",
+            name: "محمد اسدی",
+            phone: "09121234567",
+            nid: "1234567890",
+            email: "",
+            note: "",
+            doctorId: 1,
+            date: fmt(d1),
+            time: "08:30",
+            status: "confirmed",
+            createdAt: Date.now() - 86400000,
+          },
+          {
+            code: "MR-7319",
+            name: "فاطمه نوری",
+            phone: "09359876543",
+            nid: "0987654321",
+            email: "f@mail.com",
+            note: "درد قفسه سینه",
+            doctorId: 1,
+            date: fmt(d1),
+            time: "10:00",
+            status: "pending",
+            createdAt: Date.now() - 3600000,
+          },
+          {
+            code: "MR-2045",
+            name: "رضا کریمی",
+            phone: "09151112233",
+            nid: "1122334455",
+            email: "",
+            note: "",
+            doctorId: 2,
+            date: fmt(d2),
+            time: "09:00",
+            status: "confirmed",
+            createdAt: Date.now() - 7200000,
+          },
+          {
+            code: "MR-9037",
+            name: "زهرا صادقی",
+            phone: "09197778899",
+            nid: "5544332211",
+            email: "",
+            note: "معاینه دوره‌ای",
+            doctorId: 3,
+            date: fmt(d3),
+            time: "16:30",
+            status: "cancelled",
+            createdAt: Date.now() - 172800000,
+          },
+        ];
+      }
 
-let appointments = loadAppointments();
-if(appointments === null){
-  appointments = seedDemoAppointments();
-  saveAppointments(appointments);
-}
+      let appointments = loadAppointments();
+      if (appointments === null) {
+        appointments = seedDemoAppointments();
+        saveAppointments(appointments);
+      }
 
-/* =====================================================
+      /* =====================================================
    حالت (State)
 ===================================================== */
-const state = {
-  step: 1,
-  doctorId: null,
-  date: null,
-  time: null,
-  patient: {},
-  lastAppt: null,
-  adminLoggedIn: false,
-  filterStatus: 'all',
-  filterDoctor: 'all',
-  search: ''
-};
+      const state = {
+        step: 1,
+        doctorId: null,
+        date: null,
+        time: null,
+        patient: {},
+        lastAppt: null,
+        adminLoggedIn: false,
+        filterStatus: "all",
+        filterDoctor: "all",
+        search: "",
+      };
 
-/* =====================================================
+      /* =====================================================
    ابزارها (Utils)
 ===================================================== */
-function toFa(n){ return String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]); }
-function genCode(){
-  const n = Math.floor(1000 + Math.random()*9000);
-  return 'MR-' + n;
-}
-function uniqueCode(){
-  let c;
-  do{ c = genCode(); } while(appointments.some(a => a.code === c));
-  return c;
-}
-function formatDateFa(iso){
-  if(!iso) return '-';
-  const [y,m,d] = iso.split('-').map(Number);
-  const dt = new Date(y, m-1, d);
-  const dow = FA_DAYS[dt.getDay()];
-  return `${dow} ${toFa(d)} ${FA_MONTHS[m-1]} ${toFa(y)}`;
-}
-function getDoctor(id){ return DOCTORS.find(d => d.id === id); }
-function todayISO(){
-  const t = new Date();
-  return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
-}
-function isValidPhone(p){ return /^09\d{9}$/.test(p); }
-function isValidNid(n){
-  if(!/^\d{10}$/.test(n)) return false;
-  if(/^(\d)\1{9}$/.test(n)) return false;
-  let sum=0;
-  for(let i=0;i<9;i++) sum += parseInt(n[i]) * (10-i);
-  const r = sum % 11;
-  const last = parseInt(n[9]);
-  return (r < 2) ? last === r : last === 11-r;
-}
-function isValidEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+      function toFa(n) {
+        return String(n).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+      }
+      function genCode() {
+        const n = Math.floor(1000 + Math.random() * 9000);
+        return "MR-" + n;
+      }
+      function uniqueCode() {
+        let c;
+        do {
+          c = genCode();
+        } while (appointments.some((a) => a.code === c));
+        return c;
+      }
+      function formatDateFa(iso) {
+        if (!iso) return "-";
+        const [y, m, d] = iso.split("-").map(Number);
+        const dt = new Date(y, m - 1, d);
+        const dow = FA_DAYS[dt.getDay()];
+        return `${dow} ${toFa(d)} ${FA_MONTHS[m - 1]} ${toFa(y)}`;
+      }
+      function getDoctor(id) {
+        return DOCTORS.find((d) => d.id === id);
+      }
+      function todayISO() {
+        const t = new Date();
+        return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, "0")}-${String(t.getDate()).padStart(2, "0")}`;
+      }
+      function isValidPhone(p) {
+        return /^09\d{9}$/.test(p);
+      }
+      function isValidNid(n) {
+        if (!/^\d{10}$/.test(n)) return false;
+        if (/^(\d)\1{9}$/.test(n)) return false;
+        let sum = 0;
+        for (let i = 0; i < 9; i++) sum += parseInt(n[i]) * (10 - i);
+        const r = sum % 11;
+        const last = parseInt(n[9]);
+        return r < 2 ? last === r : last === 11 - r;
+      }
+      function isValidEmail(e) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
+      }
 
-/* =====================================================
+      /* =====================================================
    Toast
 ===================================================== */
-function showToast(type, title, msg){
-  const wrap = document.getElementById('toastWrap');
-  const t = document.createElement('div');
-  t.className = 'toast ' + type;
-  const icons = { success:'✅', error:'⛔', warning:'⚠️', info:'ℹ️' };
-  t.innerHTML = `<div class="t-icon">${icons[type]||'ℹ️'}</div><div class="t-body"><strong>${title}</strong><span>${msg||''}</span></div>`;
-  wrap.appendChild(t);
-  setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(), 300); }, 3800);
-}
+      function showToast(type, title, msg) {
+        const wrap = document.getElementById("toastWrap");
+        const t = document.createElement("div");
+        t.className = "toast " + type;
+        const icons = { success: "✅", error: "⛔", warning: "⚠️", info: "ℹ️" };
+        t.innerHTML = `<div class="t-icon">${icons[type] || "ℹ️"}</div><div class="t-body"><strong>${title}</strong><span>${msg || ""}</span></div>`;
+        wrap.appendChild(t);
+        setTimeout(() => {
+          t.classList.add("out");
+          setTimeout(() => t.remove(), 300);
+        }, 3800);
+      }
 
-/* =====================================================
+      /* =====================================================
    Modal
 ===================================================== */
-const modal = {
-  cb: null,
-  open(type, title, text, onConfirm){
-    const ov = document.getElementById('modalOverlay');
-    document.getElementById('modalIcon').className = 'modal-icon ' + type;
-    document.getElementById('modalIcon').textContent = type === 'danger' ? '🗑️' : type === 'warn' ? '⚠️' : '❓';
-    document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalText').textContent = text;
-    modal.cb = onConfirm;
-    ov.classList.add('open');
-  },
-  close(){
-    document.getElementById('modalOverlay').classList.remove('open');
-    modal.cb = null;
-  }
-};
-document.getElementById('modalCancel').addEventListener('click', modal.close);
-document.getElementById('modalConfirm').addEventListener('click', ()=>{
-  if(modal.cb) modal.cb();
-  modal.close();
-});
-document.getElementById('modalOverlay').addEventListener('click', e => {
-  if(e.target.id === 'modalOverlay') modal.close();
-});
+      const modal = {
+        cb: null,
+        open(type, title, text, onConfirm) {
+          const ov = document.getElementById("modalOverlay");
+          document.getElementById("modalIcon").className = "modal-icon " + type;
+          document.getElementById("modalIcon").textContent =
+            type === "danger" ? "🗑️" : type === "warn" ? "⚠️" : "❓";
+          document.getElementById("modalTitle").textContent = title;
+          document.getElementById("modalText").textContent = text;
+          modal.cb = onConfirm;
+          ov.classList.add("open");
+        },
+        close() {
+          document.getElementById("modalOverlay").classList.remove("open");
+          modal.cb = null;
+        },
+      };
+      document
+        .getElementById("modalCancel")
+        .addEventListener("click", modal.close);
+      document.getElementById("modalConfirm").addEventListener("click", () => {
+        if (modal.cb) modal.cb();
+        modal.close();
+      });
+      document.getElementById("modalOverlay").addEventListener("click", (e) => {
+        if (e.target.id === "modalOverlay") modal.close();
+      });
 
-/* =====================================================
+      /* =====================================================
    Header & Mobile Menu
 ===================================================== */
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      burger.addEventListener("click", () =>
+        mobileMenu.classList.toggle("open"),
+      );
+      mobileMenu
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () =>
+            mobileMenu.classList.remove("open"),
+          ),
+        );
 
-window.addEventListener('scroll', ()=>{
-  const header = document.querySelector('header');
-  if(window.scrollY > 20) header.style.boxShadow = '0 4px 20px rgba(13,115,119,.12)';
-  else header.style.boxShadow = 'none';
-});
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 20)
+          header.style.boxShadow = "0 4px 20px rgba(13,115,119,.12)";
+        else header.style.boxShadow = "none";
+      });
 
-/* Active nav link on scroll */
-const sections = ['home','doctors','appointment','about','contact'];
-window.addEventListener('scroll', ()=>{
-  let current = 'home';
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if(el && window.scrollY >= el.offsetTop - 120) current = id;
-  });
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#'+current);
-  });
-});
+      /* Active nav link on scroll */
+      const sections = ["home", "doctors", "appointment", "about", "contact"];
+      window.addEventListener("scroll", () => {
+        let current = "home";
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 120) current = id;
+        });
+        document.querySelectorAll(".nav-links a").forEach((a) => {
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + current,
+          );
+        });
+      });
 
-/* =====================================================
+      /* =====================================================
    Reveal on scroll
 ===================================================== */
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold:.12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-/* =====================================================
+      /* =====================================================
    رندر پزشکان (صفحه اصلی)
 ===================================================== */
-function renderDoctors(){
-  const grid = document.getElementById('doctorsGrid');
-  grid.innerHTML = DOCTORS.map(d => `
+      function renderDoctors() {
+        const grid = document.getElementById("doctorsGrid");
+        grid.innerHTML = DOCTORS.map(
+          (d) => `
     <div class="doctor-card">
       <div class="doctor-avatar">
         ${d.avatar}
-        <span class="doctor-status ${d.active ? 'active' : 'inactive'}">${d.active ? 'فعال' : 'غیرفعال'}</span>
+        <span class="doctor-status ${d.active ? "active" : "inactive"}">${d.active ? "فعال" : "غیرفعال"}</span>
       </div>
       <div class="doctor-body">
         <h3>${d.name}</h3>
@@ -1139,33 +2767,36 @@ function renderDoctors(){
           <div>🎓 سابقه: ${toFa(d.exp)} سال</div>
           <div>📅 روزهای کاری: ${d.days}</div>
         </div>
-        <button class="btn btn-primary btn-sm" ${d.active ? '' : 'disabled'} onclick="goToBooking(${d.id})">
-          ${d.active ? 'دریافت نوبت' : 'غیرفعال'}
+        <button class="btn btn-primary btn-sm" ${d.active ? "" : "disabled"} onclick="goToBooking(${d.id})">
+          ${d.active ? "دریافت نوبت" : "غیرفعال"}
         </button>
       </div>
     </div>
-  `).join('');
-}
+  `,
+        ).join("");
+      }
 
-function goToBooking(doctorId){
-  state.doctorId = doctorId;
-  state.date = null;
-  state.time = null;
-  renderApptDoctors();
-  buildDates();
-  goStep(2);
-  document.getElementById('appointment').scrollIntoView({ behavior:'smooth' });
-}
+      function goToBooking(doctorId) {
+        state.doctorId = doctorId;
+        state.date = null;
+        state.time = null;
+        renderApptDoctors();
+        buildDates();
+        goStep(2);
+        document
+          .getElementById("appointment")
+          .scrollIntoView({ behavior: "smooth" });
+      }
 
-/* =====================================================
+      /* =====================================================
    رندر پزشکان در فرم نوبت‌دهی
 ===================================================== */
-function renderApptDoctors(){
-  const wrap = document.getElementById('apptDoctors');
-  wrap.innerHTML = DOCTORS.map(d => {
-    const sel = state.doctorId === d.id ? 'selected' : '';
-    const dis = d.active ? '' : 'disabled';
-    return `
+      function renderApptDoctors() {
+        const wrap = document.getElementById("apptDoctors");
+        wrap.innerHTML = DOCTORS.map((d) => {
+          const sel = state.doctorId === d.id ? "selected" : "";
+          const dis = d.active ? "" : "disabled";
+          return `
       <div class="pick-card ${sel} ${dis}" data-id="${d.id}">
         <div class="pick-av">${d.avatar}</div>
         <div class="pick-info">
@@ -1175,417 +2806,496 @@ function renderApptDoctors(){
         <div class="pick-check">✓</div>
       </div>
     `;
-  }).join('');
+        }).join("");
 
-  wrap.querySelectorAll('.pick-card').forEach(card => {
-    card.addEventListener('click', ()=>{
-      if(card.classList.contains('disabled')) return;
-      state.doctorId = parseInt(card.dataset.id);
-      state.date = null;
-      state.time = null;
-      renderApptDoctors();
-      buildDates();
-      document.getElementById('next1').disabled = false;
-    });
-  });
-}
+        wrap.querySelectorAll(".pick-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            if (card.classList.contains("disabled")) return;
+            state.doctorId = parseInt(card.dataset.id);
+            state.date = null;
+            state.time = null;
+            renderApptDoctors();
+            buildDates();
+            document.getElementById("next1").disabled = false;
+          });
+        });
+      }
 
-/* =====================================================
+      /* =====================================================
    ساخت تاریخ‌ها (۱۴ روز آینده)
 ===================================================== */
-function buildDates(){
-  const grid = document.getElementById('datesGrid');
-  const today = new Date();
-  let html = '';
-  for(let i=0;i<14;i++){
-    const d = new Date(today);
-    d.setDate(today.getDate()+i);
-    const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-    const dow = FA_DAYS[d.getDay()];
-    const dayNum = d.getDate();
-    const mon = FA_MONTHS[d.getMonth()];
-    const isFri = d.getDay() === 5;
-    const sel = state.date === iso ? 'selected' : '';
-    html += `
-      <div class="date-card ${sel} ${isFri ? 'disabled' : ''}" data-iso="${iso}">
+      function buildDates() {
+        const grid = document.getElementById("datesGrid");
+        const today = new Date();
+        let html = "";
+        for (let i = 0; i < 14; i++) {
+          const d = new Date(today);
+          d.setDate(today.getDate() + i);
+          const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+          const dow = FA_DAYS[d.getDay()];
+          const dayNum = d.getDate();
+          const mon = FA_MONTHS[d.getMonth()];
+          const isFri = d.getDay() === 5;
+          const sel = state.date === iso ? "selected" : "";
+          html += `
+      <div class="date-card ${sel} ${isFri ? "disabled" : ""}" data-iso="${iso}">
         <div class="dow">${dow}</div>
         <div class="day">${toFa(dayNum)}</div>
         <div class="mon">${mon}</div>
       </div>
     `;
-  }
-  grid.innerHTML = html;
-  grid.querySelectorAll('.date-card').forEach(card => {
-    card.addEventListener('click', ()=>{
-      if(card.classList.contains('disabled')) return;
-      state.date = card.dataset.iso;
-      state.time = null;
-      buildDates();
-      buildSlots();
-      document.getElementById('next2').disabled = false;
-    });
-  });
-}
+        }
+        grid.innerHTML = html;
+        grid.querySelectorAll(".date-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            if (card.classList.contains("disabled")) return;
+            state.date = card.dataset.iso;
+            state.time = null;
+            buildDates();
+            buildSlots();
+            document.getElementById("next2").disabled = false;
+          });
+        });
+      }
 
-/* =====================================================
+      /* =====================================================
    ساخت زمان‌های آزاد / رزروشده
 ===================================================== */
-function isSlotBusy(doctorId, date, time){
-  return appointments.some(a =>
-    a.doctorId === doctorId &&
-    a.date === date &&
-    a.time === time &&
-    a.status !== 'cancelled'
-  );
-}
+      function isSlotBusy(doctorId, date, time) {
+        return appointments.some(
+          (a) =>
+            a.doctorId === doctorId &&
+            a.date === date &&
+            a.time === time &&
+            a.status !== "cancelled",
+        );
+      }
 
-function buildSlots(){
-  const grid = document.getElementById('slotsGrid');
-  if(!state.doctorId || !state.date){
-    grid.innerHTML = '<p style="grid-column:1/-1;color:var(--text-soft)">ابتدا پزشک و تاریخ را انتخاب کنید.</p>';
-    return;
-  }
-  grid.innerHTML = TIME_SLOTS.map(t => {
-    const busy = isSlotBusy(state.doctorId, state.date, t);
-    const sel = state.time === t ? 'selected' : '';
-    const cls = busy ? 'busy' : 'free ' + sel;
-    return `<div class="slot ${cls}" data-time="${t}">${toFa(t)}</div>`;
-  }).join('');
+      function buildSlots() {
+        const grid = document.getElementById("slotsGrid");
+        if (!state.doctorId || !state.date) {
+          grid.innerHTML =
+            '<p style="grid-column:1/-1;color:var(--text-soft)">ابتدا پزشک و تاریخ را انتخاب کنید.</p>';
+          return;
+        }
+        grid.innerHTML = TIME_SLOTS.map((t) => {
+          const busy = isSlotBusy(state.doctorId, state.date, t);
+          const sel = state.time === t ? "selected" : "";
+          const cls = busy ? "busy" : "free " + sel;
+          return `<div class="slot ${cls}" data-time="${t}">${toFa(t)}</div>`;
+        }).join("");
 
-  grid.querySelectorAll('.slot.free').forEach(s => {
-    s.addEventListener('click', ()=>{
-      state.time = s.dataset.time;
-      buildSlots();
-      document.getElementById('next3').disabled = false;
-    });
-  });
-}
+        grid.querySelectorAll(".slot.free").forEach((s) => {
+          s.addEventListener("click", () => {
+            state.time = s.dataset.time;
+            buildSlots();
+            document.getElementById("next3").disabled = false;
+          });
+        });
+      }
 
-/* =====================================================
+      /* =====================================================
    مدیریت مراحل (Stepper)
 ===================================================== */
-function goStep(n){
-  state.step = n;
-  document.querySelectorAll('.appt-step').forEach(el => {
-    el.classList.toggle('active', parseInt(el.dataset.step) === n);
-  });
-  document.querySelectorAll('#stepper .step-item').forEach(el => {
-    const s = parseInt(el.dataset.step);
-    el.classList.toggle('active', s === n);
-    el.classList.toggle('done', s < n);
-  });
-  window.scrollTo({ top: document.getElementById('appointment').offsetTop - 60, behavior:'smooth' });
-}
+      function goStep(n) {
+        state.step = n;
+        document.querySelectorAll(".appt-step").forEach((el) => {
+          el.classList.toggle("active", parseInt(el.dataset.step) === n);
+        });
+        document.querySelectorAll("#stepper .step-item").forEach((el) => {
+          const s = parseInt(el.dataset.step);
+          el.classList.toggle("active", s === n);
+          el.classList.toggle("done", s < n);
+        });
+        window.scrollTo({
+          top: document.getElementById("appointment").offsetTop - 60,
+          behavior: "smooth",
+        });
+      }
 
-document.getElementById('next1').addEventListener('click', ()=>{ if(state.doctorId) goStep(2); });
-document.getElementById('next2').addEventListener('click', ()=>{ if(state.date) goStep(3); });
-document.getElementById('next3').addEventListener('click', ()=>{ if(state.time) goStep(4); });
+      document.getElementById("next1").addEventListener("click", () => {
+        if (state.doctorId) goStep(2);
+      });
+      document.getElementById("next2").addEventListener("click", () => {
+        if (state.date) goStep(3);
+      });
+      document.getElementById("next3").addEventListener("click", () => {
+        if (state.time) goStep(4);
+      });
 
-document.querySelectorAll('[data-prev]').forEach(btn => {
-  btn.addEventListener('click', ()=> goStep(parseInt(btn.dataset.prev)));
-});
+      document.querySelectorAll("[data-prev]").forEach((btn) => {
+        btn.addEventListener("click", () => goStep(parseInt(btn.dataset.prev)));
+      });
 
-/* =====================================================
+      /* =====================================================
    اعتبارسنجی فرم بیمار
 ===================================================== */
-function validatePatient(){
-  let ok = true;
-  const name = document.getElementById('pName').value.trim();
-  const phone = document.getElementById('pPhone').value.trim();
-  const nid = document.getElementById('pNid').value.trim();
-  const email = document.getElementById('pEmail').value.trim();
-  const note = document.getElementById('pNote').value.trim();
+      function validatePatient() {
+        let ok = true;
+        const name = document.getElementById("pName").value.trim();
+        const phone = document.getElementById("pPhone").value.trim();
+        const nid = document.getElementById("pNid").value.trim();
+        const email = document.getElementById("pEmail").value.trim();
+        const note = document.getElementById("pNote").value.trim();
 
-  const setErr = (id, cond) => {
-    const el = document.getElementById(id);
-    el.classList.toggle('error', !cond);
-    if(!cond) ok = false;
-  };
+        const setErr = (id, cond) => {
+          const el = document.getElementById(id);
+          el.classList.toggle("error", !cond);
+          if (!cond) ok = false;
+        };
 
-  setErr('fg-name', name.length >= 3);
-  setErr('fg-phone', isValidPhone(phone));
-  setErr('fg-nid', isValidNid(nid));
-  if(email) setErr('fg-email', isValidEmail(email));
-  else document.getElementById('fg-email').classList.remove('error');
+        setErr("fg-name", name.length >= 3);
+        setErr("fg-phone", isValidPhone(phone));
+        setErr("fg-nid", isValidNid(nid));
+        if (email) setErr("fg-email", isValidEmail(email));
+        else document.getElementById("fg-email").classList.remove("error");
 
-  state.patient = { name, phone, nid, email, note };
-  return ok;
-}
+        state.patient = { name, phone, nid, email, note };
+        return ok;
+      }
 
-document.getElementById('next4').addEventListener('click', ()=>{
-  if(!validatePatient()){
-    showToast('error', 'خطا در اطلاعات', 'لطفاً خطاهای فرم را برطرف کنید.');
-    return;
-  }
-  buildReview();
-  goStep(5);
-});
+      document.getElementById("next4").addEventListener("click", () => {
+        if (!validatePatient()) {
+          showToast(
+            "error",
+            "خطا در اطلاعات",
+            "لطفاً خطاهای فرم را برطرف کنید.",
+          );
+          return;
+        }
+        buildReview();
+        goStep(5);
+      });
 
-/* =====================================================
+      /* =====================================================
    ساخت خلاصه بررسی
 ===================================================== */
-function buildReview(){
-  const doc = getDoctor(state.doctorId);
-  const box = document.getElementById('reviewBox');
-  box.innerHTML = `
+      function buildReview() {
+        const doc = getDoctor(state.doctorId);
+        const box = document.getElementById("reviewBox");
+        box.innerHTML = `
     <div class="review-row"><span>پزشک</span><span>${doc.name} (${doc.spec})</span></div>
     <div class="review-row"><span>تاریخ</span><span>${formatDateFa(state.date)}</span></div>
     <div class="review-row"><span>ساعت</span><span>${toFa(state.time)}</span></div>
     <div class="review-row"><span>نام بیمار</span><span>${state.patient.name}</span></div>
     <div class="review-row"><span>موبایل</span><span>${toFa(state.patient.phone)}</span></div>
     <div class="review-row"><span>کد ملی</span><span>${toFa(state.patient.nid)}</span></div>
-    ${state.patient.email ? `<div class="review-row"><span>ایمیل</span><span>${state.patient.email}</span></div>` : ''}
-    ${state.patient.note ? `<div class="review-row"><span>توضیحات</span><span>${state.patient.note}</span></div>` : ''}
+    ${state.patient.email ? `<div class="review-row"><span>ایمیل</span><span>${state.patient.email}</span></div>` : ""}
+    ${state.patient.note ? `<div class="review-row"><span>توضیحات</span><span>${state.patient.note}</span></div>` : ""}
   `;
-}
+      }
 
-/* =====================================================
+      /* =====================================================
    ثبت نهایی نوبت
 ===================================================== */
-document.getElementById('confirmBtn').addEventListener('click', ()=>{
-  if(isSlotBusy(state.doctorId, state.date, state.time)){
-    showToast('error', 'زمان رزرو شده', 'این زمان هم‌اکنون رزرو شده است. لطفاً زمان دیگری انتخاب کنید.');
-    buildSlots();
-    goStep(3);
-    return;
-  }
-  const appt = {
-    code: uniqueCode(),
-    name: state.patient.name,
-    phone: state.patient.phone,
-    nid: state.patient.nid,
-    email: state.patient.email,
-    note: state.patient.note,
-    doctorId: state.doctorId,
-    date: state.date,
-    time: state.time,
-    status: 'pending',
-    createdAt: Date.now()
-  };
-  appointments.push(appt);
-  saveAppointments(appointments);
-  state.lastAppt = appt;
-  showSuccess(appt);
-  showToast('success', 'نوبت ثبت شد', 'کد پیگیری: ' + appt.code);
-  renderAdminTable();
-  updateStats();
-});
+      document.getElementById("confirmBtn").addEventListener("click", () => {
+        if (isSlotBusy(state.doctorId, state.date, state.time)) {
+          showToast(
+            "error",
+            "زمان رزرو شده",
+            "این زمان هم‌اکنون رزرو شده است. لطفاً زمان دیگری انتخاب کنید.",
+          );
+          buildSlots();
+          goStep(3);
+          return;
+        }
+        const appt = {
+          code: uniqueCode(),
+          name: state.patient.name,
+          phone: state.patient.phone,
+          nid: state.patient.nid,
+          email: state.patient.email,
+          note: state.patient.note,
+          doctorId: state.doctorId,
+          date: state.date,
+          time: state.time,
+          status: "pending",
+          createdAt: Date.now(),
+        };
+        appointments.push(appt);
+        saveAppointments(appointments);
+        state.lastAppt = appt;
+        showSuccess(appt);
+        showToast("success", "نوبت ثبت شد", "کد پیگیری: " + appt.code);
+        renderAdminTable();
+        updateStats();
+      });
 
-function showSuccess(appt){
-  const doc = getDoctor(appt.doctorId);
-  document.getElementById('successCode').textContent = appt.code;
-  document.getElementById('successDetails').innerHTML = `
+      function showSuccess(appt) {
+        const doc = getDoctor(appt.doctorId);
+        document.getElementById("successCode").textContent = appt.code;
+        document.getElementById("successDetails").innerHTML = `
     <div class="review-row"><span>پزشک</span><span>${doc.name}</span></div>
     <div class="review-row"><span>تاریخ</span><span>${formatDateFa(appt.date)}</span></div>
     <div class="review-row"><span>ساعت</span><span>${toFa(appt.time)}</span></div>
     <div class="review-row"><span>نام بیمار</span><span>${appt.name}</span></div>
     <div class="review-row"><span>وضعیت</span><span>در انتظار تأیید</span></div>
   `;
-  goStep(6);
-}
+        goStep(6);
+      }
 
-document.getElementById('newApptBtn').addEventListener('click', ()=>{
-  state.doctorId = null; state.date = null; state.time = null; state.patient = {};
-  state.lastAppt = null;
-  document.getElementById('patientForm').reset();
-  document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
-  renderApptDoctors();
-  buildDates();
-  buildSlots();
-  document.getElementById('next1').disabled = true;
-  document.getElementById('next2').disabled = true;
-  document.getElementById('next3').disabled = true;
-  goStep(1);
-});
+      document.getElementById("newApptBtn").addEventListener("click", () => {
+        state.doctorId = null;
+        state.date = null;
+        state.time = null;
+        state.patient = {};
+        state.lastAppt = null;
+        document.getElementById("patientForm").reset();
+        document
+          .querySelectorAll(".form-group")
+          .forEach((g) => g.classList.remove("error"));
+        renderApptDoctors();
+        buildDates();
+        buildSlots();
+        document.getElementById("next1").disabled = true;
+        document.getElementById("next2").disabled = true;
+        document.getElementById("next3").disabled = true;
+        goStep(1);
+      });
 
-/* =====================================================
+      /* =====================================================
    پنل مدیریت — ورود
 ===================================================== */
-document.getElementById('adminLoginBtn').addEventListener('click', ()=>{
-  const u = document.getElementById('adminUser').value.trim();
-  const p = document.getElementById('adminPass').value.trim();
-  if(u === 'admin' && p === 'admin'){
-    state.adminLoggedIn = true;
-    document.getElementById('adminLogin').style.display = 'none';
-    document.getElementById('adminDash').classList.add('active');
-    renderAdminTable();
-    updateStats();
-    showToast('success', 'خوش آمدید', 'به پنل مدیریت وارد شدید.');
-  } else {
-    showToast('error', 'ورود ناموفق', 'نام کاربری یا رمز عبور اشتباه است.');
-  }
-});
+      document.getElementById("adminLoginBtn").addEventListener("click", () => {
+        const u = document.getElementById("adminUser").value.trim();
+        const p = document.getElementById("adminPass").value.trim();
+        if (u === "admin" && p === "admin") {
+          state.adminLoggedIn = true;
+          document.getElementById("adminLogin").style.display = "none";
+          document.getElementById("adminDash").classList.add("active");
+          renderAdminTable();
+          updateStats();
+          showToast("success", "خوش آمدید", "به پنل مدیریت وارد شدید.");
+        } else {
+          showToast(
+            "error",
+            "ورود ناموفق",
+            "نام کاربری یا رمز عبور اشتباه است.",
+          );
+        }
+      });
 
-document.getElementById('logoutBtn').addEventListener('click', ()=>{
-  state.adminLoggedIn = false;
-  document.getElementById('adminLogin').style.display = '';
-  document.getElementById('adminDash').classList.remove('active');
-  document.getElementById('adminUser').value = '';
-  document.getElementById('adminPass').value = '';
-  showToast('info', 'خروج', 'از پنل مدیریت خارج شدید.');
-});
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        state.adminLoggedIn = false;
+        document.getElementById("adminLogin").style.display = "";
+        document.getElementById("adminDash").classList.remove("active");
+        document.getElementById("adminUser").value = "";
+        document.getElementById("adminPass").value = "";
+        showToast("info", "خروج", "از پنل مدیریت خارج شدید.");
+      });
 
-/* =====================================================
+      /* =====================================================
    آمار پنل مدیریت
 ===================================================== */
-function updateStats(){
-  const today = todayISO();
-  document.getElementById('statTotal').textContent = toFa(appointments.length);
-  document.getElementById('statToday').textContent = toFa(appointments.filter(a => a.date === today).length);
-  document.getElementById('statConfirmed').textContent = toFa(appointments.filter(a => a.status === 'confirmed').length);
-  document.getElementById('statCancelled').textContent = toFa(appointments.filter(a => a.status === 'cancelled').length);
-}
+      function updateStats() {
+        const today = todayISO();
+        document.getElementById("statTotal").textContent = toFa(
+          appointments.length,
+        );
+        document.getElementById("statToday").textContent = toFa(
+          appointments.filter((a) => a.date === today).length,
+        );
+        document.getElementById("statConfirmed").textContent = toFa(
+          appointments.filter((a) => a.status === "confirmed").length,
+        );
+        document.getElementById("statCancelled").textContent = toFa(
+          appointments.filter((a) => a.status === "cancelled").length,
+        );
+      }
 
-/* =====================================================
+      /* =====================================================
    فیلتر پزشکان در جدول
 ===================================================== */
-function fillDoctorFilter(){
-  const sel = document.getElementById('filterDoctor');
-  sel.innerHTML = '<option value="all">همه پزشکان</option>' +
-    DOCTORS.map(d => `<option value="${d.id}">${d.name}</option>`).join('');
-}
+      function fillDoctorFilter() {
+        const sel = document.getElementById("filterDoctor");
+        sel.innerHTML =
+          '<option value="all">همه پزشکان</option>' +
+          DOCTORS.map((d) => `<option value="${d.id}">${d.name}</option>`).join(
+            "",
+          );
+      }
 
-/* =====================================================
+      /* =====================================================
    رندر جدول مدیریت
 ===================================================== */
-function statusFa(s){
-  return s === 'confirmed' ? 'تأییدشده' : s === 'cancelled' ? 'لغوشده' : 'در انتظار';
-}
+      function statusFa(s) {
+        return s === "confirmed"
+          ? "تأییدشده"
+          : s === "cancelled"
+            ? "لغوشده"
+            : "در انتظار";
+      }
 
-function renderAdminTable(){
-  const tbody = document.getElementById('adminTableBody');
-  const empty = document.getElementById('emptyState');
-  const q = state.search.trim().toLowerCase();
-  const fs = state.filterStatus;
-  const fd = state.filterDoctor;
+      function renderAdminTable() {
+        const tbody = document.getElementById("adminTableBody");
+        const empty = document.getElementById("emptyState");
+        const q = state.search.trim().toLowerCase();
+        const fs = state.filterStatus;
+        const fd = state.filterDoctor;
 
-  let list = appointments.slice().sort((a,b)=> b.createdAt - a.createdAt);
+        let list = appointments
+          .slice()
+          .sort((a, b) => b.createdAt - a.createdAt);
 
-  if(fs !== 'all') list = list.filter(a => a.status === fs);
-  if(fd !== 'all') list = list.filter(a => a.doctorId === parseInt(fd));
-  if(q){
-    list = list.filter(a =>
-      a.code.toLowerCase().includes(q) ||
-      a.name.toLowerCase().includes(q) ||
-      a.phone.includes(q)
-    );
-  }
+        if (fs !== "all") list = list.filter((a) => a.status === fs);
+        if (fd !== "all")
+          list = list.filter((a) => a.doctorId === parseInt(fd));
+        if (q) {
+          list = list.filter(
+            (a) =>
+              a.code.toLowerCase().includes(q) ||
+              a.name.toLowerCase().includes(q) ||
+              a.phone.includes(q),
+          );
+        }
 
-  if(list.length === 0){
-    tbody.innerHTML = '';
-    empty.style.display = 'block';
-    return;
-  }
-  empty.style.display = 'none';
+        if (list.length === 0) {
+          tbody.innerHTML = "";
+          empty.style.display = "block";
+          return;
+        }
+        empty.style.display = "none";
 
-  tbody.innerHTML = list.map(a => {
-    const doc = getDoctor(a.doctorId);
-    const badgeCls = a.status === 'confirmed' ? 'confirmed' : a.status === 'cancelled' ? 'cancelled' : 'pending';
-    return `
+        tbody.innerHTML = list
+          .map((a) => {
+            const doc = getDoctor(a.doctorId);
+            const badgeCls =
+              a.status === "confirmed"
+                ? "confirmed"
+                : a.status === "cancelled"
+                  ? "cancelled"
+                  : "pending";
+            return `
       <tr data-code="${a.code}">
         <td class="track-cell">${a.code}</td>
         <td>${a.name}</td>
-        <td>${doc ? doc.name : '-'}</td>
+        <td>${doc ? doc.name : "-"}</td>
         <td>${formatDateFa(a.date)}</td>
         <td>${toFa(a.time)}</td>
         <td>${toFa(a.phone)}</td>
         <td><span class="badge ${badgeCls}">${statusFa(a.status)}</span></td>
         <td>
           <div class="actions">
-            ${a.status !== 'confirmed' ? `<button class="btn btn-success btn-sm" data-act="confirm" data-code="${a.code}">تأیید</button>` : ''}
-            ${a.status !== 'cancelled' ? `<button class="btn btn-warning btn-sm" data-act="cancel" data-code="${a.code}">لغو</button>` : ''}
+            ${a.status !== "confirmed" ? `<button class="btn btn-success btn-sm" data-act="confirm" data-code="${a.code}">تأیید</button>` : ""}
+            ${a.status !== "cancelled" ? `<button class="btn btn-warning btn-sm" data-act="cancel" data-code="${a.code}">لغو</button>` : ""}
             <button class="btn btn-danger btn-sm" data-act="delete" data-code="${a.code}">حذف</button>
           </div>
         </td>
       </tr>
     `;
-  }).join('');
+          })
+          .join("");
 
-  tbody.querySelectorAll('button[data-act]').forEach(btn => {
-    btn.addEventListener('click', ()=>{
-      const code = btn.dataset.code;
-      const act = btn.dataset.act;
-      if(act === 'confirm') confirmAppt(code);
-      else if(act === 'cancel') cancelAppt(code);
-      else if(act === 'delete') deleteAppt(code);
-    });
-  });
-}
+        tbody.querySelectorAll("button[data-act]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const code = btn.dataset.code;
+            const act = btn.dataset.act;
+            if (act === "confirm") confirmAppt(code);
+            else if (act === "cancel") cancelAppt(code);
+            else if (act === "delete") deleteAppt(code);
+          });
+        });
+      }
 
-/* =====================================================
+      /* =====================================================
    عملیات روی نوبت‌ها
 ===================================================== */
-function confirmAppt(code){
-  const a = appointments.find(x => x.code === code);
-  if(!a) return;
-  modal.open('info', 'تأیید نوبت', `آیا از تأیید نوبت ${a.name} با کد ${code} مطمئن هستید؟`, ()=>{
-    a.status = 'confirmed';
-    saveAppointments(appointments);
-    renderAdminTable();
-    updateStats();
-    showToast('success', 'تأیید شد', `نوبت ${code} با موفقیت تأیید شد.`);
-  });
-}
+      function confirmAppt(code) {
+        const a = appointments.find((x) => x.code === code);
+        if (!a) return;
+        modal.open(
+          "info",
+          "تأیید نوبت",
+          `آیا از تأیید نوبت ${a.name} با کد ${code} مطمئن هستید؟`,
+          () => {
+            a.status = "confirmed";
+            saveAppointments(appointments);
+            renderAdminTable();
+            updateStats();
+            showToast(
+              "success",
+              "تأیید شد",
+              `نوبت ${code} با موفقیت تأیید شد.`,
+            );
+          },
+        );
+      }
 
-function cancelAppt(code){
-  const a = appointments.find(x => x.code === code);
-  if(!a) return;
-  modal.open('warn', 'لغو نوبت', `آیا از لغو نوبت ${a.name} با کد ${code} مطمئن هستید؟`, ()=>{
-    a.status = 'cancelled';
-    saveAppointments(appointments);
-    renderAdminTable();
-    updateStats();
-    showToast('warning', 'لغو شد', `نوبت ${code} لغو شد.`);
-  });
-}
+      function cancelAppt(code) {
+        const a = appointments.find((x) => x.code === code);
+        if (!a) return;
+        modal.open(
+          "warn",
+          "لغو نوبت",
+          `آیا از لغو نوبت ${a.name} با کد ${code} مطمئن هستید؟`,
+          () => {
+            a.status = "cancelled";
+            saveAppointments(appointments);
+            renderAdminTable();
+            updateStats();
+            showToast("warning", "لغو شد", `نوبت ${code} لغو شد.`);
+          },
+        );
+      }
 
-function deleteAppt(code){
-  const a = appointments.find(x => x.code === code);
-  if(!a) return;
-  modal.open('danger', 'حذف نوبت', `آیا از حذف کامل نوبت ${a.name} با کد ${code} مطمئن هستید؟ این عمل بازگشت‌پذیر نیست.`, ()=>{
-    appointments = appointments.filter(x => x.code !== code);
-    saveAppointments(appointments);
-    renderAdminTable();
-    updateStats();
-    showToast('error', 'حذف شد', `نوبت ${code} حذف شد.`);
-  });
-}
+      function deleteAppt(code) {
+        const a = appointments.find((x) => x.code === code);
+        if (!a) return;
+        modal.open(
+          "danger",
+          "حذف نوبت",
+          `آیا از حذف کامل نوبت ${a.name} با کد ${code} مطمئن هستید؟ این عمل بازگشت‌پذیر نیست.`,
+          () => {
+            appointments = appointments.filter((x) => x.code !== code);
+            saveAppointments(appointments);
+            renderAdminTable();
+            updateStats();
+            showToast("error", "حذف شد", `نوبت ${code} حذف شد.`);
+          },
+        );
+      }
 
-/* =====================================================
+      /* =====================================================
    فیلترها و جستجو
 ===================================================== */
-document.getElementById('adminSearch').addEventListener('input', e => {
-  state.search = e.target.value;
-  renderAdminTable();
-});
-document.getElementById('filterStatus').addEventListener('change', e => {
-  state.filterStatus = e.target.value;
-  renderAdminTable();
-});
-document.getElementById('filterDoctor').addEventListener('change', e => {
-  state.filterDoctor = e.target.value;
-  renderAdminTable();
-});
-document.getElementById('refreshBtn').addEventListener('click', ()=>{
-  state.search = ''; state.filterStatus = 'all'; state.filterDoctor = 'all';
-  document.getElementById('adminSearch').value = '';
-  document.getElementById('filterStatus').value = 'all';
-  document.getElementById('filterDoctor').value = 'all';
-  renderAdminTable();
-  showToast('info', 'بازنشانی', 'فیلترها پاک شدند.');
-});
+      document.getElementById("adminSearch").addEventListener("input", (e) => {
+        state.search = e.target.value;
+        renderAdminTable();
+      });
+      document
+        .getElementById("filterStatus")
+        .addEventListener("change", (e) => {
+          state.filterStatus = e.target.value;
+          renderAdminTable();
+        });
+      document
+        .getElementById("filterDoctor")
+        .addEventListener("change", (e) => {
+          state.filterDoctor = e.target.value;
+          renderAdminTable();
+        });
+      document.getElementById("refreshBtn").addEventListener("click", () => {
+        state.search = "";
+        state.filterStatus = "all";
+        state.filterDoctor = "all";
+        document.getElementById("adminSearch").value = "";
+        document.getElementById("filterStatus").value = "all";
+        document.getElementById("filterDoctor").value = "all";
+        renderAdminTable();
+        showToast("info", "بازنشانی", "فیلترها پاک شدند.");
+      });
 
-/* =====================================================
+      /* =====================================================
    مقداردهی اولیه
 ===================================================== */
-function init(){
-  renderDoctors();
-  renderApptDoctors();
-  buildDates();
-  fillDoctorFilter();
-  updateStats();
-}
-init();
-</script>
-</body>
+      function init() {
+        renderDoctors();
+        renderApptDoctors();
+        buildDates();
+        fillDoctorFilter();
+        updateStats();
+      }
+      init();
+    </script>
+  </body>
 </html>

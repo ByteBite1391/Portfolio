@@ -1,23 +1,66 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="cosmic">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AmirAli Pourbabaeii Backend &amp; Full-Stack Developer</title>
-<meta name="description" content="Interactive 3D portfolio of AmirAli Pourbabaeii â€” backend and full-stack developer working with Python, Django, Django REST Framework, PostgreSQL, Docker, Git and Three.js.">
+
+<title>AmirAli Pourbabaeii | امیرعلی پوربابایی رودبنه - Full-Stack Developer</title>
+<meta name="description" content="AmirAli Pourbabaeii (امیرعلی پوربابایی رودبنه) - Backend and Full-Stack Developer. Python, Django, Django REST Framework, PostgreSQL, Docker, Three.js.">
 <meta name="author" content="AmirAli Pourbabaeii">
-<meta name="keywords" content="AmirAli Pourbabaeii, Backend Developer, Full-Stack Developer, Python, Django, DRF, PostgreSQL, Docker, Three.js, Portfolio">
+<meta name="keywords" content="AmirAli Pourbabaeii, Amirali Pourbabaeii, Amir Ali Pourbabaeii, امیرعلی پوربابایی, امیرعلی پوربابایی رودبنه, امیر علی پوربابایی, Python developer, Django developer, backend developer, full-stack developer, برنامه نویس, توسعه دهنده بک اند, توسعه دهنده فول استک, پایتون, جنگو">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#04060d">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AmirAli Pourbabaeii â€” Backend &amp; Full-Stack Developer">
-<meta property="og:description" content="An interactive 3D developer universe. Python, Django, DRF, PostgreSQL, Docker and Three.js.">
+
+<link rel="canonical" href="https://bytebite1391.github.io/Portfolio/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="AmirAli Pourbabaeii">
+<meta property="og:title" content="AmirAli Pourbabaeii | امیرعلی پوربابایی رودبنه">
+<meta property="og:description" content="Full-Stack Developer. Python, Django, DRF, PostgreSQL, Docker, Three.js.">
 <meta property="og:url" content="https://bytebite1391.github.io/Portfolio/">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fa_IR">
+<meta property="profile:first_name" content="AmirAli">
+<meta property="profile:last_name" content="Pourbabaeii">
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AmirAli Pourbabaeii â€” Backend &amp; Full-Stack Developer">
-<meta name="twitter:description" content="An interactive 3D developer universe built with Three.js.">
+<meta name="twitter:title" content="AmirAli Pourbabaeii | امیرعلی پوربابایی رودبنه">
+<meta name="twitter:description" content="Full-Stack Developer. Python, Django, DRF, PostgreSQL, Docker, Three.js.">
+
 <link rel="stylesheet" href="vendor/fonts/fonts.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070b16'/><text x='50' y='68' font-size='52' font-family='monospace' fill='%236fd3ff' text-anchor='middle'>A</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "AmirAli Pourbabaeii",
+  "alternateName": [
+    "Amirali Pourbabaeii",
+    "Amir Ali Pourbabaeii",
+    "امیرعلی پوربابایی",
+    "امیر علی پوربابایی",
+    "امیرعلی پوربابایی رودبنه"
+  ],
+  "jobTitle": "Full-Stack Developer",
+  "description": "Backend and full-stack developer working with Python, Django, Django REST Framework, PostgreSQL, Docker, Git and Three.js.",
+  "url": "https://bytebite1391.github.io/Portfolio/",
+  "sameAs": [
+    "https://github.com/ByteBite1391",
+    "https://bytebite1391.github.io/Portfolio/",
+    "https://bytebite1391.github.io/Portfolio/toys_shop/"
+  ],
+  "knowsAbout": [
+    "Python", "Django", "Django REST Framework", "PostgreSQL",
+    "Docker", "Git", "JavaScript", "HTML", "CSS", "Three.js",
+    "REST API", "Backend Development", "Full-Stack Development"
+  ],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "English", "alternateName": "en" },
+    { "@type": "Language", "name": "Persian", "alternateName": "fa" }
+  ]
+}
+</script>
 
 <style>
 /* ==========================================================
@@ -83,6 +126,67 @@ ul{margin:0;padding:0;list-style:none}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:6px}
 
 /* ==========================================================
+   INLINE SVG SEPARATORS
+   ========================================================== */
+.dot-sep{
+  display:inline-block;
+  width:4px;height:4px;
+  vertical-align:middle;
+  margin:0 .55em;
+  color:currentColor;
+  opacity:.55;
+  flex:0 0 auto;
+}
+.dot-sep svg{display:block;width:100%;height:100%;fill:currentColor}
+
+.line-sep{
+  display:inline-block;
+  width:14px;height:1px;
+  vertical-align:middle;
+  margin:0 .6em;
+  background:currentColor;
+  opacity:.35;
+  flex:0 0 auto;
+  border-radius:1px;
+}
+
+.star-ico,
+.fork-ico{
+  display:inline-block;
+  width:11px;height:11px;
+  vertical-align:-1px;
+  margin-right:4px;
+}
+.star-ico svg{fill:currentColor}
+.fork-ico svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ==========================================================
+   BILINGUAL NAME STYLING
+   ========================================================== */
+.hero-name-fa{
+  font-family: var(--font-fa);
+  font-size: clamp(15px, 2vw, 22px);
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 10px;
+  direction: rtl;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+.about-intro-name-fa{
+  font-family: var(--font-fa);
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-weight: 500;
+  color: var(--fg);
+}
+footer .footer-name-fa{
+  font-family: var(--font-fa);
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+/* ==========================================================
    CANVAS LAYERS
    ========================================================== */
 #world{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;touch-action:pan-y}
@@ -96,7 +200,8 @@ body.matrix-on #matrix{display:block}
 #cursorDot{width:5px;height:5px;border-radius:50%;background:var(--primary);margin:-2.5px 0 0 -2.5px;box-shadow:0 0 12px var(--primary)}
 #cursorRing{
   width:34px;height:34px;border-radius:50%;border:1px solid var(--line-strong);
-  margin:-17px 0 0 -17px;transition:width .25s cubic-bezier(.2,.8,.3,1),height .25s cubic-bezier(.2,.8,.3,1),margin .25s cubic-bezier(.2,.8,.3,1),border-color .25s,background-color .25s,opacity .3s;
+  margin:-17px 0 0 -17px;
+  transition:width .25s cubic-bezier(.2,.8,.3,1),height .25s cubic-bezier(.2,.8,.3,1),margin .25s cubic-bezier(.2,.8,.3,1),border-color .25s,background-color .25s,opacity .3s;
 }
 #cursorRing.hot{width:62px;height:62px;margin:-31px 0 0 -31px;border-color:var(--primary);background:color-mix(in srgb,var(--primary) 10%, transparent)}
 #cursorRing.press{width:22px;height:22px;margin:-11px 0 0 -11px;border-color:var(--accent)}
@@ -170,7 +275,7 @@ body.cursor-hidden #cursorDot,body.cursor-hidden #cursorRing{opacity:0}
 }
 
 /* ==========================================================
-   LAYOUT / SECTIONS
+   LAYOUT
    ========================================================== */
 #content{position:relative;z-index:2}
 .section{
@@ -200,7 +305,6 @@ h2.title em{font-style:normal;color:var(--primary)}
 .small{font-size:12px;color:var(--muted)}
 .hr{height:1px;background:var(--line);margin:22px 0}
 
-/* reveal */
 html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.8,.3,1),transform .9s cubic-bezier(.2,.8,.3,1)}
 html.js .reveal.in{opacity:1;transform:none}
 html.js .reveal.d1{transition-delay:.08s}
@@ -216,7 +320,11 @@ html.js .reveal.d4{transition-delay:.32s}
 .hero-name{font-size:clamp(40px,8.4vw,104px);letter-spacing:-.045em;line-height:.92}
 .hero-name .l2{display:block;color:transparent;-webkit-text-stroke:1px var(--line-strong)}
 html[data-theme="minimal"] .hero-name .l2{-webkit-text-stroke-color:rgba(10,20,40,.4)}
-.hero-role{margin-top:18px;font-family:var(--font-mono);font-size:clamp(11px,1.4vw,14px);letter-spacing:.22em;text-transform:uppercase;color:var(--primary)}
+.hero-role{
+  margin-top:18px;font-family:var(--font-mono);font-size:clamp(11px,1.4vw,14px);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--primary);
+  display:flex;align-items:center;flex-wrap:wrap;
+}
 .hero-tag{margin-top:14px;font-size:clamp(15px,1.8vw,19px);color:var(--muted);max-width:44ch}
 .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .chip{
@@ -226,7 +334,10 @@ html[data-theme="minimal"] .hero-name .l2{-webkit-text-stroke-color:rgba(10,20,4
 }
 .chip:hover{color:var(--fg);border-color:var(--line-strong)}
 .hero-side{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
-.stat-line{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--muted);display:flex;gap:10px;align-items:center}
+.stat-line{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--muted);
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+}
 .stat-line b{color:var(--fg);font-weight:500}
 .scroll-hint{
   position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;
@@ -304,7 +415,7 @@ html[data-theme="minimal"] .hero-name .l2{-webkit-text-stroke-color:rgba(10,20,4
 .proj-row .tg{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 /* ==========================================================
-   MODAL (PROJECT DETAIL + ARCHITECTURE)
+   MODAL
    ========================================================== */
 #modal{position:fixed;inset:0;z-index:9000;display:none;place-items:center;padding:20px}
 #modal.open{display:grid}
@@ -337,7 +448,7 @@ html[data-theme="minimal"] .hero-name .l2{-webkit-text-stroke-color:rgba(10,20,4
 .modal-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 
 /* ==========================================================
-   LAB / CODE
+   LAB
    ========================================================== */
 .lab-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px;margin-top:22px}
 @media (max-width:880px){.lab-grid{grid-template-columns:1fr}}
@@ -373,7 +484,7 @@ html[data-theme="minimal"] .editor-body{color:#16233c}
 .repo:hover{border-color:var(--primary);transform:translateY(-3px)}
 .repo .rn{font-size:14px;margin-bottom:6px;word-break:break-word}
 .repo .rd{font-size:12px;color:var(--muted);min-height:32px}
-.repo .rm{display:flex;gap:12px;margin-top:10px;font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.06em}
+.repo .rm{display:flex;gap:12px;margin-top:10px;font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.06em;align-items:center}
 .lang-dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--primary);margin-right:5px;vertical-align:middle}
 .status-badge{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
 .status-badge.live{color:var(--primary);border-color:var(--primary)}
@@ -391,6 +502,7 @@ html[data-theme="minimal"] .editor-body{color:#16233c}
 .contact-card .cl{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .contact-card .cv{font-size:14px;word-break:break-word}
 footer{padding:40px clamp(16px,4vw,60px) 60px;text-align:center;color:var(--muted);font-size:11px;font-family:var(--font-mono);letter-spacing:.1em;position:relative;z-index:2}
+footer p{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px}
 
 /* ==========================================================
    TERMINAL
@@ -444,7 +556,7 @@ footer{padding:40px clamp(16px,4vw,60px) 60px;text-align:center;color:var(--mute
 .as-input input:focus{border-color:var(--primary)}
 
 /* ==========================================================
-   DEV PANEL / SETTINGS
+   PANELS
    ========================================================== */
 .panel{
   position:fixed;z-index:9300;top:calc(var(--nav-h) + 12px);right:clamp(12px,2vw,26px);
@@ -485,7 +597,7 @@ footer{padding:40px clamp(16px,4vw,60px) 60px;text-align:center;color:var(--mute
 #tip .td{color:var(--muted);font-size:10.5px;line-height:1.5}
 
 /* ==========================================================
-   WEBGL FALLBACK
+   FALLBACK
    ========================================================== */
 #fallback{position:fixed;inset:0;z-index:1;display:none;place-items:center;overflow:hidden}
 body.no-webgl #fallback{display:grid}
@@ -506,9 +618,6 @@ body.no-webgl #world{display:none}
 @keyframes fbSpin{to{transform:rotate(360deg)}}
 .fb-note{position:relative;z-index:2;text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:0 20px;max-width:620px;line-height:1.7}
 
-/* ==========================================================
-   REDUCED MOTION
-   ========================================================== */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
@@ -519,42 +628,33 @@ body.no-webgl #world{display:none}
 </head>
 <body>
 
-<!-- ==========================================================
-     LOADER
-     ========================================================== -->
+<!-- LOADER -->
 <div id="loader" role="status" aria-live="polite">
   <div class="loader-inner">
     <div class="loader-mark" aria-hidden="true">AP</div>
     <div class="loader-title" id="loaderTitle">Initializing digital environment</div>
     <div class="loader-bar"><i id="loaderBar"></i></div>
-    <div class="loader-status" id="loaderStatus">boot sequence startedâ€¦</div>
+    <div class="loader-status" id="loaderStatus">boot sequence started</div>
   </div>
 </div>
 
-<!-- ==========================================================
-     3D CANVAS + FALLBACK + MATRIX
-     ========================================================== -->
 <canvas id="world" aria-hidden="true"></canvas>
 <canvas id="matrix" aria-hidden="true"></canvas>
+
 <div id="fallback" role="img" aria-label="Animated fallback background">
   <div class="fb-grid"></div>
   <div class="fb-orb"></div>
-  <p class="fb-note" id="fbNote">3D is unavailable in this browser â€” the interactive universe is disabled, but every part of this portfolio remains fully accessible.</p>
+  <p class="fb-note" id="fbNote">3D is unavailable in this browser. The interactive universe is disabled, but every part of this portfolio remains fully accessible.</p>
 </div>
 
-<!-- ==========================================================
-     CURSOR + TOOLTIP + TOASTS
-     ========================================================== -->
 <div id="cursorDot" aria-hidden="true"></div>
 <div id="cursorRing" aria-hidden="true"></div>
 <div id="tip" role="tooltip" aria-hidden="true"></div>
 <div id="toasts" aria-live="polite"></div>
 
-<!-- ==========================================================
-     NAVIGATION
-     ========================================================== -->
+<!-- NAV -->
 <header id="nav">
-  <a class="brand" href="#home" id="brand" aria-label="AmirAli Pourbabaeii â€” home">
+  <a class="brand" href="#home" id="brand" aria-label="AmirAli Pourbabaeii home">
     <span class="dot" aria-hidden="true"></span>
     AMIRALI<span>.DEV</span>
   </a>
@@ -588,25 +688,35 @@ body.no-webgl #world{display:none}
   </div>
 </header>
 
-<!-- ==========================================================
-     CONTENT â€” THE JOURNEY
-     ========================================================== -->
 <main id="content">
 
-  <!-- 1. HOME -->
+  <!-- HOME -->
   <section class="section" id="home" data-world="0" aria-labelledby="homeName">
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow reveal">Backend / Full-Stack Developer</p>
+          <p class="eyebrow reveal">Backend and Full-Stack Developer</p>
           <h1 class="hero-name reveal d1" id="homeName">
             AmirAli
             <span class="l2">Pourbabaeii</span>
           </h1>
-          <p class="hero-role reveal d2">Python Â· Django Â· DRF Â· PostgreSQL</p>
-          <p class="hero-tag reveal d3">Building systems that turn ideas into reliable software â€” from data models and APIs to the interface on top.</p>
+          <p class="hero-name-fa reveal d1" lang="fa" dir="rtl">امیرعلی پوربابایی رودبنه</p>
+          <p class="hero-role reveal d2">
+            <span>Python</span>
+            <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+            <span>Django</span>
+            <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+            <span>DRF</span>
+            <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+            <span>PostgreSQL</span>
+          </p>
+          <p class="hero-tag reveal d3">
+            Building systems that turn ideas into reliable software.
+            From data models and APIs to the interface on top.
+          </p>
           <div class="cta-row reveal d4">
-            <a class="btn primary" href="#projects" data-magnetic><span>Enter the world</span>
+            <a class="btn primary" href="#projects" data-magnetic>
+              <span>Enter the world</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
             <a class="btn" href="https://github.com/ByteBite1391" target="_blank" rel="noopener noreferrer" data-magnetic>
@@ -623,10 +733,20 @@ body.no-webgl #world{display:none}
         </div>
 
         <aside class="hero-side glass reveal d3" aria-label="Quick profile">
-          <div class="stat-line"><b>LOCATION</b> Iran Â· remote friendly</div>
-          <div class="stat-line"><b>FOCUS</b> Backend systems &amp; REST APIs</div>
-          <div class="stat-line"><b>STACK</b> Python / Django / DRF / PostgreSQL</div>
-          <div class="stat-line"><b>TOOLS</b> Docker Â· Git Â· Linux</div>
+          <div class="stat-line">
+            <b>LOCATION</b><span>Iran</span>
+            <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+            <span>remote friendly</span>
+          </div>
+          <div class="stat-line"><b>FOCUS</b><span>Backend systems and REST APIs</span></div>
+          <div class="stat-line"><b>STACK</b><span>Python / Django / DRF / PostgreSQL</span></div>
+          <div class="stat-line">
+            <b>TOOLS</b><span>Docker</span>
+            <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+            <span>Git</span>
+            <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+            <span>Linux</span>
+          </div>
           <div class="hr"></div>
           <p class="small">Scroll to travel through the world. Every section is a different region of the same universe.</p>
         </aside>
@@ -635,13 +755,15 @@ body.no-webgl #world{display:none}
     <div class="scroll-hint" aria-hidden="true">SCROLL<i></i></div>
   </section>
 
-  <!-- 2. IDENTITY / ABOUT -->
+  <!-- IDENTITY -->
   <section class="section" id="identity" data-world="1" aria-labelledby="aboutTitle">
     <div class="wrap">
       <div class="glass reveal">
         <p class="eyebrow">Identity</p>
         <h2 class="title" id="aboutTitle">A developer who thinks in <em>systems</em>.</h2>
-        <p class="lede">I work mostly on the server side: designing data models, building REST APIs with Django and Django REST Framework, wiring them to PostgreSQL, and shipping everything in containers. I also enjoy the front end enough to build interfaces â€” including the 3D world you are standing in right now.</p>
+        <p class="lede">
+          AmirAli Pourbabaeii (<span class="about-intro-name-fa" lang="fa" dir="rtl">امیرعلی پوربابایی رودبنه</span>) is a backend and full-stack developer. I work mostly on the server side: designing data models, building REST APIs with Django and Django REST Framework, wiring them to PostgreSQL, and shipping everything in containers. I also enjoy the front end enough to build interfaces, including the 3D world you are standing in right now.
+        </p>
 
         <div class="about-grid">
           <div class="fact">
@@ -658,16 +780,16 @@ body.no-webgl #world{display:none}
           </div>
           <div class="fact">
             <h4>Always learning</h4>
-            <p>Continuously expanding the stack â€” this portfolio itself was built to experiment with Three.js and real-time 3D on the web.</p>
+            <p>Continuously expanding the stack. This portfolio itself was built to experiment with Three.js and real-time 3D on the web.</p>
           </div>
         </div>
 
-        <p class="quote">â€œWrite it so the next person â€” usually future me â€” can read it, run it and change it.â€</p>
+        <p class="quote">Write it so the next person, usually future me, can read it, run it and change it.</p>
       </div>
     </div>
   </section>
 
-  <!-- 3. SKILL GALAXY -->
+  <!-- SKILLS -->
   <section class="section" id="skills" data-world="2" aria-labelledby="skillsTitle">
     <div class="wrap">
       <div class="glass reveal">
@@ -679,7 +801,7 @@ body.no-webgl #world{display:none}
           <div>
             <div class="skill-list" id="skillPills" role="list"></div>
             <div class="hr"></div>
-            <p class="small">No percentage bars here â€” skill levels are not a number I can honestly put on a chart. The projects speak instead.</p>
+            <p class="small">No percentage bars here. Skill levels are not a number I can honestly put on a chart. The projects speak instead.</p>
           </div>
           <div id="skillInfo" aria-live="polite">
             <h3>Select a technology</h3>
@@ -690,7 +812,7 @@ body.no-webgl #world{display:none}
     </div>
   </section>
 
-  <!-- 4. PROJECT CITY -->
+  <!-- PROJECTS -->
   <section class="section" id="projects" data-world="3" aria-labelledby="projTitle">
     <div class="wrap">
       <div class="glass reveal">
@@ -702,13 +824,13 @@ body.no-webgl #world{display:none}
     </div>
   </section>
 
-  <!-- 5. TECH LAB -->
+  <!-- LAB -->
   <section class="section" id="lab" data-world="4" aria-labelledby="labTitle">
     <div class="wrap">
       <div class="glass reveal">
         <p class="eyebrow">Tech Lab</p>
         <h2 class="title" id="labTitle">A small <em>laboratory</em>.</h2>
-        <p class="lede">A few static code samples. The output is pre-computed in the browser â€” nothing is executed on a server, and no arbitrary code runs.</p>
+        <p class="lede">A few static code samples. The output is pre-computed in the browser. Nothing is executed on a server and no arbitrary code runs.</p>
 
         <div class="lab-grid">
           <div>
@@ -720,23 +842,34 @@ body.no-webgl #world{display:none}
               </div>
               <pre class="editor-body" id="editorBody" tabindex="0" aria-label="Code sample"></pre>
               <div class="editor-foot">
-                <button class="btn primary" id="runBtn"><span>Run</span>
+                <button class="btn primary" id="runBtn">
+                  <span>Run</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7V5z"/></svg>
                 </button>
-                <span class="small">Simulated output Â· browser-side only</span>
+                <span class="small">
+                  Simulated output
+                  <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+                  browser-side only
+                </span>
               </div>
             </div>
           </div>
 
           <div>
             <div class="output" id="labOutput" aria-live="polite">
-              <span class="tagline">Output</span>Press <b>Run</b> to display the pre-computed result.
+              <span class="tagline">Output</span>Press Run to display the pre-computed result.
             </div>
 
             <div class="hr"></div>
             <h3 style="font-size:16px;margin-bottom:8px">Developer Terminal</h3>
-            <p class="small" style="margin-bottom:14px">A simulated shell with a handful of commands. Try <span class="mono">help</span> â€” and there is at least one command that is not listed.</p>
-            <button class="btn" id="openTerminalBtn"><span>Open terminal</span>
+            <p class="small" style="margin-bottom:14px">
+              A simulated shell with a handful of commands. Try
+              <span class="mono">help</span>
+              <span class="line-sep" aria-hidden="true"></span>
+              and there is at least one command that is not listed.
+            </p>
+            <button class="btn" id="openTerminalBtn">
+              <span>Open terminal</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
           </div>
@@ -745,7 +878,7 @@ body.no-webgl #world{display:none}
     </div>
   </section>
 
-  <!-- 6. GITHUB WORLD -->
+  <!-- GITHUB -->
   <section class="section" id="github" data-world="5" aria-labelledby="ghTitle">
     <div class="wrap">
       <div class="glass reveal">
@@ -756,7 +889,7 @@ body.no-webgl #world{display:none}
             <span>github.com/ByteBite1391</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
           </a>
-          <span class="status-badge" id="ghStatus">Checking for live dataâ€¦</span>
+          <span class="status-badge" id="ghStatus">Checking for live data</span>
         </div>
         <div class="repo-grid" id="repoGrid"></div>
         <p class="small" id="ghNote" style="margin-top:16px"></p>
@@ -764,7 +897,7 @@ body.no-webgl #world{display:none}
     </div>
   </section>
 
-  <!-- 7. CONTACT -->
+  <!-- CONTACT -->
   <section class="section" id="contact" data-world="6" aria-labelledby="ctTitle">
     <div class="wrap">
       <div class="glass reveal" style="text-align:center">
@@ -790,24 +923,34 @@ body.no-webgl #world{display:none}
           </a>
         </div>
 
-        <p class="small" style="margin-top:24px">No contact form â€” a form without a backend would be theatre. These links are real.</p>
+        <p class="small" style="margin-top:24px">
+          No contact form
+          <span class="line-sep" aria-hidden="true"></span>
+          a form without a backend would be theatre. These links are real.
+        </p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>AMIRALI POURBABAEII Â· BUILT WITH HTML, CSS, JAVASCRIPT &amp; THREE.JS Â· ONE FILE, NO BUILD STEP</p>
-    <p style="margin-top:8px;opacity:.6">PSST â€” THE TERMINAL KNOWS MORE THAN IT SHOWS. SOME CODES ARE OLDER THAN THE WEB.</p>
+    <p>
+      AMIRALI POURBABAEII
+      <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+      <span class="footer-name-fa" lang="fa" dir="rtl">امیرعلی پوربابایی رودبنه</span>
+      <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+      BUILT WITH HTML, CSS, JAVASCRIPT AND THREE.JS
+    </p>
+    <p style="margin-top:8px;opacity:.6">ONE FILE, NO BUILD STEP</p>
   </footer>
 </main>
 
-<!-- ==========================================================
-     TERMINAL
-     ========================================================== -->
+<!-- TERMINAL -->
 <section id="terminal" aria-label="Simulated developer terminal" aria-hidden="true">
   <div class="term-head">
     <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span class="t">amirali@portfolio â€” shell (simulated)</span>
+    <span class="t">amirali@portfolio</span>
+    <span class="line-sep" aria-hidden="true"></span>
+    <span class="t">shell (simulated)</span>
     <button class="icon-btn" id="termClose" aria-label="Close terminal">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
@@ -819,9 +962,7 @@ body.no-webgl #world{display:none}
   </div>
 </section>
 
-<!-- ==========================================================
-     ASSISTANT
-     ========================================================== -->
+<!-- ASSISTANT -->
 <aside id="assistant" aria-label="Portfolio assistant">
   <div class="as-head">
     <span class="t">Ask about AmirAli</span>
@@ -839,20 +980,18 @@ body.no-webgl #world{display:none}
   </div>
 </aside>
 
-<!-- ==========================================================
-     DEV PANEL
-     ========================================================== -->
+<!-- DEV PANEL -->
 <aside class="panel" id="devPanel" aria-label="Developer mode" aria-hidden="true">
   <h4>Developer Mode</h4>
-  <div class="row"><span>FPS</span><b id="dFps">â€”</b></div>
-  <div class="row"><span>WEBGL</span><b id="dWebgl">â€”</b></div>
-  <div class="row"><span>RENDERER</span><b id="dRenderer">â€”</b></div>
-  <div class="row"><span>OBJECTS</span><b id="dObjects">â€”</b></div>
-  <div class="row"><span>PARTICLES</span><b id="dParticles">â€”</b></div>
-  <div class="row"><span>DRAW CALLS</span><b id="dCalls">â€”</b></div>
-  <div class="row"><span>RESOLUTION</span><b id="dRes">â€”</b></div>
-  <div class="row"><span>PIXEL RATIO</span><b id="dPr">â€”</b></div>
-  <div class="row"><span>QUALITY</span><b id="dQuality">â€”</b></div>
+  <div class="row"><span>FPS</span><b id="dFps">0</b></div>
+  <div class="row"><span>WEBGL</span><b id="dWebgl">-</b></div>
+  <div class="row"><span>RENDERER</span><b id="dRenderer">-</b></div>
+  <div class="row"><span>OBJECTS</span><b id="dObjects">0</b></div>
+  <div class="row"><span>PARTICLES</span><b id="dParticles">0</b></div>
+  <div class="row"><span>DRAW CALLS</span><b id="dCalls">0</b></div>
+  <div class="row"><span>RESOLUTION</span><b id="dRes">-</b></div>
+  <div class="row"><span>PIXEL RATIO</span><b id="dPr">-</b></div>
+  <div class="row"><span>QUALITY</span><b id="dQuality">-</b></div>
   <div class="seg" style="margin-top:14px">
     <button id="devMatrix">Matrix mode</button>
     <button id="devSecret">Reveal secret</button>
@@ -861,9 +1000,7 @@ body.no-webgl #world{display:none}
   <p class="small" style="margin-top:12px;font-size:10px;line-height:1.6">All values are read live from the browser. Nothing here is simulated.</p>
 </aside>
 
-<!-- ==========================================================
-     SETTINGS PANEL
-     ========================================================== -->
+<!-- SETTINGS PANEL -->
 <aside class="panel" id="settingsPanel" aria-label="Display settings" aria-hidden="true">
   <h4>Change Reality</h4>
   <div class="seg" id="themeSeg">
@@ -888,9 +1025,7 @@ body.no-webgl #world{display:none}
   <p class="small" style="margin-top:14px;font-size:10px;line-height:1.6">Sound never autoplays. It only starts after you choose it.</p>
 </aside>
 
-<!-- ==========================================================
-     PROJECT MODAL
-     ========================================================== -->
+<!-- MODAL -->
 <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="veil" data-close></div>
   <div class="modal-card">
@@ -899,7 +1034,7 @@ body.no-webgl #world{display:none}
     </button>
     <div class="modal-head">
       <h3 id="modalTitle">Project</h3>
-      <span class="status-badge" id="modalKind">â€”</span>
+      <span class="status-badge" id="modalKind">-</span>
     </div>
     <div class="modal-grid">
       <div>
@@ -915,10 +1050,7 @@ body.no-webgl #world{display:none}
     </div>
   </div>
 </div>
-
-<!-- ==========================================================
-     BOOT SCRIPT â€” helpers, loader, WebGL detection, fallback
-     ========================================================== -->
+<!-- BOOT -->
 <script>
 (function () {
   'use strict';
@@ -928,7 +1060,6 @@ body.no-webgl #world{display:none}
   window.APP.$ = function (sel, root) { return (root || document).querySelector(sel); };
   window.APP.$$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
-  /* ---------- loader ---------- */
   var loader = document.getElementById('loader');
   var bar = document.getElementById('loaderBar');
   var status = document.getElementById('loaderStatus');
@@ -941,12 +1072,11 @@ body.no-webgl #world{display:none}
   window.APP.setLoaderTitle = function (t) { if (title) title.textContent = t; };
   window.APP.hideLoader = function () {
     if (!loader || loader.classList.contains('done')) return;
-    window.APP.setLoader(100, 'welcome.');
+    window.APP.setLoader(100, 'welcome');
     setTimeout(function () { loader.classList.add('done'); }, 420);
     setTimeout(function () { loader.style.display = 'none'; }, 1500);
   };
 
-  /* ---------- toasts ---------- */
   window.APP.toast = function (msg, ms) {
     var host = document.getElementById('toasts');
     if (!host) return;
@@ -960,13 +1090,10 @@ body.no-webgl #world{display:none}
     }, ms || 2600);
   };
 
-  /* ---------- WebGL detection ---------- */
   window.APP.webglAvailable = function () {
     try {
       var c = document.createElement('canvas');
-      var gl = c.getContext('webgl2') ||
-               c.getContext('webgl') ||
-               c.getContext('experimental-webgl');
+      var gl = c.getContext('webgl2') || c.getContext('webgl') || c.getContext('experimental-webgl');
       return !!gl;
     } catch (e) { return false; }
   };
@@ -979,13 +1106,13 @@ body.no-webgl #world{display:none}
     var note = document.getElementById('fbNote');
     if (note) {
       if (reason === 'three-load-failed') {
-        note.textContent = 'The 3D library could not be loaded (network or CDN blocked) â€” the interactive universe is disabled, but every part of this portfolio remains fully accessible.';
+        note.textContent = 'The 3D library could not be loaded. The interactive universe is disabled, but every part of this portfolio remains fully accessible.';
       } else if (reason === 'no-webgl-context') {
-        note.textContent = 'WebGL is unavailable in this browser â€” the interactive universe is disabled, but every part of this portfolio remains fully accessible.';
+        note.textContent = 'WebGL is unavailable in this browser. The interactive universe is disabled, but every part of this portfolio remains fully accessible.';
       } else if (reason === 'init-timeout') {
-        note.textContent = 'The 3D universe did not initialise in time â€” you are seeing the static fallback. Every part of this portfolio remains fully accessible.';
+        note.textContent = 'The 3D universe did not initialise in time. Every part of this portfolio remains fully accessible.';
       } else {
-        note.textContent = 'The interactive universe is unavailable â€” every part of this portfolio remains fully accessible.';
+        note.textContent = 'The interactive universe is unavailable. Every part of this portfolio remains fully accessible.';
       }
     }
     if (reason) console.warn('[portfolio] fallback activated:', reason);
@@ -995,7 +1122,6 @@ body.no-webgl #world{display:none}
     window.APP.activateFallback('no-webgl-context');
   }
 
-  /* ---------- safety net ---------- */
   window.__WORLD_READY = false;
   setTimeout(function () {
     if (!window.__WORLD_READY && !document.body.classList.contains('no-webgl')) {
@@ -1006,14 +1132,10 @@ body.no-webgl #world{display:none}
 })();
 </script>
 
-<!-- ==========================================================
-     THREE.JS â€” classic UMD build (works from file://)
-     ========================================================== -->
+<!-- THREE.JS (LOCAL) -->
 <script src="vendor/three.min.js"></script>
 
-<!-- ==========================================================
-     UI SCRIPT â€” nav, cursor, terminal, assistant, projects, etc.
-     ========================================================== -->
+<!-- UI SCRIPT -->
 <script>
 (function () {
   'use strict';
@@ -1021,9 +1143,7 @@ body.no-webgl #world{display:none}
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
-  /* ==========================================================
-     NAVIGATION
-     ========================================================== */
+  /* NAV */
   var nav = $('#nav');
   var navLinks = $('#navLinks');
   var menuBtn = $('#menuBtn');
@@ -1044,9 +1164,7 @@ body.no-webgl #world{display:none}
   window.addEventListener('scroll', onScrollNav, { passive: true });
   onScrollNav();
 
-  /* ==========================================================
-     REVEAL ON SCROLL
-     ========================================================== */
+  /* REVEAL */
   if ('IntersectionObserver' in window) {
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -1058,9 +1176,7 @@ body.no-webgl #world{display:none}
     $$('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ==========================================================
-     CUSTOM CURSOR
-     ========================================================== */
+  /* CURSOR */
   if (!isTouch) {
     var dot = $('#cursorDot'), ring = $('#cursorRing');
     var mx = window.innerWidth / 2, my = window.innerHeight / 2;
@@ -1094,9 +1210,7 @@ body.no-webgl #world{display:none}
     window.APP.setCursorHot = function () {};
   }
 
-  /* ==========================================================
-     MAGNETIC BUTTONS
-     ========================================================== */
+  /* MAGNETIC BUTTONS */
   if (!isTouch && !reduceMotion) {
     $$('[data-magnetic], .btn').forEach(function (btn) {
       btn.addEventListener('mousemove', function (e) {
@@ -1111,9 +1225,7 @@ body.no-webgl #world{display:none}
     });
   }
 
-  /* ==========================================================
-     THEME SYSTEM
-     ========================================================== */
+  /* THEME */
   var themeSeg = $('#themeSeg');
   var currentTheme = document.documentElement.dataset.theme || 'cosmic';
 
@@ -1135,9 +1247,7 @@ body.no-webgl #world{display:none}
     if (savedTheme) setTheme(savedTheme); else setTheme(currentTheme);
   } catch (e) { setTheme(currentTheme); }
 
-  /* ==========================================================
-     SETTINGS / DEV PANELS
-     ========================================================== */
+  /* PANELS */
   var settingsPanel = $('#settingsPanel');
   var settingsBtn = $('#settingsBtn');
   var devPanel = $('#devPanel');
@@ -1159,9 +1269,7 @@ body.no-webgl #world{display:none}
     }
   });
 
-  /* ==========================================================
-     SOUND SYSTEM
-     ========================================================== */
+  /* SOUND */
   var soundOn = false;
   var audioCtx = null, masterGain = null;
 
@@ -1173,7 +1281,6 @@ body.no-webgl #world{display:none}
     masterGain = audioCtx.createGain();
     masterGain.gain.value = 0;
     masterGain.connect(audioCtx.destination);
-
     [55, 82.5, 110, 164.81].forEach(function (freq, i) {
       var osc = audioCtx.createOscillator();
       osc.type = i % 2 ? 'sine' : 'triangle';
@@ -1209,9 +1316,7 @@ body.no-webgl #world{display:none}
     setSound(b.dataset.sound === 'on');
   });
 
-  /* ==========================================================
-     MATRIX MODE
-     ========================================================== */
+  /* MATRIX */
   var matrixCanvas = $('#matrix');
   var matrixRAF = null;
   var matrixResizeHandler = null;
@@ -1234,7 +1339,7 @@ body.no-webgl #world{display:none}
     matrixResizeHandler = resize;
     window.addEventListener('resize', matrixResizeHandler);
 
-    var chars = 'ã‚¢ã‚¤ã‚¦ã‚¨ã‚ªã‚«ã‚­ã‚¯ã‚±ã‚³ã‚µã‚·ã‚¹ã‚»ã‚½ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/\\{}[]()=+-*';
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/\\{}[]()=+-*';
     var last = 0;
 
     function frame(ts) {
@@ -1272,9 +1377,7 @@ body.no-webgl #world{display:none}
     return on;
   }
 
-  /* ==========================================================
-     DEVELOPER MODE
-     ========================================================== */
+  /* DEV MODE */
   function toggleDev(force) {
     var open = togglePanel(devPanel, force);
     if (open) togglePanel(settingsPanel, false);
@@ -1286,9 +1389,9 @@ body.no-webgl #world{display:none}
     if (window.APP.revealSecret) window.APP.revealSecret();
   });
 
-  function closeModal() { window.APP.closeModal && window.APP.closeModal(); }
-  function closeTerminal() { window.APP.closeTerminal && window.APP.closeTerminal(); }
-  function closeAssistant() { window.APP.closeAssistant && window.APP.closeAssistant(); }
+  function closeModal() { if (window.APP.closeModal) window.APP.closeModal(); }
+  function closeTerminal() { if (window.APP.closeTerminal) window.APP.closeTerminal(); }
+  function closeAssistant() { if (window.APP.closeAssistant) window.APP.closeAssistant(); }
 
   document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
@@ -1305,13 +1408,11 @@ body.no-webgl #world{display:none}
     }
     if (e.key === '`' && !/input|textarea/i.test(document.activeElement.tagName)) {
       e.preventDefault();
-      window.APP.openTerminal && window.APP.openTerminal();
+      if (window.APP.openTerminal) window.APP.openTerminal();
     }
   });
 
-  /* ==========================================================
-     KONAMI CODE
-     ========================================================== */
+  /* KONAMI */
   var konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
   var konamiPos = 0;
   document.addEventListener('keydown', function (e) {
@@ -1327,9 +1428,7 @@ body.no-webgl #world{display:none}
     }
   });
 
-  /* ==========================================================
-     BRAND CLICKS â€” EASTER EGG
-     ========================================================== */
+  /* BRAND CLICKS */
   var brandClicks = 0, brandTimer = null;
   $('#brand').addEventListener('click', function () {
     brandClicks++;
@@ -1341,9 +1440,7 @@ body.no-webgl #world{display:none}
     }
   });
 
-  /* ==========================================================
-     PROJECT DATA + CITY UI
-     ========================================================== */
+  /* PROJECTS DATA */
   var PROJECTS = [
     {
       id: 'hospital',
@@ -1370,7 +1467,7 @@ body.no-webgl #world{display:none}
     {
       id: 'drf',
       name: 'DRF Learning Platform',
-      kind: 'API / learning',
+      kind: 'API and learning',
       short: 'API',
       desc: 'A project built to go deep on Django REST Framework: serializers, viewsets, routers, authentication, permissions and pagination, documented as a learning path rather than a product.',
       tech: ['Python', 'Django', 'Django REST Framework', 'PostgreSQL'],
@@ -1383,7 +1480,7 @@ body.no-webgl #world{display:none}
       name: 'Portfolio',
       kind: 'Front-end',
       short: 'Front-end',
-      desc: 'The public portfolio site â€” a front-end project built with plain HTML, CSS and JavaScript, hosted on GitHub Pages. This 3D universe is the Three.js evolution of it.',
+      desc: 'The public portfolio site, a front-end project built with plain HTML, CSS and JavaScript, hosted on GitHub Pages. This 3D universe is the Three.js evolution of it.',
       tech: ['HTML', 'CSS', 'JavaScript', 'Three.js', 'Git'],
       arch: ['BROWSER', 'HTML / CSS', 'JAVASCRIPT', 'THREE.JS'],
       archSide: ['GIT', 'GITHUB PAGES', 'RESPONSIVE', 'A11Y'],
@@ -1397,7 +1494,7 @@ body.no-webgl #world{display:none}
       name: 'Toys Shop',
       kind: 'Live demo',
       short: 'Demo',
-      desc: 'A colourful, playful storefront demo â€” a smaller experiment used to practise layout, product presentation and interaction design.',
+      desc: 'A colourful, playful storefront demo, a smaller experiment used to practise layout, product presentation and interaction design.',
       tech: ['HTML', 'CSS', 'JavaScript'],
       arch: ['BROWSER', 'HTML', 'CSS', 'JAVASCRIPT'],
       archSide: ['LAYOUT', 'RESPONSIVE', 'GITHUB PAGES', 'GIT'],
@@ -1490,20 +1587,18 @@ body.no-webgl #world{display:none}
   });
   window.APP.openProject = openProject;
 
-  /* ==========================================================
-     SKILLS DATA + UI
-     ========================================================== */
+  /* SKILLS */
   var SKILLS = [
     { id: 'python', label: 'Python', desc: 'Primary language. Used for backend logic, scripting, automation and everything Django is built on.' },
-    { id: 'django', label: 'Django', desc: 'The web framework behind most of my backend work â€” models, views, templates, admin and project structure.' },
+    { id: 'django', label: 'Django', desc: 'The web framework behind most of my backend work: models, views, templates, admin and project structure.' },
     { id: 'drf', label: 'Django REST Framework', desc: 'Used to expose Django applications as clean REST APIs: serializers, viewsets, routers, auth and permissions.' },
-    { id: 'postgresql', label: 'PostgreSQL', desc: 'The relational database I use for persistent data â€” schema design, relations, queries and migrations.' },
+    { id: 'postgresql', label: 'PostgreSQL', desc: 'The relational database I use for persistent data: schema design, relations, queries and migrations.' },
     { id: 'docker', label: 'Docker', desc: 'Containerising applications and services so environments are reproducible and deployment is predictable.' },
-    { id: 'git', label: 'Git', desc: 'Version control for every project â€” branching, history and collaboration on GitHub.' },
+    { id: 'git', label: 'Git', desc: 'Version control for every project: branching, history and collaboration on GitHub.' },
     { id: 'javascript', label: 'JavaScript', desc: 'Client-side behaviour: DOM interaction, async requests to APIs and the logic behind interactive interfaces.' },
-    { id: 'html', label: 'HTML', desc: 'Semantic, accessible document structure â€” the foundation every interface is built on.' },
+    { id: 'html', label: 'HTML', desc: 'Semantic, accessible document structure, the foundation every interface is built on.' },
     { id: 'css', label: 'CSS', desc: 'Layout, responsive design, theming and visual detail. This entire interface is hand-written CSS.' },
-    { id: 'threejs', label: 'Three.js', desc: 'Real-time 3D in the browser â€” scenes, cameras, lighting, particles and interaction. This world is built with it.' }
+    { id: 'threejs', label: 'Three.js', desc: 'Real-time 3D in the browser: scenes, cameras, lighting, particles and interaction. This world is built with it.' }
   ];
   window.APP.SKILLS = SKILLS;
 
@@ -1531,9 +1626,7 @@ body.no-webgl #world{display:none}
     skillPills.appendChild(b);
   });
 
-  /* ==========================================================
-     CODE LAB
-     ========================================================== */
+  /* CODE LAB */
   var DEMOS = [
     {
       name: 'hello.py',
@@ -1553,7 +1646,7 @@ body.no-webgl #world{display:none}
     {
       name: 'docker-compose.yml',
       code: 'services:\n  web:\n    build: .\n    command: python manage.py runserver 0.0.0.0:8000\n    volumes:\n      - .:/code\n    ports:\n      - "8000:8000"\n    depends_on:\n      - db\n\n  db:\n    image: postgres:16\n    environment:\n      POSTGRES_DB: portfolio',
-      out: 'web  Â·  db  â†’  services defined\n(static sample â€” nothing is executed)'
+      out: 'web and db services defined\n(static sample, nothing is executed)'
     }
   ];
 
@@ -1566,20 +1659,79 @@ body.no-webgl #world{display:none}
   function escapeHtml(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
+
+  /*
+   * Single-pass tokenizer. Never runs a regex over already-generated HTML,
+   * so it cannot corrupt its own <span class="..."> markers.
+   */
   function highlight(code) {
-    var html = escapeHtml(code);
-    html = html.replace(/(#[^\n]*)/g, '<span class="c">$1</span>');
-    html = html.replace(/("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')/g, '<span class="s">$1</span>');
-    html = html.replace(/\b(def|class|return|import|from|print|for|in|if|else|True|False|None|with|as|services)\b/g, '<span class="k">$1</span>');
-    return html;
+    var KEYWORDS = {
+      def:1, class:1, return:1, import:1, from:1, print:1, for:1, in:1,
+      if:1, else:1, elif:1, True:1, False:1, None:1, with:1, as:1,
+      try:1, except:1, finally:1, lambda:1, yield:1, pass:1, break:1,
+      continue:1, global:1, nonlocal:1, raise:1, while:1, and:1, or:1,
+      not:1, is:1, services:1, build:1, command:1, volumes:1, ports:1,
+      depends_on:1, image:1, environment:1
+    };
+
+    var out = '';
+    var i = 0;
+    var n = code.length;
+
+    function emit(text, cls) {
+      var safe = escapeHtml(text);
+      if (cls) out += '<span class="' + cls + '">' + safe + '</span>';
+      else out += safe;
+    }
+    function isIdentStart(ch) { return /[A-Za-z_]/.test(ch); }
+    function isIdentPart(ch) { return /[A-Za-z0-9_]/.test(ch); }
+
+    while (i < n) {
+      var ch = code[i];
+
+      if (ch === '#') {
+        var start = i;
+        while (i < n && code[i] !== '\n') i++;
+        emit(code.slice(start, i), 'c');
+        continue;
+      }
+
+      if (ch === '"' || ch === "'") {
+        var quote = ch;
+        var sStart = i;
+        i++;
+        while (i < n) {
+          if (code[i] === '\\' && i + 1 < n) { i += 2; continue; }
+          if (code[i] === quote) { i++; break; }
+          i++;
+        }
+        emit(code.slice(sStart, i), 's');
+        continue;
+      }
+
+      if (isIdentStart(ch)) {
+        var kStart = i;
+        i++;
+        while (i < n && isIdentPart(code[i])) i++;
+        var word = code.slice(kStart, i);
+        emit(word, KEYWORDS[word] ? 'k' : null);
+        continue;
+      }
+
+      emit(ch);
+      i++;
+    }
+
+    return out;
   }
+
   function renderDemo(i) {
     activeDemo = i;
     var d = DEMOS[i];
     editorName.textContent = d.name;
     editorBody.innerHTML = highlight(d.code);
     $$('#demoTabs button').forEach(function (b, k) { b.classList.toggle('active', k === i); });
-    labOutput.innerHTML = '<span class="tagline">Output</span>Press <b>Run</b> to display the pre-computed result.';
+    labOutput.innerHTML = '<span class="tagline">Output</span>Press Run to display the pre-computed result.';
   }
   DEMOS.forEach(function (d, i) {
     var b = document.createElement('button');
@@ -1593,13 +1745,11 @@ body.no-webgl #world{display:none}
 
   $('#runBtn').addEventListener('click', function () {
     var d = DEMOS[activeDemo];
-    labOutput.innerHTML = '<span class="tagline">Output Â· simulated, pre-computed in the browser</span>' + escapeHtml(d.out);
+    labOutput.innerHTML = '<span class="tagline">Output, simulated, pre-computed in the browser</span>' + escapeHtml(d.out);
     window.APP.toast('Simulated run complete');
   });
 
-  /* ==========================================================
-     TERMINAL
-     ========================================================== */
+  /* TERMINAL */
   var terminal = $('#terminal');
   var termBody = $('#termBody');
   var termInput = $('#termInput');
@@ -1641,7 +1791,7 @@ body.no-webgl #world{display:none}
   function bootTerminal() {
     if (booted) return;
     booted = true;
-    print('AmirAli Portfolio Shell â€” simulated environment', 'ok');
+    print('AmirAli Portfolio Shell, simulated environment', 'ok');
     print('No real system access. Commands are handled in your browser.', 'dim');
     print('Type "help" for a list of commands.', 'dim');
     print('');
@@ -1661,27 +1811,28 @@ body.no-webgl #world{display:none}
       print('  fps         current measured frame rate');
       print('  whoami      identity check');
       print('  clear       clear the screen');
-      print('  sudo        ...try it');
+      print('  sudo        try it');
       print('  exit        close the terminal');
       print('  (some commands are not listed)', 'dim');
     },
     about: function () {
-      print('AmirAli Pourbabaeii â€” Backend / Full-Stack Developer', 'ok');
+      print('AmirAli Pourbabaeii (امیرعلی پوربابایی رودبنه)', 'ok');
+      print('Backend and Full-Stack Developer.');
       print('Works with Python, Django, Django REST Framework, PostgreSQL,');
       print('Docker, Git, JavaScript, HTML, CSS and Three.js.');
       print('Focus: server-side systems, REST APIs and relational data.');
     },
     skills: function () {
       print('Technologies:', 'ok');
-      SKILLS.forEach(function (s) { print('  Â· ' + s.label); });
+      SKILLS.forEach(function (s) { print('  ' + s.label); });
     },
     projects: function () {
       print('Projects:', 'ok');
-      PROJECTS.forEach(function (p, i) { print('  ' + (i + 1) + '. ' + p.name + '  â€”  ' + p.kind); });
+      PROJECTS.forEach(function (p, i) { print('  ' + (i + 1) + '. ' + p.name + '  ' + p.kind); });
       print('Open one from the Project City section for the full architecture.', 'dim');
     },
     github: function () {
-      print('Opening github.com/ByteBite1391 â€¦', 'ok');
+      print('Opening github.com/ByteBite1391', 'ok');
       window.open('https://github.com/ByteBite1391', '_blank', 'noopener');
     },
     contact: function () {
@@ -1692,7 +1843,7 @@ body.no-webgl #world{display:none}
     clear: function () { termBody.innerHTML = ''; },
     matrix: function () {
       var on = toggleMatrix(true);
-      print(on ? 'Wake up, Neoâ€¦' : 'Matrix mode disabled.', 'ok');
+      print(on ? 'Matrix mode enabled.' : 'Matrix mode disabled.', 'ok');
     },
     system: function () {
       var info = window.APP.getSystemInfo ? window.APP.getSystemInfo() : null;
@@ -1707,12 +1858,12 @@ body.no-webgl #world{display:none}
       print('  renderer     ' + info.renderer);
     },
     sudo: function () {
-      print('Nice try. This shell runs entirely in your browser â€”', 'warn');
-      print('there is no server, no filesystem and nothing to escalate.', 'warn');
+      print('Nice try. This shell runs entirely in your browser.', 'warn');
+      print('There is no server, no filesystem and nothing to escalate.', 'warn');
       print('Try "secret" instead.', 'dim');
     },
     whoami: function () {
-      print('guest@amirali-portfolio â€” a curious visitor, presumably.', 'ok');
+      print('guest@amirali-portfolio, a curious visitor, presumably.', 'ok');
     },
     theme: function (args) {
       var list = ['cosmic', 'cyber', 'minimal', 'terminal', 'abstract'];
@@ -1735,7 +1886,7 @@ body.no-webgl #world{display:none}
       print('A hidden structure has been revealed in the world.', 'ok');
     },
     coffee: function () {
-      print('â˜• Brewingâ€¦ error: caffeine module not installed.', 'warn');
+      print('Brewing... error: caffeine module not installed.', 'warn');
       print('Developers run on it anyway.', 'dim');
     },
     exit: function () { window.APP.closeTerminal(); }
@@ -1787,9 +1938,7 @@ body.no-webgl #world{display:none}
     if (!e.target.closest('input') && !e.target.closest('button')) termInput.focus();
   });
 
-  /* ==========================================================
-     ASSISTANT (LOCAL KNOWLEDGE BASE)
-     ========================================================== */
+  /* ASSISTANT */
   var assistant = $('#assistant');
   var asBody = $('#asBody');
   var asInput = $('#asInput');
@@ -1831,15 +1980,15 @@ body.no-webgl #world{display:none}
     { k: ['backend', 'server', 'api', 'rest', 'database', 'postgres'],
       a: 'Backend is the main focus: Django and Django REST Framework for APIs, PostgreSQL for relational data, Docker for reproducible environments.' },
     { k: ['frontend', 'front-end', 'css', 'javascript', 'ui'],
-      a: 'Front-end work is done with plain HTML, CSS and JavaScript â€” including this page, which uses Three.js for the 3D world.' },
-    { k: ['who', 'about', 'amirali', 'name', 'yourself'],
-      a: 'AmirAli Pourbabaeii â€” a backend and full-stack developer who builds server-side systems and the interfaces on top of them.' },
+      a: 'Front-end work is done with plain HTML, CSS and JavaScript, including this page, which uses Three.js for the 3D world.' },
+    { k: ['who', 'about', 'amirali', 'name', 'yourself', 'persian', 'farsi', 'ایران', 'امیرعلی'],
+      a: 'AmirAli Pourbabaeii (امیرعلی پوربابایی رودبنه), a backend and full-stack developer who builds server-side systems and the interfaces on top of them.' },
     { k: ['docker', 'container'],
       a: 'Docker is used to containerise applications and services so environments stay reproducible.' },
     { k: ['three', '3d', 'webgl', 'this site'],
       a: 'This world is built with Three.js: a scroll-driven camera moving through procedurally generated clusters, particles, and interactive objects.' },
     { k: ['learning', 'learn', 'study', 'roadmap'],
-      a: 'The direction of travel: deeper backend architecture, better API design, cleaner deployment â€” and experiments like this 3D interface.' }
+      a: 'The direction of travel: deeper backend architecture, better API design, cleaner deployment, and experiments like this 3D interface.' }
   ];
 
   function answer(q) {
@@ -1851,7 +2000,7 @@ body.no-webgl #world{display:none}
       if (score > bestScore) { bestScore = score; best = entry; }
     });
     if (best) return best.a;
-    return 'I only answer from the information on this page â€” and I could not match that question to anything here. Try asking about skills, projects, GitHub or contact.';
+    return 'I only answer from the information on this page, and I could not match that question to anything here. Try asking about skills, projects, GitHub or contact.';
   }
 
   $('#asSend').addEventListener('click', function () { send(); });
@@ -1877,11 +2026,9 @@ body.no-webgl #world{display:none}
     chipsHost.appendChild(b);
   });
 
-  botSay('Hi â€” I am a local, scripted assistant. I answer only from the content of this portfolio. Ask me about skills, projects, GitHub or contact.');
+  botSay('Hi. I am a local, scripted assistant. I answer only from the content of this portfolio. Ask me about skills, projects, GitHub or contact.');
 
-  /* ==========================================================
-     GITHUB â€” LIVE DATA WITH FALLBACK
-     ========================================================== */
+  /* GITHUB */
   var LANG_COLORS = {
     Python: '#3572A5', JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#563d7c',
     Dockerfile: '#384d54', Shell: '#89e051', TypeScript: '#3178c6', Vue: '#41b883', Java: '#b07219'
@@ -1890,10 +2037,13 @@ body.no-webgl #world{display:none}
   var ghStatus = $('#ghStatus');
   var ghNote = $('#ghNote');
 
+  var STAR_SVG = '<span class="star-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 17l-6.5 4L7.5 13.5 2 9h7z"/></svg></span>';
+  var FORK_SVG = '<span class="fork-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6 7v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7"/><path d="M12 13v4"/></svg></span>';
+
   function renderStaticRepos() {
     ghStatus.textContent = 'Live data unavailable';
     ghStatus.classList.remove('live');
-    ghNote.textContent = 'The GitHub API could not be reached from this browser (offline, rate limit, or blocked). No statistics are shown because none could be verified â€” use the link above to browse the real repositories.';
+    ghNote.textContent = 'The GitHub API could not be reached from this browser (offline, rate limit, or blocked). No statistics are shown because none could be verified. Use the link above to browse the real repositories.';
     repoGrid.innerHTML = '';
     var fallback = [
       { name: 'Portfolio', desc: 'Front-end portfolio site hosted on GitHub Pages.', url: 'https://bytebite1391.github.io/Portfolio/' },
@@ -1912,7 +2062,7 @@ body.no-webgl #world{display:none}
   }
 
   function renderRepos(repos) {
-    ghStatus.textContent = 'Live Â· GitHub API';
+    ghStatus.textContent = 'Live from GitHub API';
     ghStatus.classList.add('live');
     ghNote.textContent = 'Repository names, descriptions, languages and star counts are fetched live from the public GitHub API.';
     repoGrid.innerHTML = '';
@@ -1929,8 +2079,8 @@ body.no-webgl #world{display:none}
         '<div class="rd">' + (r.description ? r.description : '<span style="opacity:.6">No description provided.</span>') + '</div>' +
         '<div class="rm">' +
           (r.language ? '<span><i class="lang-dot" style="background:' + color + '"></i>' + r.language + '</span>' : '') +
-          '<span>â˜… ' + r.stargazers_count + '</span>' +
-          '<span>â‘‚ ' + r.forks_count + '</span>' +
+          '<span>' + STAR_SVG + r.stargazers_count + '</span>' +
+          '<span>' + FORK_SVG + r.forks_count + '</span>' +
         '</div>';
       repoGrid.appendChild(a);
     });
@@ -1964,9 +2114,7 @@ body.no-webgl #world{display:none}
       });
   })();
 
-  /* ==========================================================
-     SCROLL PROGRESS â†’ NAV HIGHLIGHT
-     ========================================================== */
+  /* ACTIVE NAV */
   var sectionEls = $$('.section');
   var navAnchors = $$('#navLinks a');
 
@@ -1983,9 +2131,7 @@ body.no-webgl #world{display:none}
 })();
 </script>
 
-<!-- ==========================================================
-     THREE.JS WORLD â€” plain IIFE, uses global THREE from the UMD build
-     ========================================================== -->
+<!-- THREE.JS WORLD -->
 <script>
 (function () {
   'use strict';
@@ -2022,9 +2168,7 @@ body.no-webgl #world{display:none}
     { id: 'contact',  cam: [0, 0, -502],   look: [0, 0, -525] }
   ];
 
-  try {
-    init();
-  } catch (err) {
+  try { init(); } catch (err) {
     console.error('[portfolio] world init failed:', err);
     window.APP.activateFallback('init-timeout');
   }
@@ -2055,27 +2199,17 @@ body.no-webgl #world{display:none}
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(58, window.innerWidth / window.innerHeight, 0.1, 900);
     var clock = new THREE.Clock();
-
     var theme = THEMES[document.documentElement.dataset.theme] || THEMES.cosmic;
 
-    /* LIGHTING */
-    var ambient = new THREE.AmbientLight(theme.ambient, 1.4);
-    scene.add(ambient);
-    var keyLight = new THREE.PointLight(theme.primary, 2.2, 320, 1.6);
-    keyLight.position.set(20, 30, 30);
-    scene.add(keyLight);
-    var rimLight = new THREE.PointLight(theme.accent, 1.6, 320, 1.6);
-    rimLight.position.set(-28, -14, -40);
-    scene.add(rimLight);
-    var fillLight = new THREE.DirectionalLight(0xffffff, 0.35);
-    fillLight.position.set(0, 40, 20);
-    scene.add(fillLight);
+    var ambient = new THREE.AmbientLight(theme.ambient, 1.4); scene.add(ambient);
+    var keyLight = new THREE.PointLight(theme.primary, 2.2, 320, 1.6); keyLight.position.set(20, 30, 30); scene.add(keyLight);
+    var rimLight = new THREE.PointLight(theme.accent, 1.6, 320, 1.6); rimLight.position.set(-28, -14, -40); scene.add(rimLight);
+    var fillLight = new THREE.DirectionalLight(0xffffff, 0.35); fillLight.position.set(0, 40, 20); scene.add(fillLight);
 
     var labelMaterials = [];
     var pickables = [];
     var animated = [];
     var worldGroups = {};
-
     var dotTexture = makeDotTexture();
 
     /* PARTICLES */
@@ -2132,19 +2266,21 @@ body.no-webgl #world{display:none}
     grid2.material.depthWrite = false;
     scene.add(grid2);
 
-    /* HOME WORLD */
+    /* HOME */
     function buildHome() {
       var g = new THREE.Group();
       g.position.set(0, 0, 0);
 
-      var coreGeo = new THREE.IcosahedronGeometry(3.6, 1);
-      var coreMat = new THREE.MeshBasicMaterial({ color: theme.primary, wireframe: true, transparent: true, opacity: 0.85 });
-      var core = new THREE.Mesh(coreGeo, coreMat);
+      var core = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(3.6, 1),
+        new THREE.MeshBasicMaterial({ color: theme.primary, wireframe: true, transparent: true, opacity: 0.85 })
+      );
       g.add(core);
 
-      var innerGeo = new THREE.IcosahedronGeometry(2.1, 0);
-      var innerMat = new THREE.MeshBasicMaterial({ color: theme.accent, transparent: true, opacity: 0.32 });
-      var inner = new THREE.Mesh(innerGeo, innerMat);
+      var inner = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(2.1, 0),
+        new THREE.MeshBasicMaterial({ color: theme.accent, transparent: true, opacity: 0.32 })
+      );
       g.add(inner);
 
       var ringMat = new THREE.MeshBasicMaterial({ color: theme.primary, transparent: true, opacity: 0.5 });
@@ -2200,7 +2336,7 @@ body.no-webgl #world{display:none}
       return g;
     }
 
-    /* IDENTITY WORLD */
+    /* IDENTITY */
     function buildIdentity() {
       var g = new THREE.Group();
       g.position.set(0, 0, -80);
@@ -2542,7 +2678,7 @@ body.no-webgl #world{display:none}
         githubGroup.add(mesh);
         pickables.push(mesh);
 
-        var label = makeLabel(r.name.length > 20 ? r.name.slice(0, 18) + 'â€¦' : r.name, 0.5);
+        var label = makeLabel(r.name.length > 20 ? r.name.slice(0, 18) + '...' : r.name, 0.5);
         label.position.copy(mesh.position).add(new THREE.Vector3(0, 1.2, 0));
         githubGroup.add(label);
 
@@ -2565,7 +2701,7 @@ body.no-webgl #world{display:none}
       }
     };
 
-    /* CONTACT WORLD */
+    /* CONTACT */
     function buildContact() {
       var g = new THREE.Group();
       g.position.set(0, 0, -525);
@@ -2614,7 +2750,7 @@ body.no-webgl #world{display:none}
       return g;
     }
 
-    /* SECRET OBJECT */
+    /* SECRET */
     var secretObject = null;
     function buildSecret() {
       var g = new THREE.Group();
@@ -2643,9 +2779,8 @@ body.no-webgl #world{display:none}
       window.APP.toast('Secret structure revealed');
     };
 
-    /* BUILD THE WORLD */
+    /* BUILD */
     buildParticles(PARTICLE_COUNTS[quality]);
-
     worldGroups.home = buildHome();         scene.add(worldGroups.home);
     worldGroups.identity = buildIdentity(); scene.add(worldGroups.identity);
     worldGroups.skills = buildSkills();     scene.add(worldGroups.skills);
@@ -2655,7 +2790,7 @@ body.no-webgl #world{display:none}
     worldGroups.contact = buildContact();   scene.add(worldGroups.contact);
     scene.add(buildSecret());
 
-    /* SIZING / QUALITY */
+    /* SIZE */
     function pixelRatioForQuality() {
       var dpr = window.devicePixelRatio || 1;
       if (quality === 'low') return Math.min(dpr, 1);
@@ -2671,12 +2806,11 @@ body.no-webgl #world{display:none}
       renderer.setSize(w, h, false);
       if (window.APP.updateDevPanel) window.APP.updateDevPanel();
     }
-
     setSize();
     window.addEventListener('resize', debounce(setSize, 160));
     window.addEventListener('orientationchange', function () { setTimeout(setSize, 220); });
 
-    /* THEME APPLICATION */
+    /* THEME */
     function tintGroup(group, primary, accent) {
       if (!group) return;
       var i = 0;
@@ -2687,25 +2821,19 @@ body.no-webgl #world{display:none}
           var useAccent = (i % 4 === 1);
           obj.material.color.setHex(useAccent ? accent : primary);
           i++;
-        } else if (obj.isSprite && obj.material && obj.material.userData && obj.material.userData.isHalo) {
-          obj.material.color.setHex(primary);
         }
       });
     }
-
     window.APP.applyTheme = function (name) {
       var th = THEMES[name];
       if (!th) return;
       theme = th;
-
       scene.background = new THREE.Color(th.bg);
       scene.fog = new THREE.FogExp2(th.fog, 0.0042);
       renderer.setClearColor(th.bg, 1);
-
       ambient.color.setHex(th.ambient);
       keyLight.color.setHex(th.primary);
       rimLight.color.setHex(th.accent);
-
       if (particles) {
         particles.material.color.setHex(th.particle);
         particles.material.blending = th.bg > 0x888888 ? THREE.NormalBlending : THREE.AdditiveBlending;
@@ -2713,9 +2841,7 @@ body.no-webgl #world{display:none}
       }
       grid.material.color.setHex(th.grid);
       grid2.material.color.setHex(th.grid);
-
       labelMaterials.forEach(function (m) { m.color.setHex(th.label); });
-
       tintGroup(worldGroups.home, th.primary, th.accent);
       tintGroup(worldGroups.identity, th.primary, th.accent);
       tintGroup(worldGroups.skills, th.primary, th.accent);
@@ -2724,7 +2850,6 @@ body.no-webgl #world{display:none}
       tintGroup(worldGroups.github, th.primary, th.accent);
       tintGroup(worldGroups.contact, th.primary, th.accent);
     };
-
     window.APP.applyTheme(document.documentElement.dataset.theme || 'cosmic');
 
     /* INPUT */
@@ -2768,7 +2893,7 @@ body.no-webgl #world{display:none}
       }
     }
 
-    /* SCROLL â†’ CAMERA PATH */
+    /* SCROLL */
     var sections = window.APP.getSections ? window.APP.getSections() : [];
     var desiredPos = new THREE.Vector3(WORLDS[0].cam[0], WORLDS[0].cam[1], WORLDS[0].cam[2]);
     var desiredLook = new THREE.Vector3(WORLDS[0].look[0], WORLDS[0].look[1], WORLDS[0].look[2]);
@@ -2821,15 +2946,12 @@ body.no-webgl #world{display:none}
       var i = progress.index;
       var j = Math.min(i + 1, WORLDS.length - 1);
       var f = REDUCED ? 0 : ease(progress.frac);
-
       tmpA.set(WORLDS[i].cam[0], WORLDS[i].cam[1], WORLDS[i].cam[2]);
       tmpB.set(WORLDS[j].cam[0], WORLDS[j].cam[1], WORLDS[j].cam[2]);
       desiredPos.lerpVectors(tmpA, tmpB, f);
-
       tmpA.set(WORLDS[i].look[0], WORLDS[i].look[1], WORLDS[i].look[2]);
       tmpB.set(WORLDS[j].look[0], WORLDS[j].look[1], WORLDS[j].look[2]);
       desiredLook.lerpVectors(tmpA, tmpB, f);
-
       if (!REDUCED && !IS_TOUCH) {
         desiredPos.x += pointer.x * 2.4;
         desiredPos.y += -pointer.y * 1.5;
@@ -2852,7 +2974,7 @@ body.no-webgl #world{display:none}
       }
     };
 
-    /* QUALITY SWITCHING */
+    /* QUALITY */
     function setQuality(q) {
       quality = q;
       buildParticles(PARTICLE_COUNTS[q] || PARTICLE_COUNTS.high);
@@ -2867,7 +2989,6 @@ body.no-webgl #world{display:none}
       if (window.APP.updateDevPanel) window.APP.updateDevPanel();
     }
     window.APP.setQuality = setQuality;
-
     var qualitySeg = document.getElementById('qualitySeg');
     if (qualitySeg) {
       qualitySeg.addEventListener('click', function (e) {
@@ -2894,7 +3015,7 @@ body.no-webgl #world{display:none}
         ua: navigator.userAgent,
         cores: navigator.hardwareConcurrency || 'unknown',
         memory: navigator.deviceMemory ? navigator.deviceMemory + ' GB' : 'unknown',
-        screen: window.innerWidth + 'Ã—' + window.innerHeight + ' @' + (window.devicePixelRatio || 1) + 'x',
+        screen: window.innerWidth + 'x' + window.innerHeight + ' @' + (window.devicePixelRatio || 1) + 'x',
         webgl: renderer.capabilities.isWebGL2 ? 'WebGL2' : 'WebGL1',
         renderer: glRendererName
       };
@@ -2909,18 +3030,18 @@ body.no-webgl #world{display:none}
     window.APP.updateDevPanel = function () {
       var dFps = document.getElementById('dFps');
       if (!dFps) return;
-      dFps.textContent = fps ? Math.round(fps) : 'â€”';
-      document.getElementById('dWebgl').textContent = renderer.capabilities.isWebGL2 ? 'ACTIVE (WebGL2)' : 'ACTIVE (WebGL1)';
-      document.getElementById('dRenderer').textContent = glRendererName.length > 34 ? glRendererName.slice(0, 32) + 'â€¦' : glRendererName;
+      dFps.textContent = fps ? Math.round(fps) : '0';
+      document.getElementById('dWebgl').textContent = renderer.capabilities.isWebGL2 ? 'WebGL2' : 'WebGL1';
+      document.getElementById('dRenderer').textContent = glRendererName.length > 34 ? glRendererName.slice(0, 32) + '...' : glRendererName;
       document.getElementById('dObjects').textContent = objectCount;
       document.getElementById('dParticles').textContent = particleCount;
       document.getElementById('dCalls').textContent = renderer.info.render.calls;
-      document.getElementById('dRes').textContent = window.innerWidth + 'Ã—' + window.innerHeight;
+      document.getElementById('dRes').textContent = window.innerWidth + 'x' + window.innerHeight;
       document.getElementById('dPr').textContent = renderer.getPixelRatio().toFixed(2);
       document.getElementById('dQuality').textContent = quality.toUpperCase();
     };
 
-    /* MAIN LOOP */
+    /* LOOP */
     var elapsed = 0;
     var frameCount = 0;
     var fpsTimer = 0;
@@ -2996,12 +3117,10 @@ body.no-webgl #world{display:none}
               pick = hitObj.userData.pick;
             }
           }
-
           if (pick !== hoveredPick) {
             hoveredPick = pick;
             if (window.APP.setCursorHot) window.APP.setCursorHot(!!pick);
           }
-
           if (pick) {
             if (pick.type === 'skill') {
               var s = (window.APP.SKILLS || []).filter(function (x) { return x.id === pick.id; })[0];
@@ -3009,7 +3128,7 @@ body.no-webgl #world{display:none}
             } else if (pick.type === 'project') {
               showTip(pointerPx.x, pointerPx.y, 'Project', 'Click to open the architecture');
             } else if (pick.type === 'repo') {
-              showTip(pointerPx.x, pointerPx.y, pick.name, (pick.lang || 'repo') + ' Â· click to open on GitHub');
+              showTip(pointerPx.x, pointerPx.y, pick.name, (pick.lang || 'repo') + ', click to open on GitHub');
             }
           } else {
             hideTip();
@@ -3029,17 +3148,16 @@ body.no-webgl #world{display:none}
       renderer.render(scene, camera);
     }
 
-    /* READY */
     window.__WORLD_READY = true;
     tick();
 
     window.APP.setLoaderTitle('Initializing digital environment');
-    window.APP.setLoader(35, 'three.js loaded Â· building sceneâ€¦');
+    window.APP.setLoader(35, 'three.js loaded, building scene');
 
     requestAnimationFrame(function () {
-      window.APP.setLoader(70, 'compiling world clustersâ€¦');
+      window.APP.setLoader(70, 'compiling world clusters');
       setTimeout(function () {
-        window.APP.setLoader(100, 'welcome.');
+        window.APP.setLoader(100, 'welcome');
         window.APP.hideLoader();
       }, 380);
     });
@@ -3047,7 +3165,6 @@ body.no-webgl #world{display:none}
     console.log('%cAMIRALI.DEV', 'color:#6fd3ff;font-size:20px;font-weight:bold');
     console.log('%cTry Ctrl+Shift+A for developer mode, or press ` for the terminal.', 'color:#8ba0c4');
 
-    /* UTILITIES */
     function debounce(fn, ms) {
       var t = null;
       return function () {

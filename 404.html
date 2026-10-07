@@ -1,23 +1,54 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="cosmic">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>404 â€” Signal Lost Â· AmirAli Pourbabaeii</title>
-<meta name="description" content="The page you were looking for does not exist in this universe. Return to the portfolio of AmirAli Pourbabaeii.">
-<meta name="robots" content="noindex, nofollow">
+<title>404 | AmirAli Pourbabaeii | امیرعلی پوربابایی رودبنه</title>
+<meta name="description" content="This page does not exist in AmirAli Pourbabaeii's digital universe. Return to the portfolio of AmirAli Pourbabaeii (امیرعلی پوربابایی رودبنه), backend and full-stack developer.">
+<meta name="author" content="AmirAli Pourbabaeii">
+<meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#04060d">
+
+<link rel="canonical" href="https://bytebite1391.github.io/Portfolio/">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="404 â€” Signal Lost">
-<meta property="og:description" content="This coordinate does not exist in AmirAli's digital universe.">
-<meta property="og:url" content="https://bytebite1391.github.io/Portfolio/404">
+<meta property="og:site_name" content="AmirAli Pourbabaeii">
+<meta property="og:title" content="404 | AmirAli Pourbabaeii | امیرعلی پوربابایی رودبنه">
+<meta property="og:description" content="This page does not exist. Return to the portfolio.">
+<meta property="og:url" content="https://bytebite1391.github.io/Portfolio/404.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fa_IR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="404 | AmirAli Pourbabaeii">
+<meta name="twitter:description" content="This page does not exist. Return to the portfolio.">
+
 <link rel="stylesheet" href="vendor/fonts/fonts.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070b16'/><text x='50' y='68' font-size='52' font-family='monospace' fill='%236fd3ff' text-anchor='middle'>A</text></svg>">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "AmirAli Pourbabaeii",
+  "alternateName": [
+    "Amirali Pourbabaeii",
+    "Amir Ali Pourbabaeii",
+    "امیرعلی پوربابایی",
+    "امیر علی پوربابایی",
+    "امیرعلی پوربابایی رودبنه"
+  ],
+  "jobTitle": "Full-Stack Developer",
+  "url": "https://bytebite1391.github.io/Portfolio/",
+  "sameAs": [
+    "https://github.com/ByteBite1391",
+    "https://bytebite1391.github.io/Portfolio/",
+    "https://bytebite1391.github.io/Portfolio/toys_shop/"
+  ]
+}
+</script>
+
 <style>
-/* ==========================================================
-   THEME TOKENS  (identical to the main portfolio)
-   ========================================================== */
 :root{
   --bg:#04060d;
   --fg:#e9f1ff;
@@ -61,9 +92,6 @@ html[data-theme="abstract"]{
   --danger:#ff6b8b;
 }
 
-/* ==========================================================
-   RESET / BASE
-   ========================================================== */
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
@@ -80,32 +108,50 @@ input{font:inherit;color:inherit}
 ::selection{background:var(--primary);color:#02040a}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:6px}
 
-/* ==========================================================
-   CANVAS LAYERS
-   ========================================================== */
-#world{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
-#matrix{position:fixed;inset:0;width:100%;height:100%;display:none;z-index:1;pointer-events:none;opacity:.5;mix-blend-mode:screen}
-body.matrix-on #matrix{display:block}
+/* INLINE SVG HELPERS */
+.dot-sep{
+  display:inline-block;width:4px;height:4px;
+  vertical-align:middle;margin:0 .55em;
+  color:currentColor;opacity:.55;flex:0 0 auto;
+}
+.dot-sep svg{display:block;width:100%;height:100%;fill:currentColor}
+.line-sep{
+  display:inline-block;width:14px;height:1px;
+  vertical-align:middle;margin:0 .6em;
+  background:currentColor;opacity:.35;flex:0 0 auto;border-radius:1px;
+}
 
-/* ==========================================================
-   CUSTOM CURSOR
-   ========================================================== */
+/* PERSIAN NAME STYLING */
+.name-fa{
+  font-family:var(--font-fa);
+  direction:rtl;
+  unicode-bidi:isolate;
+  color:var(--muted);
+  font-weight:500;
+}
+.hero-name-fa{
+  font-size:clamp(15px,2vw,20px);
+  margin-top:6px;
+  line-height:1.5;
+}
+
+/* CANVAS */
+#world{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+
+/* CURSOR */
 #cursorDot,#cursorRing{position:fixed;top:0;left:0;pointer-events:none;z-index:9998;will-change:transform}
 #cursorDot{width:5px;height:5px;border-radius:50%;background:var(--primary);margin:-2.5px 0 0 -2.5px;box-shadow:0 0 12px var(--primary)}
 #cursorRing{
   width:34px;height:34px;border-radius:50%;border:1px solid var(--line-strong);
   margin:-17px 0 0 -17px;
-  transition:width .25s cubic-bezier(.2,.8,.3,1),height .25s cubic-bezier(.2,.8,.3,1),
-             margin .25s cubic-bezier(.2,.8,.3,1),border-color .25s,background-color .25s,opacity .3s;
+  transition:width .25s cubic-bezier(.2,.8,.3,1),height .25s cubic-bezier(.2,.8,.3,1),margin .25s cubic-bezier(.2,.8,.3,1),border-color .25s,background-color .25s,opacity .3s;
 }
 #cursorRing.hot{width:62px;height:62px;margin:-31px 0 0 -31px;border-color:var(--primary);background:color-mix(in srgb,var(--primary) 10%, transparent)}
 #cursorRing.press{width:22px;height:22px;margin:-11px 0 0 -11px;border-color:var(--accent)}
 @media (hover:none),(pointer:coarse){#cursorDot,#cursorRing{display:none!important}}
 body.cursor-hidden #cursorDot,body.cursor-hidden #cursorRing{opacity:0}
 
-/* ==========================================================
-   LOADER
-   ========================================================== */
+/* LOADER */
 #loader{
   position:fixed;inset:0;z-index:10000;display:grid;place-items:center;
   background:radial-gradient(120% 100% at 50% 40%, #070c18 0%, #02040a 70%);
@@ -125,9 +171,7 @@ body.cursor-hidden #cursorDot,body.cursor-hidden #cursorRing{opacity:0}
 .loader-bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#6fd3ff,#b18cff);transition:width .35s ease;box-shadow:0 0 14px rgba(111,211,255,.7)}
 .loader-status{margin-top:14px;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:#5f74a0}
 
-/* ==========================================================
-   NAV
-   ========================================================== */
+/* NAV */
 #nav{
   position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:60;
   display:flex;align-items:center;gap:18px;padding:0 clamp(14px,3vw,34px);
@@ -149,9 +193,7 @@ body.cursor-hidden #cursorDot,body.cursor-hidden #cursorRing{opacity:0}
 .icon-btn.on{color:var(--primary);border-color:var(--primary);box-shadow:0 0 18px -6px var(--glow)}
 .icon-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 
-/* ==========================================================
-   MAIN LAYOUT
-   ========================================================== */
+/* MAIN */
 main{
   position:relative;z-index:2;flex:1;
   display:grid;place-items:center;
@@ -204,13 +246,18 @@ h1.title{
   margin:0 0 14px;
 }
 h1.title em{font-style:normal;color:var(--primary)}
+.title-fa{
+  font-family:var(--font-fa);
+  direction:rtl;
+  font-size:clamp(15px,2vw,20px);
+  color:var(--muted);
+  font-weight:500;
+  margin-bottom:14px;
+}
 .lede{color:var(--muted);font-size:clamp(14px,1.5vw,16px);max-width:56ch}
 
 .hr{height:1px;background:var(--line);margin:24px 0}
 
-/* ==========================================================
-   DIAGNOSTIC READOUT
-   ========================================================== */
 .diag{
   font-family:var(--font-mono);font-size:11.5px;line-height:1.9;
   border:1px solid var(--line);border-radius:12px;
@@ -228,9 +275,6 @@ h1.title em{font-style:normal;color:var(--primary)}
 }
 @keyframes blink{50%{opacity:0}}
 
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .btn{
   position:relative;display:inline-flex;align-items:center;gap:10px;
@@ -253,9 +297,6 @@ h1.title em{font-style:normal;color:var(--primary)}
 .btn span{position:relative;z-index:1}
 .btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;position:relative;z-index:1}
 
-/* ==========================================================
-   QUICK LINKS
-   ========================================================== */
 .quick{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:10px;margin-top:26px;
@@ -269,9 +310,7 @@ h1.title em{font-style:normal;color:var(--primary)}
 .quick .ql{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .quick .qv{font-size:13.5px;color:var(--fg)}
 
-/* ==========================================================
-   TERMINAL
-   ========================================================== */
+/* TERMINAL */
 #terminal{
   position:fixed;z-index:9200;left:50%;bottom:0;transform:translate(-50%,110%);
   width:min(720px,94vw);height:min(400px,60vh);border:1px solid var(--line-strong);border-bottom:none;
@@ -296,9 +335,7 @@ h1.title em{font-style:normal;color:var(--primary)}
 .term-input .ps1{font-family:var(--font-mono);font-size:12px;color:var(--primary);white-space:nowrap}
 .term-input input{flex:1;background:none;border:none;outline:none;font-family:var(--font-mono);font-size:12.5px;color:var(--fg)}
 
-/* ==========================================================
-   TOASTS
-   ========================================================== */
+/* TOASTS */
 #toasts{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:9500;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none}
 .toast{
   font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
@@ -310,9 +347,7 @@ h1.title em{font-style:normal;color:var(--primary)}
 .toast.out{animation:toastOut .4s ease forwards}
 @keyframes toastOut{to{opacity:0;transform:translateY(-8px)}}
 
-/* ==========================================================
-   FALLBACK (no WebGL)
-   ========================================================== */
+/* FALLBACK */
 #fallback{position:fixed;inset:0;z-index:1;display:none;place-items:center;overflow:hidden}
 body.no-webgl #fallback{display:grid}
 body.no-webgl #world{display:none}
@@ -331,18 +366,15 @@ body.no-webgl #world{display:none}
 .fb-orb::after{inset:26%;border-style:solid;border-color:color-mix(in srgb,var(--danger) 40%,transparent)}
 @keyframes fbSpin{to{transform:rotate(360deg)}}
 
-/* ==========================================================
-   FOOTER
-   ========================================================== */
+/* FOOTER */
 footer{
   position:relative;z-index:2;
   padding:26px clamp(16px,4vw,60px) 34px;text-align:center;
   color:var(--muted);font-size:10.5px;font-family:var(--font-mono);letter-spacing:.12em;
 }
+footer p{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px}
 
-/* ==========================================================
-   REVEAL
-   ========================================================== */
+/* REVEAL */
 html.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.8,.3,1),transform .9s cubic-bezier(.2,.8,.3,1)}
 html.js .reveal.in{opacity:1;transform:none}
 html.js .reveal.d1{transition-delay:.08s}
@@ -350,55 +382,41 @@ html.js .reveal.d2{transition-delay:.16s}
 html.js .reveal.d3{transition-delay:.24s}
 html.js .reveal.d4{transition-delay:.32s}
 
-/* ==========================================================
-   REDUCED MOTION
-   ========================================================== */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
   html.js .reveal{opacity:1!important;transform:none!important}
-  .fb-grid,.fb-orb{animation:none!important}
-  .code-404 .digit{animation:none!important}
+  .fb-grid,.fb-orb,.code-404 .digit{animation:none!important}
   .diag .cursor{animation:none!important;opacity:1}
 }
 </style>
 </head>
 <body>
 
-<!-- ==========================================================
-     LOADER
-     ========================================================== -->
+<!-- LOADER -->
 <div id="loader" role="status" aria-live="polite">
   <div class="loader-inner">
     <div class="loader-mark" aria-hidden="true">404</div>
     <div class="loader-title" id="loaderTitle">Scanning coordinates</div>
     <div class="loader-bar"><i id="loaderBar"></i></div>
-    <div class="loader-status" id="loaderStatus">resolving signalâ€¦</div>
+    <div class="loader-status" id="loaderStatus">resolving signal</div>
   </div>
 </div>
 
-<!-- ==========================================================
-     CANVAS + FALLBACK
-     ========================================================== -->
 <canvas id="world" aria-hidden="true"></canvas>
-<canvas id="matrix" aria-hidden="true"></canvas>
+
 <div id="fallback" role="img" aria-label="Static decorative background">
   <div class="fb-grid"></div>
   <div class="fb-orb"></div>
 </div>
 
-<!-- ==========================================================
-     CURSOR + TOASTS
-     ========================================================== -->
 <div id="cursorDot" aria-hidden="true"></div>
 <div id="cursorRing" aria-hidden="true"></div>
 <div id="toasts" aria-live="polite"></div>
 
-<!-- ==========================================================
-     NAV
-     ========================================================== -->
+<!-- NAV -->
 <header id="nav">
-  <a class="brand" href="https://bytebite1391.github.io/Portfolio/" aria-label="AmirAli Pourbabaeii â€” portfolio home">
+  <a class="brand" href="https://bytebite1391.github.io/Portfolio/" aria-label="AmirAli Pourbabaeii portfolio home">
     <span class="dot" aria-hidden="true"></span>
     AMIRALI<span>.DEV</span>
   </a>
@@ -409,27 +427,26 @@ html.js .reveal.d4{transition-delay:.32s}
   </div>
 </header>
 
-<!-- ==========================================================
-     MAIN
-     ========================================================== -->
+<!-- MAIN -->
 <main>
   <div class="wrap">
     <div class="glass reveal">
-      <p class="eyebrow">Error Â· Signal lost</p>
+      <p class="eyebrow">Error &middot; Signal lost</p>
 
       <div class="code-404" aria-hidden="true">
         <span class="digit">4</span><span class="digit">0</span><span class="digit">4</span>
       </div>
 
-      <h1 class="title reveal d1" id="title">This coordinate does not exist in <em>the universe</em>.</h1>
-      <p class="lede reveal d2">You requested a page that isn't part of this system. The link may be old, misspelled, or the resource may have moved. Nothing was lost on our side â€” the address just doesn't resolve.</p>
+      <h1 class="title reveal d1">This coordinate does not exist in <em>the universe</em>.</h1>
+      <p class="title-fa reveal d1" lang="fa" dir="rtl">این آدرس در جهان دیجیتال وجود ندارد.</p>
+      <p class="lede reveal d2">You requested a page that is not part of this system. The link may be old, misspelled, or the resource may have moved. Nothing was lost on our side. The address simply does not resolve.</p>
 
       <div class="diag reveal d2" role="status" aria-live="polite">
         <div class="row"><span class="k">REQUEST</span><span class="v" id="diagPath">/</span></div>
-        <div class="row"><span class="k">STATUS</span><span class="v err">404 â€” NOT FOUND</span></div>
-        <div class="row"><span class="k">HOST</span><span class="v" id="diagHost">â€”</span></div>
-        <div class="row"><span class="k">TIME</span><span class="v" id="diagTime">â€”</span></div>
-        <div class="row"><span class="k">SYSTEM</span><span class="v ok">ONLINE Â· AWAITING INPUT<span class="cursor" aria-hidden="true"></span></span></div>
+        <div class="row"><span class="k">STATUS</span><span class="v err">404</span></div>
+        <div class="row"><span class="k">HOST</span><span class="v" id="diagHost">-</span></div>
+        <div class="row"><span class="k">TIME</span><span class="v" id="diagTime">-</span></div>
+        <div class="row"><span class="k">SYSTEM</span><span class="v ok">ONLINE, AWAITING INPUT<span class="cursor" aria-hidden="true"></span></span></div>
       </div>
 
       <div class="cta-row reveal d3">
@@ -459,7 +476,7 @@ html.js .reveal.d4{transition-delay:.32s}
       </div>
 
       <div class="hr"></div>
-      <p class="lede" style="font-size:12px">
+      <p class="small" style="color:var(--muted);font-size:12px">
         Hint: press <span class="mono" style="font-family:var(--font-mono);color:var(--primary)">`</span> to open the terminal and type <span class="mono" style="font-family:var(--font-mono);color:var(--primary)">help</span>.
         There is also an unlisted command somewhere in there.
       </p>
@@ -468,16 +485,22 @@ html.js .reveal.d4{transition-delay:.32s}
 </main>
 
 <footer>
-  <p>AMIRALI POURBABAEII Â· 404 Â· NOTHING HERE, TRY ELSEWHERE</p>
+  <p>
+    AMIRALI POURBABAEII
+    <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+    <span class="name-fa" lang="fa" dir="rtl">امیرعلی پوربابایی رودبنه</span>
+    <span class="dot-sep" aria-hidden="true"><svg viewBox="0 0 4 4"><circle cx="2" cy="2" r="2"/></svg></span>
+    404
+  </p>
 </footer>
 
-<!-- ==========================================================
-     TERMINAL
-     ========================================================== -->
+<!-- TERMINAL -->
 <section id="terminal" aria-label="Simulated developer terminal" aria-hidden="true">
   <div class="term-head">
     <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span class="t">amirali@portfolio â€” shell (simulated) Â· 404 node</span>
+    <span class="t">amirali@portfolio</span>
+    <span class="line-sep" aria-hidden="true"></span>
+    <span class="t">404 node</span>
     <button class="icon-btn" id="termClose" aria-label="Close terminal">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
@@ -489,9 +512,7 @@ html.js .reveal.d4{transition-delay:.32s}
   </div>
 </section>
 
-<!-- ==========================================================
-     BOOT SCRIPT â€” helpers, loader, WebGL detection, fallback
-     ========================================================== -->
+<!-- BOOT -->
 <script>
 (function () {
   'use strict';
@@ -501,7 +522,6 @@ html.js .reveal.d4{transition-delay:.32s}
   window.APP.$ = function (sel, root) { return (root || document).querySelector(sel); };
   window.APP.$$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
-  /* ---------- loader ---------- */
   var loader = document.getElementById('loader');
   var bar = document.getElementById('loaderBar');
   var status = document.getElementById('loaderStatus');
@@ -514,12 +534,11 @@ html.js .reveal.d4{transition-delay:.32s}
   window.APP.setLoaderTitle = function (t) { if (title) title.textContent = t; };
   window.APP.hideLoader = function () {
     if (!loader || loader.classList.contains('done')) return;
-    window.APP.setLoader(100, 'signal terminated.');
+    window.APP.setLoader(100, 'signal terminated');
     setTimeout(function () { loader.classList.add('done'); }, 420);
     setTimeout(function () { loader.style.display = 'none'; }, 1500);
   };
 
-  /* ---------- toasts ---------- */
   window.APP.toast = function (msg, ms) {
     var host = document.getElementById('toasts');
     if (!host) return;
@@ -533,13 +552,10 @@ html.js .reveal.d4{transition-delay:.32s}
     }, ms || 2600);
   };
 
-  /* ---------- WebGL detection ---------- */
   window.APP.webglAvailable = function () {
     try {
       var c = document.createElement('canvas');
-      var gl = c.getContext('webgl2') ||
-               c.getContext('webgl') ||
-               c.getContext('experimental-webgl');
+      var gl = c.getContext('webgl2') || c.getContext('webgl') || c.getContext('experimental-webgl');
       return !!gl;
     } catch (e) { return false; }
   };
@@ -555,7 +571,6 @@ html.js .reveal.d4{transition-delay:.32s}
     window.APP.activateFallback('no-webgl-context');
   }
 
-  /* ---------- safety net ---------- */
   window.__WORLD_READY = false;
   setTimeout(function () {
     if (!window.__WORLD_READY && !document.body.classList.contains('no-webgl')) {
@@ -566,14 +581,10 @@ html.js .reveal.d4{transition-delay:.32s}
 })();
 </script>
 
-<!-- ==========================================================
-     THREE.JS â€” classic UMD build (works from file://)
-     ========================================================== -->
+<!-- THREE.JS (LOCAL) -->
 <script src="vendor/three.min.js"></script>
 
-<!-- ==========================================================
-     UI SCRIPT â€” cursor, terminal, diagnostics, reveal
-     ========================================================== -->
+<!-- UI -->
 <script>
 (function () {
   'use strict';
@@ -581,9 +592,7 @@ html.js .reveal.d4{transition-delay:.32s}
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
-  /* ==========================================================
-     NAV
-     ========================================================== */
+  /* NAV */
   var nav = $('#nav');
   function onScrollNav() {
     var y = window.scrollY || window.pageYOffset;
@@ -592,9 +601,7 @@ html.js .reveal.d4{transition-delay:.32s}
   window.addEventListener('scroll', onScrollNav, { passive: true });
   onScrollNav();
 
-  /* ==========================================================
-     DIAGNOSTICS READOUT
-     ========================================================== */
+  /* DIAGNOSTICS */
   (function fillDiag() {
     var pathEl = document.getElementById('diagPath');
     var hostEl = document.getElementById('diagHost');
@@ -606,24 +613,21 @@ html.js .reveal.d4{transition-delay:.32s}
     pathEl.textContent = path + search + hash;
 
     if (location.protocol === 'file:') {
-      hostEl.textContent = 'local filesystem (file://)';
+      hostEl.textContent = 'local filesystem';
     } else if (location.hostname) {
       hostEl.textContent = location.hostname;
     } else {
-      hostEl.textContent = 'â€”';
+      hostEl.textContent = '-';
     }
 
     var d = new Date();
     function pad(n) { return String(n).padStart(2, '0'); }
     timeEl.textContent =
       d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
-      ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()) +
-      ' (local)';
+      ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
   })();
 
-  /* ==========================================================
-     REVEAL
-     ========================================================== */
+  /* REVEAL */
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -635,9 +639,7 @@ html.js .reveal.d4{transition-delay:.32s}
     $$('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ==========================================================
-     CUSTOM CURSOR
-     ========================================================== */
+  /* CURSOR */
   if (!isTouch) {
     var dot = $('#cursorDot'), ring = $('#cursorRing');
     var mx = window.innerWidth / 2, my = window.innerHeight / 2;
@@ -663,17 +665,12 @@ html.js .reveal.d4{transition-delay:.32s}
 
     document.addEventListener('mouseover', function (e) {
       var t = e.target;
-      var interactive = t.closest && t.closest('a,button,input,textarea,select');
+      var interactive = t.closest && t.closest('a,button,input,textarea,select,.quick a');
       ring.classList.toggle('hot', !!interactive);
     });
-    window.APP.setCursorHot = function (v) { ring.classList.toggle('hot', !!v); };
-  } else {
-    window.APP.setCursorHot = function () {};
   }
 
-  /* ==========================================================
-     MAGNETIC BUTTONS
-     ========================================================== */
+  /* MAGNETIC */
   if (!isTouch && !reduceMotion) {
     $$('[data-magnetic], .btn').forEach(function (btn) {
       btn.addEventListener('mousemove', function (e) {
@@ -688,73 +685,12 @@ html.js .reveal.d4{transition-delay:.32s}
     });
   }
 
-  /* ==========================================================
-     MATRIX MODE (used by the "matrix" terminal command)
-     ========================================================== */
-  var matrixCanvas = $('#matrix');
-  var matrixRAF = null;
-
-  function startMatrix() {
-    var ctx = matrixCanvas.getContext('2d');
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var cols, drops, fontSize = 15;
-
-    function resize() {
-      matrixCanvas.width = Math.floor(window.innerWidth * dpr);
-      matrixCanvas.height = Math.floor(window.innerHeight * dpr);
-      matrixCanvas.style.width = window.innerWidth + 'px';
-      matrixCanvas.style.height = window.innerHeight + 'px';
-      cols = Math.ceil(window.innerWidth / fontSize);
-      drops = new Array(cols).fill(0).map(function () { return Math.random() * -60; });
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    var chars = 'ã‚¢ã‚¤ã‚¦ã‚¨ã‚ªã‚«ã‚­ã‚¯ã‚±ã‚³ã‚µã‚·ã‚¹ã‚»ã‚½ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/\\{}[]()=+-*';
-    var last = 0;
-
-    function frame(ts) {
-      matrixRAF = requestAnimationFrame(frame);
-      if (ts - last < 50) return;
-      last = ts;
-      ctx.fillStyle = 'rgba(0,0,0,0.09)';
-      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-      ctx.font = fontSize + 'px monospace';
-      for (var i = 0; i < cols; i++) {
-        var ch = chars[(Math.random() * chars.length) | 0];
-        var y = drops[i] * fontSize;
-        ctx.fillStyle = Math.random() > 0.975 ? '#d9ffe9' : '#2bff7a';
-        ctx.fillText(ch, i * fontSize, y);
-        if (y > window.innerHeight && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      }
-    }
-    matrixRAF = requestAnimationFrame(frame);
-  }
-  function stopMatrix() {
-    if (matrixRAF) cancelAnimationFrame(matrixRAF);
-    matrixRAF = null;
-    var ctx = matrixCanvas.getContext('2d');
-    ctx.clearRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-  }
-  function toggleMatrix(force) {
-    var on = typeof force === 'boolean' ? force : !document.body.classList.contains('matrix-on');
-    document.body.classList.toggle('matrix-on', on);
-    if (on) { startMatrix(); window.APP.toast('Matrix mode engaged'); }
-    else { stopMatrix(); }
-    return on;
-  }
-
-  /* ==========================================================
-     TERMINAL
-     ========================================================== */
+  /* TERMINAL */
   var terminal = $('#terminal');
   var termBody = $('#termBody');
   var termInput = $('#termInput');
   var termHistory = [];
   var historyPos = -1;
-
   var COMMANDS = ['help', 'status', 'why', 'where', 'portfolio', 'github', 'contact', 'matrix', 'system', 'sudo', 'whoami', 'clear', 'coffee', 'exit'];
 
   function print(text, cls) {
@@ -796,10 +732,73 @@ html.js .reveal.d4{transition-delay:.32s}
   function bootTerminal() {
     if (booted) return;
     booted = true;
-    print('AmirAli Portfolio Shell â€” 404 node (simulated)', 'ok');
+    print('AmirAli Portfolio Shell, 404 node (simulated)', 'ok');
     print('You reached a coordinate that does not exist.', 'warn');
     print('Type "help" for available commands.', 'dim');
     print('');
+  }
+
+  var MATRIX_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/\\{}[]()=+-*';
+  var matrixRAF = null;
+  var matrixCanvas = null;
+  var matrixCtx = null;
+  var matrixDrops = null;
+  var matrixCols = 0;
+  var matrixFontSize = 15;
+  var matrixResizeHandler = null;
+  var matrixLastFrame = 0;
+
+  function startMatrix() {
+    if (!matrixCanvas) {
+      matrixCanvas = document.createElement('canvas');
+      matrixCanvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;display:block;z-index:5;pointer-events:none;opacity:.55;mix-blend-mode:screen';
+      document.body.appendChild(matrixCanvas);
+      matrixCtx = matrixCanvas.getContext('2d');
+    }
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    function resize() {
+      matrixCanvas.width = Math.floor(window.innerWidth * dpr);
+      matrixCanvas.height = Math.floor(window.innerHeight * dpr);
+      matrixCols = Math.ceil(window.innerWidth / matrixFontSize);
+      matrixDrops = new Array(matrixCols).fill(0).map(function () { return Math.random() * -60; });
+      matrixCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resize();
+    matrixResizeHandler = resize;
+    window.addEventListener('resize', matrixResizeHandler);
+
+    function frame(ts) {
+      matrixRAF = requestAnimationFrame(frame);
+      if (ts - matrixLastFrame < 50) return;
+      matrixLastFrame = ts;
+      matrixCtx.fillStyle = 'rgba(0,0,0,0.09)';
+      matrixCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+      matrixCtx.font = matrixFontSize + 'px monospace';
+      for (var i = 0; i < matrixCols; i++) {
+        var ch = MATRIX_CHARS[(Math.random() * MATRIX_CHARS.length) | 0];
+        var y = matrixDrops[i] * matrixFontSize;
+        matrixCtx.fillStyle = Math.random() > 0.975 ? '#d9ffe9' : '#2bff7a';
+        matrixCtx.fillText(ch, i * matrixFontSize, y);
+        if (y > window.innerHeight && Math.random() > 0.975) matrixDrops[i] = 0;
+        matrixDrops[i]++;
+      }
+    }
+    matrixRAF = requestAnimationFrame(frame);
+  }
+  function stopMatrix() {
+    if (matrixRAF) cancelAnimationFrame(matrixRAF);
+    matrixRAF = null;
+    if (matrixResizeHandler) window.removeEventListener('resize', matrixResizeHandler);
+    matrixResizeHandler = null;
+    if (matrixCtx) matrixCtx.clearRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+  }
+  function toggleMatrix(force) {
+    var on = typeof force === 'boolean' ? force : !document.body.classList.contains('matrix-on');
+    document.body.classList.toggle('matrix-on', on);
+    if (on) { startMatrix(); window.APP.toast('Matrix mode engaged'); }
+    else { stopMatrix(); }
+    return on;
   }
 
   var COMMAND_MAP = {
@@ -816,22 +815,22 @@ html.js .reveal.d4{transition-delay:.32s}
       print('  system      browser-side system info');
       print('  whoami      identity check');
       print('  clear       clear the screen');
-      print('  sudo        ...try it');
+      print('  sudo        try it');
       print('  exit        close the terminal');
       print('  (some commands are not listed)', 'dim');
     },
     status: function () {
-      print('STATUS: 404 â€” NOT FOUND', 'warn');
+      print('STATUS: 404', 'warn');
       print('PATH:   ' + ((location.pathname && location.pathname !== '/') ? location.pathname : '/'));
       print('HOST:   ' + (location.hostname || (location.protocol === 'file:' ? 'local filesystem' : 'unknown')));
-      print('SYSTEM: ONLINE Â· awaiting input', 'ok');
+      print('SYSTEM: ONLINE, awaiting input', 'ok');
     },
     why: function () {
       print('A request was made to a page that is not part of this system.', 'ok');
       print('Reasons this can happen:');
-      print('  Â· the URL was mistyped');
-      print('  Â· a link is outdated');
-      print('  Â· the resource was moved or renamed');
+      print('  the URL was mistyped');
+      print('  a link is outdated');
+      print('  the resource was moved or renamed');
       print('Nothing was broken. The address simply does not resolve.');
     },
     where: function () {
@@ -841,11 +840,11 @@ html.js .reveal.d4{transition-delay:.32s}
       print('  toys demo    https://bytebite1391.github.io/Portfolio/toys_shop/');
     },
     portfolio: function () {
-      print('Navigating to the portfolioâ€¦', 'ok');
+      print('Navigating to the portfolio.', 'ok');
       window.location.href = 'https://bytebite1391.github.io/Portfolio/';
     },
     github: function () {
-      print('Opening github.com/ByteBite1391 â€¦', 'ok');
+      print('Opening github.com/ByteBite1391', 'ok');
       window.open('https://github.com/ByteBite1391', '_blank', 'noopener');
     },
     contact: function () {
@@ -855,36 +854,25 @@ html.js .reveal.d4{transition-delay:.32s}
     },
     matrix: function () {
       var on = toggleMatrix(true);
-      print(on ? 'Wake up, Neoâ€¦' : 'Matrix mode disabled.', 'ok');
+      print(on ? 'Matrix mode enabled.' : 'Matrix mode disabled.', 'ok');
     },
     system: function () {
-      var info = window.APP.getSystemInfo ? window.APP.getSystemInfo() : null;
-      if (!info) {
-        print('Browser-side information:', 'ok');
-        print('  platform     ' + (navigator.platform || 'unknown'));
-        print('  cores        ' + (navigator.hardwareConcurrency || 'unknown'));
-        print('  screen       ' + window.innerWidth + 'Ã—' + window.innerHeight + ' @' + (window.devicePixelRatio || 1) + 'x');
-        print('  user agent   ' + navigator.userAgent);
-        return;
-      }
-      print('Browser-side information (real values):', 'ok');
-      print('  platform     ' + info.platform);
-      print('  user agent   ' + info.ua);
-      print('  cores        ' + info.cores);
-      print('  screen       ' + info.screen);
-      print('  webgl        ' + info.webgl);
-      print('  renderer     ' + info.renderer);
+      print('Browser-side information:', 'ok');
+      print('  platform     ' + (navigator.platform || 'unknown'));
+      print('  cores        ' + (navigator.hardwareConcurrency || 'unknown'));
+      print('  screen       ' + window.innerWidth + 'x' + window.innerHeight + ' @' + (window.devicePixelRatio || 1) + 'x');
+      print('  user agent   ' + navigator.userAgent);
     },
     sudo: function () {
-      print('Nice try. This shell runs entirely in your browser â€”', 'warn');
-      print('there is no server here, only a 404 page pretending to be one.', 'warn');
+      print('Nice try. This shell runs entirely in your browser.', 'warn');
+      print('There is no server here, only a 404 page pretending to be one.', 'warn');
     },
     whoami: function () {
-      print('guest@amirali-portfolio â€” apparently lost.', 'ok');
+      print('guest@amirali-portfolio, apparently lost.', 'ok');
     },
     clear: function () { termBody.innerHTML = ''; },
     coffee: function () {
-      print('â˜• Brewingâ€¦ error: caffeine module not installed.', 'warn');
+      print('Brewing... error: caffeine module not installed.', 'warn');
     },
     exit: function () { closeTerminal(); }
   };
@@ -925,7 +913,7 @@ html.js .reveal.d4{transition-delay:.32s}
       if (!v) return;
       var match = COMMANDS.filter(function (c) { return c.indexOf(v) === 0; });
       if (match.length === 1) termInput.value = match[0];
-      else if (match.length > 1) print(match.join('   '), 'dim');
+      else if (match.length > 1) { print(match.join('   '), 'dim'); }
     }
   });
   termInput.addEventListener('focus', bootTerminal);
@@ -933,7 +921,6 @@ html.js .reveal.d4{transition-delay:.32s}
     if (!e.target.closest('input') && !e.target.closest('button')) termInput.focus();
   });
 
-  /* global keyboard shortcut: backtick */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeTerminal();
     if (e.key === '`' && !/input|textarea/i.test(document.activeElement.tagName)) {
@@ -941,20 +928,10 @@ html.js .reveal.d4{transition-delay:.32s}
       openTerminal();
     }
   });
-
-  /* ==========================================================
-     PRE-BOOT TERMINAL BANNER (without showing it)
-     ========================================================== */
-  bootTerminal();
-  termBody.innerHTML = '';
-  booted = false;
 })();
 </script>
 
-<!-- ==========================================================
-     3D WORLD â€” small, self-contained Three.js scene
-     Uses the global THREE from the UMD build (works from file://)
-     ========================================================== -->
+<!-- THREE.JS WORLD (SMALL 404 SCENE) -->
 <script>
 (function () {
   'use strict';
@@ -965,9 +942,7 @@ html.js .reveal.d4{transition-delay:.32s}
   }
   if (!window.APP.webglAvailable()) return;
 
-  try {
-    init();
-  } catch (err) {
+  try { init(); } catch (err) {
     console.error('[404] world init failed:', err);
     window.APP.activateFallback('init-timeout');
   }
@@ -985,7 +960,6 @@ html.js .reveal.d4{transition-delay:.32s}
     };
 
     var theme = THEMES[document.documentElement.dataset.theme] || THEMES.cosmic;
-
     var canvas = document.getElementById('world');
     var renderer = new THREE.WebGLRenderer({
       canvas: canvas,
@@ -998,7 +972,6 @@ html.js .reveal.d4{transition-delay:.32s}
     var camera = new THREE.PerspectiveCamera(52, window.innerWidth / window.innerHeight, 0.1, 400);
     var clock = new THREE.Clock();
 
-    /* ---------- lighting ---------- */
     var ambient = new THREE.AmbientLight(theme.primary, 0.6);
     scene.add(ambient);
 
@@ -1010,13 +983,13 @@ html.js .reveal.d4{transition-delay:.32s}
     rimLight.position.set(-24, -12, -30);
     scene.add(rimLight);
 
-    /* ---------- procedural core: three interlocking rings (broken compass) ---------- */
+    /* Core: interlocking rings */
     var coreGroup = new THREE.Group();
     scene.add(coreGroup);
 
     var ringMatA = new THREE.MeshBasicMaterial({ color: theme.primary, transparent: true, opacity: 0.55, wireframe: true });
-    var ringMatB = new THREE.MeshBasicMaterial({ color: theme.accent,  transparent: true, opacity: 0.35, wireframe: true });
-    var ringMatC = new THREE.MeshBasicMaterial({ color: theme.danger,  transparent: true, opacity: 0.65, wireframe: true });
+    var ringMatB = new THREE.MeshBasicMaterial({ color: theme.accent, transparent: true, opacity: 0.35, wireframe: true });
+    var ringMatC = new THREE.MeshBasicMaterial({ color: theme.danger, transparent: true, opacity: 0.65, wireframe: true });
 
     var ringGeo = new THREE.TorusGeometry(6.5, 0.035, 8, 160);
     var ringA = new THREE.Mesh(ringGeo, ringMatA);
@@ -1033,21 +1006,19 @@ html.js .reveal.d4{transition-delay:.32s}
     coreGroup.add(ringB);
     coreGroup.add(ringC);
 
-    /* inner wireframe sphere */
     var innerShell = new THREE.Mesh(
       new THREE.IcosahedronGeometry(3.4, 1),
       new THREE.MeshBasicMaterial({ color: theme.danger, wireframe: true, transparent: true, opacity: 0.5 })
     );
     coreGroup.add(innerShell);
 
-    /* solid inner core */
     var solidCore = new THREE.Mesh(
       new THREE.IcosahedronGeometry(1.6, 0),
       new THREE.MeshBasicMaterial({ color: theme.primary, transparent: true, opacity: 0.85 })
     );
     coreGroup.add(solidCore);
 
-    /* orbit satellites â€” small cubes pretending to be data fragments */
+    /* Orbit satellites */
     var satGeo = new THREE.BoxGeometry(0.28, 0.28, 0.28);
     var satellites = [];
     for (var i = 0; i < 14; i++) {
@@ -1063,7 +1034,7 @@ html.js .reveal.d4{transition-delay:.32s}
       satellites.push(s);
     }
 
-    /* ---------- particles ---------- */
+    /* Particles */
     var dotTex = makeDotTexture();
     var particleCount = IS_TOUCH ? 500 : (REDUCED ? 700 : 1400);
     var pGeo = new THREE.BufferGeometry();
@@ -1086,7 +1057,7 @@ html.js .reveal.d4{transition-delay:.32s}
     }));
     scene.add(particles);
 
-    /* ---------- drifting debris (broken fragments) ---------- */
+    /* Debris */
     var debrisGeo = new THREE.TetrahedronGeometry(0.35, 0);
     var debris = [];
     for (var d = 0; d < 22; d++) {
@@ -1109,7 +1080,7 @@ html.js .reveal.d4{transition-delay:.32s}
       debris.push(m);
     }
 
-    /* ---------- sizing ---------- */
+    /* Sizing */
     function pixelRatio() {
       var dpr = window.devicePixelRatio || 1;
       if (IS_TOUCH) return Math.min(dpr, 1.35);
@@ -1125,33 +1096,28 @@ html.js .reveal.d4{transition-delay:.32s}
     window.addEventListener('resize', debounce(setSize, 150));
     window.addEventListener('orientationchange', function () { setTimeout(setSize, 200); });
 
-    /* ---------- theme application ---------- */
+    /* Theme */
     function applyTheme(name) {
       var th = THEMES[name];
       if (!th) return;
       theme = th;
-
       scene.background = new THREE.Color(th.bg);
       scene.fog = new THREE.FogExp2(th.fog, 0.006);
       renderer.setClearColor(th.bg, 1);
-
       ambient.color.setHex(th.primary);
       keyLight.color.setHex(th.danger);
       rimLight.color.setHex(th.primary);
-
       ringMatA.color.setHex(th.primary);
       ringMatB.color.setHex(th.accent);
       ringMatC.color.setHex(th.danger);
       innerShell.material.color.setHex(th.danger);
       solidCore.material.color.setHex(th.primary);
-
       satellites.forEach(function (s, i) {
         s.material.color.setHex(i % 3 === 0 ? th.danger : th.primary);
       });
       debris.forEach(function (m, i) {
         m.material.color.setHex(i % 4 === 0 ? th.danger : th.accent);
       });
-
       particles.material.color.setHex(th.particle);
       particles.material.blending = th.bg > 0x888888 ? THREE.NormalBlending : THREE.AdditiveBlending;
       particles.material.needsUpdate = true;
@@ -1159,7 +1125,7 @@ html.js .reveal.d4{transition-delay:.32s}
     window.APP.applyTheme = applyTheme;
     applyTheme(document.documentElement.dataset.theme || 'cosmic');
 
-    /* ---------- pointer parallax ---------- */
+    /* Pointer parallax */
     var pointer = new THREE.Vector2(0, 0);
     var targetPointer = new THREE.Vector2(0, 0);
     if (!IS_TOUCH && !REDUCED) {
@@ -1169,14 +1135,14 @@ html.js .reveal.d4{transition-delay:.32s}
       }, { passive: true });
     }
 
-    /* ---------- visibility ---------- */
+    /* Visibility */
     var running = true;
     document.addEventListener('visibilitychange', function () {
       running = !document.hidden;
       if (running) clock.getDelta();
     });
 
-    /* ---------- main loop ---------- */
+    /* Loop */
     var elapsed = 0;
     function tick() {
       requestAnimationFrame(tick);
@@ -1188,7 +1154,6 @@ html.js .reveal.d4{transition-delay:.32s}
       pointer.x += (targetPointer.x - pointer.x) * 0.05;
       pointer.y += (targetPointer.y - pointer.y) * 0.05;
 
-      /* core rotation + breathing */
       coreGroup.rotation.y = elapsed * 0.09;
       coreGroup.rotation.x = Math.sin(elapsed * 0.25) * 0.14;
       innerShell.rotation.y = -elapsed * 0.22;
@@ -1201,7 +1166,6 @@ html.js .reveal.d4{transition-delay:.32s}
       ringB.rotation.z = -elapsed * 0.17;
       ringC.rotation.z = elapsed * 0.12;
 
-      /* satellites */
       for (var i = 0; i < satellites.length; i++) {
         var s = satellites[i];
         var a2 = s.userData.angle + elapsed * s.userData.speed;
@@ -1212,7 +1176,6 @@ html.js .reveal.d4{transition-delay:.32s}
         s.rotation.y = elapsed * 0.9;
       }
 
-      /* debris */
       for (var j = 0; j < debris.length; j++) {
         var m = debris[j];
         m.rotation.x += m.userData.spin.x * dt;
@@ -1221,11 +1184,9 @@ html.js .reveal.d4{transition-delay:.32s}
         m.position.y += Math.sin(elapsed * 0.8 + j) * dt * m.userData.drift;
       }
 
-      /* particles slow drift */
       particles.rotation.y = elapsed * 0.008;
       particles.position.y = Math.sin(elapsed * 0.12) * 2;
 
-      /* camera: keep the core framed, apply pointer parallax */
       camera.position.x = pointer.x * 2.2;
       camera.position.y = 1.2 + pointer.y * 1.2;
       camera.position.z = 20;
@@ -1237,19 +1198,19 @@ html.js .reveal.d4{transition-delay:.32s}
     window.__WORLD_READY = true;
     tick();
 
-    /* ---------- loader sequence ---------- */
+    /* Loader sequence */
     window.APP.setLoaderTitle('Scanning coordinates');
-    window.APP.setLoader(40, 'parsing requestâ€¦');
+    window.APP.setLoader(40, 'parsing request');
 
     requestAnimationFrame(function () {
-      window.APP.setLoader(75, 'no matching destination foundâ€¦');
+      window.APP.setLoader(75, 'no matching destination found');
       setTimeout(function () {
-        window.APP.setLoader(100, 'signal terminated.');
+        window.APP.setLoader(100, 'signal terminated');
         window.APP.hideLoader();
       }, 380);
     });
 
-    /* ---------- utilities ---------- */
+    /* Utilities */
     function debounce(fn, ms) {
       var t = null;
       return function () {
